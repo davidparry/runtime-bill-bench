@@ -1,0 +1,17 @@
+{
+  "seed": 2,
+  "trials": [
+    {
+      "workers": 1,
+      "orders": 64,
+      "read_back": 64,
+      "not_found": 0
+    },
+    {
+      "workers": 16,
+      "orders": 64,
+      "read_back": 7,
+      "not_found": 57
+    }
+  ]
+}
