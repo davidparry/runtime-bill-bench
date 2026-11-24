@@ -1,0 +1,15 @@
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust-replay/seed6/project)
+error[E0382]: borrow of moved value: `response`
+   --> src/main.rs:179:35
+    |
+164 |     let response = OrderResponse {
+    |         -------- move occurs because `response` has type `OrderResponse`, which does not implement the `Copy` trait
+...
+174 |         orders.insert(id.clone(), response);
+    |                                   -------- value moved here
+...
+179 |         Json(serde_json::to_value(&response).unwrap()),
+    |                                   ^^^^^^^^^ value borrowed here after move
+
+For more information about this error, try `rustc --explain E0382`.
+error: could not compile `orders` (bin "orders") due to 1 previous error

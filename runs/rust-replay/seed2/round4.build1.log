@@ -1,0 +1,19 @@
+    Updating crates.io index
+     Locking 103 packages to latest compatible versions
+      Adding axum v0.7.9 (available: v0.8.9)
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust-replay/seed2/project)
+error[E0053]: method `call` has an incompatible type for trait
+  --> src/middleware.rs:43:13
+   |
+43 |     fn call(&self, req: Request<B>) -> Self::Future {
+   |             ^^^^^ types differ in mutability
+   |
+   = note: expected signature `fn(&mut JsonLoggerLayer<_>, axum::http::Request<_>) -> Pin<_>`
+              found signature `fn(&JsonLoggerLayer<_>, axum::http::Request<_>) -> Pin<_>`
+help: change the self-receiver type to match the trait
+   |
+43 |     fn call(&mut self, req: Request<B>) -> Self::Future {
+   |              +++
+
+For more information about this error, try `rustc --explain E0053`.
+error: could not compile `orders` (lib) due to 1 previous error

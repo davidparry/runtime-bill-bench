@@ -69,6 +69,8 @@
       "cpu_seconds_per_100k": 12.838,
       "rps": 77509.3,
       "p99_ms": 3.161,
+      "fixed_rate_cpu_seconds_per_100k": 21.309,
+      "fixed_rate_p99_ms": 0.895,
       "cpu_dollars_per_million": 0.00144
     },
     {
@@ -146,6 +148,8 @@
       "cpu_seconds_per_100k": 5.794,
       "rps": 133938.9,
       "p99_ms": 1.085,
+      "fixed_rate_cpu_seconds_per_100k": 11.464,
+      "fixed_rate_p99_ms": 0.484,
       "cpu_dollars_per_million": 0.00065
     },
     {
@@ -222,6 +226,8 @@
       "cpu_seconds_per_100k": 2.85,
       "rps": 120247.2,
       "p99_ms": 0.622,
+      "fixed_rate_cpu_seconds_per_100k": 6.049,
+      "fixed_rate_p99_ms": 0.355,
       "cpu_dollars_per_million": 0.00032
     },
     {
@@ -545,25 +551,50 @@
           }
         }
       ],
-      "startup_ms": 332.3,
-      "idle_rss_mb": 923.2,
-      "peak_rss_mb": 1275.7,
-      "cpu_seconds_per_100k": 53.237,
-      "rps": 23918.6,
-      "p99_ms": 6.598,
-      "cpu_dollars_per_million": 0.00599
+      "startup_ms": 188.2,
+      "idle_rss_mb": 54.9,
+      "peak_rss_mb": 286.0,
+      "cpu_seconds_per_100k": 22.365,
+      "rps": 4448.1,
+      "p99_ms": 53.17,
+      "load_workers": 1,
+      "sixteen_workers": {
+        "startup_ms": 332.3,
+        "idle_rss_mb": 923.2,
+        "peak_rss_mb": 1275.7,
+        "cpu_seconds_per_100k": 53.237,
+        "rps": 23918.6,
+        "p99_ms": 6.598
+      },
+      "fixed_rate_cpu_seconds_per_100k": 30.007,
+      "fixed_rate_p99_ms": 34.993,
+      "cpu_dollars_per_million": 0.00251
     }
   ],
   "break_even_vs_python": {
-    "java": {
-      "extra_token_dollars": 1.3375,
-      "cpu_dollars_saved_per_million": 0.00454,
-      "requests_to_break_even": 294432111
+    "cpu_seconds_per_100k": {
+      "java": {
+        "extra_token_dollars": 1.3375,
+        "cpu_dollars_saved_per_million": 0.00107,
+        "requests_to_break_even": 1248531841
+      },
+      "go": {
+        "extra_token_dollars": 0.1418,
+        "cpu_dollars_saved_per_million": 0.00186,
+        "requests_to_break_even": 76100851
+      }
     },
-    "go": {
-      "extra_token_dollars": 0.1418,
-      "cpu_dollars_saved_per_million": 0.00533,
-      "requests_to_break_even": 26580680
+    "fixed_rate_cpu_seconds_per_100k": {
+      "java": {
+        "extra_token_dollars": 1.3375,
+        "cpu_dollars_saved_per_million": 0.00098,
+        "requests_to_break_even": 1367528495
+      },
+      "go": {
+        "extra_token_dollars": 0.1418,
+        "cpu_dollars_saved_per_million": 0.00209,
+        "requests_to_break_even": 68007722
+      }
     }
   },
   "prices": {

@@ -1,0 +1,23 @@
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust-replay/seed4/project)
+error[E0599]: no associated function or constant named `NotFound` found for struct `AppError` in the current scope
+   --> src/main.rs:100:31
+    |
+100 |         None => Err(AppError::NotFound(format!("Order with id {} not found", id))),
+    |                               ^^^^^^^^ associated function or constant not found in `AppError`
+...
+107 | pub struct AppError {
+    | ------------------- associated function or constant `NotFound` not found for this struct
+    |
+note: if you're trying to build a new `AppError` consider using one of the following associated functions:
+      AppError::bad_request
+      AppError::not_found
+   --> src/main.rs:113:5
+    |
+113 |     pub fn bad_request(msg: impl Into<String>) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+...
+120 |     pub fn not_found(msg: impl Into<String>) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `orders` (bin "orders") due to 1 previous error

@@ -1,0 +1,126 @@
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust-replay/seed4/project)
+error[E0432]: unresolved import `orders`
+  --> tests/integration.rs:11:5
+   |
+11 | use orders::AppState;
+   |     ^^^^^^ use of unresolved module or unlinked crate `orders`
+   |
+   = help: if you wanted to use a crate named `orders`, use `cargo add orders` to add it to your `Cargo.toml`
+
+error[E0432]: unresolved import `orders`
+  --> tests/integration.rs:12:5
+   |
+12 | use orders::create_order;
+   |     ^^^^^^ use of unresolved module or unlinked crate `orders`
+   |
+   = help: if you wanted to use a crate named `orders`, use `cargo add orders` to add it to your `Cargo.toml`
+
+error[E0432]: unresolved import `orders`
+  --> tests/integration.rs:13:5
+   |
+13 | use orders::get_order;
+   |     ^^^^^^ use of unresolved module or unlinked crate `orders`
+   |
+   = help: if you wanted to use a crate named `orders`, use `cargo add orders` to add it to your `Cargo.toml`
+
+warning: unused import: `chrono::Utc`
+ --> tests/integration.rs:3:5
+  |
+3 | use chrono::Utc;
+  |     ^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: type `CreateOrderRequest` is more private than the item `create_order`
+  --> src/main.rs:55:1
+   |
+55 | / pub async fn create_order(
+56 | |     State(state): State<AppState>,
+57 | |     Json(req): Json<CreateOrderRequest>,
+58 | | ) -> Result<impl IntoResponse, AppError> {
+   | |________________________________________^ function `create_order` is reachable at visibility `pub`
+   |
+note: but type `CreateOrderRequest` is only usable at visibility `pub(crate)`
+  --> src/main.rs:16:1
+   |
+16 | struct CreateOrderRequest {
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^
+   = note: `#[warn(private_interfaces)]` on by default
+
+warning: type `AppError` is more private than the item `create_order`
+   --> src/main.rs:55:1
+    |
+ 55 | / pub async fn create_order(
+ 56 | |     State(state): State<AppState>,
+ 57 | |     Json(req): Json<CreateOrderRequest>,
+ 58 | | ) -> Result<impl IntoResponse, AppError> {
+    | |________________________________________^ function `create_order` is reachable at visibility `pub`
+    |
+note: but type `AppError` is only usable at visibility `pub(crate)`
+   --> src/main.rs:107:1
+    |
+107 | struct AppError {
+    | ^^^^^^^^^^^^^^^
+
+warning: type `AppError` is more private than the item `get_order`
+   --> src/main.rs:92:1
+    |
+ 92 | / pub async fn get_order(
+ 93 | |     State(state): State<AppState>,
+ 94 | |     Path(id): Path<String>,
+ 95 | | ) -> Result<impl IntoResponse, AppError> {
+    | |________________________________________^ function `get_order` is reachable at visibility `pub`
+    |
+note: but type `AppError` is only usable at visibility `pub(crate)`
+   --> src/main.rs:107:1
+    |
+107 | struct AppError {
+    | ^^^^^^^^^^^^^^^
+
+warning: type `CreateOrderRequest` is more private than the item `validate_create_order_request`
+   --> src/main.rs:134:1
+    |
+134 | pub fn validate_create_order_request(req: &CreateOrderRequest) -> Result<(), AppError> {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ function `validate_create_order_request` is reachable at visibility `pub`
+    |
+note: but type `CreateOrderRequest` is only usable at visibility `pub(crate)`
+   --> src/main.rs:16:1
+    |
+ 16 | struct CreateOrderRequest {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: type `AppError` is more private than the item `validate_create_order_request`
+   --> src/main.rs:134:1
+    |
+134 | pub fn validate_create_order_request(req: &CreateOrderRequest) -> Result<(), AppError> {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ function `validate_create_order_request` is reachable at visibility `pub`
+    |
+note: but type `AppError` is only usable at visibility `pub(crate)`
+   --> src/main.rs:107:1
+    |
+107 | struct AppError {
+    | ^^^^^^^^^^^^^^^
+
+warning: method `NotFound` should have a snake case name
+   --> src/main.rs:120:8
+    |
+120 |     fn NotFound(msg: impl Into<String>) -> Self {
+    |        ^^^^^^^^ help: convert the identifier to snake case: `not_found`
+    |
+    = note: `#[warn(non_snake_case)]` (part of `#[warn(nonstandard_style)]`) on by default
+
+error[E0433]: cannot find module or crate `orders` in this scope
+  --> tests/integration.rs:24:16
+   |
+24 |     items: Vec<orders::OrderItem>,
+   |                ^^^^^^ use of unresolved module or unlinked crate `orders`
+   |
+   = help: if you wanted to use a crate named `orders`, use `cargo add orders` to add it to your `Cargo.toml`
+
+Some errors have detailed explanations: E0432, E0433.
+For more information about an error, try `rustc --explain E0432`.
+warning: `orders` (test "integration") generated 1 warning
+error: could not compile `orders` (test "integration") due to 4 previous errors; 1 warning emitted
+warning: build failed, waiting for other jobs to finish...
+warning: `orders` (bin "orders" test) generated 6 warnings (3 duplicates)
+warning: `orders` (bin "orders") generated 6 warnings (3 duplicates)

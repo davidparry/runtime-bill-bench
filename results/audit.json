@@ -1,0 +1,251 @@
+{
+  "java": {
+    "runs": 10,
+    "passed": 2,
+    "first_try": 0,
+    "rounds_all_runs": 48,
+    "rounds_per_passing_run": 4.0,
+    "output_tokens_first_round": 4654.5,
+    "output_tokens_per_round": 1112.0,
+    "input_tokens_per_round": 9223.5,
+    "output_tokens_all_runs": 88332,
+    "input_tokens_all_runs": 454879,
+    "truncated_replies": 0,
+    "step_timeouts": 0,
+    "health_timeouts": 1,
+    "failed_steps": {
+      "mvn -B package": 37,
+      "acceptance": 9,
+      "passed": 2
+    },
+    "final_failed_step": {
+      "mvn -B package": 6,
+      "acceptance": 2
+    },
+    "feedback": {
+      "failed_build_or_test_rounds": 37,
+      "logs_over_the_limit": 18,
+      "rounds_where_the_tail_hid_errors": 3,
+      "cut_logs_that_kept_the_closing_summary": 15
+    },
+    "passing_builds": {
+      "test_cases_run": 8.5,
+      "comment_lines": 2.5,
+      "code_lines": 491.5
+    }
+  },
+  "go": {
+    "runs": 10,
+    "passed": 7,
+    "first_try": 0,
+    "rounds_all_runs": 41,
+    "rounds_per_passing_run": 4,
+    "output_tokens_first_round": 5528.0,
+    "output_tokens_per_round": 2763,
+    "input_tokens_per_round": 8369,
+    "output_tokens_all_runs": 142262,
+    "input_tokens_all_runs": 334098,
+    "truncated_replies": 0,
+    "step_timeouts": 0,
+    "health_timeouts": 0,
+    "failed_steps": {
+      "go test ./...": 17,
+      "passed": 7,
+      "go build -o orders .": 7,
+      "acceptance": 9,
+      "format": 1
+    },
+    "final_failed_step": {
+      "acceptance": 2,
+      "go test ./...": 1
+    },
+    "feedback": {
+      "failed_build_or_test_rounds": 24,
+      "logs_over_the_limit": 0,
+      "rounds_where_the_tail_hid_errors": 0,
+      "cut_logs_that_kept_the_closing_summary": 0
+    },
+    "passing_builds": {
+      "test_cases_run": 15,
+      "comment_lines": 31,
+      "code_lines": 489
+    }
+  },
+  "rust": {
+    "runs": 10,
+    "passed": 0,
+    "first_try": 0,
+    "rounds_all_runs": 50,
+    "rounds_per_passing_run": null,
+    "output_tokens_first_round": 5124.0,
+    "output_tokens_per_round": 2738.0,
+    "input_tokens_per_round": 11924.0,
+    "output_tokens_all_runs": 161225,
+    "input_tokens_all_runs": 581951,
+    "truncated_replies": 1,
+    "step_timeouts": 0,
+    "health_timeouts": 0,
+    "failed_steps": {
+      "cargo build --release": 34,
+      "acceptance": 6,
+      "cargo test --release": 10
+    },
+    "final_failed_step": {
+      "cargo build --release": 4,
+      "acceptance": 1,
+      "cargo test --release": 5
+    },
+    "feedback": {
+      "failed_build_or_test_rounds": 44,
+      "logs_over_the_limit": 10,
+      "rounds_where_the_tail_hid_errors": 9,
+      "errors_seen_in_those_rounds": 54,
+      "errors_in_those_rounds": 86
+    },
+    "passing_builds": {
+      "test_cases_run": null,
+      "comment_lines": null,
+      "code_lines": null
+    },
+    "rust": {
+      "compile_error_codes": {
+        "E0382": 16,
+        "E0277": 12,
+        "E0599": 5,
+        "E0308": 2,
+        "E0596": 1,
+        "E0428": 1,
+        "E0433": 1,
+        "E0107": 1
+      },
+      "test_rounds_needing_a_live_server": 1,
+      "test_rounds_that_did_not_compile": 8,
+      "test_rounds": 10,
+      "salvage": {
+        "seed1": {
+          "service_passed": false,
+          "failed_step": "cargo build --release",
+          "acceptance_failures": null
+        },
+        "seed10": {
+          "service_passed": false,
+          "failed_step": "acceptance",
+          "acceptance_failures": 20
+        },
+        "seed2": {
+          "service_passed": false,
+          "failed_step": "acceptance",
+          "acceptance_failures": null
+        },
+        "seed3": {
+          "service_passed": false,
+          "failed_step": "acceptance",
+          "acceptance_failures": 7
+        },
+        "seed4": {
+          "service_passed": false,
+          "failed_step": "acceptance",
+          "acceptance_failures": null
+        },
+        "seed5": {
+          "service_passed": false,
+          "failed_step": "acceptance",
+          "acceptance_failures": 21
+        },
+        "seed6": {
+          "service_passed": false,
+          "failed_step": "cargo build --release",
+          "acceptance_failures": null
+        },
+        "seed7": {
+          "service_passed": false,
+          "failed_step": "cargo build --release",
+          "acceptance_failures": null
+        },
+        "seed8": {
+          "service_passed": false,
+          "failed_step": "acceptance",
+          "acceptance_failures": 20
+        },
+        "seed9": {
+          "service_passed": false,
+          "failed_step": "acceptance",
+          "acceptance_failures": 50
+        }
+      },
+      "replay_with_whole_logs": {
+        "seed1": {
+          "whole_logs_from_round": 1,
+          "passed": false,
+          "rounds": 5,
+          "final_failed_step": "cargo build --release"
+        },
+        "seed2": {
+          "whole_logs_from_round": 3,
+          "passed": false,
+          "rounds": 5,
+          "final_failed_step": "cargo test --release"
+        },
+        "seed3": {
+          "whole_logs_from_round": 1,
+          "passed": false,
+          "rounds": 5,
+          "final_failed_step": "cargo test --release"
+        },
+        "seed4": {
+          "whole_logs_from_round": 1,
+          "passed": false,
+          "rounds": 5,
+          "final_failed_step": "cargo build --release"
+        },
+        "seed5": {
+          "whole_logs_from_round": 4,
+          "passed": false,
+          "rounds": 5,
+          "final_failed_step": "cargo test --release"
+        },
+        "seed6": {
+          "whole_logs_from_round": 1,
+          "passed": false,
+          "rounds": 5,
+          "final_failed_step": "acceptance"
+        }
+      }
+    }
+  },
+  "python": {
+    "runs": 10,
+    "passed": 7,
+    "first_try": 1,
+    "rounds_all_runs": 36,
+    "rounds_per_passing_run": 3,
+    "output_tokens_first_round": 3230.0,
+    "output_tokens_per_round": 3018.0,
+    "input_tokens_per_round": 7192.0,
+    "output_tokens_all_runs": 96596,
+    "input_tokens_all_runs": 314356,
+    "truncated_replies": 0,
+    "step_timeouts": 0,
+    "health_timeouts": 0,
+    "failed_steps": {
+      "acceptance": 13,
+      "pytest": 16,
+      "passed": 7
+    },
+    "final_failed_step": {
+      "acceptance": 2,
+      "pytest": 1
+    },
+    "feedback": {
+      "failed_build_or_test_rounds": 16,
+      "logs_over_the_limit": 14,
+      "rounds_where_the_tail_hid_errors": 0,
+      "cut_logs_that_kept_the_closing_summary": 14
+    },
+    "passing_builds": {
+      "test_cases_run": 16,
+      "comment_lines": 17,
+      "code_lines": 248
+    }
+  }
+}

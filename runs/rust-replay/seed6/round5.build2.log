@@ -1,0 +1,16 @@
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust-replay/seed6/project)
+    Finished `release` profile [optimized] target(s) in 0.50s
+     Running unittests src/main.rs (/Users/davidparry/code/github/runtime-bill-bench/.cargo-target/release/deps/orders-0ff3f7ffa23b1e84)
+
+running 8 tests
+test tests::test_404_case ... ok
+test tests::test_validation_customer_id_too_long ... ok
+test tests::test_validation_customer_id_too_short ... ok
+test tests::test_validation_items_too_few ... ok
+test tests::test_validation_unit_price_cents_zero ... ok
+test tests::test_validation_quantity_zero ... ok
+test tests::test_validation_items_too_many ... ok
+test tests::test_validation_sku_too_long ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

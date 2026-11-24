@@ -1,0 +1,11 @@
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust-replay/seed1/project)
+warning: unused variable: `rx`
+   --> src/main.rs:215:14
+    |
+215 |     let (tx, rx) = tokio::sync::broadcast::channel(1);
+    |              ^^ help: if this is intentional, prefix it with an underscore: `_rx`
+    |
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: `orders` (bin "orders") generated 1 warning (run `cargo fix --bin "orders" -p orders` to apply 1 suggestion)
+    Finished `release` profile [optimized] target(s) in 0.87s

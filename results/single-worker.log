@@ -1,0 +1,7 @@
+python seed10 one worker: cpu/100k=22.315s, peak=207.9MB, rps=4466.2, p99=34.81ms
+python seed2 one worker: cpu/100k=21.701s, peak=286.0MB, rps=4589.2, p99=53.17ms
+python seed4 one worker: cpu/100k=22.864s, peak=387.6MB, rps=4349.2, p99=63.026ms
+python seed5 one worker: cpu/100k=18.578s, peak=398.9MB, rps=5377.7, p99=59.852ms
+python seed7 one worker: cpu/100k=23.97s, peak=391.2MB, rps=4157.6, p99=73.354ms
+python seed8 one worker: cpu/100k=22.365s, peak=204.2MB, rps=4448.1, p99=34.784ms
+python seed9 one worker: cpu/100k=22.983s, peak=204.4MB, rps=4321.4, p99=41.567ms

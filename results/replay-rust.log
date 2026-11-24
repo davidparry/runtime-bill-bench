@@ -1,0 +1,29 @@
+12:13:29 rust seed1 replay round2: in=9482 out=2799 fail at cargo build --release
+12:15:58 rust seed1 replay round3: in=12755 out=1740 fail at acceptance
+12:16:23 rust seed1 replay round4: in=14621 out=1766 fail at acceptance
+12:16:53 rust seed1 replay round5: in=17564 out=1866 fail at cargo build --release
+== rust seed1 with whole logs from round 1: FAILED after 5 rounds
+rust seed10: every round showed all of its compiler errors; nothing to replay
+12:17:40 rust seed2 replay round4: in=21208 out=3139 fail at cargo build --release
+12:18:09 rust seed2 replay round5: in=24706 out=503 fail at cargo test --release
+== rust seed2 with whole logs from round 3: FAILED after 5 rounds
+12:18:33 rust seed3 replay round2: in=10931 out=1919 fail at cargo build --release
+12:19:01 rust seed3 replay round3: in=13474 out=1921 fail at cargo test --release
+12:19:48 rust seed3 replay round4: in=18919 out=2890 fail at cargo test --release
+12:20:45 rust seed3 replay round5: in=28610 out=2413 fail at cargo test --release
+== rust seed3 with whole logs from round 1: FAILED after 5 rounds
+12:21:12 rust seed4 replay round2: in=8399 out=1672 fail at cargo build --release
+12:21:35 rust seed4 replay round3: in=10491 out=1665 fail at cargo test --release
+12:21:53 rust seed4 replay round4: in=13761 out=721 fail at cargo test --release
+12:22:21 rust seed4 replay round5: in=15947 out=1674 fail at cargo build --release
+== rust seed4 with whole logs from round 1: FAILED after 5 rounds
+12:22:54 rust seed5 replay round5: in=16911 out=1630 fail at cargo test --release
+== rust seed5 with whole logs from round 4: FAILED after 5 rounds
+12:23:35 rust seed6 replay round2: in=20136 out=2345 fail at cargo build --release
+12:24:22 rust seed6 replay round3: in=23029 out=2373 fail at cargo build --release
+12:25:13 rust seed6 replay round4: in=25679 out=2374 fail at cargo test --release
+12:26:10 rust seed6 replay round5: in=29006 out=2416 fail at acceptance
+== rust seed6 with whole logs from round 1: FAILED after 5 rounds
+rust seed7: every round showed all of its compiler errors; nothing to replay
+rust seed8: every round showed all of its compiler errors; nothing to replay
+rust seed9: every round showed all of its compiler errors; nothing to replay

@@ -1,0 +1,530 @@
+warning: struct `CreateOrderResponse` is never constructed
+  --> src/main.rs:34:8
+   |
+34 | struct CreateOrderResponse {
+   |        ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: struct `ErrorResponse` is never constructed
+  --> src/main.rs:43:8
+   |
+43 | struct ErrorResponse {
+   |        ^^^^^^^^^^^^^
+
+warning: `orders` (bin "orders") generated 2 warnings
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust-replay/seed3/project)
+warning: `orders` (bin "orders" test) generated 2 warnings (2 duplicates)
+error[E0432]: unresolved import `orders`
+ --> tests/validation_tests.rs:6:9
+  |
+6 |     use orders::AppState;
+  |         ^^^^^^ use of unresolved module or unlinked crate `orders`
+  |
+  = help: if you wanted to use a crate named `orders`, use `cargo add orders` to add it to your `Cargo.toml`
+
+error[E0531]: cannot find tuple struct or tuple variant `Path` in this scope
+  --> tests/validation_tests.rs:17:91
+   |
+17 | ...   .route("/orders/{id}", axum::routing::get(|state: axum::extract::State<AppState>, Path(id): axum::extract::Path<String>| async...
+   |                                                                                         ^^^^ not found in this scope
+
+error[E0433]: cannot find type `TcpListener` in this scope
+  --> tests/validation_tests.rs:53:24
+   |
+53 |         let listener = TcpListener::bind("127.0.0.1:0").unwrap();
+   |                        ^^^^^^^^^^^ use of undeclared type `TcpListener`
+   |
+help: consider importing one of these structs
+   |
+45 +     use crate::TcpListener;
+   |
+45 +     use std::net::TcpListener;
+   |
+
+warning: unused import: `axum::http::StatusCode`
+ --> tests/validation_tests.rs:1:5
+  |
+1 | use axum::http::StatusCode;
+  |     ^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `reqwest::Client`
+ --> tests/validation_tests.rs:2:5
+  |
+2 | use reqwest::Client;
+  |     ^^^^^^^^^^^^^^^
+
+warning: unused import: `std::net::TcpListener`
+ --> tests/validation_tests.rs:3:5
+  |
+3 | use std::net::TcpListener;
+  |     ^^^^^^^^^^^^^^^^^^^^^
+
+error[E0728]: `await` is only allowed inside `async` functions and blocks
+  --> tests/validation_tests.rs:72:79
+   |
+69 |     fn wait_for_server(port: u16) {
+   |     ----------------------------- this is not `async`
+...
+72 |             if client.get(format!("http://127.0.0.1:{}/health", port)).send().await.unwrap().status().is_success() {
+   |                                                                               ^^^^^ only allowed inside `async` functions and blocks
+
+error[E0433]: cannot find module or crate `orders` in this scope
+  --> tests/validation_tests.rs:15:13
+   |
+15 |             orders::create_order(state, body).await
+   |             ^^^^^^ use of unresolved module or unlinked crate `orders`
+   |
+   = help: if you wanted to use a crate named `orders`, use `cargo add orders` to add it to your `Cargo.toml`
+
+error[E0433]: cannot find module or crate `orders` in this scope
+  --> tests/validation_tests.rs:18:13
+   |
+18 |             orders::get_order(state, id).await
+   |             ^^^^^^ use of unresolved module or unlinked crate `orders`
+   |
+   = help: if you wanted to use a crate named `orders`, use `cargo add orders` to add it to your `Cargo.toml`
+
+error[E0433]: cannot find module or crate `orders` in this scope
+  --> tests/validation_tests.rs:21:13
+   |
+21 |             orders::health_check().await
+   |             ^^^^^^ use of unresolved module or unlinked crate `orders`
+   |
+   = help: if you wanted to use a crate named `orders`, use `cargo add orders` to add it to your `Cargo.toml`
+
+error[E0277]: `()` is not a future
+  --> tests/validation_tests.rs:84:31
+   |
+84 |         wait_for_server(port).await;
+   |         --------------------- ^^^^^ `()` is not a future
+   |         |
+   |         this call returns `()`
+   |
+   = help: the trait `Future` is not implemented for `()`
+   = note: () must be a future or must implement `IntoFuture` to be awaited
+   = note: required for `()` to implement `IntoFuture`
+help: remove the `.await`
+   |
+84 -         wait_for_server(port).await;
+84 +         wait_for_server(port);
+   |
+help: alternatively, consider making `fn wait_for_server` asynchronous
+   |
+69 |     async fn wait_for_server(port: u16) {
+   |     +++++
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:99:9
+    |
+ 99 |         assert_eq!(res.status(), StatusCode::CREATED);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: `()` is not a future
+   --> tests/validation_tests.rs:109:31
+    |
+109 |         wait_for_server(port).await;
+    |         --------------------- ^^^^^ `()` is not a future
+    |         |
+    |         this call returns `()`
+    |
+    = help: the trait `Future` is not implemented for `()`
+    = note: () must be a future or must implement `IntoFuture` to be awaited
+    = note: required for `()` to implement `IntoFuture`
+help: remove the `.await`
+    |
+109 -         wait_for_server(port).await;
+109 +         wait_for_server(port);
+    |
+help: alternatively, consider making `fn wait_for_server` asynchronous
+    |
+ 69 |     async fn wait_for_server(port: u16) {
+    |     +++++
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:124:9
+    |
+124 |         assert_eq!(res.status(), StatusCode::BAD_REQUEST);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: `()` is not a future
+   --> tests/validation_tests.rs:133:31
+    |
+133 |         wait_for_server(port).await;
+    |         --------------------- ^^^^^ `()` is not a future
+    |         |
+    |         this call returns `()`
+    |
+    = help: the trait `Future` is not implemented for `()`
+    = note: () must be a future or must implement `IntoFuture` to be awaited
+    = note: required for `()` to implement `IntoFuture`
+help: remove the `.await`
+    |
+133 -         wait_for_server(port).await;
+133 +         wait_for_server(port);
+    |
+help: alternatively, consider making `fn wait_for_server` asynchronous
+    |
+ 69 |     async fn wait_for_server(port: u16) {
+    |     +++++
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:149:9
+    |
+149 |         assert_eq!(res.status(), StatusCode::BAD_REQUEST);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: `()` is not a future
+   --> tests/validation_tests.rs:158:31
+    |
+158 |         wait_for_server(port).await;
+    |         --------------------- ^^^^^ `()` is not a future
+    |         |
+    |         this call returns `()`
+    |
+    = help: the trait `Future` is not implemented for `()`
+    = note: () must be a future or must implement `IntoFuture` to be awaited
+    = note: required for `()` to implement `IntoFuture`
+help: remove the `.await`
+    |
+158 -         wait_for_server(port).await;
+158 +         wait_for_server(port);
+    |
+help: alternatively, consider making `fn wait_for_server` asynchronous
+    |
+ 69 |     async fn wait_for_server(port: u16) {
+    |     +++++
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:173:9
+    |
+173 |         assert_eq!(res.status(), StatusCode::BAD_REQUEST);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: `()` is not a future
+   --> tests/validation_tests.rs:182:31
+    |
+182 |         wait_for_server(port).await;
+    |         --------------------- ^^^^^ `()` is not a future
+    |         |
+    |         this call returns `()`
+    |
+    = help: the trait `Future` is not implemented for `()`
+    = note: () must be a future or must implement `IntoFuture` to be awaited
+    = note: required for `()` to implement `IntoFuture`
+help: remove the `.await`
+    |
+182 -         wait_for_server(port).await;
+182 +         wait_for_server(port);
+    |
+help: alternatively, consider making `fn wait_for_server` asynchronous
+    |
+ 69 |     async fn wait_for_server(port: u16) {
+    |     +++++
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:205:9
+    |
+205 |         assert_eq!(res.status(), StatusCode::BAD_REQUEST);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: `()` is not a future
+   --> tests/validation_tests.rs:214:31
+    |
+214 |         wait_for_server(port).await;
+    |         --------------------- ^^^^^ `()` is not a future
+    |         |
+    |         this call returns `()`
+    |
+    = help: the trait `Future` is not implemented for `()`
+    = note: () must be a future or must implement `IntoFuture` to be awaited
+    = note: required for `()` to implement `IntoFuture`
+help: remove the `.await`
+    |
+214 -         wait_for_server(port).await;
+214 +         wait_for_server(port);
+    |
+help: alternatively, consider making `fn wait_for_server` asynchronous
+    |
+ 69 |     async fn wait_for_server(port: u16) {
+    |     +++++
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:229:9
+    |
+229 |         assert_eq!(res.status(), StatusCode::BAD_REQUEST);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: `()` is not a future
+   --> tests/validation_tests.rs:238:31
+    |
+238 |         wait_for_server(port).await;
+    |         --------------------- ^^^^^ `()` is not a future
+    |         |
+    |         this call returns `()`
+    |
+    = help: the trait `Future` is not implemented for `()`
+    = note: () must be a future or must implement `IntoFuture` to be awaited
+    = note: required for `()` to implement `IntoFuture`
+help: remove the `.await`
+    |
+238 -         wait_for_server(port).await;
+238 +         wait_for_server(port);
+    |
+help: alternatively, consider making `fn wait_for_server` asynchronous
+    |
+ 69 |     async fn wait_for_server(port: u16) {
+    |     +++++
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:253:9
+    |
+253 |         assert_eq!(res.status(), StatusCode::BAD_REQUEST);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: `()` is not a future
+   --> tests/validation_tests.rs:262:31
+    |
+262 |         wait_for_server(port).await;
+    |         --------------------- ^^^^^ `()` is not a future
+    |         |
+    |         this call returns `()`
+    |
+    = help: the trait `Future` is not implemented for `()`
+    = note: () must be a future or must implement `IntoFuture` to be awaited
+    = note: required for `()` to implement `IntoFuture`
+help: remove the `.await`
+    |
+262 -         wait_for_server(port).await;
+262 +         wait_for_server(port);
+    |
+help: alternatively, consider making `fn wait_for_server` asynchronous
+    |
+ 69 |     async fn wait_for_server(port: u16) {
+    |     +++++
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:277:9
+    |
+277 |         assert_eq!(res.status(), StatusCode::BAD_REQUEST);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: `()` is not a future
+   --> tests/validation_tests.rs:286:31
+    |
+286 |         wait_for_server(port).await;
+    |         --------------------- ^^^^^ `()` is not a future
+    |         |
+    |         this call returns `()`
+    |
+    = help: the trait `Future` is not implemented for `()`
+    = note: () must be a future or must implement `IntoFuture` to be awaited
+    = note: required for `()` to implement `IntoFuture`
+help: remove the `.await`
+    |
+286 -         wait_for_server(port).await;
+286 +         wait_for_server(port);
+    |
+help: alternatively, consider making `fn wait_for_server` asynchronous
+    |
+ 69 |     async fn wait_for_server(port: u16) {
+    |     +++++
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:301:9
+    |
+301 |         assert_eq!(res.status(), StatusCode::BAD_REQUEST);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: `()` is not a future
+   --> tests/validation_tests.rs:310:31
+    |
+310 |         wait_for_server(port).await;
+    |         --------------------- ^^^^^ `()` is not a future
+    |         |
+    |         this call returns `()`
+    |
+    = help: the trait `Future` is not implemented for `()`
+    = note: () must be a future or must implement `IntoFuture` to be awaited
+    = note: required for `()` to implement `IntoFuture`
+help: remove the `.await`
+    |
+310 -         wait_for_server(port).await;
+310 +         wait_for_server(port);
+    |
+help: alternatively, consider making `fn wait_for_server` asynchronous
+    |
+ 69 |     async fn wait_for_server(port: u16) {
+    |     +++++
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:325:9
+    |
+325 |         assert_eq!(res.status(), StatusCode::BAD_REQUEST);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: `()` is not a future
+   --> tests/validation_tests.rs:334:31
+    |
+334 |         wait_for_server(port).await;
+    |         --------------------- ^^^^^ `()` is not a future
+    |         |
+    |         this call returns `()`
+    |
+    = help: the trait `Future` is not implemented for `()`
+    = note: () must be a future or must implement `IntoFuture` to be awaited
+    = note: required for `()` to implement `IntoFuture`
+help: remove the `.await`
+    |
+334 -         wait_for_server(port).await;
+334 +         wait_for_server(port);
+    |
+help: alternatively, consider making `fn wait_for_server` asynchronous
+    |
+ 69 |     async fn wait_for_server(port: u16) {
+    |     +++++
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:343:9
+    |
+343 |         assert_eq!(res.status(), StatusCode::NOT_FOUND);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+Some errors have detailed explanations: E0277, E0432, E0433, E0531, E0728.
+For more information about an error, try `rustc --explain E0277`.
+warning: `orders` (test "validation_tests") generated 3 warnings
+error: could not compile `orders` (test "validation_tests") due to 29 previous errors; 3 warnings emitted

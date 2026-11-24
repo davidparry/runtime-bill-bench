@@ -1,0 +1,147 @@
+warning: struct `CreateOrderResponse` is never constructed
+  --> src/main.rs:34:8
+   |
+34 | struct CreateOrderResponse {
+   |        ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: struct `ErrorResponse` is never constructed
+  --> src/main.rs:43:8
+   |
+43 | struct ErrorResponse {
+   |        ^^^^^^^^^^^^^
+
+warning: `orders` (bin "orders") generated 2 warnings
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust-replay/seed3/project)
+warning: `orders` (bin "orders" test) generated 2 warnings (2 duplicates)
+error[E0599]: no method named `close` found for struct `std::net::TcpListener` in the current scope
+  --> tests/validation_tests.rs:11:14
+   |
+11 |     listener.close().ok();
+   |              ^^^^^ method not found in `std::net::TcpListener`
+
+error[E0596]: cannot borrow `child` as mutable, as it is not declared as mutable
+  --> tests/validation_tests.rs:64:5
+   |
+64 |     child.kill().ok();
+   |     ^^^^^ cannot borrow as mutable
+   |
+help: consider changing this to be mutable
+   |
+46 |     let mut child = start_server(port);
+   |         +++
+
+error[E0596]: cannot borrow `child` as mutable, as it is not declared as mutable
+  --> tests/validation_tests.rs:88:5
+   |
+88 |     child.kill().ok();
+   |     ^^^^^ cannot borrow as mutable
+   |
+help: consider changing this to be mutable
+   |
+70 |     let mut child = start_server(port);
+   |         +++
+
+error[E0596]: cannot borrow `child` as mutable, as it is not declared as mutable
+   --> tests/validation_tests.rs:113:5
+    |
+113 |     child.kill().ok();
+    |     ^^^^^ cannot borrow as mutable
+    |
+help: consider changing this to be mutable
+    |
+ 94 |     let mut child = start_server(port);
+    |         +++
+
+error[E0596]: cannot borrow `child` as mutable, as it is not declared as mutable
+   --> tests/validation_tests.rs:137:5
+    |
+137 |     child.kill().ok();
+    |     ^^^^^ cannot borrow as mutable
+    |
+help: consider changing this to be mutable
+    |
+119 |     let mut child = start_server(port);
+    |         +++
+
+error[E0596]: cannot borrow `child` as mutable, as it is not declared as mutable
+   --> tests/validation_tests.rs:169:5
+    |
+169 |     child.kill().ok();
+    |     ^^^^^ cannot borrow as mutable
+    |
+help: consider changing this to be mutable
+    |
+143 |     let mut child = start_server(port);
+    |         +++
+
+error[E0596]: cannot borrow `child` as mutable, as it is not declared as mutable
+   --> tests/validation_tests.rs:193:5
+    |
+193 |     child.kill().ok();
+    |     ^^^^^ cannot borrow as mutable
+    |
+help: consider changing this to be mutable
+    |
+175 |     let mut child = start_server(port);
+    |         +++
+
+error[E0596]: cannot borrow `child` as mutable, as it is not declared as mutable
+   --> tests/validation_tests.rs:217:5
+    |
+217 |     child.kill().ok();
+    |     ^^^^^ cannot borrow as mutable
+    |
+help: consider changing this to be mutable
+    |
+199 |     let mut child = start_server(port);
+    |         +++
+
+error[E0596]: cannot borrow `child` as mutable, as it is not declared as mutable
+   --> tests/validation_tests.rs:241:5
+    |
+241 |     child.kill().ok();
+    |     ^^^^^ cannot borrow as mutable
+    |
+help: consider changing this to be mutable
+    |
+223 |     let mut child = start_server(port);
+    |         +++
+
+error[E0596]: cannot borrow `child` as mutable, as it is not declared as mutable
+   --> tests/validation_tests.rs:265:5
+    |
+265 |     child.kill().ok();
+    |     ^^^^^ cannot borrow as mutable
+    |
+help: consider changing this to be mutable
+    |
+247 |     let mut child = start_server(port);
+    |         +++
+
+error[E0596]: cannot borrow `child` as mutable, as it is not declared as mutable
+   --> tests/validation_tests.rs:289:5
+    |
+289 |     child.kill().ok();
+    |     ^^^^^ cannot borrow as mutable
+    |
+help: consider changing this to be mutable
+    |
+271 |     let mut child = start_server(port);
+    |         +++
+
+error[E0596]: cannot borrow `child` as mutable, as it is not declared as mutable
+   --> tests/validation_tests.rs:307:5
+    |
+307 |     child.kill().ok();
+    |     ^^^^^ cannot borrow as mutable
+    |
+help: consider changing this to be mutable
+    |
+295 |     let mut child = start_server(port);
+    |         +++
+
+Some errors have detailed explanations: E0596, E0599.
+For more information about an error, try `rustc --explain E0596`.
+error: could not compile `orders` (test "validation_tests") due to 12 previous errors

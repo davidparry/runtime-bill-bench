@@ -1,0 +1,16 @@
+warning: struct `CreateOrderResponse` is never constructed
+  --> src/main.rs:34:8
+   |
+34 | struct CreateOrderResponse {
+   |        ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: struct `ErrorResponse` is never constructed
+  --> src/main.rs:43:8
+   |
+43 | struct ErrorResponse {
+   |        ^^^^^^^^^^^^^
+
+warning: `orders` (bin "orders") generated 2 warnings
+    Finished `release` profile [optimized] target(s) in 0.08s

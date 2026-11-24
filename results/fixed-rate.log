@@ -1,0 +1,21 @@
+java seed5 at 2000/s: {'cpu_seconds_per_100k': 22.948, 'rps': 1999.8, 'p50_ms': 0.191, 'p99_ms': 1.028, 'success_rate': 1.0}
+java seed6 at 2000/s: {'cpu_seconds_per_100k': 19.671, 'rps': 1999.7, 'p50_ms': 0.181, 'p99_ms': 0.763, 'success_rate': 1.0}
+go seed1 at 2000/s: {'cpu_seconds_per_100k': 11.464, 'rps': 1999.7, 'p50_ms': 0.153, 'p99_ms': 0.536, 'success_rate': 1.0}
+go seed10 at 2000/s: {'cpu_seconds_per_100k': 12.236, 'rps': 1999.3, 'p50_ms': 0.159, 'p99_ms': 0.529, 'success_rate': 1.0}
+go seed3 at 2000/s: {'cpu_seconds_per_100k': 11.908, 'rps': 1999.7, 'p50_ms': 0.155, 'p99_ms': 0.512, 'success_rate': 1.0}
+go seed4 at 2000/s: {'cpu_seconds_per_100k': 12.118, 'rps': 1999.7, 'p50_ms': 0.157, 'p99_ms': 0.484, 'success_rate': 1.0}
+go seed5 at 2000/s: {'cpu_seconds_per_100k': 11.036, 'rps': 1999.7, 'p50_ms': 0.148, 'p99_ms': 0.402, 'success_rate': 1.0}
+go seed7 at 2000/s: {'cpu_seconds_per_100k': 10.097, 'rps': 1999.5, 'p50_ms': 0.142, 'p99_ms': 0.427, 'success_rate': 1.0}
+go seed9 at 2000/s: {'cpu_seconds_per_100k': 9.422, 'rps': 1999.6, 'p50_ms': 0.139, 'p99_ms': 0.368, 'success_rate': 1.0}
+rust handfix-seed3 at 2000/s: {'cpu_seconds_per_100k': 6.049, 'rps': 1999.6, 'p50_ms': 0.134, 'p99_ms': 0.355, 'success_rate': 1.0}
+python seed10 at 2000/s: {'cpu_seconds_per_100k': 30.145, 'rps': 1999.4, 'p50_ms': 1.033, 'p99_ms': 22.739, 'success_rate': 1.0}
+python seed2 at 2000/s: {'cpu_seconds_per_100k': 29.866, 'rps': 1999.6, 'p50_ms': 1.02, 'p99_ms': 35.78, 'success_rate': 1.0}
+python seed4 at 2000/s: {'cpu_seconds_per_100k': 30.271, 'rps': 1999.4, 'p50_ms': 1.036, 'p99_ms': 34.993, 'success_rate': 1.0}
+python seed5 at 2000/s: {'cpu_seconds_per_100k': 26.799, 'rps': 1999.4, 'p50_ms': 0.944, 'p99_ms': 54.649, 'success_rate': 1.0}
+python seed7 at 2000/s: {'cpu_seconds_per_100k': 30.131, 'rps': 1999.5, 'p50_ms': 1.029, 'p99_ms': 39.653, 'success_rate': 1.0}
+python seed8 at 2000/s: {'cpu_seconds_per_100k': 29.862, 'rps': 1999.7, 'p50_ms': 1.022, 'p99_ms': 24.194, 'success_rate': 1.0}
+python seed9 at 2000/s: {'cpu_seconds_per_100k': 30.007, 'rps': 1999.6, 'p50_ms': 1.035, 'p99_ms': 23.146, 'success_rate': 1.0}
+java: {'cpu_seconds_per_100k': 21.309, 'rps': 1999.75, 'p50_ms': 0.186, 'p99_ms': 0.895}
+go: {'cpu_seconds_per_100k': 11.464, 'rps': 1999.7, 'p50_ms': 0.153, 'p99_ms': 0.484}
+rust: {'cpu_seconds_per_100k': 6.049, 'rps': 1999.6, 'p50_ms': 0.134, 'p99_ms': 0.355}
+python: {'cpu_seconds_per_100k': 30.007, 'rps': 1999.5, 'p50_ms': 1.029, 'p99_ms': 34.993}

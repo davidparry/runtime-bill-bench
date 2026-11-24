@@ -22,6 +22,23 @@ def cpu_dollars_per_million(cpu_seconds_per_100k: float) -> float:
     return cpu_seconds_per_100k * 10 / 3600 * config.FARGATE_VCPU_HOUR
 
 
+def python_one_worker_loads() -> list[dict]:
+    path = config.RESULTS_DIR / "python-one-worker.json"
+    if not path.exists():
+        return []
+    return [run["load"] for run in json.loads(path.read_text()).values() if "error" not in run["load"]]
+
+
+def load_medians(loads: list[dict]) -> dict:
+    keys = ("startup_ms", "idle_rss_mb", "peak_rss_mb", "cpu_seconds_per_100k", "rps", "p99_ms")
+    return {key: median([l[key] for l in loads]) for key in keys}
+
+
+def fixed_rate() -> dict:
+    path = config.RESULTS_DIR / "fixed-rate.json"
+    return json.loads(path.read_text()) if path.exists() else {"rate": None, "languages": {}}
+
+
 def summarize_lang(name: str) -> dict:
     results, measures = [], []
     for result_path in sorted((config.RUNS_DIR / name).glob("seed*/result.json")):
@@ -41,6 +58,10 @@ def summarize_lang(name: str) -> dict:
     distinct = {(v["id"], v["package"]) for v in vulns}
     severities = Counter(sev for (vid, pkg), sev in {(v["id"], v["package"]): v["severity"] for v in vulns}.items())
     loads = [m["load"] for m in measures if "load" in m and "error" not in m["load"]]
+    sixteen_workers = None
+    if name == "python" and python_one_worker_loads():
+        # measure.py ran Python's load test with one worker per core, which splits the in-memory store and fails the spec.
+        sixteen_workers, loads = load_medians(loads), python_one_worker_loads()
     summary = {
         "lang": name,
         "runs": len(results),
@@ -66,21 +87,22 @@ def summarize_lang(name: str) -> dict:
         "distinct_vulns_by_severity": dict(severities),
         "vulns_with_fix": len({(v["id"], v["package"]) for v in vulns if v.get("fixed")}),
         "pins": [m["pins"] for m in measures],
-        "startup_ms": median([l["startup_ms"] for l in loads]),
-        "idle_rss_mb": median([l["idle_rss_mb"] for l in loads]),
-        "peak_rss_mb": median([l["peak_rss_mb"] for l in loads]),
-        "cpu_seconds_per_100k": median([l["cpu_seconds_per_100k"] for l in loads]),
-        "rps": median([l["rps"] for l in loads]),
-        "p99_ms": median([l["p99_ms"] for l in loads]),
+        **load_medians(loads),
     }
+    if sixteen_workers:
+        summary["load_workers"] = 1
+        summary["sixteen_workers"] = sixteen_workers
+    steady = (fixed_rate()["languages"].get(name) or {}).get("median") or {}
+    summary["fixed_rate_cpu_seconds_per_100k"] = steady.get("cpu_seconds_per_100k")
+    summary["fixed_rate_p99_ms"] = steady.get("p99_ms")
     if summary["cpu_seconds_per_100k"] is not None:
         summary["cpu_dollars_per_million"] = round(cpu_dollars_per_million(summary["cpu_seconds_per_100k"]), 5)
     return summary
 
 
-def break_even(lang: dict, baseline: dict) -> dict:
+def break_even(lang: dict, baseline: dict, cpu_key: str) -> dict:
     extra_tokens = lang["token_dollars_per_working_service"] - baseline["token_dollars_per_working_service"]
-    saved_per_request = (baseline["cpu_seconds_per_100k"] - lang["cpu_seconds_per_100k"]) / 100_000 / 3600 * config.FARGATE_VCPU_HOUR
+    saved_per_request = (baseline[cpu_key] - lang[cpu_key]) / 100_000 / 3600 * config.FARGATE_VCPU_HOUR
     entry = {"extra_token_dollars": round(extra_tokens, 4), "cpu_dollars_saved_per_million": round(saved_per_request * 1e6, 5)}
     if extra_tokens <= 0:
         entry["requests_to_break_even"] = 0
@@ -91,7 +113,16 @@ def break_even(lang: dict, baseline: dict) -> dict:
     return entry
 
 
+def beats_python(s: dict, even: dict) -> str:
+    if s["lang"] == "python":
+        return "baseline"
+    requests = even.get(s["lang"], {}).get("requests_to_break_even")
+    return "n/a" if requests is None else f"{requests:,}"
+
+
 def markdown(summaries: list[dict], even: dict) -> str:
+    rate = fixed_rate()["rate"]
+    steady = f"at {rate:,} a second" if rate else "at a fixed rate"
     rows = [
         ("Passed (of runs)", lambda s: f"{s['passed']} of {s['runs']}"),
         ("Passed on the first try", lambda s: str(s["first_try"])),
@@ -105,21 +136,30 @@ def markdown(summaries: list[dict], even: dict) -> str:
         ("Runtime dependencies", lambda s: fmt(s["runtime_deps"])),
         ("Known vulnerabilities per build (median)", lambda s: fmt(s["vulns_per_build"])),
         ("Startup to first healthy response (ms)", lambda s: fmt(s["startup_ms"])),
-        ("CPU-seconds per 100k orders", lambda s: fmt(s["cpu_seconds_per_100k"], 1)),
+        ("CPU-seconds per 100k orders, flat out", lambda s: fmt(s["cpu_seconds_per_100k"], 1)),
+        (f"CPU-seconds per 100k orders {steady}", lambda s: fmt(s["fixed_rate_cpu_seconds_per_100k"], 1)),
         ("Peak memory under load (MB)", lambda s: fmt(s["peak_rss_mb"])),
-        ("Throughput (requests per second)", lambda s: fmt(s["rps"])),
-        ("p99 latency (ms)", lambda s: fmt(s["p99_ms"], 1)),
-        ("Compute cost per million orders (Fargate)", lambda s: f"${s['cpu_dollars_per_million']:.4f}" if s.get("cpu_dollars_per_million") is not None else "n/a"),
-        ("Requests until it beats Python", lambda s: (
-            "baseline" if s["lang"] == "python"
-            else "n/a" if even.get(s["lang"], {}).get("requests_to_break_even") is None
-            else f"{even[s['lang']]['requests_to_break_even']:,}"
-        )),
+        ("Throughput, flat out (requests per second)", lambda s: fmt(s["rps"])),
+        ("p99 latency, flat out (ms)", lambda s: fmt(s["p99_ms"], 1)),
+        (f"p99 latency {steady} (ms)", lambda s: fmt(s["fixed_rate_p99_ms"], 1)),
+        ("Compute cost per million orders, flat out (Fargate)", lambda s: f"${s['cpu_dollars_per_million']:.4f}" if s.get("cpu_dollars_per_million") is not None else "n/a"),
+        ("Requests until it beats Python, flat out", lambda s: beats_python(s, even["cpu_seconds_per_100k"])),
+        (f"Requests until it beats Python {steady}", lambda s: beats_python(s, even["fixed_rate_cpu_seconds_per_100k"])),
     ]
     header = "| Measure | " + " | ".join(s["lang"].capitalize() for s in summaries) + " |"
     lines = [header, "|---|" + "---|" * len(summaries)]
     for label, cell in rows:
         lines.append(f"| {label} | " + " | ".join(cell(s) for s in summaries) + " |")
+    for s in summaries:
+        if s.get("sixteen_workers"):
+            w = s["sixteen_workers"]
+            lines += [
+                "",
+                f"{s['lang'].capitalize()}'s load numbers come from one uvicorn worker, the command its stack contract gives and the "
+                "acceptance test ran (`bench/single_worker.py`). With one worker per core it split its in-memory store "
+                f"(`results/python-workers.json`) and used {fmt(w['cpu_seconds_per_100k'], 1)} CPU-seconds per 100k orders, "
+                f"{fmt(w['peak_rss_mb'])} MB at peak, and {fmt(w['rps'])} requests per second.",
+            ]
     return "\n".join(lines) + "\n"
 
 
@@ -128,10 +168,12 @@ def main() -> None:
     by_name = {s["lang"]: s for s in summaries}
     baseline = by_name.get("python")
     even = {}
-    if baseline and baseline["passed"] and baseline["cpu_seconds_per_100k"] is not None:
-        for s in summaries:
-            if s["lang"] != "python" and s["passed"] and s["cpu_seconds_per_100k"] is not None:
-                even[s["lang"]] = break_even(s, baseline)
+    for cpu_key in ("cpu_seconds_per_100k", "fixed_rate_cpu_seconds_per_100k"):
+        even[cpu_key] = {}
+        if baseline and baseline["passed"] and baseline[cpu_key] is not None:
+            for s in summaries:
+                if s["lang"] != "python" and s["passed"] and s[cpu_key] is not None:
+                    even[cpu_key][s["lang"]] = break_even(s, baseline, cpu_key)
     out = {"model": config.MODEL, "languages": summaries, "break_even_vs_python": even,
            "prices": {"fargate_vcpu_hour": config.FARGATE_VCPU_HOUR, "fargate_gb_hour": config.FARGATE_GB_HOUR,
                       "opus_input_per_m": config.OPUS_INPUT_PER_M, "opus_output_per_m": config.OPUS_OUTPUT_PER_M}}
