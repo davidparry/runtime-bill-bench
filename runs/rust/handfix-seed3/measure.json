@@ -1,0 +1,171 @@
+{
+  "lang": "rust",
+  "seed": 3,
+  "loc": {
+    "source": 202,
+    "test": 116,
+    "manifest": 14,
+    "config": 0,
+    "other": 0,
+    "total": 332
+  },
+  "runtime_deps": [
+    "async-trait v0.1.92",
+    "atomic-waker v1.1.2",
+    "axum v0.7.9",
+    "axum-core v0.4.5",
+    "bytes v1.12.2",
+    "cfg-if v1.0.5",
+    "chrono v0.4.45",
+    "core-foundation-sys v0.8.7",
+    "errno v0.3.15",
+    "form_urlencoded v1.2.3",
+    "futures-core v0.3.34",
+    "futures-task v0.3.34",
+    "futures-util v0.3.34",
+    "getrandom v0.4.3",
+    "http v1.5.0",
+    "http-body v1.1.0",
+    "http-body-util v0.1.5",
+    "httparse v1.10.1",
+    "httpdate v1.0.3",
+    "hyper v1.13.0",
+    "hyper-util v0.1.21",
+    "iana-time-zone v0.1.65",
+    "itoa v1.0.19",
+    "libc v0.2.191",
+    "lock_api v0.4.14",
+    "log v0.4.35",
+    "matchit v0.7.3",
+    "memchr v2.8.3",
+    "mime v0.3.18",
+    "mio v1.2.5",
+    "num-traits v0.2.19",
+    "once_cell v1.21.4",
+    "parking_lot v0.12.5",
+    "parking_lot_core v0.9.12",
+    "percent-encoding v2.3.2",
+    "pin-project-lite v0.2.18",
+    "proc-macro2 v1.0.107",
+    "quote v1.0.47",
+    "rustversion v1.0.23",
+    "ryu v1.0.23",
+    "scopeguard v1.2.0",
+    "serde v1.0.229",
+    "serde_core v1.0.229",
+    "serde_derive v1.0.229",
+    "serde_json v1.0.154",
+    "serde_path_to_error v0.1.20",
+    "serde_urlencoded v0.7.1",
+    "signal-hook-registry v1.4.8",
+    "slab v0.4.12",
+    "smallvec v1.16.6",
+    "socket2 v0.6.5",
+    "syn v3.0.10",
+    "sync_wrapper v1.0.2",
+    "tokio v1.54.1",
+    "tokio-macros v2.7.2",
+    "tower v0.5.3",
+    "tower-layer v0.3.3",
+    "tower-service v0.3.3",
+    "tracing v0.1.44",
+    "tracing-core v0.1.36",
+    "unicode-ident v1.0.27",
+    "uuid v1.29.3",
+    "zmij v1.0.23"
+  ],
+  "vulnerabilities": [],
+  "pins": {
+    "framework": "axum",
+    "pinned": "0.7",
+    "crates": {
+      "axum": {
+        "requirement": "0.7",
+        "resolved": "0.7.9",
+        "resolved_released": "2024-11-16",
+        "current": "0.8.9"
+      },
+      "tokio": {
+        "requirement": "1",
+        "resolved": "1.54.1",
+        "resolved_released": "2026-10-21",
+        "current": "1.54.1"
+      },
+      "serde": {
+        "requirement": "1",
+        "resolved": "1.0.229",
+        "resolved_released": "2026-07-18",
+        "current": "1.0.229"
+      },
+      "serde_json": {
+        "requirement": "1",
+        "resolved": "1.0.154",
+        "resolved_released": "2026-10-11",
+        "current": "1.0.154"
+      },
+      "uuid": {
+        "requirement": "1",
+        "resolved": "1.29.3",
+        "resolved_released": "2026-11-17",
+        "current": "1.29.3"
+      }
+    }
+  },
+  "load_trials": [
+    {
+      "startup_ms": 33.5,
+      "idle_rss_mb": 6.9,
+      "peak_rss_mb": 45.6,
+      "cpu_seconds_per_100k": 2.85,
+      "rps": 120247.2,
+      "p50_ms": 0.525,
+      "p99_ms": 0.702,
+      "success_rate": 1.0,
+      "status_codes": {
+        "201": 100000
+      },
+      "errors": {}
+    },
+    {
+      "startup_ms": 28.7,
+      "idle_rss_mb": 6.8,
+      "peak_rss_mb": 46.5,
+      "cpu_seconds_per_100k": 2.832,
+      "rps": 121548.4,
+      "p50_ms": 0.523,
+      "p99_ms": 0.602,
+      "success_rate": 1.0,
+      "status_codes": {
+        "201": 100000
+      },
+      "errors": {}
+    },
+    {
+      "startup_ms": 32.6,
+      "idle_rss_mb": 6.8,
+      "peak_rss_mb": 45.6,
+      "cpu_seconds_per_100k": 2.914,
+      "rps": 118156.6,
+      "p50_ms": 0.538,
+      "p99_ms": 0.622,
+      "success_rate": 1.0,
+      "status_codes": {
+        "201": 100000
+      },
+      "errors": {}
+    }
+  ],
+  "load": {
+    "startup_ms": 32.6,
+    "idle_rss_mb": 6.8,
+    "peak_rss_mb": 45.6,
+    "cpu_seconds_per_100k": 2.85,
+    "rps": 120247.2,
+    "p50_ms": 0.525,
+    "p99_ms": 0.622
+  },
+  "hand_fixed": {
+    "change": "Added serde's camelCase rename to the request and item structs, changed the route to axum 0.7's /orders/:id syntax, set the 201 status the handler already logged, and logged GET /health.",
+    "changed_lines": 6
+  }
+}

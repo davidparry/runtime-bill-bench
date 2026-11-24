@@ -1,0 +1,11 @@
+--- FAIL: TestHandleCreateOrder (0.00s)
+    --- FAIL: TestHandleCreateOrder/customerId_too_long (0.00s)
+        main_test.go:170: expected status 400, got 201. Body: {"id":"06c90089-9e45-4781-a825-dcf50fc9bac2","customerId":"a","items":[{"sku":"A-1","quantity":2,"unitPriceCents":1250}],"totalCents":2500,"createdAt":"2026-11-24T15:17:56.047298Z"}
+    --- FAIL: TestHandleCreateOrder/item_sku_too_long (0.00s)
+        main_test.go:170: expected status 400, got 201. Body: {"id":"59c17243-cf2b-4136-80b5-e6143ffd9c98","customerId":"c-1","items":[{"sku":"a","quantity":2,"unitPriceCents":1250}],"totalCents":2500,"createdAt":"2026-11-24T15:17:56.047407Z"}
+--- FAIL: TestHandleGetOrder (0.00s)
+    --- FAIL: TestHandleGetOrder/invalid_path (0.00s)
+        main_test.go:220: expected status 400, got 404. Body: {"error":"order not found"}
+FAIL
+FAIL	orders	0.121s
+FAIL

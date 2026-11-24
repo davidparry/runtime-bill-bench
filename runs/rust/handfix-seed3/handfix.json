@@ -1,0 +1,15 @@
+{
+  "seed": 3,
+  "files": [
+    "Cargo.toml",
+    "src/main.rs",
+    "tests/validation_tests.rs"
+  ],
+  "change": "Added serde's camelCase rename to the request and item structs, changed the route to axum 0.7's /orders/:id syntax, set the 201 status the handler already logged, and logged GET /health.",
+  "changed_lines": 6,
+  "service_passed": true,
+  "failed_step": null,
+  "detail": null,
+  "acceptance_failures": 0,
+  "startup_seconds": 0.112
+}

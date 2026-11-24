@@ -1,0 +1,90 @@
+{
+  "lang": "python",
+  "seed": 10,
+  "model": "qwen3.6:35b-a3b-coding",
+  "passed": true,
+  "rounds": 4,
+  "input_tokens": 32869,
+  "output_tokens": 10215,
+  "wall_seconds": 125.1,
+  "files": [
+    "main.py",
+    "requirements-dev.txt",
+    "requirements.txt",
+    "test_main.py"
+  ],
+  "round_records": [
+    {
+      "round": 1,
+      "prompt_eval_count": 768,
+      "eval_count": 3747,
+      "prompt_eval_duration": 506047000,
+      "eval_duration": 30385707000,
+      "load_duration": 2180750,
+      "total_duration": 30924523959,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.py",
+        "requirements-dev.txt",
+        "requirements.txt",
+        "test_main.py"
+      ],
+      "startup_seconds": 0.291,
+      "acceptance_failures": 32,
+      "failed_step": "acceptance",
+      "failure": "These checks failed:\n- GET /orders/{id} for an unknown id: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Order not found\"}'\n- POST /orders with malformed JSON: expected status 400, got 422 with body '{\"detail\":[{\"type\":\"json_invalid\",\"loc\":[\"body\",32],\"msg\":\"JSON decode error\",\"input\":{},\"ctx\":{\"error\":\"Expecting value\"}}]}'\n- POST /orders with malformed JSON: expected a JSON object with a string \"error\" field, got '{\"detail\":[{\"type\":\"json_invalid\",\"loc\":[\"body\",32],\"msg\":\"JSON decode error\",\"input\":{},\"ctx\":{\"error\":\"Expecting value\"}}]}'\n- POST /orders with no customerId: expected status 400, got 422 with body '{\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"customerId\"],\"msg\":\"Field required\",\"input\":{\"items\":[{\"sku\":\"A-1\",\"quantity\":2,\"unitPriceCents\":1250}]}}]}'\n- POST /orders with no customerId: expected a JSON object with a string \"error\" field, got '{\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"customerId\"],\"msg\":\"Field required\",\"input\":{\"items\":[{\"sku\":\"A-1\",\"quantity\":2,\"unitPriceCents\":1250}]}}]}'\n- POST /orders with an empty customerId: expected status 400, got 422 with body '{\"detail\":[{\"type\":\"string_too_short\",\"loc\":[\"body\",\"customerId\"],\"msg\":\"String should have at least 1 character\",\"input\":\"\",\"ctx\":{\"min_length\":1}}]}'\n- POST /orders with an empty customerId: expected a JSON object with a string \"error\" field, got '{\"detail\":[{\"type\":\"string_too_short\",\"loc\":[\"body\",\"customerId\"],\"msg\":\"String should have at least 1 character\",\"input\":\"\",\"ctx\":{\"min_length\":1}}]}'\n- POST /orders with a 65-character customerId: expected status 400, got 422 with body '{\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"customerId\"],\"msg\":\"String should have at most 64 characters\",\"input\":\"ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc\",\"ctx\":{\"max_length\":64}}]}'\n- POST /orders with a 65-character customerId: expected a JSON object with a string \"error\" field, got '{\"detail\":[{\"type\":\"string_too_long\",\"loc\":[\"body\",\"customerId\"],\"msg\":\"String should have at most 64 characters\",\"input\":\"ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc\",\"ctx\":{\"max_length\":64}}]}'\n- POST /orders with no items: expected status 400, got 422 with body '{\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"items\"],\"msg\":\"Field required\",\"input\":{\"customerId\":\"c-1\"}}]}'\n- POST /orders with no items: expected a JSON object with a string \"error\" field, got '{\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"items\"],\"msg\":\"Field required\",\"input\":{\"customerId\":\"c-1\"}}]}'\n- POST /orders with an empty items array: expected status 400, got 422 with body '{\"detail\":[{\"type\":\"too_short\",\"loc\":[\"body\",\"items\"],\"msg\":\"List should have at least 1 item after validation, not 0\",\"input\":[],\"ctx\":{\"field_type\":\"List\",\"min_length\":1,\"actual_length\":0}}]}'\n- POST /orders with an empty items array: expected a JSON object with a string \"error\" field, got '{\"detail\":[{\"type\":\"too_short\",\"loc\":[\"body\",\"items\"],\"msg\":\"List should have at least 1 item after validation, not 0\",\"input\":[],\"ctx\":{\"field_type\":\"List\",\"min_length\":1,\"actual_length\":0}}]}'\n- POST /orders with 51 items: expected status 400, got 422 with body '{\"detail\":[{\"type\":\"too_long\",\"loc\":[\"body\",\"items\"],\"msg\":\"List should have at most 50 items after validation, not 51\",\"input\":[{\"sku\":\"A-1\",\"quantity\":2,\"unitPriceCents\":1250},{\"sku\":\"A-1\",\"quantity\":2,\"unitPriceCents\":1250},{\"sku\":\"A-1\",\"quantity\":2,\"unitPriceCents\":1250},{\"sku\":\"A-1\",\"quantity\":'\n- POST /orders with 51 items: expected a JSON object with a string \"error\" field, got '{\"detail\":[{\"type\":\"too_long\",\"loc\":[\"body\",\"items\"],\"msg\":\"List should have at most 50 items after validation, not 51\",\"input\":[{\"sku\":\"A-1\",\"quantity\":2,\"unitPriceCents\":1250},{\"sku\":\"A-1\",\"quantity\":2,\"unitPriceCents\":1250},{\"sku\":\"A-1\",\"quantity\":2,\"unitPriceCents\":1250},{\"sku\":\"A-1\",\"quantity\":'\n- POST /orders with quantity 0: expected status 400, got 422 with body '{\"detail\":[{\"type\":\"greater_than_equal\",\"loc\":[\"body\",\"items\",0,\"quantity\"],\"msg\":\"Input should be greater than or equal to 1\",\"input\":0,\"ctx\":{\"ge\":1}}]}'\n- POST /orders with quantity 0: expected a JSON object with a string \"error\" field, got '{\"detail\":[{\"type\":\"greater_than_equal\",\"loc\":[\"body\",\"items\",0,\"quantity\"],\"msg\":\"Input should be greater than or equal to 1\",\"input\":0,\"ctx\":{\"ge\":1}}]}'\n- POST /orders with quantity 101: expected status 400, got 422 with body '{\"detail\":[{\"type\":\"less_than_equal\",\"loc\":[\"body\",\"items\",0,\"quantity\"],\"msg\":\"Input should be less than or equal to 100\",\"input\":101,\"ctx\":{\"le\":100}}]}'\n- POST /orders with quantity 101: expected a JSON object with a string \"error\" field, got '{\"detail\":[{\"type\":\"less_than_equal\",\"loc\":[\"body\",\"items\",0,\"quantity\"],\"msg\":\"Input should be less than or equal to 100\",\"input\":101,\"ctx\":{\"le\":100}}]}'\n- POST /orders with no quantity: expected status 400, got 422 with body '{\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"items\",0,\"quantity\"],\"msg\":\"Field required\",\"input\":{\"sku\":\"A-1\",\"unitPriceCents\":1250}}]}'\n- POST /orders with no quantity: expected a JSON object with a string \"error\" field, got '{\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"items\",0,\"quantity\"],\"msg\":\"Field required\",\"input\":{\"sku\":\"A-1\",\"unitPriceCents\":1250}}]}'\n- POST /orders with unitPriceCents 0: expected status 400, got 422 with body '{\"detail\":[{\"type\":\"greater_than_equal\",\"loc\":[\"body\",\"items\",0,\"unitPriceCents\"],\"msg\":\"Input should be greater than or equal to 1\",\"input\":0,\"ctx\":{\"ge\":1}}]}'\n- POST /orders with unitPriceCents 0: expected a JSON object with a string \"error\" field, got '{\"detail\":[{\"type\":\"greater_than_equal\",\"loc\":[\"body\",\"items\",0,\"unitPriceCents\"],\"msg\":\"Input should be greater than or equal to 1\",\"input\":0,\"ctx\":{\"ge\":1}}]}'\n- POST /orders with unitPriceCents 1000001: expected status 400, got 422 with body '{\"detail\":[{\"type\":\"less_than_equal\",\"loc\":[\"body\",\"items\",0,\"unitPriceCents\"],\"msg\":\"Input should be less than or equal to 1000000\",\"input\":1000001,\"ctx\":{\"le\":1000000}}]}'\n- P"
+    },
+    {
+      "round": 2,
+      "prompt_eval_count": 6741,
+      "eval_count": 1524,
+      "prompt_eval_duration": 4939593000,
+      "eval_duration": 11889351000,
+      "load_duration": 6181042,
+      "total_duration": 16875687000,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.py"
+      ],
+      "failed_step": "pytest",
+      "failure": "`pytest` exited with status 1. The last lines of its output:\n```\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 422\nE       assert 400 == 422\nE        +  where 400 = <Response [400 Bad Request]>.status_code\n\ntest_main.py:70: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 400, \"durationMs\": 0, \"message\": \"POST /orders 400 0ms\", \"level\": \"INFO\"}\n------------------------------ Captured log call -------------------------------\nINFO     orders_service:main.py:115 POST /orders 400 0ms\n_____________ TestCreateOrder.test_create_order_invalid_sku_length _____________\n\nself = <test_main.TestCreateOrder object at 0x1088cd480>\n\n    def test_create_order_invalid_sku_length(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": [{\"sku\": \"a\" * 33, \"quantity\": 1, \"unitPriceCents\": 100}]\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 422\nE       assert 400 == 422\nE        +  where 400 = <Response [400 Bad Request]>.status_code\n\ntest_main.py:78: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 400, \"durationMs\": 0, \"message\": \"POST /orders 400 0ms\", \"level\": \"INFO\"}\n------------------------------ Captured log call -------------------------------\nINFO     orders_service:main.py:115 POST /orders 400 0ms\n___________ TestCreateOrder.test_create_order_invalid_quantity_zero ____________\n\nself = <test_main.TestCreateOrder object at 0x1088cd7b0>\n\n    def test_create_order_invalid_quantity_zero(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": [{\"sku\": \"A-1\", \"quantity\": 0, \"unitPriceCents\": 100}]\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 422\nE       assert 400 == 422\nE        +  where 400 = <Response [400 Bad Request]>.status_code\n\ntest_main.py:86: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 400, \"durationMs\": 0, \"message\": \"POST /orders 400 0ms\", \"level\": \"INFO\"}\n------------------------------ Captured log call -------------------------------\nINFO     orders_service:main.py:115 POST /orders 400 0ms\n_________ TestCreateOrder.test_create_order_invalid_quantity_too_high __________\n\nself = <test_main.TestCreateOrder object at 0x10889fb50>\n\n    def test_create_order_invalid_quantity_too_high(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": [{\"sku\": \"A-1\", \"quantity\": 101, \"unitPriceCents\": 100}]\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 422\nE       assert 400 == 422\nE        +  where 400 = <Response [400 Bad Request]>.status_code\n\ntest_main.py:94: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 400, \"durationMs\": 0, \"message\": \"POST /orders 400 0ms\", \"level\": \"INFO\"}\n------------------------------ Captured log call -------------------------------\nINFO     orders_service:main.py:115 POST /orders 400 0ms\n__________ TestCreateOrder.test_create_order_invalid_unit_price_zero ___________\n\nself = <test_main.TestCreateOrder object at 0x10889fc50>\n\n    def test_create_order_invalid_unit_price_zero(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": [{\"sku\": \"A-1\", \"quantity\": 1, \"unitPriceCents\": 0}]\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 422\nE       assert 400 == 422\nE        +  where 400 = <Response [400 Bad Request]>.status_code\n\ntest_main.py:102: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 400, \"durationMs\": 0, \"message\": \"POST /orders 400 0ms\", \"level\": \"INFO\"}\n------------------------------ Captured log call -------------------------------\nINFO     orders_service:main.py:115 POST /orders 400 0ms\n________ TestCreateOrder.test_create_order_invalid_unit_price_too_high _________\n\nself = <test_main.TestCreateOrder object at 0x10843f4d0>\n\n    def test_create_order_invalid_unit_price_too_high(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": [{\"sku\": \"A-1\", \"quantity\": 1, \"unitPriceCents\": 1000001}]\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 422\nE       assert 400 == 422\nE        +  where 400 = <Response [400 Bad Request]>.status_code\n\ntest_main.py:110: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 400, \"durationMs\": 0, \"message\": \"POST /orders 400 0ms\", \"level\": \"INFO\"}\n------------------------------ Captured log call -------------------------------\nINFO     orders_service:main.py:115 POST /orders 400 0ms\n_______________ TestCreateOrder.test_create_order_too_many_items _______________\n\nself = <test_main.TestCreateOrder object at 0x108890500>\n\n    def test_create_order_too_many_items(self):\n        items = [{\"sku\": \"A-1\", \"quantity\": 1, \"unitPriceCents\": 100} for _ in range(51)]\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": items\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 422\nE       assert 400 == 422\nE        +  where 400 = <Response [400 Bad Request]>.status_code\n\ntest_main.py:119: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 400, \"durationMs\": 0, \"message\": \"POST /orders 400 0ms\", \"level\": \"INFO\"}\n------------------------------ Captured log call -------------------"
+    },
+    {
+      "round": 3,
+      "prompt_eval_count": 10601,
+      "eval_count": 3407,
+      "prompt_eval_duration": 7891249000,
+      "eval_duration": 26843402000,
+      "load_duration": 5154750,
+      "total_duration": 34786045000,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.py",
+        "test_main.py"
+      ],
+      "failed_step": "pytest",
+      "failure": "`pytest` exited with status 1. The last lines of its output:\n```\n...............FF                                                        [100%]\n=================================== FAILURES ===================================\n____________________ TestGetOrder.test_get_order_not_found _____________________\n\nself = <test_main.TestGetOrder object at 0x10ab83ed0>\n\n    def test_get_order_not_found(self):\n        response = client.get(\"/orders/non-existent-id\")\n        assert response.status_code == 404\n        data = response.json()\n>       assert \"error\" in data\nE       AssertionError: assert 'error' in {'detail': 'Order not found'}\n\ntest_main.py:184: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"GET\", \"path\": \"/orders/non-existent-id\", \"status\": 404, \"durationMs\": 0, \"message\": \"GET /orders/non-existent-id 404 0ms\", \"level\": \"INFO\"}\n------------------------------ Captured log call -------------------------------\nINFO     orders_service:main.py:113 GET /orders/non-existent-id 404 0ms\n_______________ TestGetOrder.test_get_order_invalid_uuid_format ________________\n\nself = <test_main.TestGetOrder object at 0x10ac7b230>\n\n    def test_get_order_invalid_uuid_format(self):\n        # Even if the ID doesn't look like a UUID, if it's not in the store, it's 404\n        response = client.get(\"/orders/not-a-uuid\")\n        assert response.status_code == 404\n        data = response.json()\n>       assert \"error\" in data\nE       AssertionError: assert 'error' in {'detail': 'Order not found'}\n\ntest_main.py:191: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"GET\", \"path\": \"/orders/not-a-uuid\", \"status\": 404, \"durationMs\": 0, \"message\": \"GET /orders/not-a-uuid 404 0ms\", \"level\": \"INFO\"}\n------------------------------ Captured log call -------------------------------\nINFO     orders_service:main.py:113 GET /orders/not-a-uuid 404 0ms\n=============================== warnings summary ===============================\n.venv/lib/python3.14/site-packages/fastapi/testclient.py:1\n  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed10/project/.venv/lib/python3.14/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as TestClient  # noqa\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n=========================== short test summary info ============================\nFAILED test_main.py::TestGetOrder::test_get_order_not_found - AssertionError:...\nFAILED test_main.py::TestGetOrder::test_get_order_invalid_uuid_format - Asser...\n2 failed, 15 passed, 1 warning in 0.55s\n```"
+    },
+    {
+      "round": 4,
+      "prompt_eval_count": 14759,
+      "eval_count": 1537,
+      "prompt_eval_duration": 11671948000,
+      "eval_duration": 12495490000,
+      "load_duration": 5781333,
+      "total_duration": 24222996750,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.py"
+      ],
+      "startup_seconds": 0.291,
+      "acceptance_failures": 0,
+      "failed_step": null,
+      "failure": null
+    }
+  ]
+}

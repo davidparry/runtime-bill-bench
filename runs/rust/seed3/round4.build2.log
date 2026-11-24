@@ -1,0 +1,223 @@
+   Compiling hyper v1.13.0
+   Compiling hyper-util v0.1.21
+   Compiling axum v0.7.9
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed3/project)
+warning: struct `CreateOrderResponse` is never constructed
+  --> src/main.rs:31:8
+   |
+31 | struct CreateOrderResponse {
+   |        ^^^^^^^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: struct `ErrorResponse` is never constructed
+  --> src/main.rs:40:8
+   |
+40 | struct ErrorResponse {
+   |        ^^^^^^^^^^^^^
+
+error[E0432]: unresolved import `orders`
+ --> tests/validation_tests.rs:1:5
+  |
+1 | use orders::AppState;
+  |     ^^^^^^ use of unresolved module or unlinked crate `orders`
+  |
+  = help: if you wanted to use a crate named `orders`, use `cargo add orders` to add it to your `Cargo.toml`
+
+warning: unused imports: `Request` and `body::Body`
+ --> tests/validation_tests.rs:3:5
+  |
+3 |     body::Body,
+  |     ^^^^^^^^^^
+4 |     http::{Request, StatusCode},
+  |            ^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:43:5
+    |
+ 43 |     assert_eq!(res.status(), StatusCode::BAD_REQUEST);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:59:5
+    |
+ 59 |     assert_eq!(res.status(), StatusCode::BAD_REQUEST);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:74:5
+    |
+ 74 |     assert_eq!(res.status(), StatusCode::BAD_REQUEST);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:97:5
+    |
+ 97 |     assert_eq!(res.status(), StatusCode::BAD_REQUEST);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:112:5
+    |
+112 |     assert_eq!(res.status(), StatusCode::BAD_REQUEST);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:127:5
+    |
+127 |     assert_eq!(res.status(), StatusCode::BAD_REQUEST);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:142:5
+    |
+142 |     assert_eq!(res.status(), StatusCode::BAD_REQUEST);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:157:5
+    |
+157 |     assert_eq!(res.status(), StatusCode::BAD_REQUEST);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:172:5
+    |
+172 |     assert_eq!(res.status(), StatusCode::BAD_REQUEST);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+error[E0277]: can't compare `reqwest::StatusCode` with `axum::http::StatusCode`
+   --> tests/validation_tests.rs:182:5
+    |
+182 |     assert_eq!(res.status(), StatusCode::NOT_FOUND);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ no implementation for `reqwest::StatusCode == axum::http::StatusCode`
+    |
+    = help: the trait `PartialEq<axum::http::StatusCode>` is not implemented for `reqwest::StatusCode`
+help: `reqwest::StatusCode` implements trait `PartialEq<Rhs>`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-0.2.12/src/status.rs:44:23
+    |
+ 44 | #[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
+    |                       ^^^^^^^^^ `PartialEq`
+...
+234 | impl PartialEq<u16> for StatusCode {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `PartialEq<u16>`
+    = note: there are multiple different versions of crate `http` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+
+Some errors have detailed explanations: E0277, E0432.
+For more information about an error, try `rustc --explain E0277`.
+warning: `orders` (test "validation_tests") generated 1 warning
+error: could not compile `orders` (test "validation_tests") due to 11 previous errors; 1 warning emitted
+warning: build failed, waiting for other jobs to finish...
+warning: `orders` (bin "orders" test) generated 2 warnings (1 duplicate)
+warning: `orders` (bin "orders") generated 2 warnings (1 duplicate)

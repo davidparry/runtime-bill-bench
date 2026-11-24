@@ -1,0 +1,2187 @@
+2026/11/24 10:26:17 Server starting on port 52091
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52102: runtime error: index out of range [56] with length 16
+goroutine 49 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbeac030?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb0018}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb0018?}, 0x102f3a168?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb0018}, 0x2ed0dbeaa000)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb6000}, 0x2ed0dbeaa000)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb6000?}, 0x2ed0dbf00ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb6000?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbe9e000, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52119: runtime error: index out of range [45] with length 16
+goroutine 62 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbeac108?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb0228}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb0228?}, 0x1033c2bb8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb0228}, 0x2ed0dbeab180)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb6690}, 0x2ed0dbeab180)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb6690?}, 0x2ed0dbe12ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb6690?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbe9e900, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52120: runtime error: index out of range [36] with length 36
+goroutine 64 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbeac138?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb0270}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb0270?}, 0x1033f6fa8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb0270}, 0x2ed0dbeab400)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb6780}, 0x2ed0dbeab400)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb6780?}, 0x2ed0dbe12ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb6780?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbe9ea20, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52121: runtime error: index out of range [46] with length 16
+goroutine 97 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbeac150?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce378}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce378?}, 0x103482df0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce378}, 0x2ed0dbdf7180)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec870}, 0x2ed0dbdf7180)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec870?}, 0x2ed0dbf04ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec870?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbde6ab0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52122: runtime error: index out of range [46] with length 16
+goroutine 82 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbeac168?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbc842b8}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbc842b8?}, 0x1034904c8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbc842b8}, 0x2ed0dbeab680)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbd345a0}, 0x2ed0dbeab680)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbd345a0?}, 0x2ed0dbe12ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbd345a0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbe9eb40, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52123: runtime error: index out of range [36] with length 36
+goroutine 67 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc902e8?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce3a8}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce3a8?}, 0x1034c21a8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce3a8}, 0x2ed0dbc752c0)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec960}, 0x2ed0dbc752c0)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec960?}, 0x2ed0dbe13ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec960?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd24990, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52125: runtime error: index out of range [56] with length 16
+goroutine 69 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbeac180?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce3d8}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce3d8?}, 0x1034cf498?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce3d8}, 0x2ed0dbc75680)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdeca50}, 0x2ed0dbc75680)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdeca50?}, 0x2ed0dbe14ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdeca50?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd24b40, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52124: runtime error: index out of range [57] with length 16
+goroutine 68 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbe3e000?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb0300}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb0300?}, 0x103506768?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb0300}, 0x2ed0dbc75540)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb6870}, 0x2ed0dbc75540)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb6870?}, 0x2ed0dbe12ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb6870?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd24ab0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52126: runtime error: index out of range [31] with length 16
+goroutine 85 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbeac1e0?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb0360}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb0360?}, 0x103525f50?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb0360}, 0x2ed0dbe28000)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb6a50}, 0x2ed0dbe28000)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb6a50?}, 0x2ed0dbe17ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb6a50?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbe9ebd0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52127: runtime error: index out of range [47] with length 16
+goroutine 86 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbe3e030?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb0330}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb0330?}, 0x10350c910?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb0330}, 0x2ed0dbeab7c0)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb6960}, 0x2ed0dbeab7c0)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb6960?}, 0x2ed0dbf00ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb6960?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbe9ec60, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52128: runtime error: index out of range [36] with length 36
+goroutine 18 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbe3e090?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe50060}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe50060?}, 0x10358b850?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe50060}, 0x2ed0dbe28140)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbe72000}, 0x2ed0dbe28140)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbe72000?}, 0x2ed0dbe18ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbe72000?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbe2e000, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52130: runtime error: index out of range [36] with length 36
+goroutine 114 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dc00e018?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe500c0}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe500c0?}, 0x1035a3720?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe500c0}, 0x2ed0dc006140)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbe721e0}, 0x2ed0dc006140)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbe721e0?}, 0x2ed0dbffbae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbe721e0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8090, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52132: runtime error: index out of range [60] with length 16
+goroutine 116 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbdb0228?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc012018}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc012018?}, 0x1035b3cd8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc012018}, 0x2ed0dc006280)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc018000}, 0x2ed0dc006280)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc018000?}, 0x2ed0dbffcae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc018000?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe81b0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52133: runtime error: index out of range [27] with length 16
+goroutine 21 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc90300?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe50108}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe50108?}, 0x1035c32f0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe50108}, 0x2ed0dbe28500)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbe722d0}, 0x2ed0dbe28500)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbe722d0?}, 0x2ed0dbe18ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbe722d0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbe2e120, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52131: runtime error: index out of range [29] with length 16
+goroutine 115 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbdb0240?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe50090}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe50090?}, 0x1035921c8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe50090}, 0x2ed0dbeabcc0)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbe720f0}, 0x2ed0dbeabcc0)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbe720f0?}, 0x2ed0dbe17ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbe720f0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8120, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52134: runtime error: index out of range [36] with length 36
+goroutine 22 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dc00e060?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc012078}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc012078?}, 0x1035e6958?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc012078}, 0x2ed0dbe28780)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc0180f0}, 0x2ed0dbe28780)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc0180f0?}, 0x2ed0dbe17ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc0180f0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbe2e240, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52129: runtime error: index out of range [30] with length 16
+goroutine 113 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dc00e078?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce408}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce408?}, 0x10358a4c8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce408}, 0x2ed0dc006000)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdecb40}, 0x2ed0dc006000)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdecb40?}, 0x2ed0dbffaae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdecb40?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8000, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52135: runtime error: index out of range [42] with length 16
+goroutine 118 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbdb0258?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb03a8}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb03a8?}, 0x1035d4848?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb03a8}, 0x2ed0dc090000)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb6b40}, 0x2ed0dc090000)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb6b40?}, 0x2ed0dbf00ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb6b40?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe82d0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52136: runtime error: index out of range [40] with length 16
+goroutine 119 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc90330?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbc84318}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbc84318?}, 0x1035f9a08?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbc84318}, 0x2ed0dc006640)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbd34690}, 0x2ed0dc006640)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbd34690?}, 0x2ed0dbffcae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbd34690?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8360, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52137: runtime error: index out of range [36] with length 36
+goroutine 100 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc90348?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc0120d8}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc0120d8?}, 0x103620338?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc0120d8}, 0x2ed0dbdf77c0)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc0181e0}, 0x2ed0dbdf77c0)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc0181e0?}, 0x2ed0dbffaae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc0181e0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbde6d80, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52139: runtime error: index out of range [40] with length 16
+goroutine 123 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dc00e0c0?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb03d8}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb03d8?}, 0x10368e8d8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb03d8}, 0x2ed0dc006b40)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb6c30}, 0x2ed0dc006b40)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb6c30?}, 0x2ed0dbe17ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb6c30?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe85a0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52138: runtime error: index out of range [41] with length 16
+goroutine 122 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbeac228?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc012108}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc012108?}, 0x10366d980?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc012108}, 0x2ed0dc006a00)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc0182d0}, 0x2ed0dc006a00)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc0182d0?}, 0x2ed0dbffaae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc0182d0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8510, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52141: runtime error: index out of range [47] with length 16
+goroutine 89 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dc00e0f0?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc012150}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc012150?}, 0x1036c6b48?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc012150}, 0x2ed0dc090280)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc0183c0}, 0x2ed0dc090280)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc0183c0?}, 0x2ed0dbf00ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc0183c0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbe9ef30, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52142: runtime error: index out of range [36] with length 36
+goroutine 74 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbeac258?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb0420}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb0420?}, 0x1036cdc90?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb0420}, 0x2ed0dbdf7900)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb6d20}, 0x2ed0dbdf7900)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb6d20?}, 0x2ed0dbe14ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb6d20?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd24c60, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52145: runtime error: index out of range [36] with length 36
+goroutine 77 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbeac2a0?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb0468}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb0468?}, 0x10371ce30?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb0468}, 0x2ed0dbc75a40)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb6e10}, 0x2ed0dbc75a40)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb6e10?}, 0x2ed0dbe15ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb6e10?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd24e10, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52143: runtime error: index out of range [56] with length 16
+goroutine 75 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbdb0288?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce498}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce498?}, 0x1037354d0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce498}, 0x2ed0dbc75900)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdecc30}, 0x2ed0dbc75900)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdecc30?}, 0x2ed0dbffcae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdecc30?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd24cf0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52148: runtime error: index out of range [44] with length 16
+goroutine 129 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbdb0000?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb04e0}, 0x2ed0dbe00808?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb04e0?}, 0x18?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x100257cb0?, {0x100756978, 0x2ed0dbeb04e0}, 0x2ed0dc0072c0)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb6ff0}, 0x2ed0dc0072c0)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbea6a70?, {0x100756a08?, 0x2ed0dbeb6ff0?}, 0x2ed0dbffaae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x2ed0dbfe8a00?}, {0x100756a08?, 0x2ed0dbeb6ff0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8990, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52146: runtime error: index out of range [61] with length 16
+goroutine 127 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc901f8?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb0498}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb0498?}, 0x1037331a8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb0498}, 0x2ed0dc007180)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb6f00}, 0x2ed0dc007180)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb6f00?}, 0x2ed0dbffdae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb6f00?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8870, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52147: runtime error: index out of range [36] with length 36
+goroutine 128 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc90210?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc012060}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc012060?}, 0x1037bd880?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc012060}, 0x2ed0dbc75b80)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc0180f0}, 0x2ed0dbc75b80)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc0180f0?}, 0x2ed0dbff6ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc0180f0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8900, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52151: runtime error: index out of range [27] with length 16
+goroutine 93 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc90228?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc0120c0}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc0120c0?}, 0x1037df390?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc0120c0}, 0x2ed0dc006000)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc0182d0}, 0x2ed0dc006000)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc0182d0?}, 0x2ed0dbffcae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc0182d0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8000, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52153: runtime error: index out of range [60] with length 16
+goroutine 95 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc90258?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc012090}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc012090?}, 0x1037cf1c0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc012090}, 0x2ed0dbe28500)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc0181e0}, 0x2ed0dbe28500)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc0181e0?}, 0x2ed0dbf05ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc0181e0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe81b0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52152: runtime error: index out of range [57] with length 16
+goroutine 94 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc90270?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc012018}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc012018?}, 0x10379f808?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc012018}, 0x2ed0dbe28000)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc018000}, 0x2ed0dbe28000)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc018000?}, 0x2ed0dbffaae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc018000?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8090, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52140: runtime error: index out of range [24] with length 16
+goroutine 124 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc90288?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc012198}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc012198?}, 0x1036eb538?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc012198}, 0x2ed0dc006c80)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc0184b0}, 0x2ed0dc006c80)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc0184b0?}, 0x2ed0dbffdae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc0184b0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8630, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52156: runtime error: index out of range [40] with length 16
+goroutine 151 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dc00e078?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce2d0}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce2d0?}, 0x103854690?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce2d0}, 0x2ed0dbe28c80)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec0f0}, 0x2ed0dbe28c80)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec0f0?}, 0x2ed0dbffcae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec0f0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbde6240, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52144: runtime error: index out of range [40] with length 16
+goroutine 76 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dc00e0a8?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc0121c8}, 0x2ed0dbc8b808?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc0121c8?}, 0x18?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x100257cb0?, {0x100756978, 0x2ed0dc0121c8}, 0x2ed0dc090640)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc0185a0}, 0x2ed0dc090640)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x2ed0dc002220?, {0x100756a08?, 0x2ed0dc0185a0?}, 0x2ed0dbe14ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x2ed0dbd24df0?}, {0x100756a08?, 0x2ed0dc0185a0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd24d80, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52149: runtime error: index out of range [26] with length 16
+goroutine 130 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbeac030?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc0120f0}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc0120f0?}, 0x1037fe3a8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc0120f0}, 0x2ed0dbe28b40)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc0183c0}, 0x2ed0dbe28b40)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc0183c0?}, 0x2ed0dbf00ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc0183c0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8a20, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52157: runtime error: index out of range [47] with length 16
+goroutine 152 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc902e8?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc012138}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc012138?}, 0x103877cf8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc012138}, 0x2ed0dc006140)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc018690}, 0x2ed0dc006140)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc018690?}, 0x2ed0dbff7ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc018690?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbde62d0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52159: runtime error: index out of range [41] with length 16
+goroutine 179 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dc00e0c0?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce2a0}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce2a0?}, 0x103851b98?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce2a0}, 0x2ed0dbe28f00)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec000}, 0x2ed0dbe28f00)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec000?}, 0x2ed0dbf00ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec000?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe86c0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52154: runtime error: index out of range [27] with length 16
+goroutine 96 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc90318?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce348}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce348?}, 0x1038bf968?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce348}, 0x2ed0dbe283c0)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec2d0}, 0x2ed0dbe283c0)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec2d0?}, 0x2ed0dbffaae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec2d0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8240, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52158: runtime error: index out of range [28] with length 16
+goroutine 178 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc90348?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce300}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce300?}, 0x103876d58?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce300}, 0x2ed0dc090140)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec1e0}, 0x2ed0dc090140)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec1e0?}, 0x2ed0dbffdae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec1e0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe85a0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52161: runtime error: index out of range [36] with length 36
+goroutine 193 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc90360?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce390}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce390?}, 0x10392d738?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce390}, 0x2ed0dc090280)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec3c0}, 0x2ed0dc090280)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec3c0?}, 0x2ed0dbf01ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec3c0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbe9e090, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52155: runtime error: index out of range [36] with length 36
+goroutine 177 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc90378?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc0121f8}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc0121f8?}, 0x1038dd5f8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc0121f8}, 0x2ed0dbe288c0)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc018780}, 0x2ed0dbe288c0)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc018780?}, 0x2ed0dbf05ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc018780?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe83f0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52160: runtime error: index out of range [41] with length 16
+goroutine 157 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbeac078?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe50090}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe50090?}, 0x10399d448?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe50090}, 0x2ed0dc006280)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb60f0}, 0x2ed0dc006280)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb60f0?}, 0x2ed0dbff8ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb60f0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbde6360, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52150: runtime error: index out of range [36] with length 36
+goroutine 161 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbdb0120?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe50030}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe50030?}, 0x1037e0ee8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe50030}, 0x2ed0dc090a00)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb6000}, 0x2ed0dc090a00)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb6000?}, 0x2ed0dbffdae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb6000?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dc196000, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52162: runtime error: index out of range [57] with length 16
+goroutine 160 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dc00e0f0?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce408}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce408?}, 0x103998a10?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce408}, 0x2ed0dc0068c0)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec4b0}, 0x2ed0dc0068c0)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec4b0?}, 0x2ed0dbffdae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec4b0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbde6750, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52173: runtime error: index out of range [44] with length 16
+goroutine 132 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc903d8?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe50108}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe50108?}, 0x1039c58d0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe50108}, 0x2ed0dbdf6140)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb62d0}, 0x2ed0dbdf6140)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb62d0?}, 0x2ed0dbd35ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb62d0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dc196090, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52164: runtime error: index out of range [57] with length 16
+goroutine 183 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dc00e150?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe500d8}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe500d8?}, 0x1039b8db0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe500d8}, 0x2ed0dbe292c0)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb61e0}, 0x2ed0dbe292c0)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb61e0?}, 0x2ed0dbf05ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb61e0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8bd0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52169: runtime error: index out of range [44] with length 16
+goroutine 187 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dc00e180?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe50168}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe50168?}, 0x1039e6440?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe50168}, 0x2ed0dc090780)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb64b0}, 0x2ed0dc090780)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb64b0?}, 0x2ed0dbf03ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb64b0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8e10, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52170: runtime error: index out of range [60] with length 16
+goroutine 188 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc903f0?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce450}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce450?}, 0x10399b8f0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce450}, 0x2ed0dc090c80)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec5a0}, 0x2ed0dc090c80)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec5a0?}, 0x2ed0dbf04ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec5a0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8ea0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52166: runtime error: index out of range [59] with length 16
+goroutine 185 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc90408?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe50138}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe50138?}, 0x1039db478?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe50138}, 0x2ed0dbe29540)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb63c0}, 0x2ed0dbe29540)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb63c0?}, 0x2ed0dbff6ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb63c0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8cf0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52172: runtime error: index out of range [36] with length 36
+goroutine 195 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc90438?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce540}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce540?}, 0x103a4b958?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce540}, 0x2ed0dc090dc0)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec780}, 0x2ed0dc090dc0)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec780?}, 0x2ed0dbe12ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec780?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbe9e120, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52165: runtime error: index out of range [36] with length 36
+goroutine 184 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dc00e198?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce4c8}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce4c8?}, 0x1039eb260?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce4c8}, 0x2ed0dbe29400)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec690}, 0x2ed0dbe29400)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec690?}, 0x2ed0dbff7ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec690?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8c60, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52167: runtime error: index out of range [28] with length 16
+goroutine 212 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc90450?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc012288}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc012288?}, 0x103a17568?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc012288}, 0x2ed0dc006f00)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc018960}, 0x2ed0dc006f00)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc018960?}, 0x2ed0dbf01ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc018960?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbde6990, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52174: runtime error: index out of range [36] with length 36
+goroutine 197 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbdb0138?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc012240}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc012240?}, 0x1039e8f38?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc012240}, 0x2ed0dc0912c0)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc018870}, 0x2ed0dc0912c0)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc018870?}, 0x2ed0dbff8ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc018870?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbe9e2d0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52176: runtime error: index out of range [57] with length 16
+goroutine 199 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbeac120?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc0122e8}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc0122e8?}, 0x103a63058?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc0122e8}, 0x2ed0dc091180)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc018a50}, 0x2ed0dc091180)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc018a50?}, 0x2ed0dbf05ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc018a50?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbe9e480, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52177: runtime error: index out of range [36] with length 36
+goroutine 216 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dc00e1f8?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe50198}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe50198?}, 0x103a5e238?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe50198}, 0x2ed0dc0077c0)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb65a0}, 0x2ed0dc0077c0)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb65a0?}, 0x2ed0dbf04ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb65a0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbde6b40, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52168: runtime error: index out of range [31] with length 16
+goroutine 186 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbdb0150?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc012318}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc012318?}, 0x103a6e408?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc012318}, 0x2ed0dc090500)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc018b40}, 0x2ed0dc090500)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc018b40?}, 0x2ed0dbf02ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc018b40?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8d80, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52178: runtime error: index out of range [36] with length 36
+goroutine 221 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dc00e228?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc012390}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc012390?}, 0x103ae1bb0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc012390}, 0x2ed0dc007b80)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc018d20}, 0x2ed0dc007b80)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc018d20?}, 0x2ed0dbe12ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc018d20?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbde6cf0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52175: runtime error: index out of range [59] with length 16
+goroutine 198 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbdb0168?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe501c8}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe501c8?}, 0x103a6e020?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe501c8}, 0x2ed0dbdf63c0)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb6690}, 0x2ed0dbdf63c0)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb6690?}, 0x2ed0dbe14ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb6690?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbe9e3f0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52179: runtime error: index out of range [59] with length 16
+goroutine 226 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbdb0180?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc012348}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc012348?}, 0x103a8b8c8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc012348}, 0x2ed0dbe29a40)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc018c30}, 0x2ed0dbe29a40)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc018c30?}, 0x2ed0dbf01ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc018c30?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe90e0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52163: runtime error: index out of range [61] with length 16
+goroutine 210 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbe10000?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc0123d8}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc0123d8?}, 0x103b04a48?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc0123d8}, 0x2ed0dc006a00)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc018e10}, 0x2ed0dc006a00)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc018e10?}, 0x2ed0dbffcae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc018e10?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbde67e0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52188: runtime error: index out of range [36] with length 36
+goroutine 224 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbe10048?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb0168}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb0168?}, 0x103b7d7e0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb0168}, 0x2ed0dbeaa000)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbd78000}, 0x2ed0dbeaa000)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbd78000?}, 0x2ed0dbf06ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbd78000?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbde6f30, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52181: runtime error: index out of range [46] with length 16
+goroutine 227 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbee4000?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe50210}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe50210?}, 0x103b07158?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe50210}, 0x2ed0dbc743c0)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb6780}, 0x2ed0dbc743c0)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb6780?}, 0x2ed0dbf01ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb6780?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe9320, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52182: runtime error: index out of range [57] with length 16
+goroutine 228 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbe10000?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb0198}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb0198?}, 0x103b80aa8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb0198}, 0x2ed0dbc74500)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbd780f0}, 0x2ed0dbc74500)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbd780f0?}, 0x2ed0dbf02ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbd780f0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe93b0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52171: runtime error: index out of range [59] with length 16
+goroutine 189 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbdb0000?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce5a0}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce5a0?}, 0x103a80130?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce5a0}, 0x2ed0dbe29680)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec870}, 0x2ed0dbe29680)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec870?}, 0x2ed0dbf06ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec870?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8f30, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52184: runtime error: index out of range [63] with length 16
+goroutine 202 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbdb0138?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe50240}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe50240?}, 0x103b81a48?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe50240}, 0x2ed0dc091a40)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb6870}, 0x2ed0dc091a40)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb6870?}, 0x2ed0dbe14ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb6870?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbe9e870, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52198: runtime error: index out of range [36] with length 36
+goroutine 244 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbdb0168?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb00f0}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb00f0?}, 0x103c54560?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb00f0}, 0x2ed0dc24c140)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbd781e0}, 0x2ed0dc24c140)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbd781e0?}, 0x2ed0dbe19ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbd781e0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd24480, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52202: runtime error: index out of range [42] with length 16
+goroutine 142 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbee4060?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe50090}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe50090?}, 0x103c7a6c0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe50090}, 0x2ed0dbdc2780)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec1e0}, 0x2ed0dbdc2780)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec1e0?}, 0x2ed0dbe18ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec1e0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe8090, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52189: runtime error: index out of range [60] with length 16
+goroutine 24 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbe10078?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbc841b0}, 0x2ed0dbd81808?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbc841b0?}, 0x18?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x100257cb0?, {0x100756978, 0x2ed0dbc841b0}, 0x2ed0dbdc2000)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbe2e000}, 0x2ed0dbdc2000)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdc0060?, {0x100756a08?, 0x2ed0dbe2e000?}, 0x2ed0dbd31ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x2ed0dbd24100?}, {0x100756a08?, 0x2ed0dbe2e000?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd24090, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52197: runtime error: index out of range [60] with length 16
+goroutine 243 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc902a0?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce1b0}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce1b0?}, 0x103c539a8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce1b0}, 0x2ed0dbc74140)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbe2e0f0}, 0x2ed0dbc74140)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbe2e0f0?}, 0x2ed0dbe18ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbe2e0f0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd243f0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52191: runtime error: index out of range [36] with length 36
+goroutine 140 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbee40a8?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe500f0}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe500f0?}, 0x103c96fc8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe500f0}, 0x2ed0dbdf6b40)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec2d0}, 0x2ed0dbdf6b40)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec2d0?}, 0x2ed0dbf02ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec2d0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dc196360, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52206: runtime error: index out of range [44] with length 16
+goroutine 252 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbee40d8?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb0138}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb0138?}, 0x103cca418?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb0138}, 0x2ed0dbeaadc0)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbd782d0}, 0x2ed0dbeaadc0)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbd782d0?}, 0x2ed0dbe18ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbd782d0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd24ab0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52180: runtime error: index out of range [44] with length 16
+goroutine 134 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbdb01c8?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe50018}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe50018?}, 0x103c76458?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe50018}, 0x2ed0dbdf6500)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec000}, 0x2ed0dbdf6500)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec000?}, 0x2ed0dbe15ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec000?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dc196120, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52186: runtime error: index out of range [36] with length 36
+goroutine 137 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbc902d0?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce240}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce240?}, 0x103c78398?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce240}, 0x2ed0dbdf6640)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbe2e2d0}, 0x2ed0dbdf6640)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbe2e2d0?}, 0x2ed0dbe17ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbe2e2d0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dc1961b0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52185: runtime error: index out of range [47] with length 16
+goroutine 203 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbe100c0?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce270}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce270?}, 0x103caee98?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce270}, 0x2ed0dc091b80)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbe2e3c0}, 0x2ed0dc091b80)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbe2e3c0?}, 0x2ed0dbf04ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbe2e3c0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbe9e900, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52192: runtime error: index out of range [43] with length 16
+goroutine 141 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbf20000?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc012078}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc012078?}, 0x103c7f4e0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc012078}, 0x2ed0dbdf6c80)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb60f0}, 0x2ed0dbdf6c80)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb60f0?}, 0x2ed0dbf06ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb60f0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dc1963f0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52204: runtime error: index out of range [41] with length 16
+goroutine 250 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbee4108?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce2d0}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce2d0?}, 0x103cbe0c8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce2d0}, 0x2ed0dbc74a00)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbe2e5a0}, 0x2ed0dbc74a00)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbe2e5a0?}, 0x2ed0dbf02ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbe2e5a0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd24990, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52196: runtime error: index out of range [59] with length 16
+goroutine 242 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbe100d8?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce210}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce210?}, 0x103c6ef28?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce210}, 0x2ed0dbdc2500)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbe2e1e0}, 0x2ed0dbdc2500)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbe2e1e0?}, 0x2ed0dbe14ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbe2e1e0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd24120, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52187: runtime error: index out of range [62] with length 16
+goroutine 223 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbf20030?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbdce2a0}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbdce2a0?}, 0x103cb5810?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbdce2a0}, 0x2ed0dbc74b40)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbe2e4b0}, 0x2ed0dbc74b40)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbe2e4b0?}, 0x2ed0dbffcae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbe2e4b0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbde6ea0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52190: runtime error: index out of range [60] with length 16
+goroutine 25 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbf20048?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe50048}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe50048?}, 0x103c78780?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe50048}, 0x2ed0dbdc2140)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec0f0}, 0x2ed0dbdc2140)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec0f0?}, 0x2ed0dbd32ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec0f0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd241b0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52195: runtime error: index out of range [41] with length 16
+goroutine 233 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbf20060?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe50138}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe50138?}, 0x103cc7920?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe50138}, 0x2ed0dbc74c80)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec3c0}, 0x2ed0dbc74c80)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec3c0?}, 0x2ed0dbe12ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec3c0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe9680, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52193: runtime error: index out of range [41] with length 16
+goroutine 231 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbdb01f8?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc012030}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc012030?}, 0x103c7d1b8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc012030}, 0x2ed0dbeaa140)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb6000}, 0x2ed0dbeaa140)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb6000?}, 0x2ed0dbff7ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb6000?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe9560, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52200: runtime error: index out of range [29] with length 16
+goroutine 246 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbf20078?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbc84120}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbc84120?}, 0x103cd7af0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbc84120}, 0x2ed0dbeaa3c0)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbd5c000}, 0x2ed0dbeaa3c0)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbd5c000?}, 0x2ed0dbffdae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbd5c000?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd245a0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52205: runtime error: index out of range [36] with length 36
+goroutine 251 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbe100f0?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe50180}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe50180?}, 0x103cdbd58?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe50180}, 0x2ed0dbeaaf00)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec4b0}, 0x2ed0dbeaaf00)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec4b0?}, 0x2ed0dbe19ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec4b0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd24a20, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52194: runtime error: index out of range [36] with length 36
+goroutine 232 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbe10108?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc0120c0}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc0120c0?}, 0x103ca1ba8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc0120c0}, 0x2ed0dbdf6dc0)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb61e0}, 0x2ed0dbdf6dc0)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb61e0?}, 0x2ed0dbf1fae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb61e0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbfe95f0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52201: runtime error: index out of range [36] with length 36
+goroutine 247 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbdb0240?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:346 +0x54
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb01e0}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb01e0?}, 0x103d61610?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb01e0}, 0x2ed0dbeaa500)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbd783c0}, 0x2ed0dbeaa500)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbd783c0?}, 0x2ed0dbffaae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbd783c0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd24630, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52203: runtime error: index out of range [59] with length 16
+goroutine 248 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbe10120?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbe501c8}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbe501c8?}, 0x103d9ded0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbe501c8}, 0x2ed0dbeaa640)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbdec5a0}, 0x2ed0dbeaa640)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbdec5a0?}, 0x2ed0dbff9ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbdec5a0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd246c0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52183: runtime error: index out of range [25] with length 16
+goroutine 201 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbe10138?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dc0120f0}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dc0120f0?}, 0x103cc7d08?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dc0120f0}, 0x2ed0dbc74780)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbeb62d0}, 0x2ed0dbc74780)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbeb62d0?}, 0x2ed0dbf05ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbeb62d0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbe9e7e0, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52207: runtime error: index out of range [43] with length 16
+goroutine 274 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbe10150?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb0258}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb0258?}, 0x103dd2e78?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb0258}, 0x2ed0dbe28140)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbd785a0}, 0x2ed0dbe28140)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbd785a0?}, 0x2ed0dbd33ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbd785a0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dc018000, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52208: runtime error: index out of range [27] with length 16
+goroutine 293 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbf200a8?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbfde0a8}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbfde0a8?}, 0x103e1f908?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbfde0a8}, 0x2ed0dbc74f00)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dc07a000}, 0x2ed0dbc74f00)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc07a000?}, 0x2ed0dbf1dae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc07a000?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbde6630, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 http: panic serving 127.0.0.1:52199: runtime error: index out of range [62] with length 16
+goroutine 245 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac
+panic({0x100741870?, 0x2ed0dbe10168?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+main.generateUUID()
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58
+main.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb0228}, 0x2540be400?)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc
+net/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb0228?}, 0x103db2308?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb0228}, 0x2ed0dbdf6140)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194
+main.loggingMiddleware.func1({0x100756a08, 0x2ed0dbd784b0}, 0x2ed0dbdf6140)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac
+net/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbd784b0?}, 0x2ed0dbe13ae0?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38
+net/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbd784b0?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0
+net/http.(*conn).serve(0x2ed0dbd24510, {0x100756dd0, 0x2ed0dbd1e240})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0
+created by net/http.(*Server).Serve in goroutine 5
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8
+2026/11/24 10:26:17 Shutting down server...
+2026/11/24 10:26:17 Server exited

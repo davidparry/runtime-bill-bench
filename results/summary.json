@@ -1,0 +1,575 @@
+{
+  "model": "qwen3.6:35b-a3b-coding",
+  "languages": [
+    {
+      "lang": "java",
+      "runs": 10,
+      "passed": 2,
+      "rounds": [
+        3,
+        5
+      ],
+      "first_try": 0,
+      "measured_builds": 2,
+      "salvaged_builds": 0,
+      "hand_fixed_builds": [],
+      "median_input_tokens": 34061.5,
+      "median_output_tokens": 7503.0,
+      "all_input_tokens": 454879,
+      "all_output_tokens": 88332,
+      "output_tokens_per_working_service": 44166,
+      "token_dollars_per_working_service": 1.7931,
+      "loc_source": 328.5,
+      "loc_test": 165.5,
+      "loc_total": 539.0,
+      "runtime_deps": 34.0,
+      "vulns_per_build": 84.0,
+      "builds_with_vulns": 2,
+      "distinct_vulns": 86,
+      "distinct_vulns_by_severity": {
+        "CRITICAL": 9,
+        "HIGH": 31,
+        "LOW": 14,
+        "MEDIUM": 32
+      },
+      "vulns_with_fix": 86,
+      "pins": [
+        {
+          "framework": "spring-boot",
+          "pinned": "3.3.5",
+          "pinned_released": "2024-10-24",
+          "current": "4.2.0",
+          "current_released": "2026-11-19",
+          "java_version": "21",
+          "resolved": {
+            "spring-boot": "3.3.5",
+            "spring-web": "6.1.14",
+            "tomcat-embed-core": "10.1.31",
+            "jackson-databind": "2.17.2"
+          }
+        },
+        {
+          "framework": "spring-boot",
+          "pinned": "3.3.4",
+          "pinned_released": "2024-09-19",
+          "current": "4.2.0",
+          "current_released": "2026-11-19",
+          "java_version": "21",
+          "resolved": {
+            "spring-boot": "3.3.4",
+            "spring-web": "6.1.13",
+            "tomcat-embed-core": "10.1.30",
+            "jackson-databind": "2.17.2"
+          }
+        }
+      ],
+      "startup_ms": 789.65,
+      "idle_rss_mb": 214.85,
+      "peak_rss_mb": 501.1,
+      "cpu_seconds_per_100k": 12.838,
+      "rps": 77509.3,
+      "p99_ms": 3.161,
+      "cpu_dollars_per_million": 0.00144
+    },
+    {
+      "lang": "go",
+      "runs": 10,
+      "passed": 7,
+      "rounds": [
+        3,
+        5,
+        4,
+        2,
+        5,
+        3,
+        4
+      ],
+      "first_try": 0,
+      "measured_builds": 7,
+      "salvaged_builds": 0,
+      "hand_fixed_builds": [],
+      "median_input_tokens": 28816,
+      "median_output_tokens": 13500,
+      "all_input_tokens": 334098,
+      "all_output_tokens": 142262,
+      "output_tokens_per_working_service": 20323,
+      "token_dollars_per_working_service": 0.5974,
+      "loc_source": 286,
+      "loc_test": 216,
+      "loc_total": 532,
+      "runtime_deps": 0,
+      "vulns_per_build": 0,
+      "builds_with_vulns": 0,
+      "distinct_vulns": 0,
+      "distinct_vulns_by_severity": {},
+      "vulns_with_fix": 0,
+      "pins": [
+        {
+          "framework": "standard library",
+          "pinned": "1.27.0",
+          "toolchain": "go1.27.4"
+        },
+        {
+          "framework": "standard library",
+          "pinned": "1.23",
+          "toolchain": "go1.27.4"
+        },
+        {
+          "framework": "standard library",
+          "pinned": "1.21",
+          "toolchain": "go1.27.4"
+        },
+        {
+          "framework": "standard library",
+          "pinned": "1.21",
+          "toolchain": "go1.27.4"
+        },
+        {
+          "framework": "standard library",
+          "pinned": "1.27",
+          "toolchain": "go1.27.4"
+        },
+        {
+          "framework": "standard library",
+          "pinned": "1.27",
+          "toolchain": "go1.27.4"
+        },
+        {
+          "framework": "standard library",
+          "pinned": "1.27.0",
+          "toolchain": "go1.27.4"
+        }
+      ],
+      "startup_ms": 29.4,
+      "idle_rss_mb": 11.4,
+      "peak_rss_mb": 82.1,
+      "cpu_seconds_per_100k": 5.794,
+      "rps": 133938.9,
+      "p99_ms": 1.085,
+      "cpu_dollars_per_million": 0.00065
+    },
+    {
+      "lang": "rust",
+      "runs": 10,
+      "passed": 0,
+      "rounds": [],
+      "first_try": 0,
+      "measured_builds": 1,
+      "salvaged_builds": 0,
+      "hand_fixed_builds": [
+        {
+          "change": "Added serde's camelCase rename to the request and item structs, changed the route to axum 0.7's /orders/:id syntax, set the 201 status the handler already logged, and logged GET /health.",
+          "changed_lines": 6,
+          "seed": 3
+        }
+      ],
+      "median_input_tokens": null,
+      "median_output_tokens": null,
+      "all_input_tokens": 581951,
+      "all_output_tokens": 161225,
+      "output_tokens_per_working_service": null,
+      "token_dollars_per_working_service": null,
+      "loc_source": 202,
+      "loc_test": 116,
+      "loc_total": 332,
+      "runtime_deps": 63,
+      "vulns_per_build": 0,
+      "builds_with_vulns": 0,
+      "distinct_vulns": 0,
+      "distinct_vulns_by_severity": {},
+      "vulns_with_fix": 0,
+      "pins": [
+        {
+          "framework": "axum",
+          "pinned": "0.7",
+          "crates": {
+            "axum": {
+              "requirement": "0.7",
+              "resolved": "0.7.9",
+              "resolved_released": "2024-11-16",
+              "current": "0.8.9"
+            },
+            "tokio": {
+              "requirement": "1",
+              "resolved": "1.54.1",
+              "resolved_released": "2026-10-21",
+              "current": "1.54.1"
+            },
+            "serde": {
+              "requirement": "1",
+              "resolved": "1.0.229",
+              "resolved_released": "2026-07-18",
+              "current": "1.0.229"
+            },
+            "serde_json": {
+              "requirement": "1",
+              "resolved": "1.0.154",
+              "resolved_released": "2026-10-11",
+              "current": "1.0.154"
+            },
+            "uuid": {
+              "requirement": "1",
+              "resolved": "1.29.3",
+              "resolved_released": "2026-11-17",
+              "current": "1.29.3"
+            }
+          }
+        }
+      ],
+      "startup_ms": 32.6,
+      "idle_rss_mb": 6.8,
+      "peak_rss_mb": 45.6,
+      "cpu_seconds_per_100k": 2.85,
+      "rps": 120247.2,
+      "p99_ms": 0.622,
+      "cpu_dollars_per_million": 0.00032
+    },
+    {
+      "lang": "python",
+      "runs": 10,
+      "passed": 7,
+      "rounds": [
+        4,
+        4,
+        4,
+        2,
+        3,
+        1,
+        3
+      ],
+      "first_try": 1,
+      "measured_builds": 7,
+      "salvaged_builds": 0,
+      "hand_fixed_builds": [],
+      "median_input_tokens": 13358,
+      "median_output_tokens": 6728,
+      "all_input_tokens": 314356,
+      "all_output_tokens": 96596,
+      "output_tokens_per_working_service": 13799,
+      "token_dollars_per_working_service": 0.4556,
+      "loc_source": 156,
+      "loc_test": 121,
+      "loc_total": 271,
+      "runtime_deps": 14,
+      "vulns_per_build": 0,
+      "builds_with_vulns": 0,
+      "distinct_vulns": 0,
+      "distinct_vulns_by_severity": {},
+      "vulns_with_fix": 0,
+      "pins": [
+        {
+          "framework": "fastapi",
+          "pinned": ">=0.115.0",
+          "packages": {
+            "fastapi": {
+              "requirement": ">=0.115.0",
+              "resolved": "0.165.0",
+              "resolved_released": "2026-11-18",
+              "current": "0.165.0",
+              "current_released": "2026-11-18"
+            },
+            "uvicorn": {
+              "requirement": ">=0.30.0",
+              "resolved": "0.54.0",
+              "resolved_released": "2026-09-25",
+              "current": "0.54.0",
+              "current_released": "2026-09-25"
+            },
+            "pydantic": {
+              "requirement": ">=2.9.0",
+              "resolved": "2.14.4",
+              "resolved_released": "2026-11-19",
+              "current": "2.14.4",
+              "current_released": "2026-11-19"
+            },
+            "pydantic-core": {
+              "requirement": null,
+              "resolved": "2.50.5",
+              "resolved_released": "2026-11-19",
+              "current": "2.50.5",
+              "current_released": "2026-11-19"
+            },
+            "starlette": {
+              "requirement": null,
+              "resolved": "1.10.0",
+              "resolved_released": "2026-10-24",
+              "current": "1.10.0",
+              "current_released": "2026-10-24"
+            }
+          }
+        },
+        {
+          "framework": "fastapi",
+          "pinned": ">=0.115.0",
+          "packages": {
+            "fastapi": {
+              "requirement": ">=0.115.0",
+              "resolved": "0.165.0",
+              "resolved_released": "2026-11-18",
+              "current": "0.165.0",
+              "current_released": "2026-11-18"
+            },
+            "uvicorn": {
+              "requirement": ">=0.30.0",
+              "resolved": "0.54.0",
+              "resolved_released": "2026-09-25",
+              "current": "0.54.0",
+              "current_released": "2026-09-25"
+            },
+            "pydantic": {
+              "requirement": ">=2.9.0",
+              "resolved": "2.14.4",
+              "resolved_released": "2026-11-19",
+              "current": "2.14.4",
+              "current_released": "2026-11-19"
+            },
+            "pydantic-core": {
+              "requirement": null,
+              "resolved": "2.50.5",
+              "resolved_released": "2026-11-19",
+              "current": "2.50.5",
+              "current_released": "2026-11-19"
+            },
+            "starlette": {
+              "requirement": null,
+              "resolved": "1.10.0",
+              "resolved_released": "2026-10-24",
+              "current": "1.10.0",
+              "current_released": "2026-10-24"
+            }
+          }
+        },
+        {
+          "framework": "fastapi",
+          "pinned": ">=0.104.0",
+          "packages": {
+            "fastapi": {
+              "requirement": ">=0.104.0",
+              "resolved": "0.165.0",
+              "resolved_released": "2026-11-18",
+              "current": "0.165.0",
+              "current_released": "2026-11-18"
+            },
+            "uvicorn": {
+              "requirement": ">=0.24.0",
+              "resolved": "0.54.0",
+              "resolved_released": "2026-09-25",
+              "current": "0.54.0",
+              "current_released": "2026-09-25"
+            },
+            "pydantic": {
+              "requirement": ">=2.5.0",
+              "resolved": "2.14.4",
+              "resolved_released": "2026-11-19",
+              "current": "2.14.4",
+              "current_released": "2026-11-19"
+            },
+            "pydantic-core": {
+              "requirement": null,
+              "resolved": "2.50.5",
+              "resolved_released": "2026-11-19",
+              "current": "2.50.5",
+              "current_released": "2026-11-19"
+            },
+            "starlette": {
+              "requirement": null,
+              "resolved": "1.10.0",
+              "resolved_released": "2026-10-24",
+              "current": "1.10.0",
+              "current_released": "2026-10-24"
+            }
+          }
+        },
+        {
+          "framework": "fastapi",
+          "pinned": ">=0.115.0",
+          "packages": {
+            "fastapi": {
+              "requirement": ">=0.115.0",
+              "resolved": "0.165.0",
+              "resolved_released": "2026-11-18",
+              "current": "0.165.0",
+              "current_released": "2026-11-18"
+            },
+            "uvicorn": {
+              "requirement": ">=0.30.0",
+              "resolved": "0.54.0",
+              "resolved_released": "2026-09-25",
+              "current": "0.54.0",
+              "current_released": "2026-09-25"
+            },
+            "pydantic": {
+              "requirement": ">=2.9.0",
+              "resolved": "2.14.4",
+              "resolved_released": "2026-11-19",
+              "current": "2.14.4",
+              "current_released": "2026-11-19"
+            },
+            "pydantic-core": {
+              "requirement": null,
+              "resolved": "2.50.5",
+              "resolved_released": "2026-11-19",
+              "current": "2.50.5",
+              "current_released": "2026-11-19"
+            },
+            "starlette": {
+              "requirement": null,
+              "resolved": "1.10.0",
+              "resolved_released": "2026-10-24",
+              "current": "1.10.0",
+              "current_released": "2026-10-24"
+            }
+          }
+        },
+        {
+          "framework": "fastapi",
+          "pinned": ">=0.104.0",
+          "packages": {
+            "fastapi": {
+              "requirement": ">=0.104.0",
+              "resolved": "0.165.0",
+              "resolved_released": "2026-11-18",
+              "current": "0.165.0",
+              "current_released": "2026-11-18"
+            },
+            "uvicorn": {
+              "requirement": ">=0.24.0",
+              "resolved": "0.54.0",
+              "resolved_released": "2026-09-25",
+              "current": "0.54.0",
+              "current_released": "2026-09-25"
+            },
+            "pydantic": {
+              "requirement": ">=2.5.0",
+              "resolved": "2.14.4",
+              "resolved_released": "2026-11-19",
+              "current": "2.14.4",
+              "current_released": "2026-11-19"
+            },
+            "pydantic-core": {
+              "requirement": null,
+              "resolved": "2.50.5",
+              "resolved_released": "2026-11-19",
+              "current": "2.50.5",
+              "current_released": "2026-11-19"
+            },
+            "starlette": {
+              "requirement": null,
+              "resolved": "1.10.0",
+              "resolved_released": "2026-10-24",
+              "current": "1.10.0",
+              "current_released": "2026-10-24"
+            }
+          }
+        },
+        {
+          "framework": "fastapi",
+          "pinned": ">=0.115.0,<1.0.0",
+          "packages": {
+            "fastapi": {
+              "requirement": ">=0.115.0,<1.0.0",
+              "resolved": "0.165.0",
+              "resolved_released": "2026-11-18",
+              "current": "0.165.0",
+              "current_released": "2026-11-18"
+            },
+            "uvicorn": {
+              "requirement": ">=0.30.0,<1.0.0",
+              "resolved": "0.54.0",
+              "resolved_released": "2026-09-25",
+              "current": "0.54.0",
+              "current_released": "2026-09-25"
+            },
+            "pydantic": {
+              "requirement": ">=2.9.0,<3.0.0",
+              "resolved": "2.14.4",
+              "resolved_released": "2026-11-19",
+              "current": "2.14.4",
+              "current_released": "2026-11-19"
+            },
+            "pydantic-core": {
+              "requirement": null,
+              "resolved": "2.50.5",
+              "resolved_released": "2026-11-19",
+              "current": "2.50.5",
+              "current_released": "2026-11-19"
+            },
+            "starlette": {
+              "requirement": null,
+              "resolved": "1.10.0",
+              "resolved_released": "2026-10-24",
+              "current": "1.10.0",
+              "current_released": "2026-10-24"
+            }
+          }
+        },
+        {
+          "framework": "fastapi",
+          "pinned": ">=0.115.0,<1.0.0",
+          "packages": {
+            "fastapi": {
+              "requirement": ">=0.115.0,<1.0.0",
+              "resolved": "0.165.0",
+              "resolved_released": "2026-11-18",
+              "current": "0.165.0",
+              "current_released": "2026-11-18"
+            },
+            "uvicorn": {
+              "requirement": ">=0.30.0,<1.0.0",
+              "resolved": "0.54.0",
+              "resolved_released": "2026-09-25",
+              "current": "0.54.0",
+              "current_released": "2026-09-25"
+            },
+            "pydantic": {
+              "requirement": ">=2.9.0,<3.0.0",
+              "resolved": "2.14.4",
+              "resolved_released": "2026-11-19",
+              "current": "2.14.4",
+              "current_released": "2026-11-19"
+            },
+            "pydantic-core": {
+              "requirement": null,
+              "resolved": "2.50.5",
+              "resolved_released": "2026-11-19",
+              "current": "2.50.5",
+              "current_released": "2026-11-19"
+            },
+            "starlette": {
+              "requirement": null,
+              "resolved": "1.10.0",
+              "resolved_released": "2026-10-24",
+              "current": "1.10.0",
+              "current_released": "2026-10-24"
+            }
+          }
+        }
+      ],
+      "startup_ms": 332.3,
+      "idle_rss_mb": 923.2,
+      "peak_rss_mb": 1275.7,
+      "cpu_seconds_per_100k": 53.237,
+      "rps": 23918.6,
+      "p99_ms": 6.598,
+      "cpu_dollars_per_million": 0.00599
+    }
+  ],
+  "break_even_vs_python": {
+    "java": {
+      "extra_token_dollars": 1.3375,
+      "cpu_dollars_saved_per_million": 0.00454,
+      "requests_to_break_even": 294432111
+    },
+    "go": {
+      "extra_token_dollars": 0.1418,
+      "cpu_dollars_saved_per_million": 0.00533,
+      "requests_to_break_even": 26580680
+    }
+  },
+  "prices": {
+    "fargate_vcpu_hour": 0.04048,
+    "fargate_gb_hour": 0.004445,
+    "opus_input_per_m": 4.0,
+    "opus_output_per_m": 20.0
+  }
+}

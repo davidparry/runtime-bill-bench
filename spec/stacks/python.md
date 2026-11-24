@@ -1,0 +1,4 @@
+- Python with FastAPI, uvicorn, and pydantic. The harness uses Python 3.14.
+- The ASGI application object is `app` in `main.py` at the project root.
+- Put runtime dependencies in requirements.txt and test-only dependencies in requirements-dev.txt.
+- The harness installs both files, runs `pytest`, then starts the service with `uvicorn main:app --host 0.0.0.0 --port $PORT --no-access-log`.

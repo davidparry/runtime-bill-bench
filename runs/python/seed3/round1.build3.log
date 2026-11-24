@@ -1,0 +1,198 @@
+EEEEEEEEEEEEEEEEEE                                                       [100%]
+==================================== ERRORS ====================================
+_________ ERROR at setup of TestHealthEndpoint.test_health_returns_ok __________
+
+    @pytest.fixture
+    def client():
+>       with httpx.ASGITransport(app=app) as transport:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.ASGITransport' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:17: TypeError
+_________ ERROR at setup of TestCreateOrder.test_create_order_success __________
+
+    @pytest.fixture
+    def client():
+>       with httpx.ASGITransport(app=app) as transport:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.ASGITransport' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:17: TypeError
+_______ ERROR at setup of TestCreateOrder.test_create_order_invalid_json _______
+
+    @pytest.fixture
+    def client():
+>       with httpx.ASGITransport(app=app) as transport:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.ASGITransport' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:17: TypeError
+___ ERROR at setup of TestCreateOrder.test_create_order_missing_customer_id ____
+
+    @pytest.fixture
+    def client():
+>       with httpx.ASGITransport(app=app) as transport:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.ASGITransport' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:17: TypeError
+_______ ERROR at setup of TestCreateOrder.test_create_order_empty_items ________
+
+    @pytest.fixture
+    def client():
+>       with httpx.ASGITransport(app=app) as transport:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.ASGITransport' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:17: TypeError
+____ ERROR at setup of TestCreateOrder.test_create_order_invalid_sku_length ____
+
+    @pytest.fixture
+    def client():
+>       with httpx.ASGITransport(app=app) as transport:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.ASGITransport' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:17: TypeError
+_____ ERROR at setup of TestCreateOrder.test_create_order_invalid_quantity _____
+
+    @pytest.fixture
+    def client():
+>       with httpx.ASGITransport(app=app) as transport:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.ASGITransport' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:17: TypeError
+____ ERROR at setup of TestCreateOrder.test_create_order_invalid_unit_price ____
+
+    @pytest.fixture
+    def client():
+>       with httpx.ASGITransport(app=app) as transport:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.ASGITransport' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:17: TypeError
+______ ERROR at setup of TestCreateOrder.test_create_order_too_many_items ______
+
+    @pytest.fixture
+    def client():
+>       with httpx.ASGITransport(app=app) as transport:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.ASGITransport' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:17: TypeError
+___ ERROR at setup of TestCreateOrder.test_create_order_customer_id_too_long ___
+
+    @pytest.fixture
+    def client():
+>       with httpx.ASGITransport(app=app) as transport:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.ASGITransport' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:17: TypeError
+______ ERROR at setup of TestCreateOrder.test_create_order_sku_too_short _______
+
+    @pytest.fixture
+    def client():
+>       with httpx.ASGITransport(app=app) as transport:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.ASGITransport' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:17: TypeError
+____ ERROR at setup of TestCreateOrder.test_create_order_quantity_too_high _____
+
+    @pytest.fixture
+    def client():
+>       with httpx.ASGITransport(app=app) as transport:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.ASGITransport' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:17: TypeError
+___ ERROR at setup of TestCreateOrder.test_create_order_unit_price_too_high ____
+
+    @pytest.fixture
+    def client():
+>       with httpx.ASGITransport(app=app) as transport:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.ASGITransport' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:17: TypeError
+__ ERROR at setup of TestCreateOrder.test_create_order_ignore_unknown_fields ___
+
+    @pytest.fixture
+    def client():
+>       with httpx.ASGITransport(app=app) as transport:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.ASGITransport' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:17: TypeError
+______ ERROR at setup of TestCreateOrder.test_create_order_multiple_items ______
+
+    @pytest.fixture
+    def client():
+>       with httpx.ASGITransport(app=app) as transport:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.ASGITransport' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:17: TypeError
+____________ ERROR at setup of TestGetOrder.test_get_order_success _____________
+
+    @pytest.fixture
+    def client():
+>       with httpx.ASGITransport(app=app) as transport:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.ASGITransport' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:17: TypeError
+___________ ERROR at setup of TestGetOrder.test_get_order_not_found ____________
+
+    @pytest.fixture
+    def client():
+>       with httpx.ASGITransport(app=app) as transport:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.ASGITransport' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:17: TypeError
+___________ ERROR at setup of TestConcurrency.test_concurrent_orders ___________
+
+    @pytest.fixture
+    def client():
+>       with httpx.ASGITransport(app=app) as transport:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.ASGITransport' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:17: TypeError
+=============================== warnings summary ===============================
+main.py:51
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/main.py:51: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.14/migration/
+    class Item(BaseModel):
+
+main.py:59
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/main.py:59: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.14/migration/
+    class OrderCreateRequest(BaseModel):
+
+main.py:66
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/main.py:66: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.14/migration/
+    class OrderResponse(BaseModel):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+ERROR tests/test_orders.py::TestHealthEndpoint::test_health_returns_ok - Type...
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_success - Type...
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_invalid_json
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_missing_customer_id
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_empty_items - ...
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_invalid_sku_length
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_invalid_quantity
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_invalid_unit_price
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_too_many_items
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_customer_id_too_long
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_sku_too_short
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_quantity_too_high
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_unit_price_too_high
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_ignore_unknown_fields
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_multiple_items
+ERROR tests/test_orders.py::TestGetOrder::test_get_order_success - TypeError:...
+ERROR tests/test_orders.py::TestGetOrder::test_get_order_not_found - TypeErro...
+ERROR tests/test_orders.py::TestConcurrency::test_concurrent_orders - TypeErr...
+3 warnings, 18 errors in 0.73s

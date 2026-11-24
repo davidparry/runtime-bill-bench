@@ -1,0 +1,10 @@
+rust seed1: failed at cargo build --release
+rust seed2: failed at acceptance (None acceptance failures)
+rust seed3: failed at acceptance (7 acceptance failures)
+rust seed4: failed at acceptance (None acceptance failures)
+rust seed5: failed at acceptance (21 acceptance failures)
+rust seed6: failed at cargo build --release
+rust seed7: failed at cargo build --release
+rust seed10: failed at acceptance (20 acceptance failures)
+rust seed8: failed at acceptance (20 acceptance failures)
+rust seed9: failed at acceptance (50 acceptance failures)

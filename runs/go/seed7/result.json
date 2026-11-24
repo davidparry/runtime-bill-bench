@@ -1,0 +1,69 @@
+{
+  "lang": "go",
+  "seed": 7,
+  "model": "qwen3.6:35b-a3b-coding",
+  "passed": true,
+  "rounds": 3,
+  "input_tokens": 20640,
+  "output_tokens": 11315,
+  "wall_seconds": 109.7,
+  "files": [
+    "go.mod",
+    "main.go",
+    "main_test.go"
+  ],
+  "round_records": [
+    {
+      "round": 1,
+      "prompt_eval_count": 733,
+      "eval_count": 8024,
+      "prompt_eval_duration": 491952000,
+      "eval_duration": 64121897000,
+      "load_duration": 5008792,
+      "total_duration": 64658359542,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "go.mod",
+        "main.go",
+        "main_test.go"
+      ],
+      "failed_step": "go test ./...",
+      "failure": "`go test ./...` exited with status 1. The last lines of its output:\n```\n# orders [orders.test]\n./main_test.go:17:12: undefined: time\n./main_test.go:19:32: undefined: time\n./main_test.go:48:12: undefined: time\n./main_test.go:50:3: declared and not used: reqBody\n./main_test.go:50:19: undefined: io\n./main_test.go:53:41: undefined: time\n./main_test.go:65:3: undefined: store\n./main_test.go:66:3: undefined: store\n./main_test.go:67:3: undefined: store\n./main_test.go:77:14: cannot use 1st function result (value of type *CreateOrderRequest) as *http.Request value in multiple assignment\n./main_test.go:77:14: too many errors\nFAIL\torders [build failed]\nFAIL\n```"
+    },
+    {
+      "round": 2,
+      "prompt_eval_count": 9040,
+      "eval_count": 1649,
+      "prompt_eval_duration": 7148432000,
+      "eval_duration": 13054904000,
+      "load_duration": 5193041,
+      "total_duration": 20245329083,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main_test.go"
+      ],
+      "failed_step": "go test ./...",
+      "failure": "`go test ./...` exited with status 1. The last lines of its output:\n```\n# orders [orders.test]\n./main_test.go:4:2: \"bytes\" imported and not used\n./main_test.go:133:2: undefined: store\n./main_test.go:134:2: undefined: store\n./main_test.go:135:2: undefined: store\n./main_test.go:151:18: undefined: store\nFAIL\torders [build failed]\nFAIL\n```"
+    },
+    {
+      "round": 3,
+      "prompt_eval_count": 10867,
+      "eval_count": 1642,
+      "prompt_eval_duration": 8869585000,
+      "eval_duration": 13544675000,
+      "load_duration": 2760417,
+      "total_duration": 22466333250,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main_test.go"
+      ],
+      "startup_seconds": 0.184,
+      "acceptance_failures": 0,
+      "failed_step": null,
+      "failure": null
+    }
+  ]
+}

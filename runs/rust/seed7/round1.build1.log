@@ -1,0 +1,15 @@
+    Updating crates.io index
+error: failed to select a version for `axum`.
+    ... required by package `orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed7/project)`
+versions that meet the requirements `^0.8` are: 0.8.9, 0.8.8, 0.8.7, 0.8.6, 0.8.5, 0.8.4, 0.8.3, 0.8.1, 0.8.0
+
+package `orders` depends on `axum` with feature `test` but `axum` does not have that feature.
+help: there is a feature `ws` with a similar name
+
+
+all possible versions conflict with previously selected packages
+
+  previously selected package `axum v0.8.0`
+    ... which satisfies dependency `axum = "^0.8"` of package `orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed7/project)`
+
+failed to select a version for `axum` which could resolve this conflict

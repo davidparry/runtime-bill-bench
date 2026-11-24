@@ -1,0 +1,310 @@
+    Updating crates.io index
+     Locking 182 packages to latest compatible versions
+      Adding axum v0.7.9 (available: v0.8.9)
+      Adding reqwest v0.11.27 (available: v0.13.5)
+      Adding tower-http v0.5.2 (available: v0.7.1)
+ Downloading crates ...
+  Downloaded mime v0.3.18
+  Downloaded form_urlencoded v1.2.3
+  Downloaded axum-core v0.4.5
+  Downloaded pin-project-lite v0.2.18
+  Downloaded matchit v0.7.3
+  Downloaded bytes v1.12.2
+  Downloaded smallvec v1.16.6
+  Downloaded uuid v1.29.3
+  Downloaded axum v0.7.9
+  Downloaded tower-http v0.5.2
+  Downloaded hyper v1.13.0
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.27
+   Compiling libc v0.2.191
+   Compiling quote v1.0.47
+   Compiling itoa v1.0.19
+   Compiling pin-project-lite v0.2.18
+   Compiling bytes v1.12.2
+   Compiling cfg-if v1.0.5
+   Compiling serde_core v1.0.229
+   Compiling futures-core v0.3.34
+   Compiling parking_lot_core v0.9.12
+   Compiling smallvec v1.16.6
+   Compiling scopeguard v1.2.0
+   Compiling once_cell v1.21.4
+   Compiling log v0.4.35
+   Compiling httparse v1.10.1
+   Compiling serde v1.0.229
+   Compiling tower-service v0.3.3
+   Compiling lock_api v0.4.14
+   Compiling zmij v1.0.23
+   Compiling autocfg v1.5.1
+   Compiling tracing-core v0.1.36
+   Compiling tower-layer v0.3.3
+   Compiling futures-task v0.3.34
+   Compiling rustversion v1.0.23
+   Compiling slab v0.4.12
+   Compiling atomic-waker v1.1.2
+   Compiling httpdate v1.0.3
+   Compiling futures-util v0.3.34
+   Compiling getrandom v0.4.3
+   Compiling sync_wrapper v1.0.2
+   Compiling num-traits v0.2.19
+   Compiling serde_json v1.0.154
+   Compiling http v1.5.0
+   Compiling tracing v0.1.44
+   Compiling percent-encoding v2.3.2
+   Compiling form_urlencoded v1.2.3
+   Compiling memchr v2.8.3
+   Compiling mime v0.3.18
+   Compiling core-foundation-sys v0.8.7
+   Compiling ryu v1.0.23
+   Compiling iana-time-zone v0.1.65
+   Compiling matchit v0.7.3
+   Compiling bitflags v2.13.2
+   Compiling http-body v1.1.0
+   Compiling http-body-util v0.1.5
+   Compiling tower-http v0.5.2
+   Compiling errno v0.3.15
+   Compiling mio v1.2.5
+   Compiling socket2 v0.6.5
+   Compiling signal-hook-registry v1.4.8
+   Compiling parking_lot v0.12.5
+   Compiling syn v3.0.10
+   Compiling serde_path_to_error v0.1.20
+   Compiling uuid v1.29.3
+   Compiling tokio-macros v2.7.2
+   Compiling serde_derive v1.0.229
+   Compiling async-trait v0.1.92
+   Compiling tokio v1.54.1
+   Compiling axum-core v0.4.5
+   Compiling serde_urlencoded v0.7.1
+   Compiling chrono v0.4.45
+   Compiling hyper v1.13.0
+   Compiling tower v0.5.3
+   Compiling hyper-util v0.1.21
+   Compiling axum v0.7.9
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed1/project)
+error: expected one of `!`, `(`, `...`, `..=`, `..`, `::`, `:`, `{`, or `|`, found `req`
+   --> src/main.rs:167:28
+    |
+167 |     axum::extract::Request req,
+    |     -----------------------^^^
+    |     |                      |
+    |     |                      expected one of 9 possible tokens
+    |     help: declare the type after the parameter binding: `<identifier>: <type>`
+
+error: expected one of `!`, `(`, `...`, `..=`, `..`, `::`, `:`, `{`, or `|`, found `handler`
+   --> src/main.rs:168:22
+    |
+168 |     axum::next::Next handler,
+    |     -----------------^^^^^^^
+    |     |                |
+    |     |                expected one of 9 possible tokens
+    |     help: declare the type after the parameter binding: `<identifier>: <type>`
+
+error[E0425]: cannot find function `shutdown_hook` in module `signal`
+   --> src/main.rs:213:17
+    |
+213 |         signal::shutdown_hook().await;
+    |                 ^^^^^^^^^^^^^ not found in `signal`
+
+warning: unused import: `Response`
+ --> src/main.rs:4:30
+  |
+4 |     response::{IntoResponse, Response},
+  |                              ^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+error[E0277]: the trait bound `OrderItem: serde::Serialize` is not satisfied
+   --> src/main.rs:119:14
+    |
+119 |           Json(serde_json::json!({
+    |  ______________^
+120 | |             "id": id,
+121 | |             "customerId": order.customer_id,
+122 | |             "items": order.items,
+123 | |             "totalCents": order.total_cents,
+124 | |             "createdAt": order.created_at
+125 | |         })),
+    | |          ^
+    | |          |
+    | |__________unsatisfied trait bound
+    |            required by a bound introduced by this call
+    |
+help: the trait `Serialize` is not implemented for `OrderItem`
+   --> src/main.rs:28:1
+    |
+ 28 | struct OrderItem {
+    | ^^^^^^^^^^^^^^^^
+    = note: for local types consider adding `#[derive(serde::Serialize)]` to your `OrderItem` type
+    = note: for types from other crates check whether the crate offers a `serde` feature flag
+    = help: the following other types implement trait `Serialize`:
+              &'a T
+              &'a mut T
+              ()
+              (T,)
+              (T0, T1)
+              (T0, T1, T2)
+              (T0, T1, T2, T3)
+              (T0, T1, T2, T3, T4)
+            and 144 others
+    = note: there are multiple different versions of crate `orders` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+    = note: required for `Vec<OrderItem>` to implement `Serialize`
+    = note: 1 redundant requirement hidden
+    = note: required for `&Vec<OrderItem>` to implement `Serialize`
+note: required by a bound in `to_value`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.154/src/value/mod.rs:997:8
+    |
+995 | pub fn to_value<T>(value: T) -> Result<Value, Error>
+    |        -------- required by a bound in this function
+996 | where
+997 |     T: Serialize,
+    |        ^^^^^^^^^ required by this bound in `to_value`
+    = note: this error originates in the macro `$crate::json_internal` which comes from the expansion of the macro `serde_json::json` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `OrderItem: serde::Serialize` is not satisfied
+   --> src/main.rs:147:24
+    |
+147 |               let resp = serde_json::json!({
+    |  ________________________^
+148 | |                 "id": order.id,
+149 | |                 "customerId": order.customer_id,
+150 | |                 "items": order.items,
+151 | |                 "totalCents": order.total_cents,
+152 | |                 "createdAt": order.created_at
+153 | |             });
+    | |              ^
+    | |              |
+    | |______________unsatisfied trait bound
+    |                required by a bound introduced by this call
+    |
+help: the trait `Serialize` is not implemented for `OrderItem`
+   --> src/main.rs:28:1
+    |
+ 28 | struct OrderItem {
+    | ^^^^^^^^^^^^^^^^
+    = note: for local types consider adding `#[derive(serde::Serialize)]` to your `OrderItem` type
+    = note: for types from other crates check whether the crate offers a `serde` feature flag
+    = help: the following other types implement trait `Serialize`:
+              &'a T
+              &'a mut T
+              ()
+              (T,)
+              (T0, T1)
+              (T0, T1, T2)
+              (T0, T1, T2, T3)
+              (T0, T1, T2, T3, T4)
+            and 144 others
+    = note: there are multiple different versions of crate `orders` in the dependency graph
+    = help: you can use `cargo tree` to explore your dependency tree
+    = note: required for `Vec<OrderItem>` to implement `Serialize`
+    = note: 1 redundant requirement hidden
+    = note: required for `&Vec<OrderItem>` to implement `Serialize`
+note: required by a bound in `to_value`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.154/src/value/mod.rs:997:8
+    |
+995 | pub fn to_value<T>(value: T) -> Result<Value, Error>
+    |        -------- required by a bound in this function
+996 | where
+997 |     T: Serialize,
+    |        ^^^^^^^^^ required by this bound in `to_value`
+    = note: this error originates in the macro `$crate::json_internal` which comes from the expansion of the macro `serde_json::json` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `OrderItem: serde::Serialize` is not satisfied
+    --> src/main.rs:34:17
+     |
+  34 | #[derive(Debug, Serialize)]
+     |                 ^^^^^^^^^ unsatisfied trait bound
+...
+  38 |     items: Vec<OrderItem>,
+     |     ----- required by a bound introduced by this call
+     |
+help: the trait `Serialize` is not implemented for `OrderItem`
+    --> src/main.rs:28:1
+     |
+  28 | struct OrderItem {
+     | ^^^^^^^^^^^^^^^^
+     = note: for local types consider adding `#[derive(serde::Serialize)]` to your `OrderItem` type
+     = note: for types from other crates check whether the crate offers a `serde` feature flag
+     = help: the following other types implement trait `Serialize`:
+               &'a T
+               &'a mut T
+               ()
+               (T,)
+               (T0, T1)
+               (T0, T1, T2)
+               (T0, T1, T2, T3)
+               (T0, T1, T2, T3, T4)
+             and 144 others
+     = note: there are multiple different versions of crate `orders` in the dependency graph
+     = help: you can use `cargo tree` to explore your dependency tree
+     = note: required for `Vec<OrderItem>` to implement `Serialize`
+note: required by a bound in `_::_serde::ser::SerializeStruct::serialize_field`
+    --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_core-1.0.229/src/ser/mod.rs:1917:21
+     |
+1915 |     fn serialize_field<T>(&mut self, key: &'static str, value: &T) -> Result<(), Self::Error>
+     |        --------------- required by a bound in this associated function
+1916 |     where
+1917 |         T: ?Sized + Serialize;
+     |                     ^^^^^^^^^ required by this bound in `SerializeStruct::serialize_field`
+     = note: this error originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `FromFn<fn(..., ...) -> ... {log_middleware}, (), ..., _>: Service<...>` is not satisfied
+   --> src/main.rs:201:16
+    |
+201 |         .layer(axum::middleware::from_fn(log_middleware))
+    |          ----- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ unsatisfied trait bound
+    |          |
+    |          required by a bound introduced by this call
+    |
+    = help: the trait `tower_service::Service<axum::http::Request<Body>>` is not implemented for `FromFn<fn({type error}, ...) -> ... {log_middleware}, (), ..., _>`
+    = help: the following other types implement trait `tower_service::Service<Request>`:
+              axum::middleware::FromFn<F, S, I, (T1, T2)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5, T6)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5, T6, T7)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5, T6, T7, T8)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5, T6, T7, T8, T9)>
+            and 8 others
+note: required by a bound in `Router::<S>::layer`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axum-0.7.9/src/routing/mod.rs:284:21
+    |
+281 |     pub fn layer<L>(self, layer: L) -> Router<S>
+    |            ----- required by a bound in this associated function
+...
+284 |         L::Service: Service<Request> + Clone + Send + 'static,
+    |                     ^^^^^^^^^^^^^^^^ required by this bound in `Router::<S>::layer`
+    = note: the full name for the type has been written to '/Users/davidparry/code/github/runtime-bill-bench/.cargo-target/release/deps/orders-8dd298e2e183b8e0.long-type-16529257170298224873.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+error[E0277]: the trait bound `FromFn<fn(..., ...) -> ... {log_middleware}, (), ..., _>: Service<...>` is not satisfied
+   --> src/main.rs:197:15
+    |
+197 |       let app = Router::new()
+    |  _______________^
+198 | |         .route("/health", get(health_handler))
+199 | |         .route("/orders", post(create_order_handler))
+200 | |         .route("/orders/{id}", get(get_order_handler))
+201 | |         .layer(axum::middleware::from_fn(log_middleware))
+    | |_________________________________________________________^ unsatisfied trait bound
+    |
+    = help: the trait `tower_service::Service<axum::http::Request<Body>>` is not implemented for `FromFn<fn({type error}, ...) -> ... {log_middleware}, (), ..., _>`
+    = help: the following other types implement trait `tower_service::Service<Request>`:
+              axum::middleware::FromFn<F, S, I, (T1, T2)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5, T6)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5, T6, T7)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5, T6, T7, T8)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5, T6, T7, T8, T9)>
+            and 8 others
+    = note: the full name for the type has been written to '/Users/davidparry/code/github/runtime-bill-bench/.cargo-target/release/deps/orders-8dd298e2e183b8e0.long-type-16529257170298224873.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+Some errors have detailed explanations: E0277, E0425.
+For more information about an error, try `rustc --explain E0277`.
+warning: `orders` (bin "orders") generated 1 warning
+error: could not compile `orders` (bin "orders") due to 8 previous errors; 1 warning emitted

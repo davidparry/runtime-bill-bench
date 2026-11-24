@@ -1,0 +1,9 @@
+# orders [orders.test]
+./main_test.go:4:2: "bytes" imported and not used
+./main_test.go:9:2: "os" imported and not used
+./main_test.go:18:13: undefined: mux
+./main_test.go:45:2: declared and not used: handler
+./main_test.go:65:14: req.CreatedAt undefined (type CreateOrderRequest has no field or method CreatedAt)
+./main_test.go:67:10: undefined: time
+FAIL	orders [build failed]
+FAIL

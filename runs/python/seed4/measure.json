@@ -1,0 +1,124 @@
+{
+  "lang": "python",
+  "seed": 4,
+  "loc": {
+    "source": 149,
+    "test": 159,
+    "manifest": 6,
+    "config": 0,
+    "other": 0,
+    "total": 314
+  },
+  "runtime_deps": [
+    "annotated-doc 0.0.7",
+    "annotated-types 0.8.0",
+    "anyio 4.16.0",
+    "click 8.5.1",
+    "fastapi 0.165.0",
+    "h11 0.16.0",
+    "idna 3.20",
+    "opentelemetry-api 1.45.2",
+    "pydantic 2.14.4",
+    "pydantic-core 2.50.5",
+    "starlette 1.10.0",
+    "typing-extensions 4.16.0",
+    "typing-inspection 0.4.5",
+    "uvicorn 0.54.0"
+  ],
+  "vulnerabilities": [],
+  "pins": {
+    "framework": "fastapi",
+    "pinned": ">=0.104.0",
+    "packages": {
+      "fastapi": {
+        "requirement": ">=0.104.0",
+        "resolved": "0.165.0",
+        "resolved_released": "2026-11-18",
+        "current": "0.165.0",
+        "current_released": "2026-11-18"
+      },
+      "uvicorn": {
+        "requirement": ">=0.24.0",
+        "resolved": "0.54.0",
+        "resolved_released": "2026-09-25",
+        "current": "0.54.0",
+        "current_released": "2026-09-25"
+      },
+      "pydantic": {
+        "requirement": ">=2.5.0",
+        "resolved": "2.14.4",
+        "resolved_released": "2026-11-19",
+        "current": "2.14.4",
+        "current_released": "2026-11-19"
+      },
+      "pydantic-core": {
+        "requirement": null,
+        "resolved": "2.50.5",
+        "resolved_released": "2026-11-19",
+        "current": "2.50.5",
+        "current_released": "2026-11-19"
+      },
+      "starlette": {
+        "requirement": null,
+        "resolved": "1.10.0",
+        "resolved_released": "2026-10-24",
+        "current": "1.10.0",
+        "current_released": "2026-10-24"
+      }
+    }
+  },
+  "load_trials": [
+    {
+      "startup_ms": 462.6,
+      "idle_rss_mb": 925.2,
+      "peak_rss_mb": 1379.4,
+      "cpu_seconds_per_100k": 56.222,
+      "rps": 21970.4,
+      "p50_ms": 2.752,
+      "p99_ms": 7.107,
+      "success_rate": 1.0,
+      "status_codes": {
+        "201": 100000
+      },
+      "errors": {}
+    },
+    {
+      "startup_ms": 430.7,
+      "idle_rss_mb": 924.4,
+      "peak_rss_mb": 1368.4,
+      "cpu_seconds_per_100k": 53.061,
+      "rps": 19056.7,
+      "p50_ms": 2.425,
+      "p99_ms": 9.586,
+      "success_rate": 1.0,
+      "status_codes": {
+        "201": 100000
+      },
+      "errors": {}
+    },
+    {
+      "startup_ms": 423.1,
+      "idle_rss_mb": 924.1,
+      "peak_rss_mb": 1403.4,
+      "cpu_seconds_per_100k": 56.349,
+      "rps": 22929.9,
+      "p50_ms": 2.515,
+      "p99_ms": 6.264,
+      "success_rate": 1.0,
+      "status_codes": {
+        "201": 100000
+      },
+      "errors": {}
+    }
+  ],
+  "load": {
+    "startup_ms": 430.7,
+    "idle_rss_mb": 924.4,
+    "peak_rss_mb": 1379.4,
+    "cpu_seconds_per_100k": 56.222,
+    "rps": 21970.4,
+    "p50_ms": 2.515,
+    "p99_ms": 7.107
+  },
+  "salvaged": false
+}

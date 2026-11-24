@@ -1,0 +1,85 @@
+{
+  "lang": "go",
+  "seed": 9,
+  "model": "qwen3.6:35b-a3b-coding",
+  "passed": true,
+  "rounds": 4,
+  "input_tokens": 28816,
+  "output_tokens": 13500,
+  "wall_seconds": 135.1,
+  "files": [
+    "go.mod",
+    "main.go",
+    "main_test.go"
+  ],
+  "round_records": [
+    {
+      "round": 1,
+      "prompt_eval_count": 729,
+      "eval_count": 5463,
+      "prompt_eval_duration": 491501000,
+      "eval_duration": 44035461000,
+      "load_duration": 3209500,
+      "total_duration": 44555258416,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "go.mod",
+        "main.go",
+        "main_test.go"
+      ],
+      "failed_step": "go build -o orders .",
+      "failure": "`go build -o orders .` exited with status 1. The last lines of its output:\n```\n# orders\n./main.go:16:2: \"unicode/utf8\" imported and not used\n./main.go:82:2: declared and not used: id\n```"
+    },
+    {
+      "round": 2,
+      "prompt_eval_count": 6322,
+      "eval_count": 2514,
+      "prompt_eval_duration": 4978757000,
+      "eval_duration": 19947434000,
+      "load_duration": 3928792,
+      "total_duration": 24973311292,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.go"
+      ],
+      "failed_step": "go test ./...",
+      "failure": "`go test ./...` exited with status 1. The last lines of its output:\n```\n# orders [orders.test]\n./main_test.go:7:2: \"io\" imported and not used\nFAIL\torders [build failed]\nFAIL\n```"
+    },
+    {
+      "round": 3,
+      "prompt_eval_count": 8950,
+      "eval_count": 2762,
+      "prompt_eval_duration": 6909162000,
+      "eval_duration": 22136669000,
+      "load_duration": 6659291,
+      "total_duration": 29097041500,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main_test.go"
+      ],
+      "failed_step": "go test ./...",
+      "failure": "`go test ./...` exited with status 1. The last lines of its output:\n```\n--- FAIL: TestValidateCustomerID (0.00s)\n    --- FAIL: TestValidateCustomerID/too_long (0.00s)\n        main_test.go:29: validateCustomerID(\"c-\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\") error = <nil>, wantErr true\n{\"durationMs\":0,\"method\":\"GET\",\"path\":\"/health\",\"status\":200}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":201}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":201}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":201}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":201}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":201}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":201}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":201}\n{\"durationMs\":0,\"method\":\"GET\",\"path\":\"/orders/934956ce-d328-4e58-8361-b2633d8c5fb9\",\"status\":200}\n{\"durationMs\":0,\"method\":\"GET\",\"path\":\"/orders/233bc57f-04e0-49ee-affe-f091bac1c1a7\",\"status\":200}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":201}\n{\"durationMs\":0,\"method\":\"GET\",\"path\":\"/orders/cc5c8786-abdb-4228-a3c1-c4471f317204\",\"status\":200}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":201}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":201}\n{\"durationMs\":0,\"method\":\"GET\",\"path\":\"/orders/d4fe9f8a-af87-4b92-957c-cf056803b3e8\",\"status\":200}\n{\"durationMs\":0,\"method\":\"GET\",\"path\":\"/orders/51fc7d20-2f2e-49a4-b29f-a3067cec353f\",\"status\":200}\n{\"durationMs\":0,\"method\":\"GET\",\"path\":\"/orders/0397cf91-f35f-4bf9-93a8-8609ad4a4e2e\",\"status\":200}\n{\"durationMs\":0,\"method\":\"GET\",\"path\":\"/orders/fc7ef234-ba3d-4f03-8e84-fba76af44676\",\"status\":200}\n{\"durationMs\":0,\"method\":\"GET\",\"path\":\"/orders/60ea09ad-99a6-4c0d-a621-0e57fe70972b\",\"status\":200}\n{\"durationMs\":0,\"method\":\"GET\",\"path\":\"/orders/5ae92fbd-d118-463d-b952-5bfa35a7aa58\",\"status\":200}\n{\"durationMs\":0,\"method\":\"GET\",\"path\":\"/orders/6a4be859-1e78-426c-a648-9cc0215d996c\",\"status\":200}\nFAIL\nFAIL\torders\t0.407s\nFAIL\n```"
+    },
+    {
+      "round": 4,
+      "prompt_eval_count": 12815,
+      "eval_count": 2761,
+      "prompt_eval_duration": 10462152000,
+      "eval_duration": 22829414000,
+      "load_duration": 4557291,
+      "total_duration": 33347047416,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main_test.go"
+      ],
+      "startup_seconds": 0.209,
+      "acceptance_failures": 0,
+      "failed_step": null,
+      "failure": null
+    }
+  ]
+}

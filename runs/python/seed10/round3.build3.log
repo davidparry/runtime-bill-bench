@@ -1,0 +1,45 @@
+...............FF                                                        [100%]
+=================================== FAILURES ===================================
+____________________ TestGetOrder.test_get_order_not_found _____________________
+
+self = <test_main.TestGetOrder object at 0x10ab83ed0>
+
+    def test_get_order_not_found(self):
+        response = client.get("/orders/non-existent-id")
+        assert response.status_code == 404
+        data = response.json()
+>       assert "error" in data
+E       AssertionError: assert 'error' in {'detail': 'Order not found'}
+
+test_main.py:184: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "GET", "path": "/orders/non-existent-id", "status": 404, "durationMs": 0, "message": "GET /orders/non-existent-id 404 0ms", "level": "INFO"}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:main.py:113 GET /orders/non-existent-id 404 0ms
+_______________ TestGetOrder.test_get_order_invalid_uuid_format ________________
+
+self = <test_main.TestGetOrder object at 0x10ac7b230>
+
+    def test_get_order_invalid_uuid_format(self):
+        # Even if the ID doesn't look like a UUID, if it's not in the store, it's 404
+        response = client.get("/orders/not-a-uuid")
+        assert response.status_code == 404
+        data = response.json()
+>       assert "error" in data
+E       AssertionError: assert 'error' in {'detail': 'Order not found'}
+
+test_main.py:191: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "GET", "path": "/orders/not-a-uuid", "status": 404, "durationMs": 0, "message": "GET /orders/not-a-uuid 404 0ms", "level": "INFO"}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:main.py:113 GET /orders/not-a-uuid 404 0ms
+=============================== warnings summary ===============================
+.venv/lib/python3.14/site-packages/fastapi/testclient.py:1
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed10/project/.venv/lib/python3.14/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED test_main.py::TestGetOrder::test_get_order_not_found - AssertionError:...
+FAILED test_main.py::TestGetOrder::test_get_order_invalid_uuid_format - Asser...
+2 failed, 15 passed, 1 warning in 0.55s

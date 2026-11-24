@@ -1,0 +1,233 @@
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed5/project)
+error: incorrect use of `await`
+   --> tests/integration_tests.rs:133:15
+    |
+133 |         .await()
+    |               ^^
+    |
+help: `await` is not a method call, remove the parentheses
+    |
+133 -         .await()
+133 +         .await
+    |
+
+error: incorrect use of `await`
+   --> tests/integration_tests.rs:150:15
+    |
+150 |         .await()
+    |               ^^
+    |
+help: `await` is not a method call, remove the parentheses
+    |
+150 -         .await()
+150 +         .await
+    |
+
+error: incorrect use of `await`
+   --> tests/integration_tests.rs:173:15
+    |
+173 |         .await()
+    |               ^^
+    |
+help: `await` is not a method call, remove the parentheses
+    |
+173 -         .await()
+173 +         .await
+    |
+
+error: incorrect use of `await`
+   --> tests/integration_tests.rs:196:15
+    |
+196 |         .await()
+    |               ^^
+    |
+help: `await` is not a method call, remove the parentheses
+    |
+196 -         .await()
+196 +         .await
+    |
+
+error: incorrect use of `await`
+   --> tests/integration_tests.rs:211:15
+    |
+211 |         .await()
+    |               ^^
+    |
+help: `await` is not a method call, remove the parentheses
+    |
+211 -         .await()
+211 +         .await
+    |
+
+warning: unused import: `Response`
+ --> src/main.rs:4:30
+  |
+4 |     response::{IntoResponse, Response},
+  |                              ^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `std::time::Instant`
+ --> tests/integration_tests.rs:3:5
+  |
+3 | use std::time::Instant;
+  |     ^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+error[E0599]: no method named `post` found for opaque type `impl Future<Output = Client>` in the current scope
+  --> tests/integration_tests.rs:17:10
+   |
+16 |       let res = client()
+   |  _______________-
+17 | |         .post(format!("{}/orders", BASE_URL))
+   | |         -^^^^ method not found in `impl Future<Output = Client>`
+   | |_________|
+   |
+   |
+help: consider `await`ing on the `Future` and calling the method on its `Output`
+   |
+17 |         .await.post(format!("{}/orders", BASE_URL))
+   |          ++++++
+
+error[E0599]: no method named `post` found for opaque type `impl Future<Output = Client>` in the current scope
+  --> tests/integration_tests.rs:48:10
+   |
+47 |       let create_res = client()
+   |  ______________________-
+48 | |         .post(format!("{}/orders", BASE_URL))
+   | |         -^^^^ method not found in `impl Future<Output = Client>`
+   | |_________|
+   |
+   |
+help: consider `await`ing on the `Future` and calling the method on its `Output`
+   |
+48 |         .await.post(format!("{}/orders", BASE_URL))
+   |          ++++++
+
+error[E0599]: no method named `get` found for opaque type `impl Future<Output = Client>` in the current scope
+  --> tests/integration_tests.rs:68:10
+   |
+67 |       let get_res = client()
+   |  ___________________-
+68 | |         .get(format!("{}/orders/{}", BASE_URL, order_id))
+   | |         -^^^ method not found in `impl Future<Output = Client>`
+   | |_________|
+   |
+   |
+help: consider `await`ing on the `Future` and calling the method on its `Output`
+   |
+68 |         .await.get(format!("{}/orders/{}", BASE_URL, order_id))
+   |          ++++++
+
+error[E0599]: no method named `get` found for opaque type `impl Future<Output = Client>` in the current scope
+  --> tests/integration_tests.rs:83:10
+   |
+82 |       let res = client()
+   |  _______________-
+83 | |         .get(format!("{}/orders/non-existent-id", BASE_URL))
+   | |         -^^^ method not found in `impl Future<Output = Client>`
+   | |_________|
+   |
+   |
+help: consider `await`ing on the `Future` and calling the method on its `Output`
+   |
+83 |         .await.get(format!("{}/orders/non-existent-id", BASE_URL))
+   |          ++++++
+
+error[E0599]: no method named `post` found for opaque type `impl Future<Output = Client>` in the current scope
+  --> tests/integration_tests.rs:96:10
+   |
+95 |       let res = client()
+   |  _______________-
+96 | |         .post(format!("{}/orders", BASE_URL))
+   | |         -^^^^ method not found in `impl Future<Output = Client>`
+   | |_________|
+   |
+   |
+help: consider `await`ing on the `Future` and calling the method on its `Output`
+   |
+96 |         .await.post(format!("{}/orders", BASE_URL))
+   |          ++++++
+
+error[E0599]: no method named `post` found for opaque type `impl Future<Output = Client>` in the current scope
+   --> tests/integration_tests.rs:121:10
+    |
+120 |       let res = client()
+    |  _______________-
+121 | |         .post(format!("{}/orders", BASE_URL))
+    | |         -^^^^ method not found in `impl Future<Output = Client>`
+    | |_________|
+    |
+    |
+help: consider `await`ing on the `Future` and calling the method on its `Output`
+    |
+121 |         .await.post(format!("{}/orders", BASE_URL))
+    |          ++++++
+
+error[E0599]: no method named `post` found for opaque type `impl Future<Output = Client>` in the current scope
+   --> tests/integration_tests.rs:144:10
+    |
+143 |       let res = client()
+    |  _______________-
+144 | |         .post(format!("{}/orders", BASE_URL))
+    | |         -^^^^ method not found in `impl Future<Output = Client>`
+    | |_________|
+    |
+    |
+help: consider `await`ing on the `Future` and calling the method on its `Output`
+    |
+144 |         .await.post(format!("{}/orders", BASE_URL))
+    |          ++++++
+
+error[E0599]: no method named `post` found for opaque type `impl Future<Output = Client>` in the current scope
+   --> tests/integration_tests.rs:161:10
+    |
+160 |       let res = client()
+    |  _______________-
+161 | |         .post(format!("{}/orders", BASE_URL))
+    | |         -^^^^ method not found in `impl Future<Output = Client>`
+    | |_________|
+    |
+    |
+help: consider `await`ing on the `Future` and calling the method on its `Output`
+    |
+161 |         .await.post(format!("{}/orders", BASE_URL))
+    |          ++++++
+
+error[E0599]: no method named `post` found for opaque type `impl Future<Output = Client>` in the current scope
+   --> tests/integration_tests.rs:184:10
+    |
+183 |       let res = client()
+    |  _______________-
+184 | |         .post(format!("{}/orders", BASE_URL))
+    | |         -^^^^ method not found in `impl Future<Output = Client>`
+    | |_________|
+    |
+    |
+help: consider `await`ing on the `Future` and calling the method on its `Output`
+    |
+184 |         .await.post(format!("{}/orders", BASE_URL))
+    |          ++++++
+
+error[E0599]: no method named `post` found for opaque type `impl Future<Output = Client>` in the current scope
+   --> tests/integration_tests.rs:207:10
+    |
+206 |       let res = client()
+    |  _______________-
+207 | |         .post(format!("{}/orders", BASE_URL))
+    | |         -^^^^ method not found in `impl Future<Output = Client>`
+    | |_________|
+    |
+    |
+help: consider `await`ing on the `Future` and calling the method on its `Output`
+    |
+207 |         .await.post(format!("{}/orders", BASE_URL))
+    |          ++++++
+
+For more information about this error, try `rustc --explain E0599`.
+warning: `orders` (test "integration_tests") generated 1 warning
+error: could not compile `orders` (test "integration_tests") due to 15 previous errors; 1 warning emitted
+warning: build failed, waiting for other jobs to finish...
+warning: `orders` (bin "orders" test) generated 1 warning (1 duplicate)
+warning: `orders` (bin "orders") generated 1 warning (run `cargo fix --bin "orders" -p orders` to apply 1 suggestion)

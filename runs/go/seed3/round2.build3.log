@@ -1,0 +1,4 @@
+# orders [orders.test]
+./main_test.go:7:2: "io" imported and not used
+FAIL	orders [build failed]
+FAIL

@@ -1,0 +1,94 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling libc v0.2.191
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling itoa v1.0.19
+   Compiling bytes v1.12.2
+   Compiling pin-project-lite v0.2.18
+   Compiling serde_core v1.0.229
+   Compiling cfg-if v1.0.5
+   Compiling parking_lot_core v0.9.12
+   Compiling futures-core v0.3.34
+   Compiling smallvec v1.16.6
+   Compiling scopeguard v1.2.0
+   Compiling once_cell v1.21.4
+   Compiling httparse v1.10.1
+   Compiling tower-service v0.3.3
+   Compiling log v0.4.35
+   Compiling lock_api v0.4.14
+   Compiling serde v1.0.229
+   Compiling autocfg v1.5.1
+   Compiling futures-task v0.3.34
+   Compiling slab v0.4.12
+   Compiling tracing-core v0.1.36
+   Compiling rustversion v1.0.23
+   Compiling tower-layer v0.3.3
+   Compiling zmij v1.0.23
+   Compiling futures-util v0.3.34
+   Compiling serde_json v1.0.154
+   Compiling atomic-waker v1.1.2
+   Compiling percent-encoding v2.3.2
+   Compiling num-traits v0.2.19
+   Compiling getrandom v0.4.3
+   Compiling httpdate v1.0.3
+   Compiling sync_wrapper v1.0.2
+   Compiling tracing v0.1.44
+   Compiling http v1.5.0
+   Compiling form_urlencoded v1.2.3
+   Compiling mime v0.3.18
+   Compiling core-foundation-sys v0.8.7
+   Compiling memchr v2.8.3
+   Compiling ryu v1.0.23
+   Compiling bitflags v2.13.2
+   Compiling iana-time-zone v0.1.65
+   Compiling matchit v0.7.3
+   Compiling syn v3.0.10
+   Compiling errno v0.3.15
+   Compiling socket2 v0.6.5
+   Compiling mio v1.2.5
+   Compiling http-body v1.1.0
+   Compiling signal-hook-registry v1.4.8
+   Compiling parking_lot v0.12.5
+   Compiling http-body-util v0.1.5
+   Compiling tower-http v0.5.2
+   Compiling serde_path_to_error v0.1.20
+   Compiling uuid v1.29.3
+   Compiling tokio-macros v2.7.2
+   Compiling serde_derive v1.0.229
+   Compiling async-trait v0.1.92
+   Compiling tokio v1.54.1
+   Compiling axum-core v0.4.5
+   Compiling serde_urlencoded v0.7.1
+   Compiling chrono v0.4.45
+   Compiling hyper v1.13.0
+   Compiling tower v0.5.3
+   Compiling hyper-util v0.1.21
+   Compiling axum v0.7.9
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed1/project)
+error[E0382]: borrow of moved value: `order`
+   --> src/main.rs:123:14
+    |
+108 |       let order = OrderResponse {
+    |           ----- move occurs because `order` has type `OrderResponse`, which does not implement the `Copy` trait
+...
+118 |           orders.insert(id.clone(), order);
+    |                                     ----- value moved here
+...
+123 |           Json(serde_json::json!({
+    |  ______________^
+124 | |             "id": id,
+125 | |             "customerId": order.customer_id,
+126 | |             "items": order.items,
+127 | |             "totalCents": order.total_cents,
+128 | |             "createdAt": order.created_at
+129 | |         })),
+    | |__________^ value borrowed here after move
+    |
+    = note: this error originates in the macro `$crate::json_internal` which comes from the expansion of the macro `serde_json::json` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider cloning the value if the performance cost is acceptable
+    |
+118 |         orders.insert(id.clone(), order.clone());
+    |                                        ++++++++
+
+For more information about this error, try `rustc --explain E0382`.
+error: could not compile `orders` (bin "orders") due to 1 previous error

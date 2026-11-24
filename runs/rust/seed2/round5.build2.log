@@ -1,0 +1,88 @@
+warning: variable does not need to be mutable
+  --> src/middleware.rs:43:24
+   |
+43 |     fn call(&mut self, mut req: Request<B>) -> Self::Future {
+   |                        ----^^^
+   |                        |
+   |                        help: remove this `mut`
+   |
+   = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: `orders` (lib) generated 1 warning (run `cargo fix --lib -p orders` to apply 1 suggestion)
+warning: `orders` (lib test) generated 1 warning (1 duplicate)
+warning: unused import: `std::net::SocketAddr`
+ --> src/main.rs:2:5
+  |
+2 | use std::net::SocketAddr;
+  |     ^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed2/project)
+warning: `orders` (bin "orders" test) generated 1 warning (run `cargo fix --bin "orders" -p orders --tests` to apply 1 suggestion)
+warning: `orders` (bin "orders") generated 1 warning (1 duplicate)
+error[E0425]: cannot find function `to_bytes` in module `hyper::body`
+  --> tests/api_tests.rs:49:35
+   |
+49 |     let body_bytes = hyper::body::to_bytes(res.into_body()).await.unwrap();
+   |                                   ^^^^^^^^ not found in `hyper::body`
+
+warning: unused import: `tower::ServiceExt`
+ --> tests/api_tests.rs:6:5
+  |
+6 | use tower::ServiceExt;
+  |     ^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+error[E0308]: mismatched types
+  --> tests/api_tests.rs:11:5
+   |
+11 | /     INIT.get_or_init(|| async {
+12 | |         let app = create_router();
+13 | |         let listener = tokio::net::TcpListener::bind("127.0.0.1:0").await.unwrap();
+14 | |         let addr = listener.local_addr().unwrap();
+...  |
+21 | |     })
+22 | |     .await
+   | |__________^ expected `SocketAddr`, found `&SocketAddr`
+   |
+help: consider dereferencing the borrow
+   |
+11 |     *INIT.get_or_init(|| async {
+   |     +
+
+error[E0782]: expected a type, found a trait
+  --> tests/api_tests.rs:37:19
+   |
+37 |             .body(hyper::body::Body::from(b.to_string()))
+   |                   ^^^^^^^^^^^^^^^^^
+   |
+help: you can add the `dyn` keyword if you want a trait object
+   |
+37 |             .body(<dyn hyper::body::Body>::from(b.to_string()))
+   |                   ++++                  +
+
+error[E0782]: expected a type, found a trait
+  --> tests/api_tests.rs:43:19
+   |
+43 |             .body(hyper::body::Body::empty())
+   |                   ^^^^^^^^^^^^^^^^^
+   |
+help: you can add the `dyn` keyword if you want a trait object
+   |
+43 |             .body(<dyn hyper::body::Body>::empty())
+   |                   ++++                  +
+
+warning: unused variable: `response_body`
+  --> tests/api_tests.rs:99:18
+   |
+99 |     let (status, response_body) = make_request("/orders", Some(body)).await;
+   |                  ^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_response_body`
+   |
+   = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+Some errors have detailed explanations: E0308, E0425, E0782.
+For more information about an error, try `rustc --explain E0308`.
+warning: `orders` (test "api_tests") generated 2 warnings
+error: could not compile `orders` (test "api_tests") due to 4 previous errors; 2 warnings emitted

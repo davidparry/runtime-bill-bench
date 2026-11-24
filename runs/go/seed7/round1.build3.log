@@ -1,0 +1,14 @@
+# orders [orders.test]
+./main_test.go:17:12: undefined: time
+./main_test.go:19:32: undefined: time
+./main_test.go:48:12: undefined: time
+./main_test.go:50:3: declared and not used: reqBody
+./main_test.go:50:19: undefined: io
+./main_test.go:53:41: undefined: time
+./main_test.go:65:3: undefined: store
+./main_test.go:66:3: undefined: store
+./main_test.go:67:3: undefined: store
+./main_test.go:77:14: cannot use 1st function result (value of type *CreateOrderRequest) as *http.Request value in multiple assignment
+./main_test.go:77:14: too many errors
+FAIL	orders [build failed]
+FAIL

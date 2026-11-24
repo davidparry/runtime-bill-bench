@@ -1,0 +1,148 @@
+INFO:     Uvicorn running on http://0.0.0.0:60960 (Press CTRL+C to quit)
+INFO:     Started parent process [39658]
+INFO:     Started server process [39664]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [39661]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [39662]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [39660]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [39667]
+INFO:     Waiting for application startup.
+INFO:     Started server process [39668]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Application startup complete.
+INFO:     Started server process [39663]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [39666]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [39674]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [39672]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [39665]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [39669]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [39673]
+INFO:     Waiting for application startup.
+INFO:     Started server process [39675]
+INFO:     Started server process [39670]
+INFO:     Waiting for application startup.
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Application startup complete.
+INFO:     Application startup complete.
+INFO:     Started server process [39671]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Received SIGTERM, exiting.
+INFO:     Terminated child process [39660]
+INFO:     Terminated child process [39661]
+INFO:     Terminated child process [39662]
+INFO:     Terminated child process [39663]
+INFO:     Terminated child process [39664]
+INFO:     Terminated child process [39665]
+INFO:     Terminated child process [39666]
+INFO:     Terminated child process [39667]
+INFO:     Terminated child process [39668]
+INFO:     Terminated child process [39669]
+INFO:     Terminated child process [39670]
+INFO:     Terminated child process [39671]
+INFO:     Terminated child process [39672]
+INFO:     Terminated child process [39673]
+INFO:     Terminated child process [39674]
+INFO:     Terminated child process [39675]
+INFO:     Waiting for child process [39660]
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39670]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39671]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39673]
+INFO:     Waiting for application shutdown.
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39664]
+INFO:     Finished server process [39661]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39662]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39660]
+INFO:     Waiting for child process [39661]
+INFO:     Waiting for child process [39662]
+INFO:     Waiting for child process [39663]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39666]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39663]
+INFO:     Waiting for child process [39664]
+INFO:     Waiting for child process [39665]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39667]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39665]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39672]
+INFO:     Waiting for child process [39666]
+INFO:     Waiting for child process [39667]
+INFO:     Waiting for child process [39668]
+INFO:     Waiting for application shutdown.
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39675]
+INFO:     Finished server process [39669]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39668]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [39674]
+INFO:     Waiting for child process [39669]
+INFO:     Waiting for child process [39670]
+INFO:     Waiting for child process [39671]
+INFO:     Waiting for child process [39672]
+INFO:     Waiting for child process [39673]
+INFO:     Waiting for child process [39674]
+INFO:     Waiting for child process [39675]
+INFO:     Stopping parent process [39658]

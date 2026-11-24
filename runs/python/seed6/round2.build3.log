@@ -1,0 +1,220 @@
+..FFFFFFFFFFFF...                                                        [100%]
+=================================== FAILURES ===================================
+______________ TestCreateOrderValidation.test_missing_customer_id ______________
+
+self = <test_main.TestCreateOrderValidation object at 0x10c43c050>
+
+    def test_missing_customer_id(self):
+        payload = {
+            "items": [{"sku": "A-1", "quantity": 2, "unitPriceCents": 1250}]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 400
+E       assert 422 == 400
+E        +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+
+test_main.py:38: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 422, "durationMs": 0}
+_______________ TestCreateOrderValidation.test_empty_customer_id _______________
+
+self = <test_main.TestCreateOrderValidation object at 0x10c3ca650>
+
+    def test_empty_customer_id(self):
+        payload = {
+            "customerId": "",
+            "items": [{"sku": "A-1", "quantity": 2, "unitPriceCents": 1250}]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 400
+E       assert 422 == 400
+E        +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+
+test_main.py:47: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 422, "durationMs": 0}
+_____________ TestCreateOrderValidation.test_customer_id_too_long ______________
+
+self = <test_main.TestCreateOrderValidation object at 0x10c3caea0>
+
+    def test_customer_id_too_long(self):
+        payload = {
+            "customerId": "a" * 65,
+            "items": [{"sku": "A-1", "quantity": 2, "unitPriceCents": 1250}]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 400
+E       assert 422 == 400
+E        +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+
+test_main.py:56: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 422, "durationMs": 0}
+_________________ TestCreateOrderValidation.test_missing_items _________________
+
+self = <test_main.TestCreateOrderValidation object at 0x10c438170>
+
+    def test_missing_items(self):
+        payload = {
+            "customerId": "c-1"
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 400
+E       assert 422 == 400
+E        +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+
+test_main.py:64: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 422, "durationMs": 0}
+__________________ TestCreateOrderValidation.test_empty_items __________________
+
+self = <test_main.TestCreateOrderValidation object at 0x10c3e17b0>
+
+    def test_empty_items(self):
+        payload = {
+            "customerId": "c-1",
+            "items": []
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 400
+E       assert 422 == 400
+E        +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+
+test_main.py:73: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 422, "durationMs": 0}
+_______________ TestCreateOrderValidation.test_item_sku_too_long _______________
+
+self = <test_main.TestCreateOrderValidation object at 0x10c3e1ae0>
+
+    def test_item_sku_too_long(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [{"sku": "a" * 33, "quantity": 1, "unitPriceCents": 100}]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 400
+E       assert 422 == 400
+E        +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+
+test_main.py:82: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 422, "durationMs": 0}
+______________ TestCreateOrderValidation.test_item_quantity_zero _______________
+
+self = <test_main.TestCreateOrderValidation object at 0x10c408050>
+
+    def test_item_quantity_zero(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [{"sku": "A-1", "quantity": 0, "unitPriceCents": 100}]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 400
+E       assert 422 == 400
+E        +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+
+test_main.py:91: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 422, "durationMs": 0}
+____________ TestCreateOrderValidation.test_item_quantity_too_high _____________
+
+self = <test_main.TestCreateOrderValidation object at 0x10c408150>
+
+    def test_item_quantity_too_high(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [{"sku": "A-1", "quantity": 101, "unitPriceCents": 100}]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 400
+E       assert 422 == 400
+E        +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+
+test_main.py:100: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 422, "durationMs": 0}
+_____________ TestCreateOrderValidation.test_item_unit_price_zero ______________
+
+self = <test_main.TestCreateOrderValidation object at 0x10c400140>
+
+    def test_item_unit_price_zero(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [{"sku": "A-1", "quantity": 1, "unitPriceCents": 0}]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 400
+E       assert 422 == 400
+E        +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+
+test_main.py:109: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 422, "durationMs": 0}
+___________ TestCreateOrderValidation.test_item_unit_price_too_high ____________
+
+self = <test_main.TestCreateOrderValidation object at 0x10c400230>
+
+    def test_item_unit_price_too_high(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [{"sku": "A-1", "quantity": 1, "unitPriceCents": 1000001}]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 400
+E       assert 422 == 400
+E        +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+
+test_main.py:118: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 422, "durationMs": 0}
+________________ TestCreateOrderValidation.test_too_many_items _________________
+
+self = <test_main.TestCreateOrderValidation object at 0x10c3fc670>
+
+    def test_too_many_items(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [{"sku": "A-1", "quantity": 1, "unitPriceCents": 100} for _ in range(51)]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 400
+E       assert 422 == 400
+E        +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+
+test_main.py:127: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 422, "durationMs": 0}
+_________________ TestCreateOrderValidation.test_invalid_json __________________
+
+self = <test_main.TestCreateOrderValidation object at 0x10c3fc9f0>
+
+    def test_invalid_json(self):
+        response = client.post("/orders", content="not json", headers={"Content-Type": "application/json"})
+>       assert response.status_code == 400
+E       assert 422 == 400
+E        +  where 422 = <Response [422 Unprocessable Entity]>.status_code
+
+test_main.py:132: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 422, "durationMs": 0}
+=============================== warnings summary ===============================
+.venv/lib/python3.14/site-packages/fastapi/testclient.py:1
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed6/project/.venv/lib/python3.14/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED test_main.py::TestCreateOrderValidation::test_missing_customer_id - as...
+FAILED test_main.py::TestCreateOrderValidation::test_empty_customer_id - asse...
+FAILED test_main.py::TestCreateOrderValidation::test_customer_id_too_long - a...
+FAILED test_main.py::TestCreateOrderValidation::test_missing_items - assert 4...
+FAILED test_main.py::TestCreateOrderValidation::test_empty_items - assert 422...
+FAILED test_main.py::TestCreateOrderValidation::test_item_sku_too_long - asse...
+FAILED test_main.py::TestCreateOrderValidation::test_item_quantity_zero - ass...
+FAILED test_main.py::TestCreateOrderValidation::test_item_quantity_too_high
+FAILED test_main.py::TestCreateOrderValidation::test_item_unit_price_zero - a...
+FAILED test_main.py::TestCreateOrderValidation::test_item_unit_price_too_high
+FAILED test_main.py::TestCreateOrderValidation::test_too_many_items - assert ...
+FAILED test_main.py::TestCreateOrderValidation::test_invalid_json - assert 42...
+12 failed, 5 passed, 1 warning in 0.72s

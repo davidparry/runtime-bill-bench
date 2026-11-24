@@ -1,0 +1,136 @@
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed1/project)
+error: expected one of `!`, `(`, `...`, `..=`, `..`, `::`, `:`, `{`, or `|`, found `req`
+   --> src/main.rs:171:28
+    |
+171 |     axum::extract::Request req,
+    |     -----------------------^^^
+    |     |                      |
+    |     |                      expected one of 9 possible tokens
+    |     help: declare the type after the parameter binding: `<identifier>: <type>`
+
+error: expected one of `!`, `(`, `...`, `..=`, `..`, `::`, `:`, `{`, or `|`, found `handler`
+   --> src/main.rs:172:22
+    |
+172 |     axum::next::Next handler,
+    |     -----------------^^^^^^^
+    |     |                |
+    |     |                expected one of 9 possible tokens
+    |     help: declare the type after the parameter binding: `<identifier>: <type>`
+
+warning: unused import: `Response`
+ --> src/main.rs:4:30
+  |
+4 |     response::{IntoResponse, Response},
+  |                              ^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+error[E0382]: borrow of moved value: `id`
+   --> src/main.rs:123:14
+    |
+ 96 |       let id = Uuid::new_v4().to_string();
+    |           -- move occurs because `id` has type `std::string::String`, which does not implement the `Copy` trait
+...
+118 |           orders.insert(id, order);
+    |                         -- value moved here
+...
+123 |           Json(serde_json::json!({
+    |  ______________^
+124 | |             "id": id,
+125 | |             "customerId": order.customer_id,
+126 | |             "items": order.items,
+127 | |             "totalCents": order.total_cents,
+128 | |             "createdAt": order.created_at
+129 | |         })),
+    | |__________^ value borrowed here after move
+    |
+    = note: this error originates in the macro `$crate::json_internal` which comes from the expansion of the macro `serde_json::json` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider cloning the value if the performance cost is acceptable
+    |
+118 |         orders.insert(id.clone(), order);
+    |                         ++++++++
+
+error[E0382]: borrow of moved value: `order`
+   --> src/main.rs:123:14
+    |
+108 |       let order = OrderResponse {
+    |           ----- move occurs because `order` has type `OrderResponse`, which does not implement the `Copy` trait
+...
+118 |           orders.insert(id, order);
+    |                             ----- value moved here
+...
+123 |           Json(serde_json::json!({
+    |  ______________^
+124 | |             "id": id,
+125 | |             "customerId": order.customer_id,
+126 | |             "items": order.items,
+127 | |             "totalCents": order.total_cents,
+128 | |             "createdAt": order.created_at
+129 | |         })),
+    | |__________^ value borrowed here after move
+    |
+    = note: this error originates in the macro `$crate::json_internal` which comes from the expansion of the macro `serde_json::json` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider cloning the value if the performance cost is acceptable
+    |
+118 |         orders.insert(id, order.clone());
+    |                                ++++++++
+
+error[E0277]: the trait bound `FromFn<fn(..., ...) -> ... {log_middleware}, (), ..., _>: Service<...>` is not satisfied
+   --> src/main.rs:205:16
+    |
+205 |         .layer(axum::middleware::from_fn(log_middleware))
+    |          ----- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ unsatisfied trait bound
+    |          |
+    |          required by a bound introduced by this call
+    |
+    = help: the trait `tower_service::Service<axum::http::Request<Body>>` is not implemented for `FromFn<fn({type error}, ...) -> ... {log_middleware}, (), ..., _>`
+    = help: the following other types implement trait `tower_service::Service<Request>`:
+              axum::middleware::FromFn<F, S, I, (T1, T2)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5, T6)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5, T6, T7)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5, T6, T7, T8)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5, T6, T7, T8, T9)>
+            and 8 others
+note: required by a bound in `Router::<S>::layer`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axum-0.7.9/src/routing/mod.rs:284:21
+    |
+281 |     pub fn layer<L>(self, layer: L) -> Router<S>
+    |            ----- required by a bound in this associated function
+...
+284 |         L::Service: Service<Request> + Clone + Send + 'static,
+    |                     ^^^^^^^^^^^^^^^^ required by this bound in `Router::<S>::layer`
+    = note: the full name for the type has been written to '/Users/davidparry/code/github/runtime-bill-bench/.cargo-target/release/deps/orders-8dd298e2e183b8e0.long-type-12969352452870291016.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+error[E0277]: the trait bound `FromFn<fn(..., ...) -> ... {log_middleware}, (), ..., _>: Service<...>` is not satisfied
+   --> src/main.rs:201:15
+    |
+201 |       let app = Router::new()
+    |  _______________^
+202 | |         .route("/health", get(health_handler))
+203 | |         .route("/orders", post(create_order_handler))
+204 | |         .route("/orders/{id}", get(get_order_handler))
+205 | |         .layer(axum::middleware::from_fn(log_middleware))
+    | |_________________________________________________________^ unsatisfied trait bound
+    |
+    = help: the trait `tower_service::Service<axum::http::Request<Body>>` is not implemented for `FromFn<fn({type error}, ...) -> ... {log_middleware}, (), ..., _>`
+    = help: the following other types implement trait `tower_service::Service<Request>`:
+              axum::middleware::FromFn<F, S, I, (T1, T2)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5, T6)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5, T6, T7)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5, T6, T7, T8)>
+              axum::middleware::FromFn<F, S, I, (T1, T2, T3, T4, T5, T6, T7, T8, T9)>
+            and 8 others
+    = note: the full name for the type has been written to '/Users/davidparry/code/github/runtime-bill-bench/.cargo-target/release/deps/orders-8dd298e2e183b8e0.long-type-12969352452870291016.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+Some errors have detailed explanations: E0277, E0382.
+For more information about an error, try `rustc --explain E0277`.
+warning: `orders` (bin "orders") generated 1 warning
+error: could not compile `orders` (bin "orders") due to 6 previous errors; 1 warning emitted

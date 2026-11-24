@@ -1,0 +1,101 @@
+{
+  "lang": "rust",
+  "seed": 8,
+  "model": "qwen3.6:35b-a3b-coding",
+  "passed": false,
+  "rounds": 5,
+  "input_tokens": 50725,
+  "output_tokens": 14203,
+  "wall_seconds": 164.3,
+  "files": [
+    "Cargo.toml",
+    "src/lib.rs",
+    "src/main.rs",
+    "tests/validation_tests.rs"
+  ],
+  "round_records": [
+    {
+      "round": 1,
+      "prompt_eval_count": 737,
+      "eval_count": 8689,
+      "prompt_eval_duration": 494827000,
+      "eval_duration": 74047882000,
+      "load_duration": 3676000,
+      "total_duration": 74600068791,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "Cargo.toml",
+        "src/lib.rs",
+        "src/main.rs",
+        "tests/validation_tests.rs"
+      ],
+      "failed_step": "cargo build --release",
+      "failure": "`cargo build --release` exited with status 101. The last lines of its output:\n```\n    Updating crates.io index\n     Locking 182 packages to latest compatible versions\n      Adding axum v0.7.9 (available: v0.8.9)\n      Adding reqwest v0.11.27 (available: v0.13.5)\n      Adding tower-http v0.5.2 (available: v0.7.1)\n   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed8/project)\nwarning: unused imports: `Router`, `get`, and `post`\n --> src/lib.rs:5:15\n  |\n5 |     routing::{get, post},\n  |               ^^^  ^^^^\n6 |     Json, Router,\n  |           ^^^^^^\n  |\n  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default\n\nerror[E0382]: use of moved value: `order.created_at`\n   --> src/lib.rs:151:25\n    |\n130 |     let order = OrderResponse {\n    |         ----- move occurs because `order` has type `OrderResponse`, which does not implement the `Copy` trait\n...\n141 |         store.insert(id.clone(), order);\n    |                                  ----- value moved here\n...\n151 |             created_at: order.created_at,\n    |                         ^^^^^^^^^^^^^^^^ value used here after move\n\nFor more information about this error, try `rustc --explain E0382`.\nwarning: `orders` (lib) generated 1 warning\nerror: could not compile `orders` (lib) due to 1 previous error; 1 warning emitted\n```"
+    },
+    {
+      "round": 2,
+      "prompt_eval_count": 9899,
+      "eval_count": 1303,
+      "prompt_eval_duration": 7037130000,
+      "eval_duration": 10398978000,
+      "load_duration": 4542875,
+      "total_duration": 17493918791,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "src/lib.rs"
+      ],
+      "failed_step": "cargo build --release",
+      "failure": "`cargo build --release` exited with status 101. The last lines of its output:\n```\n   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed8/project)\nwarning: unused imports: `Router`, `get`, and `post`\n --> src/lib.rs:5:15\n  |\n5 |     routing::{get, post},\n  |               ^^^  ^^^^\n6 |     Json, Router,\n  |           ^^^^^^\n  |\n  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default\n\nerror[E0382]: use of moved value: `order`\n   --> src/lib.rs:150:26\n    |\n130 |     let order = OrderResponse {\n    |         ----- move occurs because `order` has type `OrderResponse`, which does not implement the `Copy` trait\n...\n141 |         store.insert(id.clone(), order);\n    |                                  ----- value moved here\n...\n150 |             total_cents: order.total_cents,\n    |                          ^^^^^^^^^^^^^^^^^ value used here after move\n    |\nhelp: consider cloning the value if the performance cost is acceptable\n    |\n141 |         store.insert(id.clone(), order.clone());\n    |                                       ++++++++\n\nFor more information about this error, try `rustc --explain E0382`.\nwarning: `orders` (lib) generated 1 warning\nerror: could not compile `orders` (lib) due to 1 previous error; 1 warning emitted\n```"
+    },
+    {
+      "round": 3,
+      "prompt_eval_count": 11638,
+      "eval_count": 1301,
+      "prompt_eval_duration": 9639454000,
+      "eval_duration": 10480775000,
+      "load_duration": 4280500,
+      "total_duration": 20179571667,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "src/lib.rs"
+      ],
+      "failed_step": "cargo build --release",
+      "failure": "`cargo build --release` exited with status 101. The last lines of its output:\n```\n   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed8/project)\nwarning: unused imports: `get` and `post`\n --> src/lib.rs:5:15\n  |\n5 |     routing::{get, post},\n  |               ^^^  ^^^^\n  |\n  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default\n\nerror[E0382]: use of moved value: `order`\n   --> src/lib.rs:150:26\n    |\n130 |     let order = OrderResponse {\n    |         ----- move occurs because `order` has type `OrderResponse`, which does not implement the `Copy` trait\n...\n141 |         store.insert(id.clone(), order);\n    |                                  ----- value moved here\n...\n150 |             total_cents: order.total_cents,\n    |                          ^^^^^^^^^^^^^^^^^ value used here after move\n    |\nhelp: consider cloning the value if the performance cost is acceptable\n    |\n141 |         store.insert(id.clone(), order.clone());\n    |                                       ++++++++\n\nFor more information about this error, try `rustc --explain E0382`.\nwarning: `orders` (lib) generated 1 warning\nerror: could not compile `orders` (lib) due to 1 previous error; 1 warning emitted\n```"
+    },
+    {
+      "round": 4,
+      "prompt_eval_count": 13357,
+      "eval_count": 1256,
+      "prompt_eval_duration": 11281677000,
+      "eval_duration": 10360463000,
+      "load_duration": 7216208,
+      "total_duration": 21702751000,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "src/lib.rs"
+      ],
+      "failed_step": "cargo build --release",
+      "failure": "`cargo build --release` exited with status 101. The last lines of its output:\n```\n   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed8/project)\nwarning: unused imports: `get` and `post`\n --> src/lib.rs:5:15\n  |\n5 |     routing::{get, post},\n  |               ^^^  ^^^^\n  |\n  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default\n\nwarning: `orders` (lib) generated 1 warning (run `cargo fix --lib -p orders` to apply 1 suggestion)\nwarning: unused import: `time::Instant`\n  --> src/main.rs:13:5\n   |\n13 |     time::Instant,\n   |     ^^^^^^^^^^^^^\n   |\n   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default\n\nerror[E0382]: use of moved value: `order.created_at`\n   --> src/main.rs:154:25\n    |\n133 |     let order = OrderResponse {\n    |         ----- move occurs because `order` has type `OrderResponse`, which does not implement the `Copy` trait\n...\n144 |         store.insert(id.clone(), order);\n    |                                  ----- value moved here\n...\n154 |             created_at: order.created_at,\n    |                         ^^^^^^^^^^^^^^^^ value used here after move\n\nFor more information about this error, try `rustc --explain E0382`.\nwarning: `orders` (bin \"orders\") generated 1 warning\nerror: could not compile `orders` (bin \"orders\") due to 1 previous error; 1 warning emitted\n```"
+    },
+    {
+      "round": 5,
+      "prompt_eval_count": 15094,
+      "eval_count": 1654,
+      "prompt_eval_duration": 12816479000,
+      "eval_duration": 13999639000,
+      "load_duration": 4839833,
+      "total_duration": 26882679958,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "src/main.rs"
+      ],
+      "failed_step": "cargo build --release",
+      "failure": "`cargo build --release` exited with status 101. The last lines of its output:\n```\nwarning: unused imports: `get` and `post`\n --> src/lib.rs:5:15\n  |\n5 |     routing::{get, post},\n  |               ^^^  ^^^^\n  |\n  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default\n\nwarning: `orders` (lib) generated 1 warning (run `cargo fix --lib -p orders` to apply 1 suggestion)\n   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed8/project)\nerror[E0382]: use of moved value: `order`\n   --> src/main.rs:152:26\n    |\n132 |     let order = OrderResponse {\n    |         ----- move occurs because `order` has type `OrderResponse`, which does not implement the `Copy` trait\n...\n143 |         store.insert(id.clone(), order);\n    |                                  ----- value moved here\n...\n152 |             total_cents: order.total_cents,\n    |                          ^^^^^^^^^^^^^^^^^ value used here after move\n    |\nhelp: consider cloning the value if the performance cost is acceptable\n    |\n143 |         store.insert(id.clone(), order.clone());\n    |                                       ++++++++\n\nFor more information about this error, try `rustc --explain E0382`.\nerror: could not compile `orders` (bin \"orders\") due to 1 previous error\n```"
+    }
+  ]
+}

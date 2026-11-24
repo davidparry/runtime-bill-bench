@@ -1,0 +1,3 @@
+- Go, using only the standard library (no third-party modules). The harness uses Go 1.27.
+- A module named `orders` with package main in the module root.
+- The harness runs `go build -o orders .` and `go test ./...`, then starts the service with `./orders`.

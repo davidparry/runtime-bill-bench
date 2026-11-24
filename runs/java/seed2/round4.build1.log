@@ -1,0 +1,86 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.example:orders-service >---------------------
+[INFO] Building orders-service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ orders-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ orders-service ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 9 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ orders-service ---
+[INFO] skip non existing resourceDirectory /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed2/project/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ orders-service ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ orders-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.orderservice.OrderControllerTest
+09:32:36.894 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.orderservice.OrderControllerTest]: OrderControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:32:36.937 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.orderservice.OrdersServiceApplication for test class com.example.orderservice.OrderControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-11-24T09:32:37.062-06:00  INFO 6363 --- [           main] c.e.orderservice.OrderControllerTest     : Starting OrderControllerTest using Java 25.0.5 with PID 6363 (started by davidparry in /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed2/project)
+2026-11-24T09:32:37.063-06:00  INFO 6363 --- [           main] c.e.orderservice.OrderControllerTest     : No active profile set, falling back to 1 default profile: "default"
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/Users/davidparry/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-11-24T09:32:37.448-06:00  INFO 6363 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-24T09:32:37.448-06:00  INFO 6363 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-24T09:32:37.448-06:00  INFO 6363 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-11-24T09:32:37.455-06:00  INFO 6363 --- [           main] c.e.orderservice.OrderControllerTest     : Started OrderControllerTest in 0.48 seconds (process running for 0.807)
+WARNING: A Java agent has been loaded dynamically (/Users/davidparry/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-11-24T09:32:37.800-06:00  INFO 6363 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"POST","path":"/orders","status":400,"durationMs":66}
+2026-11-24T09:32:37.816-06:00  INFO 6363 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"GET","path":"/health","status":200,"durationMs":1}
+2026-11-24T09:32:37.822-06:00  INFO 6363 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"POST","path":"/orders","status":400,"durationMs":4}
+2026-11-24T09:32:37.829-06:00  INFO 6363 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"POST","path":"/orders","status":201,"durationMs":5}
+2026-11-24T09:32:37.846-06:00  INFO 6363 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"GET","path":"/orders/101e7a72-aa7b-487c-9020-ef225f068b60","status":200,"durationMs":1}
+2026-11-24T09:32:37.849-06:00  INFO 6363 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"GET","path":"/orders/non-existent-id","status":404,"durationMs":1}
+2026-11-24T09:32:37.851-06:00  INFO 6363 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"POST","path":"/orders","status":400,"durationMs":1}
+2026-11-24T09:32:37.853-06:00  INFO 6363 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"POST","path":"/orders","status":400,"durationMs":1}
+2026-11-24T09:32:37.855-06:00  INFO 6363 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"POST","path":"/orders","status":400,"durationMs":0}
+2026-11-24T09:32:37.857-06:00  INFO 6363 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"POST","path":"/orders","status":400,"durationMs":0}
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.017 s -- in com.example.orderservice.OrderControllerTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ orders-service ---
+[INFO] Building jar: /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed2/project/target/orders-service-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:3.3.5:repackage (repackage) @ orders-service ---
+[INFO] Replacing main artifact /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed2/project/target/orders-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed2/project/target/orders-service-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.373 s
+[INFO] Finished at: 2026-11-24T09:32:39-06:00
+[INFO] ------------------------------------------------------------------------

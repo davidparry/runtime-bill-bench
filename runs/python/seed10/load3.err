@@ -1,0 +1,84 @@
+INFO:     Uvicorn running on http://0.0.0.0:58632 (Press CTRL+C to quit)
+INFO:     Started parent process [38110]
+INFO:     Started server process [38115]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38113]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38116]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38117]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38114]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38125]
+INFO:     Started server process [38119]
+INFO:     Waiting for application startup.
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Application startup complete.
+INFO:     Started server process [38122]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38127]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38123]
+INFO:     Waiting for application startup.
+INFO:     Started server process [38126]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38121]
+INFO:     Waiting for application startup.
+INFO:     Started server process [38120]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Application startup complete.
+INFO:     Application startup complete.
+INFO:     Started server process [38118]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38124]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38128]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Received SIGTERM, exiting.
+INFO:     Terminated child process [38113]
+INFO:     Terminated child process [38114]
+INFO:     Terminated child process [38115]
+INFO:     Terminated child process [38116]
+INFO:     Terminated child process [38117]
+INFO:     Terminated child process [38118]
+INFO:     Terminated child process [38119]
+INFO:     Terminated child process [38120]
+INFO:     Terminated child process [38121]
+INFO:     Terminated child process [38122]
+INFO:     Terminated child process [38123]
+INFO:     Terminated child process [38124]
+INFO:     Terminated child process [38125]
+INFO:     Terminated child process [38126]
+INFO:     Terminated child process [38127]
+INFO:     Terminated child process [38128]
+INFO:     Waiting for child process [38113]
+INFO:     Waiting for child process [38114]
+INFO:     Waiting for child process [38115]
+INFO:     Waiting for child process [38116]
+INFO:     Waiting for child process [38117]
+INFO:     Waiting for child process [38118]
+INFO:     Waiting for child process [38119]
+INFO:     Waiting for child process [38120]
+INFO:     Waiting for child process [38121]
+INFO:     Waiting for child process [38122]
+INFO:     Waiting for child process [38123]
+INFO:     Waiting for child process [38124]
+INFO:     Waiting for child process [38125]
+INFO:     Waiting for child process [38126]
+INFO:     Waiting for child process [38127]
+INFO:     Waiting for child process [38128]
+INFO:     Stopping parent process [38110]

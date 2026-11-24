@@ -1,0 +1,499 @@
+INFO:     Started server process [4987]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:56574 (Press CTRL+C to quit)
+{"method": "GET", "path": "/health", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/health", "status": 200, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 0}
+{"method": "GET", "path": "/orders/8e193b41-22e1-4580-948e-66aa407a69ab", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/13fe1b35-78a4-42ac-9f18-6aa632defb82", "status": 404, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 2}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 2}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 2}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 2}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 2}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 2}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 2}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 2}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 2}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 2}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 2}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 2}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 2}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 2}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 1}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 0}
+{"method": "POST", "path": "/orders", "status": 201, "durationMs": 0}
+{"method": "GET", "path": "/orders/cde2f105-9696-4d92-9349-5ba022fe2409", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/6c6eaccc-f365-4e85-b645-8687aa21cf07", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/10c0d744-af8e-4a12-85cf-df646b2e6eab", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/263951e2-2efa-4601-9b32-5cbf531d53b4", "status": 200, "durationMs": 1}
+{"method": "GET", "path": "/orders/3d180ac4-1072-4036-9530-e51a53af7463", "status": 200, "durationMs": 1}
+{"method": "GET", "path": "/orders/e28a66a9-c22c-439d-a29e-5c94444c52e4", "status": 200, "durationMs": 1}
+{"method": "GET", "path": "/orders/051d9aa8-dc31-46c7-b4db-feccec3b2f05", "status": 200, "durationMs": 1}
+{"method": "GET", "path": "/orders/503d7ee1-aeb4-4688-a950-8db8694a0cae", "status": 200, "durationMs": 1}
+{"method": "GET", "path": "/orders/44872f6f-7f60-438e-9599-f55ecc9675be", "status": 200, "durationMs": 1}
+{"method": "GET", "path": "/orders/64949c27-2799-44ac-9194-88685df82d98", "status": 200, "durationMs": 1}
+{"method": "GET", "path": "/orders/2fb4e5a3-88c2-408c-83cf-ff58b3ca3f23", "status": 200, "durationMs": 1}
+{"method": "GET", "path": "/orders/2098ba03-0ead-487b-ae83-0f72820502e8", "status": 200, "durationMs": 1}
+{"method": "GET", "path": "/orders/325910c9-be2e-4985-86d4-0902f4d17add", "status": 200, "durationMs": 1}
+{"method": "GET", "path": "/orders/98b2fb77-80d3-4be7-ae39-5acc32c79a43", "status": 200, "durationMs": 1}
+{"method": "GET", "path": "/orders/94a3a70c-d4c3-4679-a988-5e5bb43aab8a", "status": 200, "durationMs": 1}
+{"method": "GET", "path": "/orders/90857d5b-63e6-4423-871c-cd1e2e64c85a", "status": 200, "durationMs": 1}
+{"method": "GET", "path": "/orders/8fbb8fc6-2258-4418-87b0-e4a1e739bd7b", "status": 200, "durationMs": 1}
+{"method": "GET", "path": "/orders/d58919ec-50e5-46d2-b345-0bb5c545c7ea", "status": 200, "durationMs": 1}
+{"method": "GET", "path": "/orders/6f46f054-1448-44da-a5a9-af23e7a8d890", "status": 200, "durationMs": 1}
+{"method": "GET", "path": "/orders/079004a0-493c-4865-817f-1765b8d090da", "status": 200, "durationMs": 1}
+{"method": "GET", "path": "/orders/2eca037b-1a24-4a16-8ec8-53c7888b44f3", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/e75d3cfb-7069-47d6-a5e5-27f2728122f4", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/f8c5d743-feb9-4a93-a114-398f8ca9fc32", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/606c4196-3aee-4129-8c8b-1b8f7edbc096", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/d4142f97-528a-4679-8867-e2dfb0544009", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/7173d850-37b9-415e-8654-ba81166198ca", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/e837b2f7-5ba8-464e-b48f-120fdb83d519", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/654e27ad-00f0-4285-bb01-0aceadf67ee5", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/5cf74b27-72e4-4b56-ad9f-85a34b3098a3", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/ac44dfde-c541-4264-96c7-1b92d9688992", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/0f2bfff2-8e57-43a2-ac8d-1ad4700ebca0", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/b4ee44b8-06f3-4964-9326-7fadc3be2555", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/f604b4f3-cf1f-4271-a260-bfb8cf404b75", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/69ddf20c-9e9b-45c6-ad02-4353e5809b3e", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/a0a96e98-d97e-4f17-8d95-4838c71efffd", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/cb1e8992-81d7-4e48-864f-31eaa4ac77ad", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/46f1b23d-7ca7-4553-884e-53d11913910b", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/134cd106-43dc-4370-8497-fa5223952947", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/1cd540c9-9a05-4513-b95b-e0eef9d59195", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/0ae965ad-67f1-476c-bbcd-dc0cc1e2a778", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/aec9aebe-6c18-42ea-9424-a9bb8248b226", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/494aa15c-4cfb-43c0-9d65-d979fb530ff1", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/68bacfd4-a81c-494e-b9f9-99e752dec93a", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/4dc6be73-3924-42a8-84f5-812934c6fb7e", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/c4a7f36d-83b6-4fd7-8dd0-0dbd13708dfe", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/ce7eebb8-6a1a-44d7-adae-e859e0fd4bca", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/7e95ae56-8b7e-4d58-a969-c26daff94ca1", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/5920015b-6200-4dfb-be6e-d8c72d33f4a9", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/89e4215f-c0cb-4f2d-bae4-f30cec6656cd", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/dd06c659-36b6-483f-b09f-f1039e7cbd64", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/7e967d0d-f035-49c4-9e1d-7e38051a4341", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/d25b2c43-b471-44a9-88b3-b47482dd8cde", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/d4b856a7-dd37-4346-8366-dc42edab4a65", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/2dad7feb-3f7a-4320-acc5-51fede896885", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/9b090e64-8bac-4c3c-9d4f-cf178252085c", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/575d6475-8b7f-456f-8a2a-01f023c5269f", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/447586ed-3db2-483d-9226-4d5129a4a1e3", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/70e4d9ad-6244-4814-876a-46c00a394d6f", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/a87780ef-cc39-4799-a6be-eeb1d287c9d7", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/e59e1e39-1e71-4c92-bca5-fd7dc3f21fa1", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/7ef24944-1561-44b5-92de-343f0634b562", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/4aff9e19-cc5f-4147-8615-6aff25fadae3", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/c7a53f1e-5e35-4cf0-9fe4-6cbbb72cc6a1", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/60e3e3ba-87f9-4db7-94eb-ffaf781d3332", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/e9bb2e9d-6522-4147-9b0f-b3e0386c3a80", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/7a238f9b-31bd-4b57-a340-6b514d107eac", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/07bd6bcf-aac2-4825-84e5-2020716be483", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/14f25485-cef8-4475-8311-f8b58373add7", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/4ce30124-7e34-4edd-b7f0-554b22faaedb", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/241a269e-97f7-458b-a648-e9e7a5a1b58b", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/00f117e5-d6db-4d87-a6fd-aac7d6c754fb", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/8363dd96-2e07-4f39-9e8b-b46a00621d49", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/1a047a05-afce-4410-87ce-40be1677f78b", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/b07a6955-0b1d-4aad-b2d6-c04793bc91ba", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/01545f1e-9303-46ab-aa69-69b3cf577dd0", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/b81089a1-73ff-420b-a409-1a0c93199668", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/c6f4b700-6d10-4554-a410-853f6aa72fa1", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/8b85d2bd-b930-4316-89ff-f35b38107f24", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/ca0a4f48-bc74-478f-abe3-5be723de2302", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/3a988ccc-d4b5-4913-8d2c-cdd71128320a", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/954b8e29-e120-4717-9cf9-3d5a19bfbf16", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/4cb61ee6-5a75-4135-9e06-602306dd98a4", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/b6e445ea-846a-4536-a5d2-081ad9ebc251", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/7ba81f71-5310-495a-a3fd-5abf866a7616", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/9ac7ebe2-15ec-45a1-9996-bb9cd62c1afe", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/2934aabc-5c4e-489f-a535-cd7f8de2b33b", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/1f404a3a-69ae-4d6d-af0c-a02c437ab33a", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/c4d86bab-d911-48a0-9e19-f42c5a7fa0a7", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/ca4f30f9-760c-4251-9a5d-93f5e8662c0c", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/04976944-f5cd-48e1-9ff3-8f58afa49624", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/20e92691-f1c4-4f68-a4cc-2b11f40c6b64", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/70a73b34-eb86-4f97-a084-5fa6dd700f29", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/76f66c2c-70da-425a-b78b-7fac00072cf0", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/8289be12-fc1d-4bf2-9e95-314781cd8bd2", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/bf75da9a-f0b1-4a87-ae8a-66c9604dcf6e", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/fd2a7c8c-6d7b-43b9-83a2-f6d6a8e146d2", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/c4e425a9-20bd-4bfc-92f3-0364665ff4a1", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/88ef5b14-1983-4ec5-954e-13dd02b5dd52", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/5086f11a-fb70-4b60-8129-29811b371bb4", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/d0d21f7d-2fcc-4c41-ac5e-7d3865fba317", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/40e91f05-0799-443c-a592-9f3866d057ff", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/1708bf2c-0acf-4d6a-8dee-3da06bd35dd4", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/9cb87279-105e-4b8a-b2bc-2261c213d230", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/3e156a3b-a2bb-47f2-b12f-f5e8008d9f5e", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/36a2ac5e-b566-4c5f-be01-04a68094c2a2", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/dcdb21ab-555f-4ead-bff9-beb7f7d8915f", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/af6eb468-b14c-484d-a654-c5b8a13600d2", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/7474424d-ca96-41f9-b213-5dc7a276ccb0", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/6442c5c5-4c0f-48ca-b184-b2bd0097b54c", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/db24bac7-2708-4aae-9a5c-de427a62a912", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/358440a5-157b-4098-8956-fb91f58c1514", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/68178da3-62fb-46db-b8a8-2b235d32a4b2", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/af929d87-ad12-4858-b477-b80c418bfec4", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/b373bfc6-9c68-48d2-b12a-8fb0a8ed76b1", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/d8803ce5-0b66-4ea0-84d7-23fc71faa90f", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/659bb7a5-6346-4446-95ac-e41372bc88d3", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/c3d6c5a6-415f-494d-b54e-d051433bcf18", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/1b0e07ab-caaa-4f21-8998-75ae7993e4a5", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/d782da17-63b7-42bf-af15-0ad09961afa7", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/b618625c-2b93-4f54-8766-11b5ca6da138", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/6997949b-cc1c-4e8e-9ee4-ab5f2ba8b9ee", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/e1e7f677-a82d-4a9a-951f-9a12e6e4c156", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/70e1cb66-53bd-48b5-9e27-5e3c7455ea9e", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/5ec70ec8-1695-40c3-9530-3e11289133f0", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/612232e5-d7a7-4bf7-89f7-d22c6fedff11", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/6bc1682a-ea17-4058-8142-6a37b70fa616", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/e6246558-6ac9-4a2b-8c22-ec15748ab8be", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/6851b8db-5791-4256-aa09-d59546310cad", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/b479655b-b9de-4bc8-9fcd-cfed7a79e8f9", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/d2403ebf-d480-487c-93be-8c15064d9ce0", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/6e780750-aea1-474b-81ea-de5c31213732", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/190cec77-f46c-4fd9-abe6-5345d1ba2660", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/da49dcf7-819f-483b-a9c0-4445f2d2f589", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/194be26f-1e4d-4bcc-9bb7-7ee9adeee291", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/2cb4ba88-5a63-40b3-ae7b-847ab892b93f", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/e14c2d33-25a2-4d53-a68c-38f0354207e8", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/2f5bd2fd-8a7d-4f15-bb3e-2bd9d2747a4f", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/ea25138a-2205-43ce-b057-0e92fd794d8f", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/1446e5b9-430b-47ae-a22f-addc3cb5ae26", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/01deb861-7f19-4a15-9466-0ae2563b2065", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/be42f13f-097e-4f6f-8352-237b95eabea2", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/f977f4fc-db02-4d0b-8d5b-13cac0ff7d2e", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/030f6f1b-87d4-4612-bec2-1dcbb50c92f1", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/50f4e3ea-a54b-4624-b4c3-aab891967dcc", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/7c89fe07-61bc-4228-9235-b4f35854b86b", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/3d0d6ff4-6831-4144-b72f-d10cf433f1b9", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/76cecdc1-3e6c-4fc3-9904-42bc1f5dc88f", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/0ddd38b6-d75d-408c-896b-fee47c12fd5b", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/7dbe5f16-7ca6-4480-b6cd-12a290dad3d9", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/d1f6fbed-6dd4-4ce1-bb03-2f7997694915", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/38ee443b-0d74-4c1c-9376-dc7f1e05407d", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/14bfd2bf-c25f-444a-a057-6900c4b06519", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/a56647f9-4b78-4046-a68c-bdefadc2e216", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/dda4cd59-9988-4a77-8500-bf348f310652", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/aa03cc98-6399-48f9-aa45-a99f9fa27e57", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/862d4ee1-e61d-4cf3-8808-824c4b53c0ab", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/a9a2590a-cf10-4e77-b107-4501e98f8559", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/edeb0790-2a4b-4b11-9e76-bd80087c3f42", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/d36ab394-8aa8-441b-9065-de73aae69f9d", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/fc9a35d0-c5c9-4874-91f8-6175fefa220c", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/157b32ff-52bf-4890-b86f-0da4a2588bf0", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/461f69f2-5d5c-4d84-992e-17dbd2e6f6d0", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/15ed7839-1aa6-43a7-8f14-bc7b04245e4e", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/d1457540-257a-45b3-aa67-e47f1158c2f1", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/475b797f-972d-4842-b006-a717866e26d1", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/88abb6b0-530a-4caf-a12c-f367f9b53b88", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/30c61e43-b38e-4c86-8b22-a2425e23d58b", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/fc892918-05e9-43f9-9cb2-eca25b0a11fb", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/ca27a6a0-55fb-415c-a829-1a3995475ef3", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/9d43da1b-e92a-40cd-aeed-c1519c286011", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/a08783d2-fec0-4e0b-9cef-e460ef69c4ba", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/70900708-614c-4d2c-8c65-7c46e5b0a121", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/eba70801-e946-4aaf-831c-68b78694a661", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/5be7e1c1-a1a0-48f8-bdcd-6c411437eba3", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/a4549a0a-6d90-4f23-a399-f0a842362bbb", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/6ffd74aa-605c-4cf1-b340-7bfb6bbe3e2d", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/3fb6fca1-5570-4eca-a054-6d330b830138", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/804575ee-cfd9-48cd-b1d2-ec97c2a25670", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/6f3c8748-6eed-407f-9cf1-7657fdfc157b", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/3d68701e-cfee-4399-9639-04e1cdbe873a", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/d1439481-4fa4-4a1a-b6fb-c8d3c28c000b", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/5ed42ddc-37ad-45ee-b394-446ec4d1f6e3", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/57f7bf81-dc87-4f65-b8eb-af59e586ed7e", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/67410994-c706-49eb-beb4-cd693d9c854f", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/6e1fbc61-f80f-455f-8c89-44afea39723a", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/986e41b4-319f-4407-bf9d-ac2083a8d76a", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/7412d6cd-00fb-4a31-a0d8-dc4b378eb7e7", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/14647b2b-a90a-4e89-ae03-2ac403eba2ea", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/9b8488d6-0dd1-43e9-9c32-e70b4fdfc6b0", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/b588eadb-7c77-4a76-91fa-3ed2db0b7081", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/41e06d54-55e4-4a98-bdc4-e8673d791964", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/2f3e7d58-bead-4819-a41e-e177a17a02e3", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/0415abec-a4db-4206-96e8-4c83255fa876", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/ab474efe-725d-4f60-9bea-9271e016c289", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/e1202991-906e-4256-8977-45528edbc329", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/a894d274-288d-463c-b05e-d714b3aa69dc", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/5b34c9ff-99dd-4a1b-84ef-b0c28e1a940d", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/25bb59c9-46d9-426a-abcd-2d56f1090d85", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/dadfc20f-e039-4712-8d26-9ab3b5882762", "status": 200, "durationMs": 0}
+{"method": "GET", "path": "/orders/56760047-eb94-461e-a4fb-9c32ad82e7d7", "status": 200, "durationMs": 0}
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [4987]
+--- Logging error ---
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/logging/__init__.py", line 472, in format
+    return self._format(record)
+           ~~~~~~~~~~~~^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/logging/__init__.py", line 468, in _format
+    return self._fmt % values
+           ~~~~~~~~~~^~~~~~~~
+KeyError: 'method'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/davidparry/code/github/runtime-bill-bench/runs/python/seed1/project/main.py", line 33, in emit
+    msg = self.format(record)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/logging/__init__.py", line 999, in format
+    return fmt.format(record)
+           ~~~~~~~~~~^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/logging/__init__.py", line 715, in format
+    s = self.formatMessage(record)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/logging/__init__.py", line 684, in formatMessage
+    return self._style.format(record)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/logging/__init__.py", line 474, in format
+    raise ValueError('Formatting field not found in record: %s' % e)
+ValueError: Formatting field not found in record: 'method'
+Call stack:
+  File "/Users/davidparry/code/github/runtime-bill-bench/runs/python/seed1/project/.venv/bin/uvicorn", line 10, in <module>
+    sys.exit(main())
+  File "/Users/davidparry/code/github/runtime-bill-bench/runs/python/seed1/project/.venv/lib/python3.14/site-packages/click/core.py", line 1653, in __call__
+    return self.main(*args, **kwargs)
+  File "/Users/davidparry/code/github/runtime-bill-bench/runs/python/seed1/project/.venv/lib/python3.14/site-packages/click/core.py", line 1560, in main
+    rv = self.invoke(ctx)
+  File "/Users/davidparry/code/github/runtime-bill-bench/runs/python/seed1/project/.venv/lib/python3.14/site-packages/click/core.py", line 1414, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/Users/davidparry/code/github/runtime-bill-bench/runs/python/seed1/project/.venv/lib/python3.14/site-packages/click/core.py", line 911, in invoke
+    return callback(*args, **kwargs)
+  File "/Users/davidparry/code/github/runtime-bill-bench/runs/python/seed1/project/.venv/lib/python3.14/site-packages/uvicorn/main.py", line 448, in main
+    run(
+  File "/Users/davidparry/code/github/runtime-bill-bench/runs/python/seed1/project/.venv/lib/python3.14/site-packages/uvicorn/main.py", line 632, in run
+    server.run()
+  File "/Users/davidparry/code/github/runtime-bill-bench/runs/python/seed1/project/.venv/lib/python3.14/site-packages/uvicorn/server.py", line 86, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py", line 204, in run
+    return runner.run(main)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+  File "/Users/davidparry/code/github/runtime-bill-bench/runs/python/seed1/project/.venv/lib/python3.14/site-packages/uvicorn/server.py", line 89, in serve
+    with self.capture_signals():
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextlib.py", line 148, in __exit__
+    next(self.gen)
+  File "/Users/davidparry/code/github/runtime-bill-bench/runs/python/seed1/project/.venv/lib/python3.14/site-packages/uvicorn/server.py", line 349, in capture_signals
+    signal.raise_signal(captured_signal)
+  File "/Users/davidparry/code/github/runtime-bill-bench/runs/python/seed1/project/main.py", line 217, in shutdown_handler
+    logger.info("Received shutdown signal, stopping server...")
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/logging/__init__.py", line 1520, in info
+    self._log(INFO, msg, args, **kwargs)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/logging/__init__.py", line 1665, in _log
+    self.handle(record)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/logging/__init__.py", line 1681, in handle
+    self.callHandlers(record)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/logging/__init__.py", line 1737, in callHandlers
+    hdlr.handle(record)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/logging/__init__.py", line 1027, in handle
+    self.emit(record)
+  File "/Users/davidparry/code/github/runtime-bill-bench/runs/python/seed1/project/main.py", line 48, in emit
+    self.handleError(record)
+Message: 'Received shutdown signal, stopping server...'
+Arguments: ()

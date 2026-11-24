@@ -1,0 +1,73 @@
+{
+  "lang": "go",
+  "seed": 5,
+  "loc": {
+    "source": 369,
+    "test": 202,
+    "manifest": 2,
+    "config": 0,
+    "other": 0,
+    "total": 573
+  },
+  "runtime_deps": [],
+  "vulnerabilities": [],
+  "pins": {
+    "framework": "standard library",
+    "pinned": "1.27",
+    "toolchain": "go1.27.4"
+  },
+  "load_trials": [
+    {
+      "startup_ms": 32.4,
+      "idle_rss_mb": 11.3,
+      "peak_rss_mb": 100.3,
+      "cpu_seconds_per_100k": 5.928,
+      "rps": 132990.2,
+      "p50_ms": 0.473,
+      "p99_ms": 1.026,
+      "success_rate": 1.0,
+      "status_codes": {
+        "201": 100000
+      },
+      "errors": {}
+    },
+    {
+      "startup_ms": 32.8,
+      "idle_rss_mb": 11.4,
+      "peak_rss_mb": 81.0,
+      "cpu_seconds_per_100k": 5.717,
+      "rps": 136347.8,
+      "p50_ms": 0.452,
+      "p99_ms": 1.221,
+      "success_rate": 1.0,
+      "status_codes": {
+        "201": 100000
+      },
+      "errors": {}
+    },
+    {
+      "startup_ms": 31.9,
+      "idle_rss_mb": 11.3,
+      "peak_rss_mb": 82.1,
+      "cpu_seconds_per_100k": 5.867,
+      "rps": 133678.1,
+      "p50_ms": 0.469,
+      "p99_ms": 1.039,
+      "success_rate": 1.0,
+      "status_codes": {
+        "201": 100000
+      },
+      "errors": {}
+    }
+  ],
+  "load": {
+    "startup_ms": 32.4,
+    "idle_rss_mb": 11.3,
+    "peak_rss_mb": 82.1,
+    "cpu_seconds_per_100k": 5.867,
+    "rps": 133678.1,
+    "p50_ms": 0.469,
+    "p99_ms": 1.039
+  },
+  "salvaged": false
+}

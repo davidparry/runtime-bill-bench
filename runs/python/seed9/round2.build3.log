@@ -1,0 +1,94 @@
+..FFFFF..                                                                [100%]
+=================================== FAILURES ===================================
+___________________ test_create_order_invalid_no_customer_id ___________________
+
+    def test_create_order_invalid_no_customer_id():
+        payload = {
+            "items": [{"sku": "A-1", "quantity": 1, "unitPriceCents": 100}]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 422  # Pydantic validation error
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       assert 400 == 422
+E        +  where 400 = <Response [400 Bad Request]>.status_code
+
+test_main.py:36: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0.29, "timestamp": "2026-11-24T17:02:05.477625+00:00"}
+____________________ test_create_order_invalid_empty_items _____________________
+
+    def test_create_order_invalid_empty_items():
+        payload = {
+            "customerId": "c-1",
+            "items": []
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 422
+E       assert 400 == 422
+E        +  where 400 = <Response [400 Bad Request]>.status_code
+
+test_main.py:44: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0.34, "timestamp": "2026-11-24T17:02:05.499022+00:00"}
+____________________ test_create_order_invalid_sku_too_long ____________________
+
+    def test_create_order_invalid_sku_too_long():
+        payload = {
+            "customerId": "c-1",
+            "items": [{"sku": "A" * 33, "quantity": 1, "unitPriceCents": 100}]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 422
+E       assert 400 == 422
+E        +  where 400 = <Response [400 Bad Request]>.status_code
+
+test_main.py:52: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0.3, "timestamp": "2026-11-24T17:02:05.501701+00:00"}
+___________________ test_create_order_invalid_quantity_zero ____________________
+
+    def test_create_order_invalid_quantity_zero():
+        payload = {
+            "customerId": "c-1",
+            "items": [{"sku": "A-1", "quantity": 0, "unitPriceCents": 100}]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 422
+E       assert 400 == 422
+E        +  where 400 = <Response [400 Bad Request]>.status_code
+
+test_main.py:60: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0.28, "timestamp": "2026-11-24T17:02:05.504233+00:00"}
+__________________ test_create_order_invalid_unit_price_zero ___________________
+
+    def test_create_order_invalid_unit_price_zero():
+        payload = {
+            "customerId": "c-1",
+            "items": [{"sku": "A-1", "quantity": 1, "unitPriceCents": 0}]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 422
+E       assert 400 == 422
+E        +  where 400 = <Response [400 Bad Request]>.status_code
+
+test_main.py:68: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0.26, "timestamp": "2026-11-24T17:02:05.506835+00:00"}
+=============================== warnings summary ===============================
+.venv/lib/python3.14/site-packages/fastapi/testclient.py:1
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed9/project/.venv/lib/python3.14/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+main.py:24
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed9/project/main.py:24: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.14/migration/
+    class CreateOrderRequest(BaseModel):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED test_main.py::test_create_order_invalid_no_customer_id - assert 400 ==...
+FAILED test_main.py::test_create_order_invalid_empty_items - assert 400 == 422
+FAILED test_main.py::test_create_order_invalid_sku_too_long - assert 400 == 422
+FAILED test_main.py::test_create_order_invalid_quantity_zero - assert 400 == 422
+FAILED test_main.py::test_create_order_invalid_unit_price_zero - assert 400 =...
+5 failed, 4 passed, 2 warnings in 0.55s

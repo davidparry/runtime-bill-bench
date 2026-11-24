@@ -1,0 +1,7 @@
+{
+  "service_passed": false,
+  "failed_step": "acceptance",
+  "detail": "The harness started the service with PORT=58672, and it did not answer GET /health on that port with status 200 within 120 seconds (it was still running). Server output:\n```\nListening on 0.0.0.0:8080\n```",
+  "acceptance_failures": null,
+  "startup_seconds": null
+}

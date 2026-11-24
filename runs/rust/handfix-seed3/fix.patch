@@ -1,0 +1,43 @@
+diff -ru -x target -x Cargo.lock /Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed3/project/src/main.rs /Users/davidparry/code/github/runtime-bill-bench/runs/rust/handfix-seed3/project/src/main.rs
+--- /Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed3/project/src/main.rs	2026-11-24 09:57:10
++++ /Users/davidparry/code/github/runtime-bill-bench/runs/rust/handfix-seed3/project/src/main.rs	2026-11-24 11:14:53
+@@ -15,12 +15,14 @@
+ use uuid::Uuid;
+ 
+ #[derive(Debug, Deserialize)]
++#[serde(rename_all = "camelCase")]
+ struct CreateOrderRequest {
+     customer_id: String,
+     items: Vec<OrderItem>,
+ }
+ 
+ #[derive(Debug, Deserialize, Clone, Serialize)]
++#[serde(rename_all = "camelCase")]
+ struct OrderItem {
+     sku: String,
+     quantity: u64,
+@@ -63,7 +65,7 @@
+ 
+     let app = Router::new()
+         .route("/orders", post(create_order))
+-        .route("/orders/{id}", get(get_order))
++        .route("/orders/:id", get(get_order))
+         .route("/health", get(health_check))
+         .with_state(state);
+ 
+@@ -89,6 +91,7 @@
+ 
+ async fn health_check() -> impl IntoResponse {
+     let body = serde_json::json!({ "status": "ok" });
++    log_request("GET", "/health", 200, 0);
+     (StatusCode::OK, Json(body)).into_response()
+ }
+ 
+@@ -150,6 +153,7 @@
+     });
+ 
+     let mut response = Response::new(serde_json::to_string(&response_body).unwrap().into());
++    *response.status_mut() = StatusCode::CREATED;
+     response.headers_mut().insert(
+         "Location",
+         HeaderValue::from_str(&format!("/orders/{}", order_id)).unwrap(),

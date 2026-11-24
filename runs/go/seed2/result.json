@@ -1,0 +1,105 @@
+{
+  "lang": "go",
+  "seed": 2,
+  "model": "qwen3.6:35b-a3b-coding",
+  "passed": false,
+  "rounds": 5,
+  "input_tokens": 34385,
+  "output_tokens": 12415,
+  "wall_seconds": 138.2,
+  "files": [
+    "go.mod",
+    "main.go",
+    "main_test.go",
+    "uuid.go"
+  ],
+  "round_records": [
+    {
+      "round": 1,
+      "prompt_eval_count": 729,
+      "eval_count": 4431,
+      "prompt_eval_duration": 490392000,
+      "eval_duration": 37846030000,
+      "load_duration": 4805041,
+      "total_duration": 38376011833,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "go.mod",
+        "main.go",
+        "main_test.go",
+        "uuid.go"
+      ],
+      "failed_step": "go build -o orders .",
+      "failure": "`go build -o orders .` exited with status 1. The last lines of its output:\n```\n# orders\n./main.go:138:14: assignment mismatch: 1 variable but mux.Handler returns 2 values\n```"
+    },
+    {
+      "round": 2,
+      "prompt_eval_count": 5279,
+      "eval_count": 1937,
+      "prompt_eval_duration": 4075121000,
+      "eval_duration": 15772910000,
+      "load_duration": 2699666,
+      "total_duration": 19894159333,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.go"
+      ],
+      "failed_step": "go build -o orders .",
+      "failure": "`go build -o orders .` exited with status 1. The last lines of its output:\n```\n# orders\n./main.go:99:9: undefined: strings\n```"
+    },
+    {
+      "round": 3,
+      "prompt_eval_count": 7319,
+      "eval_count": 1941,
+      "prompt_eval_duration": 5824395000,
+      "eval_duration": 14987493000,
+      "load_duration": 2479167,
+      "total_duration": 20845354667,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.go"
+      ],
+      "failed_step": "go test ./...",
+      "failure": "`go test ./...` exited with status 1. The last lines of its output:\n```\n# orders [orders.test]\n./main_test.go:6:2: \"fmt\" imported and not used\n./main_test.go:14:2: declared and not used: req\n./main_test.go:15:2: declared and not used: w\n./main_test.go:122:2: declared and not used: order\n./main_test.go:149:2: declared and not used: w\n./main_test.go:175:39: undefined: time\n./main_test.go:177:20: undefined: time\nFAIL\torders [build failed]\nFAIL\n```"
+    },
+    {
+      "round": 4,
+      "prompt_eval_count": 9477,
+      "eval_count": 1903,
+      "prompt_eval_duration": 8075221000,
+      "eval_duration": 17175929000,
+      "load_duration": 6403708,
+      "total_duration": 25303369083,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main_test.go"
+      ],
+      "startup_seconds": 0.376,
+      "acceptance_failures": 1,
+      "failed_step": "acceptance",
+      "failure": "These checks failed:\n- POST /orders with unknown fields: expected status 201, got 400 with body '{\"error\":\"Invalid JSON: json: unknown field \\\\\"color\\\\\"\"}\\n'\n\nThe service's standard error:\n```\n2026/11/24 09:34:52 Orders service starting on port 59865\n2026/11/24 09:34:52 Received signal terminated, shutting down...\n2026/11/24 09:34:52 Orders service stopped.\n```"
+    },
+    {
+      "round": 5,
+      "prompt_eval_count": 11581,
+      "eval_count": 2203,
+      "prompt_eval_duration": 9918994000,
+      "eval_duration": 19072370000,
+      "load_duration": 3656667,
+      "total_duration": 29036388750,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.go"
+      ],
+      "startup_seconds": 1.073,
+      "acceptance_failures": 1,
+      "failed_step": "acceptance",
+      "failure": "These checks failed:\n- POST /orders with unknown fields: expected status 201, got 400 with body '{\"error\":\"Invalid JSON: EOF\"}\\n'\n\nThe service's standard error:\n```\n2026/11/24 09:35:23 Orders service starting on port 60496\n2026/11/24 09:35:23 Received signal terminated, shutting down...\n2026/11/24 09:35:23 Orders service stopped.\n```"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.example:orders-service >---------------------
+[INFO] Building orders-service 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ orders-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ orders-service ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 8 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ orders-service ---
+[INFO] skip non existing resourceDirectory /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed3/project/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ orders-service ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+[INFO] Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed3/project/src/test/java/com/example/orderservice/OrderControllerTest.java:[42,16] incompatible types: inference variable E has incompatible bounds
+    equality constraints: com.example.orderservice.model.OrderItem
+    lower bounds: java.util.Map<K,V>
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.768 s
+[INFO] Finished at: 2026-11-24T09:52:20-06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.13.0:testCompile (default-testCompile) on project orders-service: Compilation failure
+[ERROR] /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed3/project/src/test/java/com/example/orderservice/OrderControllerTest.java:[42,16] incompatible types: inference variable E has incompatible bounds
+[ERROR]     equality constraints: com.example.orderservice.model.OrderItem
+[ERROR]     lower bounds: java.util.Map<K,V>
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

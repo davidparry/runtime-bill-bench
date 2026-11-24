@@ -1,0 +1,7 @@
+{
+  "service_passed": false,
+  "failed_step": "acceptance",
+  "detail": "These checks failed:\n- POST /orders with a valid order: expected status 201, got 400 with body '{\"error\":\"Invalid JSON: missing field `unit_price_cents` at line 1 column 87\"}'\n- GET /orders/{id} for an unknown id: Content-Type is '', expected application/json\n- GET /orders/{id} for an unknown id: expected a JSON object with a string \"error\" field, got ''\n- POST /orders with the largest allowed order: expected status 201, got 400 with body '{\"error\":\"Invalid JSON: missing field `unit_price_cents` at line 1 column 92\"}'\n- POST /orders with unknown fields: expected status 201, got 400 with body '{\"error\":\"Invalid JSON: missing field `unit_price_cents` at line 1 column 103\"}'\n- 200 concurrent POST /orders, then GET each: 200 of 200 creates failed; the first got status 400 with body '{\"error\":\"Invalid JSON: missing field `unit_price_cents` at line 1 column 85\"}'\n- request log: expected at least 220 stdout lines that are JSON objects with the top-level keys method, path, status, and durationMs (one per request); found 218. Last stdout lines:\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400}\nReceived SIGTERM, shutting down gracefully...",
+  "acceptance_failures": 7,
+  "startup_seconds": 0.222
+}

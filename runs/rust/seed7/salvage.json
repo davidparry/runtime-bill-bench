@@ -1,0 +1,5 @@
+{
+  "service_passed": false,
+  "failed_step": "cargo build --release",
+  "detail": "    Updating crates.io index\nerror: failed to select a version for `axum`.\n    ... required by package `orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed7/project)`\nversions that meet the requirements `^0.7` are: 0.7.9, 0.7.8, 0.7.7, 0.7.6, 0.7.5, 0.7.4, 0.7.3, 0.7.2, 0.7.1, 0.7.0\n\npackage `orders` depends on `axum` with feature `test` but `axum` does not have that feature.\nhelp: there is a feature `ws` with a similar name\n\n\nall possible versions conflict with previously selected packages\n\n  previously selected package `axum v0.7.0`\n    ... which satisfies dependency `axum = \"^0.7\"` of package `orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed7/project)`\n\nfailed to select a version for `axum` which could resolve this conflict"
+}

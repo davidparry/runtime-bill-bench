@@ -1,0 +1,107 @@
+{
+  "lang": "go",
+  "seed": 6,
+  "model": "qwen3.6:35b-a3b-coding",
+  "passed": false,
+  "rounds": 5,
+  "input_tokens": 60743,
+  "output_tokens": 21518,
+  "wall_seconds": 236.7,
+  "files": [
+    "go.mod",
+    "main.go",
+    "main_test.go"
+  ],
+  "round_records": [
+    {
+      "round": 1,
+      "prompt_eval_count": 730,
+      "eval_count": 8647,
+      "prompt_eval_duration": 484491000,
+      "eval_duration": 63370033000,
+      "load_duration": 4853959,
+      "total_duration": 63903746750,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "go.mod",
+        "main.go",
+        "main_test.go"
+      ],
+      "failed_step": "go test ./...",
+      "failure": "`go test ./...` exited with status 1. The last lines of its output:\n```\n--- FAIL: TestValidateCreateRequest (0.00s)\n    --- FAIL: TestValidateCreateRequest/unknown_fields_ignored (0.00s)\n        main_test.go:118: validateCreateRequest() error = invalid JSON body: json: unknown field \"extra\", wantErr false\nFAIL\nFAIL\torders\t0.400s\nFAIL\n```"
+    },
+    {
+      "round": 2,
+      "prompt_eval_count": 9540,
+      "eval_count": 2913,
+      "prompt_eval_duration": 6876411000,
+      "eval_duration": 23853151000,
+      "load_duration": 4622000,
+      "total_duration": 30786891333,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.go"
+      ],
+      "startup_seconds": 0.2,
+      "acceptance_failures": 3,
+      "failed_step": "acceptance",
+      "failure": "These checks failed:\n- POST /orders with a valid order: id 'a107-34-47-a8-36a9aff3b91eb34bd789cb' is not a version 4 UUID\n- POST /orders with the largest allowed order: id '5b6b-25-4b-9b-237402aa4604476d9093c3' is not a version 4 UUID\n- POST /orders with unknown fields: id '8b92-d7-49-8a-8c7e9310865d4f334ca779' is not a version 4 UUID\n\nThe service's standard error:\n```\n2026/11/24 10:24:50 Server starting on port 50852\n2026/11/24 10:24:50 Shutting down server...\n2026/11/24 10:24:50 Server exited\n```"
+    },
+    {
+      "round": 3,
+      "prompt_eval_count": 12765,
+      "eval_count": 2925,
+      "prompt_eval_duration": 10809648000,
+      "eval_duration": 23831432000,
+      "load_duration": 3174125,
+      "total_duration": 34707172792,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.go"
+      ],
+      "startup_seconds": 0.331,
+      "acceptance_failures": 2,
+      "failed_step": "acceptance",
+      "failure": "These checks failed:\n- POST /orders with a valid order: id '9e8a-43-47-7b-24c6049d94872b2154242d' is not a version 4 UUID\n- POST /orders with the largest allowed order: id '39dc-7d-42-63-f3a6323994ede4519f5f89' is not a version 4 UUID\n\nThe service's standard error:\n```\n2026/11/24 10:25:26 Server starting on port 51569\n2026/11/24 10:25:26 Shutting down server...\n2026/11/24 10:25:26 Server exited\n```"
+    },
+    {
+      "round": 4,
+      "prompt_eval_count": 15948,
+      "eval_count": 4041,
+      "prompt_eval_duration": 13383142000,
+      "eval_duration": 36342052000,
+      "load_duration": 2925417,
+      "total_duration": 49788818167,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.go"
+      ],
+      "startup_seconds": 0.144,
+      "acceptance_failures": 5,
+      "failed_step": "acceptance",
+      "failure": "These checks failed:\n- POST /orders with a valid order: request failed: RemoteDisconnected('Remote end closed connection without response')\n- POST /orders with the largest allowed order: request failed: RemoteDisconnected('Remote end closed connection without response')\n- POST /orders with unknown fields: request failed: RemoteDisconnected('Remote end closed connection without response')\n- 200 concurrent POST /orders, then GET each: request failed: RemoteDisconnected('Remote end closed connection without response')\n- request log: expected at least 108 stdout lines that are JSON objects with the top-level keys method, path, status, and durationMs (one per request); found 18. Last stdout lines:\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400}\n\nThe service's standard error:\n```\nnet/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbfde0a8?}, 0x103e1f908?)\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38\nnet/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbfde0a8}, 0x2ed0dbc74f00)\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194\nmain.loggingMiddleware.func1({0x100756a08, 0x2ed0dc07a000}, 0x2ed0dbc74f00)\n\t/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac\nnet/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dc07a000?}, 0x2ed0dbf1dae0?)\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38\nnet/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dc07a000?}, 0x1?)\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0\nnet/http.(*conn).serve(0x2ed0dbde6630, {0x100756dd0, 0x2ed0dbd1e240})\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0\ncreated by net/http.(*Server).Serve in goroutine 5\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8\n2026/11/24 10:26:17 http: panic serving 127.0.0.1:52199: runtime error: index out of range [62] with length 16\ngoroutine 245 [running]:\nnet/http.(*conn).serve.func1()\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac\npanic({0x100741870?, 0x2ed0dbe10168?})\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120\nmain.generateUUID()\n\t/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:247 +0x58\nmain.handleCreateOrder.func1({0x100756978, 0x2ed0dbeb0228}, 0x2540be400?)\n\t/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc\nnet/http.HandlerFunc.ServeHTTP(0x2ed0dbdd00c0?, {0x100756978?, 0x2ed0dbeb0228?}, 0x103db2308?)\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38\nnet/http.(*ServeMux).ServeHTTP(0x18?, {0x100756978, 0x2ed0dbeb0228}, 0x2ed0dbdf6140)\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194\nmain.loggingMiddleware.func1({0x100756a08, 0x2ed0dbd784b0}, 0x2ed0dbdf6140)\n\t/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:359 +0xac\nnet/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100756a08?, 0x2ed0dbd784b0?}, 0x2ed0dbe13ae0?)\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38\nnet/http.serverHandler.ServeHTTP({0x10?}, {0x100756a08?, 0x2ed0dbd784b0?}, 0x1?)\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0\nnet/http.(*conn).serve(0x2ed0dbd24510, {0x100756dd0, 0x2ed0dbd1e240})\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0\ncreated by net/http.(*Server).Serve in goroutine 5\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8\n2026/11/24 10:26:17 Shutting down server...\n2026/11/24 10:26:17 Server exited\n```"
+    },
+    {
+      "round": 5,
+      "prompt_eval_count": 21760,
+      "eval_count": 2992,
+      "prompt_eval_duration": 21125910000,
+      "eval_duration": 30712102000,
+      "load_duration": 4148042,
+      "total_duration": 51918047083,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.go"
+      ],
+      "startup_seconds": 0.194,
+      "acceptance_failures": 5,
+      "failed_step": "acceptance",
+      "failure": "These checks failed:\n- POST /orders with a valid order: request failed: RemoteDisconnected('Remote end closed connection without response')\n- POST /orders with the largest allowed order: request failed: RemoteDisconnected('Remote end closed connection without response')\n- POST /orders with unknown fields: request failed: RemoteDisconnected('Remote end closed connection without response')\n- 200 concurrent POST /orders, then GET each: request failed: RemoteDisconnected('Remote end closed connection without response')\n- request log: expected at least 125 stdout lines that are JSON objects with the top-level keys method, path, status, and durationMs (one per request); found 18. Last stdout lines:\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400}\n\nThe service's standard error:\n```\nnet/http.HandlerFunc.ServeHTTP(0x55b42dabc0c0?, {0x100d92978?, 0x55b42da04378?}, 0x10fe054c0?)\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38\nnet/http.(*ServeMux).ServeHTTP(0x18?, {0x100d92978, 0x55b42da04378}, 0x55b42db2c500)\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194\nmain.loggingMiddleware.func1({0x100d92a08, 0x55b42dd8a000}, 0x55b42db2c500)\n\t/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:293 +0xac\nnet/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100d92a08?, 0x55b42dd8a000?}, 0x55b42daedae0?)\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38\nnet/http.serverHandler.ServeHTTP({0x10?}, {0x100d92a08?, 0x55b42dd8a000?}, 0x1?)\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0\nnet/http.(*conn).serve(0x55b42dac8510, {0x100d92dd0, 0x55b42dbb0240})\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0\ncreated by net/http.(*Server).Serve in goroutine 34\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8\n2026/11/24 10:27:10 http: panic serving 127.0.0.1:52416: runtime error: index out of range [36] with length 36\ngoroutine 231 [running]:\nnet/http.(*conn).serve.func1()\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:1963 +0xac\npanic({0x100d7d870?, 0x55b42dcb40a8?})\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120\nmain.generateUUID()\n\t/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:280 +0x50\nmain.handleCreateOrder.func1({0x100d92978, 0x55b42db32138}, 0x2540be400?)\n\t/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:160 +0xbc\nnet/http.HandlerFunc.ServeHTTP(0x55b42dabc0c0?, {0x100d92978?, 0x55b42db32138?}, 0x10fda3e28?)\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38\nnet/http.(*ServeMux).ServeHTTP(0x18?, {0x100d92978, 0x55b42db32138}, 0x55b42dd1a000)\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2927 +0x194\nmain.loggingMiddleware.func1({0x100d92a08, 0x55b42dcaa5a0}, 0x55b42dd1a000)\n\t/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed6/project/main.go:293 +0xac\nnet/http.HandlerFunc.ServeHTTP(0x1000000000000?, {0x100d92a08?, 0x55b42dcaa5a0?}, 0x55b42de9bae0?)\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2362 +0x38\nnet/http.serverHandler.ServeHTTP({0x10?}, {0x100d92a08?, 0x55b42dcaa5a0?}, 0x1?)\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3440 +0xb0\nnet/http.(*conn).serve(0x55b42dbb8090, {0x100d92dd0, 0x55b42dbb0240})\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:2161 +0x5a0\ncreated by net/http.(*Server).Serve in goroutine 34\n\t/opt/homebrew/Cellar/go/1.27.4/libexec/src/net/http/server.go:3608 +0x3e8\n2026/11/24 10:27:10 Shutting down server...\n2026/11/24 10:27:10 Server exited\n```"
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+   Compiling system-configuration-sys v0.6.0
+   Compiling base64 v0.23.1
+   Compiling axum-core v0.4.5
+   Compiling tokio-util v0.7.20
+   Compiling tower v0.5.3
+   Compiling h2 v0.4.20
+   Compiling system-configuration v0.7.0
+   Compiling hyper v1.13.0
+   Compiling hyper-util v0.1.21
+   Compiling axum v0.7.9
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed2/project)
+warning: unused variable: `status`
+  --> src/handlers.rs:20:14
+   |
+20 |         let (status, message) = match self {
+   |              ^^^^^^ help: if this is intentional, prefix it with an underscore: `_status`
+   |
+   = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: variable does not need to be mutable
+  --> src/middleware.rs:43:24
+   |
+43 |     fn call(&mut self, mut req: Request<B>) -> Self::Future {
+   |                        ----^^^
+   |                        |
+   |                        help: remove this `mut`
+   |
+   = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: `orders` (lib) generated 2 warnings (run `cargo fix --lib -p orders` to apply 2 suggestions)
+warning: unused import: `std::net::SocketAddr`
+ --> src/main.rs:2:5
+  |
+2 | use std::net::SocketAddr;
+  |     ^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+error[E0432]: unresolved import `orders::AppState`
+ --> tests/integration_tests.rs:4:5
+  |
+4 | use orders::AppState; // Note: AppState is not pub in main, so we need to expose it or test via HTTP
+  |     ^^^^^^^^^^^^^^^^ no `AppState` in the root
+
+error[E0425]: cannot find function `to_bytes` in module `hyper::body`
+  --> tests/api_tests.rs:51:35
+   |
+51 |     let body_bytes = hyper::body::to_bytes(res.into_body()).await.unwrap();
+   |                                   ^^^^^^^^ not found in `hyper::body`
+
+warning: unused import: `hyper::body::Bytes`
+ --> tests/api_tests.rs:2:5
+  |
+2 | use hyper::body::Bytes;
+  |     ^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+error[E0433]: cannot find `AppState` in `orders`
+  --> tests/integration_tests.rs:26:29
+   |
+26 |         let state = orders::AppState::new();
+   |                             ^^^^^^^^ could not find `AppState` in `orders`
+
+warning: unused imports: `HeaderName` and `StatusCode`
+ --> tests/integration_tests.rs:1:18
+  |
+1 | use axum::http::{HeaderName, StatusCode};
+  |                  ^^^^^^^^^^  ^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `tower::service_fn`
+ --> tests/api_tests.rs:7:5
+  |
+7 | use tower::service_fn;
+  |     ^^^^^^^^^^^^^^^^^
+
+warning: unused import: `hyper::body::Bytes`
+ --> tests/integration_tests.rs:2:5
+  |
+2 | use hyper::body::Bytes;
+  |     ^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `hyper_util::rt::TokioExecutor`
+ --> tests/integration_tests.rs:3:5
+  |
+3 | use hyper_util::rt::TokioExecutor;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `tower::ServiceExt`
+ --> tests/api_tests.rs:8:5
+  |
+8 | use tower::ServiceExt;
+  |     ^^^^^^^^^^^^^^^^^
+
+warning: unused import: `tower::ServiceBuilder`
+ --> tests/integration_tests.rs:9:5
+  |
+9 | use tower::ServiceBuilder;
+  |     ^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `tower::ServiceExt`
+  --> tests/integration_tests.rs:10:5
+   |
+10 | use tower::ServiceExt; // for ready()
+   |     ^^^^^^^^^^^^^^^^^
+
+error[E0271]: expected `{async block@tests/api_tests.rs:13:25: 13:30}` to be a future that resolves to `SocketAddr`, but it resolves to `&SocketAddr`
+   --> tests/api_tests.rs:13:10
+    |
+ 13 |     INIT.get_or_init(|| async {
+    |          ^^^^^^^^^^^ expected `SocketAddr`, found `&SocketAddr`
+    |
+note: required by a bound in `tokio::sync::OnceCell::<T>::get_or_init`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.54.1/src/sync/once_cell.rs:353:21
+    |
+350 |     pub async fn get_or_init<F, Fut>(&self, f: F) -> &T
+    |                  ----------- required by a bound in this associated function
+...
+353 |         Fut: Future<Output = T>,
+    |                     ^^^^^^^^^^ required by this bound in `OnceCell::<T>::get_or_init`
+
+error[E0271]: expected `{async block@tests/integration_tests.rs:25:25: 25:30}` to be a future that resolves to `SocketAddr`, but it resolves to `&SocketAddr`
+   --> tests/integration_tests.rs:25:10
+    |
+ 25 |     ADDR.get_or_init(|| async {
+    |          ^^^^^^^^^^^ expected `SocketAddr`, found `&SocketAddr`
+    |
+note: required by a bound in `tokio::sync::OnceCell::<T>::get_or_init`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.54.1/src/sync/once_cell.rs:353:21
+    |
+350 |     pub async fn get_or_init<F, Fut>(&self, f: F) -> &T
+    |                  ----------- required by a bound in this associated function
+...
+353 |         Fut: Future<Output = T>,
+    |                     ^^^^^^^^^^ required by this bound in `OnceCell::<T>::get_or_init`
+
+error[E0271]: expected `{async block@tests/integration_tests.rs:25:25: 25:30}` to be a future that resolves to `SocketAddr`, but it resolves to `&SocketAddr`
+   --> tests/integration_tests.rs:25:5
+    |
+ 25 | /     ADDR.get_or_init(|| async {
+ 26 | |         let state = orders::AppState::new();
+ 27 | |         let app = Router::new()
+ 28 | |             .route("/orders", axum::routing::post(orders::handlers::create_order)) // This won't work if handlers aren't pub
+...   |
+ 40 | |         &addr
+ 41 | |     }).await
+    | |______^ expected `SocketAddr`, found `&SocketAddr`
+    |
+note: required by a bound in `tokio::sync::OnceCell::<T>::get_or_init`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.54.1/src/sync/once_cell.rs:353:21
+    |
+350 |     pub async fn get_or_init<F, Fut>(&self, f: F) -> &T
+    |                  ----------- required by a bound in this associated function
+...
+353 |         Fut: Future<Output = T>,
+    |                     ^^^^^^^^^^ required by this bound in `OnceCell::<T>::get_or_init`
+
+error[E0271]: expected `{async block@tests/api_tests.rs:13:25: 13:30}` to be a future that resolves to `SocketAddr`, but it resolves to `&SocketAddr`
+   --> tests/api_tests.rs:13:5
+    |
+ 13 | /     INIT.get_or_init(|| async {
+ 14 | |         let app = create_router();
+ 15 | |         let listener = tokio::net::TcpListener::bind("127.0.0.1:0").await.unwrap();
+ 16 | |         let addr = listener.local_addr().unwrap();
+...   |
+ 22 | |         &addr
+ 23 | |     })
+    | |______^ expected `SocketAddr`, found `&SocketAddr`
+    |
+note: required by a bound in `tokio::sync::OnceCell::<T>::get_or_init`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.54.1/src/sync/once_cell.rs:353:21
+    |
+350 |     pub async fn get_or_init<F, Fut>(&self, f: F) -> &T
+    |                  ----------- required by a bound in this associated function
+...
+353 |         Fut: Future<Output = T>,
+    |                     ^^^^^^^^^^ required by this bound in `OnceCell::<T>::get_or_init`
+
+error[E0271]: expected `{async block@tests/integration_tests.rs:25:25: 25:30}` to be a future that resolves to `SocketAddr`, but it resolves to `&SocketAddr`
+   --> tests/integration_tests.rs:41:8
+    |
+ 41 |     }).await
+    |        ^^^^^ expected `SocketAddr`, found `&SocketAddr`
+    |
+note: required by a bound in `tokio::sync::OnceCell::<T>::get_or_init`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.54.1/src/sync/once_cell.rs:353:21
+    |
+350 |     pub async fn get_or_init<F, Fut>(&self, f: F) -> &T
+    |                  ----------- required by a bound in this associated function
+...
+353 |         Fut: Future<Output = T>,
+    |                     ^^^^^^^^^^ required by this bound in `OnceCell::<T>::get_or_init`
+
+error[E0271]: expected `{async block@tests/api_tests.rs:13:25: 13:30}` to be a future that resolves to `SocketAddr`, but it resolves to `&SocketAddr`
+   --> tests/api_tests.rs:24:6
+    |
+ 24 |     .await
+    |      ^^^^^ expected `SocketAddr`, found `&SocketAddr`
+    |
+note: required by a bound in `tokio::sync::OnceCell::<T>::get_or_init`
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.54.1/src/sync/once_cell.rs:353:21
+    |
+350 |     pub async fn get_or_init<F, Fut>(&self, f: F) -> &T
+    |                  ----------- required by a bound in this associated function
+...
+353 |         Fut: Future<Output = T>,
+    |                     ^^^^^^^^^^ required by this bound in `OnceCell::<T>::get_or_init`
+
+Some errors have detailed explanations: E0271, E0432, E0433.
+For more information about an error, try `rustc --explain E0271`.
+error[E0782]: expected a type, found a trait
+  --> tests/api_tests.rs:39:19
+   |
+39 |             .body(hyper::body::Body::from(b.to_string()))
+   |                   ^^^^^^^^^^^^^^^^^
+   |
+help: you can add the `dyn` keyword if you want a trait object
+   |
+39 |             .body(<dyn hyper::body::Body>::from(b.to_string()))
+   |                   ++++                  +
+
+warning: `orders` (test "integration_tests") generated 5 warnings
+error: could not compile `orders` (test "integration_tests") due to 5 previous errors; 5 warnings emitted
+warning: build failed, waiting for other jobs to finish...
+warning: `orders` (lib test) generated 2 warnings (2 duplicates)
+error[E0782]: expected a type, found a trait
+  --> tests/api_tests.rs:45:19
+   |
+45 |             .body(hyper::body::Body::empty())
+   |                   ^^^^^^^^^^^^^^^^^
+   |
+help: you can add the `dyn` keyword if you want a trait object
+   |
+45 |             .body(<dyn hyper::body::Body>::empty())
+   |                   ++++                  +
+
+warning: unused variable: `response_body`
+   --> tests/api_tests.rs:101:18
+    |
+101 |     let (status, response_body) = make_request("/orders", Some(body)).await;
+    |                  ^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_response_body`
+    |
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+Some errors have detailed explanations: E0271, E0425, E0782.
+warning: `orders` (test "api_tests") generated 4 warnings
+error: could not compile `orders` (test "api_tests") due to 6 previous errors; 4 warnings emitted
+warning: `orders` (bin "orders" test) generated 1 warning (1 duplicate)
+warning: `orders` (bin "orders") generated 1 warning (run `cargo fix --bin "orders" -p orders` to apply 1 suggestion)

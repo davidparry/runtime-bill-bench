@@ -1,0 +1,148 @@
+INFO:     Uvicorn running on http://0.0.0.0:59355 (Press CTRL+C to quit)
+INFO:     Started parent process [38710]
+INFO:     Started server process [38712]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38724]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38716]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38713]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38715]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38722]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38720]
+INFO:     Waiting for application startup.
+INFO:     Started server process [38714]
+INFO:     Waiting for application startup.
+INFO:     Started server process [38723]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Application startup complete.
+INFO:     Started server process [38726]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38717]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38725]
+INFO:     Application startup complete.
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38728]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38721]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38729]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [38727]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Received SIGTERM, exiting.
+INFO:     Terminated child process [38712]
+INFO:     Terminated child process [38713]
+INFO:     Terminated child process [38714]
+INFO:     Terminated child process [38715]
+INFO:     Terminated child process [38716]
+INFO:     Terminated child process [38717]
+INFO:     Terminated child process [38720]
+INFO:     Terminated child process [38721]
+INFO:     Terminated child process [38722]
+INFO:     Terminated child process [38723]
+INFO:     Terminated child process [38724]
+INFO:     Terminated child process [38725]
+INFO:     Terminated child process [38726]
+INFO:     Terminated child process [38727]
+INFO:     Terminated child process [38728]
+INFO:     Terminated child process [38729]
+INFO:     Waiting for child process [38712]
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [38715]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [38725]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [38714]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [38721]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [38720]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [38727]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [38729]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [38726]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [38728]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [38724]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [38713]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [38716]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [38722]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [38712]
+INFO:     Waiting for child process [38713]
+INFO:     Waiting for child process [38714]
+INFO:     Waiting for child process [38715]
+INFO:     Waiting for child process [38716]
+INFO:     Waiting for child process [38717]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [38723]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [38717]
+INFO:     Waiting for child process [38720]
+INFO:     Waiting for child process [38721]
+INFO:     Waiting for child process [38722]
+INFO:     Waiting for child process [38723]
+INFO:     Waiting for child process [38724]
+INFO:     Waiting for child process [38725]
+INFO:     Waiting for child process [38726]
+INFO:     Waiting for child process [38727]
+INFO:     Waiting for child process [38728]
+INFO:     Waiting for child process [38729]
+INFO:     Stopping parent process [38710]

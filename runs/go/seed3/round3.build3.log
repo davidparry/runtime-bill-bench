@@ -1,0 +1,22 @@
+{"durationMs":0,"method":"GET","path":"/health","status":200,"timestamp":"2026-11-24T15:54:57Z"}
+{"durationMs":0,"method":"POST","path":"/orders","status":201,"timestamp":"2026-11-24T15:54:57Z"}
+{"durationMs":0,"method":"POST","path":"/orders","status":400,"timestamp":"2026-11-24T15:54:57Z"}
+{"durationMs":0,"method":"POST","path":"/orders","status":400,"timestamp":"2026-11-24T15:54:57Z"}
+{"durationMs":0,"method":"POST","path":"/orders","status":400,"timestamp":"2026-11-24T15:54:57Z"}
+{"durationMs":0,"method":"POST","path":"/orders","status":400,"timestamp":"2026-11-24T15:54:57Z"}
+{"durationMs":0,"method":"POST","path":"/orders","status":400,"timestamp":"2026-11-24T15:54:57Z"}
+{"durationMs":0,"method":"POST","path":"/orders","status":400,"timestamp":"2026-11-24T15:54:57Z"}
+{"durationMs":0,"method":"POST","path":"/orders","status":400,"timestamp":"2026-11-24T15:54:57Z"}
+{"durationMs":0,"method":"POST","path":"/orders","status":400,"timestamp":"2026-11-24T15:54:57Z"}
+{"durationMs":0,"method":"POST","path":"/orders","status":400,"timestamp":"2026-11-24T15:54:57Z"}
+{"durationMs":0,"method":"POST","path":"/orders","status":201,"timestamp":"2026-11-24T15:54:57Z"}
+{"durationMs":0,"method":"GET","path":"/orders/b368f61e-ab15-4a0c-9d65-3fd6c80882b2","status":200,"timestamp":"2026-11-24T15:54:57Z"}
+{"durationMs":0,"method":"GET","path":"/orders/non-existent-id","status":404,"timestamp":"2026-11-24T15:54:57Z"}
+{"durationMs":0,"method":"POST","path":"/orders","status":400,"timestamp":"2026-11-24T15:54:57Z"}
+--- FAIL: TestIgnoreUnknownFields (0.00s)
+    main_test.go:286: Expected status 201, got 400
+{"durationMs":0,"method":"GET","path":"/health","status":200,"timestamp":"2026-11-24T15:54:57Z"}
+{"durationMs":0,"method":"POST","path":"/orders","status":201,"timestamp":"2026-11-24T15:54:57Z"}
+FAIL
+FAIL	orders	0.390s
+FAIL

@@ -1,0 +1,6 @@
+--- FAIL: TestValidateCreateRequest (0.00s)
+    --- FAIL: TestValidateCreateRequest/unknown_fields_ignored (0.00s)
+        main_test.go:118: validateCreateRequest() error = invalid JSON body: json: unknown field "extra", wantErr false
+FAIL
+FAIL	orders	0.400s
+FAIL

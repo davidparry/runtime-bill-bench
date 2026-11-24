@@ -1,0 +1,14 @@
+INFO:     Started server process [35505]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:60205 (Press CTRL+C to quit)
+Exception in callback lifespan.<locals>.signal_handler() at /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed10/project/main.py:206
+handle: <Handle lifespan.<locals>.signal_handler() at /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed10/project/main.py:206>
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/events.py", line 94, in _run
+    self._context.run(self._callback, *self._args)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/davidparry/code/github/runtime-bill-bench/runs/python/seed10/project/main.py", line 207, in signal_handler
+    loop.create_task(app.shutdown())
+                     ^^^^^^^^^^^^
+AttributeError: 'FastAPI' object has no attribute 'shutdown'

@@ -1,0 +1,5 @@
+# orders [orders.test]
+./main_test.go:247:16: undefined: time
+./main_test.go:248:9: undefined: time
+FAIL	orders [build failed]
+FAIL

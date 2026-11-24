@@ -1,0 +1,92 @@
+    Updating crates.io index
+     Locking 189 packages to latest compatible versions
+      Adding matchit v0.8.4 (available: v0.8.6)
+      Adding reqwest v0.12.28 (available: v0.13.5)
+      Adding tower-http v0.6.11 (available: v0.7.1)
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed9/project)
+warning: found module declaration for main.rs
+ --> src/lib.rs:1:1
+  |
+1 | pub mod main;
+  | ^^^^^^^^^^^^^
+  |
+  = note: a binary crate cannot be used as library
+  = note: `#[warn(special_module_name)]` on by default
+
+warning: unused import: `axum::http::header::CONTENT_TYPE`
+ --> src/main.rs:6:5
+  |
+6 | use axum::http::header::CONTENT_TYPE;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused imports: `Duration` and `timeout`
+  --> src/main.rs:13:19
+   |
+13 | use tokio::time::{timeout, Duration};
+   |                   ^^^^^^^  ^^^^^^^^
+
+warning: unused import: `tower::ServiceBuilder`
+  --> src/main.rs:14:5
+   |
+14 | use tower::ServiceBuilder;
+   |     ^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `warn`
+  --> src/main.rs:16:21
+   |
+16 | use tracing::{info, warn};
+   |                     ^^^^
+
+error[E0382]: use of moved value: `req.items`
+   --> src/main.rs:120:16
+    |
+106 |     Json(req): Json<CreateOrderRequest>,
+    |          --- move occurs because `req` has type `CreateOrderRequest`, which does not implement the `Copy` trait
+...
+109 |     if let Err(e) = validate_create_request(req) {
+    |                                             --- value moved here
+...
+120 |         items: req.items,
+    |                ^^^^^^^^^ value used here after move
+
+error[E0382]: use of moved value: `new_order.created_at`
+   --> src/main.rs:136:21
+    |
+117 |     let new_order = Order {
+    |         --------- move occurs because `new_order` has type `Order`, which does not implement the `Copy` trait
+...
+127 |         store.insert(order_id.clone(), new_order);
+    |                                        --------- value moved here
+...
+136 |         created_at: new_order.created_at,
+    |                     ^^^^^^^^^^^^^^^^^^^^ value used here after move
+
+error[E0308]: mismatched types
+  --> src/main.rs:60:5
+   |
+56 | fn error_response(status: StatusCode, message: &str) -> Response {
+   |                                                         -------- expected `Response<Body>` because of return type
+...
+60 |     (status, body.into_response())
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `Response<Body>`, found `(StatusCode, Response<Body>)`
+   |
+   = note: expected struct `Response<Body>`
+               found tuple `(axum::http::StatusCode, Response<Body>)`
+
+error[E0782]: expected a type, found a trait
+   --> src/main.rs:192:27
+    |
+192 |     let shutdown_handle = axum::serve::ListenerExt::with_graceful_shutdown(listener, async move {
+    |                           ^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+help: you can add the `dyn` keyword if you want a trait object
+    |
+192 |     let shutdown_handle = <dyn axum::serve::ListenerExt>::with_graceful_shutdown(listener, async move {
+    |                           ++++                         +
+
+Some errors have detailed explanations: E0308, E0382, E0782.
+For more information about an error, try `rustc --explain E0308`.
+warning: `orders` (lib) generated 5 warnings
+error: could not compile `orders` (lib) due to 4 previous errors; 5 warnings emitted

@@ -1,0 +1,3 @@
+- Rust with axum, tokio, and serde. Add other crates if you need them. The harness uses Rust 1.97 (stable).
+- A Cargo package named `orders` with a binary target.
+- The harness runs `cargo build --release` and `cargo test --release`, then starts the service with `target/release/orders`.

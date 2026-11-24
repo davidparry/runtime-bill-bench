@@ -1,0 +1,2 @@
+{"timestamp":"2026-11-24T17:13:52.006584Z","level":"INFO","fields":{"message":"Starting server on 0.0.0.0:62152"},"target":"orders"}
+{"timestamp":"2026-11-24T17:13:52.061628Z","level":"INFO","fields":{"message":"Server shut down gracefully."},"target":"orders"}

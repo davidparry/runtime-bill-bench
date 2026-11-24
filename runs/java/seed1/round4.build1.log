@@ -1,0 +1,141 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.example:orders-service >---------------------
+[INFO] Building orders-service 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ orders-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ orders-service ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 10 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ orders-service ---
+[INFO] skip non existing resourceDirectory /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed1/project/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ orders-service ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug parameters release 21] to target/test-classes
+[INFO] /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed1/project/src/test/java/com/example/orders/OrdersControllerIntegrationTest.java: /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed1/project/src/test/java/com/example/orders/OrdersControllerIntegrationTest.java uses unchecked or unsafe operations.
+[INFO] /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed1/project/src/test/java/com/example/orders/OrdersControllerIntegrationTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ orders-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.orders.OrdersControllerIntegrationTest
+09:20:31.824 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.orders.OrdersControllerIntegrationTest]: OrdersControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:20:31.857 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.orders.OrdersServiceApplication for test class com.example.orders.OrdersControllerIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-11-24T09:20:31.967-06:00  INFO 185 --- [           main] c.e.o.OrdersControllerIntegrationTest    : Starting OrdersControllerIntegrationTest using Java 25.0.5 with PID 185 (started by davidparry in /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed1/project)
+2026-11-24T09:20:31.968-06:00  INFO 185 --- [           main] c.e.o.OrdersControllerIntegrationTest    : No active profile set, falling back to 1 default profile: "default"
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/Users/davidparry/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-11-24T09:20:32.248-06:00  INFO 185 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-24T09:20:32.253-06:00  INFO 185 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-24T09:20:32.253-06:00  INFO 185 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-11-24T09:20:32.266-06:00  INFO 185 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-24T09:20:32.267-06:00  INFO 185 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 294 ms
+2026-11-24T09:20:32.384-06:00  INFO 185 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 54282 (http) with context path '/'
+2026-11-24T09:20:32.388-06:00  INFO 185 --- [           main] c.e.o.OrdersControllerIntegrationTest    : Started OrdersControllerIntegrationTest in 0.496 seconds (process running for 0.777)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/Users/davidparry/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-11-24T09:20:32.697-06:00  INFO 185 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-24T09:20:32.697-06:00  INFO 185 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-24T09:20:32.697-06:00  INFO 185 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-11-24T09:20:32.767-06:00  INFO 185 --- [o-auto-1-exec-1] c.example.orders.config.LoggingFilter    : {"path":"/orders","method":"POST","durationMs":69,"status":400}
+2026-11-24T09:20:32.780-06:00  INFO 185 --- [o-auto-1-exec-2] c.example.orders.config.LoggingFilter    : {"path":"/orders","method":"POST","durationMs":3,"status":201}
+2026-11-24T09:20:32.786-06:00  INFO 185 --- [o-auto-1-exec-3] c.example.orders.config.LoggingFilter    : {"path":"/orders/non-existent-id","method":"GET","durationMs":1,"status":404}
+2026-11-24T09:20:32.791-06:00  INFO 185 --- [o-auto-1-exec-4] c.example.orders.config.LoggingFilter    : {"path":"/orders","method":"POST","durationMs":1,"status":400}
+2026-11-24T09:20:32.795-06:00  INFO 185 --- [o-auto-1-exec-5] c.example.orders.config.LoggingFilter    : {"path":"/orders","method":"POST","durationMs":1,"status":500}
+[ERROR] Tests run: 5, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 1.016 s <<< FAILURE! -- in com.example.orders.OrdersControllerIntegrationTest
+[ERROR] com.example.orders.OrdersControllerIntegrationTest.createOrder_success -- Time elapsed: 0.008 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: java.lang.Long@65844c96<2500> but was: java.lang.Integer@25214797<2500>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.example.orders.OrdersControllerIntegrationTest.createOrder_success(OrdersControllerIntegrationTest.java:52)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+[ERROR] com.example.orders.OrdersControllerIntegrationTest.getOrder_notFound -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.util.Map.get(Object)" because the return value of "org.springframework.http.ResponseEntity.getBody()" is null
+	at com.example.orders.OrdersControllerIntegrationTest.getOrder_notFound(OrdersControllerIntegrationTest.java:98)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+[ERROR] com.example.orders.OrdersControllerIntegrationTest.createOrder_invalidJson -- Time elapsed: 0.003 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <400 BAD_REQUEST> but was: <500 INTERNAL_SERVER_ERROR>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at com.example.orders.OrdersControllerIntegrationTest.createOrder_invalidJson(OrdersControllerIntegrationTest.java:105)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+[INFO] Running com.example.orders.ValidationRulesTest
+2026-11-24T09:20:32.799-06:00  INFO 185 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.orders.ValidationRulesTest]: ValidationRulesTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T09:20:32.800-06:00  INFO 185 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.orders.OrdersServiceApplication for test class com.example.orders.ValidationRulesTest
+2026-11-24T09:20:32.804-06:00  INFO 185 --- [o-auto-1-exec-6] c.example.orders.config.LoggingFilter    : {"path":"/orders","method":"POST","durationMs":1,"status":400}
+2026-11-24T09:20:32.811-06:00  INFO 185 --- [o-auto-1-exec-7] c.example.orders.config.LoggingFilter    : {"path":"/orders","method":"POST","durationMs":4,"status":400}
+2026-11-24T09:20:32.814-06:00  INFO 185 --- [o-auto-1-exec-8] c.example.orders.config.LoggingFilter    : {"path":"/orders","method":"POST","durationMs":0,"status":400}
+2026-11-24T09:20:32.817-06:00  INFO 185 --- [o-auto-1-exec-9] c.example.orders.config.LoggingFilter    : {"path":"/orders","method":"POST","durationMs":0,"status":400}
+2026-11-24T09:20:32.820-06:00  INFO 185 --- [-auto-1-exec-10] c.example.orders.config.LoggingFilter    : {"path":"/orders","method":"POST","durationMs":1,"status":400}
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s -- in com.example.orders.ValidationRulesTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   OrdersControllerIntegrationTest.createOrder_invalidJson:105 expected: <400 BAD_REQUEST> but was: <500 INTERNAL_SERVER_ERROR>
+[ERROR]   OrdersControllerIntegrationTest.createOrder_success:52 expected: java.lang.Long@65844c96<2500> but was: java.lang.Integer@25214797<2500>
+[ERROR] Errors: 
+[ERROR]   OrdersControllerIntegrationTest.getOrder_notFound:98 NullPointer Cannot invoke "java.util.Map.get(Object)" because the return value of "org.springframework.http.ResponseEntity.getBody()" is null
+[INFO] 
+[ERROR] Tests run: 10, Failures: 2, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.757 s
+[INFO] Finished at: 2026-11-24T09:20:34-06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.5:test (default-test) on project orders-service: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed1/project/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

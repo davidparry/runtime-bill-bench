@@ -1,0 +1,5 @@
+# orders [orders.test]
+./main_test.go:6:2: "io" imported and not used
+./main_test.go:235:10: handler.ServeHTTP undefined (type func(w http.ResponseWriter, r *http.Request) has no field or method ServeHTTP)
+FAIL	orders [build failed]
+FAIL

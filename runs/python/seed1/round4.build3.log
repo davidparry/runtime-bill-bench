@@ -1,0 +1,259 @@
+..FFFFFFFFFF..F                                                          [100%]
+=================================== FAILURES ===================================
+________________ TestCreateOrder.test_create_order_invalid_json ________________
+
+self = <test_orders.TestCreateOrder object at 0x10ac7c190>
+
+    def test_create_order_invalid_json(self):
+        response = client.post("/orders", content="not json", headers={"Content-Type": "application/json"})
+        assert response.status_code == 400
+>       assert "error" in response.json()
+E       AssertionError: assert 'error' in {'detail': 'Invalid JSON body'}
+E        +  where {'detail': 'Invalid JSON body'} = json()
+E        +    where json = <Response [400 Bad Request]>.json
+
+tests/test_orders.py:45: AssertionError
+----------------------------- Captured stderr call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:(unknown):0 Request processed
+____________ TestCreateOrder.test_create_order_missing_customer_id _____________
+
+self = <test_orders.TestCreateOrder object at 0x10acaf100>
+
+    def test_create_order_missing_customer_id(self):
+        payload = {
+            "items": [
+                {"sku": "A-1", "quantity": 1, "unitPriceCents": 100}
+            ]
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 400
+>       assert "error" in response.json()
+E       AssertionError: assert 'error' in {'detail': 'customerId: Field required'}
+E        +  where {'detail': 'customerId: Field required'} = json()
+E        +    where json = <Response [400 Bad Request]>.json
+
+tests/test_orders.py:55: AssertionError
+----------------------------- Captured stderr call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:(unknown):0 Request processed
+____________ TestCreateOrder.test_create_order_customer_id_too_long ____________
+
+self = <test_orders.TestCreateOrder object at 0x10acafa80>
+
+    def test_create_order_customer_id_too_long(self):
+        payload = {
+            "customerId": "c" * 65,
+            "items": [
+                {"sku": "A-1", "quantity": 1, "unitPriceCents": 100}
+            ]
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 400
+>       assert "error" in response.json()
+E       AssertionError: assert 'error' in {'detail': 'customerId: String should have at most 64 characters'}
+E        +  where {'detail': 'customerId: String should have at most 64 characters'} = json()
+E        +    where json = <Response [400 Bad Request]>.json
+
+tests/test_orders.py:66: AssertionError
+----------------------------- Captured stderr call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:(unknown):0 Request processed
+________________ TestCreateOrder.test_create_order_empty_items _________________
+
+self = <test_orders.TestCreateOrder object at 0x10acc20f0>
+
+    def test_create_order_empty_items(self):
+        payload = {
+            "customerId": "c-1",
+            "items": []
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 400
+>       assert "error" in response.json()
+E       AssertionError: assert 'error' in {'detail': 'items: List should have at least 1 item after validation, not 0'}
+E        +  where {'detail': 'items: List should have at least 1 item after validation, not 0'} = json()
+E        +    where json = <Response [400 Bad Request]>.json
+
+tests/test_orders.py:75: AssertionError
+----------------------------- Captured stderr call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:(unknown):0 Request processed
+___________ TestCreateOrder.test_create_order_invalid_quantity_zero ____________
+
+self = <test_orders.TestCreateOrder object at 0x10aca69c0>
+
+    def test_create_order_invalid_quantity_zero(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [
+                {"sku": "A-1", "quantity": 0, "unitPriceCents": 100}
+            ]
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 400
+>       assert "error" in response.json()
+E       AssertionError: assert 'error' in {'detail': 'items -> 0 -> quantity: Input should be greater than or equal to 1'}
+E        +  where {'detail': 'items -> 0 -> quantity: Input should be greater than or equal to 1'} = json()
+E        +    where json = <Response [400 Bad Request]>.json
+
+tests/test_orders.py:86: AssertionError
+----------------------------- Captured stderr call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:(unknown):0 Request processed
+_________ TestCreateOrder.test_create_order_invalid_quantity_too_high __________
+
+self = <test_orders.TestCreateOrder object at 0x10aca6ad0>
+
+    def test_create_order_invalid_quantity_too_high(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [
+                {"sku": "A-1", "quantity": 101, "unitPriceCents": 100}
+            ]
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 400
+>       assert "error" in response.json()
+E       AssertionError: assert 'error' in {'detail': 'items -> 0 -> quantity: Input should be less than or equal to 100'}
+E        +  where {'detail': 'items -> 0 -> quantity: Input should be less than or equal to 100'} = json()
+E        +    where json = <Response [400 Bad Request]>.json
+
+tests/test_orders.py:97: AssertionError
+----------------------------- Captured stderr call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:(unknown):0 Request processed
+__________ TestCreateOrder.test_create_order_invalid_unit_price_zero ___________
+
+self = <test_orders.TestCreateOrder object at 0x10ac9f550>
+
+    def test_create_order_invalid_unit_price_zero(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [
+                {"sku": "A-1", "quantity": 1, "unitPriceCents": 0}
+            ]
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 400
+>       assert "error" in response.json()
+E       AssertionError: assert 'error' in {'detail': 'items -> 0 -> unitPriceCents: Input should be greater than or equal to 1'}
+E        +  where {'detail': 'items -> 0 -> unitPriceCents: Input should be greater than or equal to 1'} = json()
+E        +    where json = <Response [400 Bad Request]>.json
+
+tests/test_orders.py:108: AssertionError
+----------------------------- Captured stderr call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:(unknown):0 Request processed
+________ TestCreateOrder.test_create_order_invalid_unit_price_too_high _________
+
+self = <test_orders.TestCreateOrder object at 0x10ac9f650>
+
+    def test_create_order_invalid_unit_price_too_high(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [
+                {"sku": "A-1", "quantity": 1, "unitPriceCents": 1000001}
+            ]
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 400
+>       assert "error" in response.json()
+E       AssertionError: assert 'error' in {'detail': 'items -> 0 -> unitPriceCents: Input should be less than or equal to 1000000'}
+E        +  where {'detail': 'items -> 0 -> unitPriceCents: Input should be less than or equal to 1000000'} = json()
+E        +    where json = <Response [400 Bad Request]>.json
+
+tests/test_orders.py:119: AssertionError
+----------------------------- Captured stderr call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:(unknown):0 Request processed
+________________ TestCreateOrder.test_create_order_sku_too_long ________________
+
+self = <test_orders.TestCreateOrder object at 0x10ac99e50>
+
+    def test_create_order_sku_too_long(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [
+                {"sku": "s" * 33, "quantity": 1, "unitPriceCents": 100}
+            ]
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 400
+>       assert "error" in response.json()
+E       AssertionError: assert 'error' in {'detail': 'items -> 0 -> sku: String should have at most 32 characters'}
+E        +  where {'detail': 'items -> 0 -> sku: String should have at most 32 characters'} = json()
+E        +    where json = <Response [400 Bad Request]>.json
+
+tests/test_orders.py:130: AssertionError
+----------------------------- Captured stderr call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:(unknown):0 Request processed
+_______________ TestCreateOrder.test_create_order_too_many_items _______________
+
+self = <test_orders.TestCreateOrder object at 0x10ac99f40>
+
+    def test_create_order_too_many_items(self):
+        items = [{"sku": "A-1", "quantity": 1, "unitPriceCents": 100} for _ in range(51)]
+        payload = {
+            "customerId": "c-1",
+            "items": items
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 400
+>       assert "error" in response.json()
+E       AssertionError: assert 'error' in {'detail': 'items: List should have at most 50 items after validation, not 51'}
+E        +  where {'detail': 'items: List should have at most 50 items after validation, not 51'} = json()
+E        +    where json = <Response [400 Bad Request]>.json
+
+tests/test_orders.py:140: AssertionError
+----------------------------- Captured stderr call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:(unknown):0 Request processed
+____________________ TestGetOrder.test_get_order_not_found _____________________
+
+self = <test_orders.TestGetOrder object at 0x10ac7c7d0>
+
+    def test_get_order_not_found(self):
+        fake_id = "non-existent-id-12345"
+        response = client.get(f"/orders/{fake_id}")
+        assert response.status_code == 404
+>       assert "error" in response.json()
+E       assert 'error' in {'detail': "Order with id 'non-existent-id-12345' not found"}
+E        +  where {'detail': "Order with id 'non-existent-id-12345' not found"} = json()
+E        +    where json = <Response [404 Not Found]>.json
+
+tests/test_orders.py:175: AssertionError
+----------------------------- Captured stderr call -----------------------------
+{"method": "GET", "path": "/orders/non-existent-id-12345", "status": 404, "durationMs": 0}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:(unknown):0 Request processed
+=============================== warnings summary ===============================
+.venv/lib/python3.14/site-packages/fastapi/testclient.py:1
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed1/project/.venv/lib/python3.14/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_orders.py::TestCreateOrder::test_create_order_invalid_json
+FAILED tests/test_orders.py::TestCreateOrder::test_create_order_missing_customer_id
+FAILED tests/test_orders.py::TestCreateOrder::test_create_order_customer_id_too_long
+FAILED tests/test_orders.py::TestCreateOrder::test_create_order_empty_items
+FAILED tests/test_orders.py::TestCreateOrder::test_create_order_invalid_quantity_zero
+FAILED tests/test_orders.py::TestCreateOrder::test_create_order_invalid_quantity_too_high
+FAILED tests/test_orders.py::TestCreateOrder::test_create_order_invalid_unit_price_zero
+FAILED tests/test_orders.py::TestCreateOrder::test_create_order_invalid_unit_price_too_high
+FAILED tests/test_orders.py::TestCreateOrder::test_create_order_sku_too_long
+FAILED tests/test_orders.py::TestCreateOrder::test_create_order_too_many_items
+FAILED tests/test_orders.py::TestGetOrder::test_get_order_not_found - assert ...
+11 failed, 4 passed, 1 warning in 0.56s

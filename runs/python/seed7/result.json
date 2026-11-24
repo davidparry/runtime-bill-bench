@@ -1,0 +1,79 @@
+{
+  "lang": "python",
+  "seed": 7,
+  "model": "qwen3.6:35b-a3b-coding",
+  "passed": true,
+  "rounds": 3,
+  "input_tokens": 13165,
+  "output_tokens": 8276,
+  "wall_seconds": 83.4,
+  "files": [
+    "main.py",
+    "requirements-dev.txt",
+    "requirements.txt",
+    "tests/test_orders.py"
+  ],
+  "round_records": [
+    {
+      "round": 1,
+      "prompt_eval_count": 768,
+      "eval_count": 2767,
+      "prompt_eval_duration": 521139000,
+      "eval_duration": 22268509000,
+      "load_duration": 5318500,
+      "total_duration": 22866749417,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.py",
+        "requirements-dev.txt",
+        "requirements.txt",
+        "tests/test_orders.py"
+      ],
+      "startup_seconds": 0.293,
+      "acceptance_failures": 17,
+      "failed_step": "acceptance",
+      "failure": "These checks failed:\n- GET /orders/{id} for an unknown id: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Order not found\"}'\n- POST /orders with malformed JSON: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Invalid JSON body\"}'\n- POST /orders with no customerId: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Field required\"}'\n- POST /orders with an empty customerId: expected a JSON object with a string \"error\" field, got '{\"detail\":\"String should have at least 1 character\"}'\n- POST /orders with a 65-character customerId: expected a JSON object with a string \"error\" field, got '{\"detail\":\"String should have at most 64 characters\"}'\n- POST /orders with no items: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Field required\"}'\n- POST /orders with an empty items array: expected a JSON object with a string \"error\" field, got '{\"detail\":\"List should have at least 1 item after validation, not 0\"}'\n- POST /orders with 51 items: expected a JSON object with a string \"error\" field, got '{\"detail\":\"List should have at most 50 items after validation, not 51\"}'\n- POST /orders with quantity 0: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Input should be greater than or equal to 1\"}'\n- POST /orders with quantity 101: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Input should be less than or equal to 100\"}'\n- POST /orders with no quantity: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Field required\"}'\n- POST /orders with unitPriceCents 0: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Input should be greater than or equal to 1\"}'\n- POST /orders with unitPriceCents 1000001: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Input should be less than or equal to 1000000\"}'\n- POST /orders with an empty sku: expected a JSON object with a string \"error\" field, got '{\"detail\":\"String should have at least 1 character\"}'\n- POST /orders with a 33-character sku: expected a JSON object with a string \"error\" field, got '{\"detail\":\"String should have at most 32 characters\"}'\n- POST /orders with no sku: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Field required\"}'\n- request log: expected at least 421 stdout lines that are JSON objects with the top-level keys method, path, status, and durationMs (one per request); found 0. Last stdout lines:\n{\"method\": \"GET\", \"path\": \"/orders/3296502d-78da-4534-bd6b-bc8c5dff017b\", \"message\": \"Request completed\"}\n{\"method\": \"GET\", \"path\": \"/orders/73966596-f2a6-4e8c-bf8e-96a46e640648\", \"message\": \"Request completed\"}\n{\"method\": \"GET\", \"path\": \"/orders/f431d18b-8a14-4ce2-afcd-5ee655cdd3c0\", \"message\": \"Request completed\"}\n{\"method\": \"GET\", \"path\": \"/orders/43707b00-b3ce-4a51-8c37-a9b83c6176c7\", \"message\": \"Request completed\"}\n{\"message\": \"Shutdown signal received\"}\n\nThe service's standard error:\n```\nINFO:     Started server process [26193]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:57085 (Press CTRL+C to quit)\nINFO:     Shutting down\nINFO:     Waiting for application shutdown.\nINFO:     Application shutdown complete.\nINFO:     Finished server process [26193]\n```"
+    },
+    {
+      "round": 2,
+      "prompt_eval_count": 4566,
+      "eval_count": 2854,
+      "prompt_eval_duration": 3082993000,
+      "eval_duration": 22739307000,
+      "load_duration": 5400250,
+      "total_duration": 25865870792,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.py",
+        "tests/test_orders.py"
+      ],
+      "startup_seconds": 0.358,
+      "acceptance_failures": 1,
+      "failed_step": "acceptance",
+      "failure": "These checks failed:\n- request log: expected at least 421 stdout lines that are JSON objects with the top-level keys method, path, status, and durationMs (one per request); found 0. Last stdout lines:\n{\"method\": \"GET\", \"path\": \"/orders/7f9972f6-08bd-48c5-95e4-977e5a17e9ae\"}\n{\"method\": \"GET\", \"path\": \"/orders/30337d51-a54a-4b71-8264-ef7306c66f64\"}\n{\"method\": \"GET\", \"path\": \"/orders/c2cbafe9-80b2-45d0-9edd-00a59ad4a33a\"}\n{\"method\": \"GET\", \"path\": \"/orders/9241bf02-bb23-40c7-821b-595a47095235\"}\n{}\n\nThe service's standard error:\n```\nINFO:     Started server process [26453]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:57576 (Press CTRL+C to quit)\nINFO:     Shutting down\nINFO:     Waiting for application shutdown.\nINFO:     Application shutdown complete.\nINFO:     Finished server process [26453]\n```"
+    },
+    {
+      "round": 3,
+      "prompt_eval_count": 7831,
+      "eval_count": 2655,
+      "prompt_eval_duration": 5070440000,
+      "eval_duration": 21088343000,
+      "load_duration": 5987583,
+      "total_duration": 26212039875,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.py",
+        "requirements-dev.txt",
+        "requirements.txt",
+        "tests/test_orders.py"
+      ],
+      "startup_seconds": 0.303,
+      "acceptance_failures": 0,
+      "failed_step": null,
+      "failure": null
+    }
+  ]
+}

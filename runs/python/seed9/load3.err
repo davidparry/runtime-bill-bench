@@ -1,0 +1,148 @@
+INFO:     Uvicorn running on http://0.0.0.0:61432 (Press CTRL+C to quit)
+INFO:     Started parent process [40035]
+INFO:     Started server process [40037]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [40039]
+INFO:     Waiting for application startup.
+INFO:     Started server process [40038]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [40049]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Application startup complete.
+INFO:     Started server process [40040]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [40045]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [40041]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [40044]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [40043]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [40051]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [40048]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [40047]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [40046]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Started server process [40042]
+INFO:     Waiting for application startup.
+INFO:     Started server process [40050]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Application startup complete.
+INFO:     Started server process [40052]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Received SIGTERM, exiting.
+INFO:     Terminated child process [40037]
+INFO:     Terminated child process [40038]
+INFO:     Terminated child process [40039]
+INFO:     Terminated child process [40040]
+INFO:     Terminated child process [40041]
+INFO:     Terminated child process [40042]
+INFO:     Terminated child process [40043]
+INFO:     Terminated child process [40044]
+INFO:     Terminated child process [40045]
+INFO:     Terminated child process [40046]
+INFO:     Terminated child process [40047]
+INFO:     Terminated child process [40048]
+INFO:     Terminated child process [40049]
+INFO:     Terminated child process [40050]
+INFO:     Terminated child process [40051]
+INFO:     Terminated child process [40052]
+INFO:     Waiting for child process [40037]
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [40043]
+INFO:     Finished server process [40051]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [40047]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Waiting for application shutdown.
+INFO:     Finished server process [40050]
+INFO:     Application shutdown complete.
+INFO:     Finished server process [40040]
+INFO:     Waiting for application shutdown.
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [40042]
+INFO:     Finished server process [40048]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [40046]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [40052]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [40045]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [40037]
+INFO:     Waiting for child process [40038]
+INFO:     Waiting for application shutdown.
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [40038]
+INFO:     Finished server process [40039]
+INFO:     Waiting for child process [40039]
+INFO:     Waiting for child process [40040]
+INFO:     Waiting for child process [40041]
+INFO:     Waiting for application shutdown.
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [40049]
+INFO:     Application shutdown complete.
+INFO:     Finished server process [40044]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [40041]
+INFO:     Waiting for child process [40042]
+INFO:     Waiting for child process [40043]
+INFO:     Waiting for child process [40044]
+INFO:     Waiting for child process [40045]
+INFO:     Waiting for child process [40046]
+INFO:     Waiting for child process [40047]
+INFO:     Waiting for child process [40048]
+INFO:     Waiting for child process [40049]
+INFO:     Waiting for child process [40050]
+INFO:     Waiting for child process [40051]
+INFO:     Waiting for child process [40052]
+INFO:     Stopping parent process [40035]

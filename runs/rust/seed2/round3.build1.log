@@ -1,0 +1,30 @@
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed2/project)
+warning: unused variable: `status`
+  --> src/handlers.rs:20:14
+   |
+20 |         let (status, message) = match self {
+   |              ^^^^^^ help: if this is intentional, prefix it with an underscore: `_status`
+   |
+   = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: variable does not need to be mutable
+  --> src/middleware.rs:43:24
+   |
+43 |     fn call(&mut self, mut req: Request<B>) -> Self::Future {
+   |                        ----^^^
+   |                        |
+   |                        help: remove this `mut`
+   |
+   = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: `orders` (lib) generated 2 warnings (run `cargo fix --lib -p orders` to apply 2 suggestions)
+warning: unused import: `std::net::SocketAddr`
+ --> src/main.rs:2:5
+  |
+2 | use std::net::SocketAddr;
+  |     ^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: `orders` (bin "orders") generated 1 warning (run `cargo fix --bin "orders" -p orders` to apply 1 suggestion)
+    Finished `release` profile [optimized] target(s) in 0.97s

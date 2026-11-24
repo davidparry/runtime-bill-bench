@@ -1,0 +1,108 @@
+{
+  "lang": "python",
+  "seed": 6,
+  "model": "qwen3.6:35b-a3b-coding",
+  "passed": false,
+  "rounds": 5,
+  "input_tokens": 46215,
+  "output_tokens": 10971,
+  "wall_seconds": 170.5,
+  "files": [
+    "main.py",
+    "requirements-dev.txt",
+    "requirements.txt",
+    "test_main.py"
+  ],
+  "round_records": [
+    {
+      "round": 1,
+      "prompt_eval_count": 766,
+      "eval_count": 3322,
+      "prompt_eval_duration": 558167000,
+      "eval_duration": 27062212000,
+      "load_duration": 4731333,
+      "total_duration": 27710735625,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.py",
+        "requirements-dev.txt",
+        "requirements.txt",
+        "test_main.py"
+      ],
+      "failed_step": "pytest",
+      "failure": "`pytest` exited with status 1. The last lines of its output:\n```\nself = <test_main.TestCreateOrderValidation object at 0x10ad3d8c0>\n\n    def test_empty_items(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": []\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 400\nE       assert 422 == 400\nE        +  where 422 = <Response [422 Unprocessable Entity]>.status_code\n\ntest_main.py:73: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 422, \"durationMs\": 0}\n_______________ TestCreateOrderValidation.test_item_sku_too_long _______________\n\nself = <test_main.TestCreateOrderValidation object at 0x10ad3dbf0>\n\n    def test_item_sku_too_long(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": [{\"sku\": \"a\" * 33, \"quantity\": 1, \"unitPriceCents\": 100}]\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 400\nE       assert 422 == 400\nE        +  where 422 = <Response [422 Unprocessable Entity]>.status_code\n\ntest_main.py:82: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 422, \"durationMs\": 0}\n______________ TestCreateOrderValidation.test_item_quantity_zero _______________\n\nself = <test_main.TestCreateOrderValidation object at 0x10ad94050>\n\n    def test_item_quantity_zero(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": [{\"sku\": \"A-1\", \"quantity\": 0, \"unitPriceCents\": 100}]\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 400\nE       assert 422 == 400\nE        +  where 422 = <Response [422 Unprocessable Entity]>.status_code\n\ntest_main.py:91: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 422, \"durationMs\": 0}\n____________ TestCreateOrderValidation.test_item_quantity_too_high _____________\n\nself = <test_main.TestCreateOrderValidation object at 0x10ad94150>\n\n    def test_item_quantity_too_high(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": [{\"sku\": \"A-1\", \"quantity\": 101, \"unitPriceCents\": 100}]\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 400\nE       assert 422 == 400\nE        +  where 422 = <Response [422 Unprocessable Entity]>.status_code\n\ntest_main.py:100: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 422, \"durationMs\": 0}\n_____________ TestCreateOrderValidation.test_item_unit_price_zero ______________\n\nself = <test_main.TestCreateOrderValidation object at 0x10ada8320>\n\n    def test_item_unit_price_zero(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": [{\"sku\": \"A-1\", \"quantity\": 1, \"unitPriceCents\": 0}]\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 400\nE       assert 422 == 400\nE        +  where 422 = <Response [422 Unprocessable Entity]>.status_code\n\ntest_main.py:109: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 422, \"durationMs\": 0}\n___________ TestCreateOrderValidation.test_item_unit_price_too_high ____________\n\nself = <test_main.TestCreateOrderValidation object at 0x10ada8410>\n\n    def test_item_unit_price_too_high(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": [{\"sku\": \"A-1\", \"quantity\": 1, \"unitPriceCents\": 1000001}]\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 400\nE       assert 422 == 400\nE        +  where 422 = <Response [422 Unprocessable Entity]>.status_code\n\ntest_main.py:118: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 422, \"durationMs\": 0}\n________________ TestCreateOrderValidation.test_too_many_items _________________\n\nself = <test_main.TestCreateOrderValidation object at 0x10ad64670>\n\n    def test_too_many_items(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": [{\"sku\": \"A-1\", \"quantity\": 1, \"unitPriceCents\": 100} for _ in range(51)]\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 400\nE       assert 422 == 400\nE        +  where 422 = <Response [422 Unprocessable Entity]>.status_code\n\ntest_main.py:127: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 422, \"durationMs\": 0}\n_________________ TestCreateOrderValidation.test_invalid_json __________________\n\nself = <test_main.TestCreateOrderValidation object at 0x10ad649f0>\n\n    def test_invalid_json(self):\n        response = client.post(\"/orders\", content=\"not json\", headers={\"Content-Type\": \"application/json\"})\n>       assert response.status_code == 400\nE       assert 422 == 400\nE        +  where 422 = <Response [422 Unprocessable Entity]>.status_code\n\ntest_main.py:132: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 422, \"durationMs\": 0}\n=============================== warnings summary ===============================\n.venv/lib/python3.14/site-packages/fastapi/testclient.py:1\n  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed6/project/.venv/lib/python3.14/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as Tes"
+    },
+    {
+      "round": 2,
+      "prompt_eval_count": 6131,
+      "eval_count": 3252,
+      "prompt_eval_duration": 4157917000,
+      "eval_duration": 26187820000,
+      "load_duration": 5221959,
+      "total_duration": 30381822667,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.py",
+        "test_main.py"
+      ],
+      "failed_step": "pytest",
+      "failure": "`pytest` exited with status 1. The last lines of its output:\n```\nself = <test_main.TestCreateOrderValidation object at 0x10c3e17b0>\n\n    def test_empty_items(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": []\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 400\nE       assert 422 == 400\nE        +  where 422 = <Response [422 Unprocessable Entity]>.status_code\n\ntest_main.py:73: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 422, \"durationMs\": 0}\n_______________ TestCreateOrderValidation.test_item_sku_too_long _______________\n\nself = <test_main.TestCreateOrderValidation object at 0x10c3e1ae0>\n\n    def test_item_sku_too_long(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": [{\"sku\": \"a\" * 33, \"quantity\": 1, \"unitPriceCents\": 100}]\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 400\nE       assert 422 == 400\nE        +  where 422 = <Response [422 Unprocessable Entity]>.status_code\n\ntest_main.py:82: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 422, \"durationMs\": 0}\n______________ TestCreateOrderValidation.test_item_quantity_zero _______________\n\nself = <test_main.TestCreateOrderValidation object at 0x10c408050>\n\n    def test_item_quantity_zero(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": [{\"sku\": \"A-1\", \"quantity\": 0, \"unitPriceCents\": 100}]\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 400\nE       assert 422 == 400\nE        +  where 422 = <Response [422 Unprocessable Entity]>.status_code\n\ntest_main.py:91: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 422, \"durationMs\": 0}\n____________ TestCreateOrderValidation.test_item_quantity_too_high _____________\n\nself = <test_main.TestCreateOrderValidation object at 0x10c408150>\n\n    def test_item_quantity_too_high(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": [{\"sku\": \"A-1\", \"quantity\": 101, \"unitPriceCents\": 100}]\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 400\nE       assert 422 == 400\nE        +  where 422 = <Response [422 Unprocessable Entity]>.status_code\n\ntest_main.py:100: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 422, \"durationMs\": 0}\n_____________ TestCreateOrderValidation.test_item_unit_price_zero ______________\n\nself = <test_main.TestCreateOrderValidation object at 0x10c400140>\n\n    def test_item_unit_price_zero(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": [{\"sku\": \"A-1\", \"quantity\": 1, \"unitPriceCents\": 0}]\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 400\nE       assert 422 == 400\nE        +  where 422 = <Response [422 Unprocessable Entity]>.status_code\n\ntest_main.py:109: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 422, \"durationMs\": 0}\n___________ TestCreateOrderValidation.test_item_unit_price_too_high ____________\n\nself = <test_main.TestCreateOrderValidation object at 0x10c400230>\n\n    def test_item_unit_price_too_high(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": [{\"sku\": \"A-1\", \"quantity\": 1, \"unitPriceCents\": 1000001}]\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 400\nE       assert 422 == 400\nE        +  where 422 = <Response [422 Unprocessable Entity]>.status_code\n\ntest_main.py:118: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 422, \"durationMs\": 0}\n________________ TestCreateOrderValidation.test_too_many_items _________________\n\nself = <test_main.TestCreateOrderValidation object at 0x10c3fc670>\n\n    def test_too_many_items(self):\n        payload = {\n            \"customerId\": \"c-1\",\n            \"items\": [{\"sku\": \"A-1\", \"quantity\": 1, \"unitPriceCents\": 100} for _ in range(51)]\n        }\n        response = client.post(\"/orders\", json=payload)\n>       assert response.status_code == 400\nE       assert 422 == 400\nE        +  where 422 = <Response [422 Unprocessable Entity]>.status_code\n\ntest_main.py:127: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 422, \"durationMs\": 0}\n_________________ TestCreateOrderValidation.test_invalid_json __________________\n\nself = <test_main.TestCreateOrderValidation object at 0x10c3fc9f0>\n\n    def test_invalid_json(self):\n        response = client.post(\"/orders\", content=\"not json\", headers={\"Content-Type\": \"application/json\"})\n>       assert response.status_code == 400\nE       assert 422 == 400\nE        +  where 422 = <Response [422 Unprocessable Entity]>.status_code\n\ntest_main.py:132: AssertionError\n----------------------------- Captured stdout call -----------------------------\n{\"method\": \"POST\", \"path\": \"/orders\", \"status\": 422, \"durationMs\": 0}\n=============================== warnings summary ===============================\n.venv/lib/python3.14/site-packages/fastapi/testclient.py:1\n  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed6/project/.venv/lib/python3.14/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.\n    from starlette.testclient import TestClient as Tes"
+    },
+    {
+      "round": 3,
+      "prompt_eval_count": 11435,
+      "eval_count": 1576,
+      "prompt_eval_duration": 8880766000,
+      "eval_duration": 12869596000,
+      "load_duration": 5053833,
+      "total_duration": 21800178500,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.py"
+      ],
+      "startup_seconds": 1.157,
+      "acceptance_failures": 1,
+      "failed_step": "acceptance",
+      "failure": "These checks failed:\n- SIGTERM: the service did not exit within 10 seconds\n\nThe service's standard error:\n```\nINFO:     Started server process [24235]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:54186 (Press CTRL+C to quit)\n```"
+    },
+    {
+      "round": 4,
+      "prompt_eval_count": 13156,
+      "eval_count": 1414,
+      "prompt_eval_duration": 10562362000,
+      "eval_duration": 11488860000,
+      "load_duration": 8635791,
+      "total_duration": 22122688541,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.py"
+      ],
+      "startup_seconds": 3.268,
+      "acceptance_failures": 1,
+      "failed_step": "acceptance",
+      "failure": "These checks failed:\n- SIGTERM: the service did not exit within 10 seconds\n\nThe service's standard error:\n```\nINFO:     Started server process [24417]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:54714 (Press CTRL+C to quit)\n```"
+    },
+    {
+      "round": 5,
+      "prompt_eval_count": 14727,
+      "eval_count": 1407,
+      "prompt_eval_duration": 11693733000,
+      "eval_duration": 11134807000,
+      "load_duration": 6534208,
+      "total_duration": 22899528625,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.py"
+      ],
+      "startup_seconds": 0.676,
+      "acceptance_failures": 1,
+      "failed_step": "acceptance",
+      "failure": "These checks failed:\n- SIGTERM: the service did not exit within 10 seconds\n\nThe service's standard error:\n```\nINFO:     Started server process [24645]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:55333 (Press CTRL+C to quit)\n```"
+    }
+  ]
+}

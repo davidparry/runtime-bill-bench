@@ -1,0 +1,175 @@
+"""
+Tests for the Orders Service.
+
+Covers validation rules and 404 cases.
+"""
+
+import pytest
+from fastapi.testclient import TestClient
+from main import app
+
+client = TestClient(app)
+
+class TestHealthEndpoint:
+    def test_health_check(self):
+        response = client.get("/health")
+        assert response.status_code == 200
+        assert response.json() == {"status": "ok"}
+
+class TestCreateOrder:
+    def test_create_order_success(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [
+                {"sku": "A-1", "quantity": 2, "unitPriceCents": 1250}
+            ]
+        }
+        response = client.post("/orders", json=payload)
+        
+        assert response.status_code == 201
+        assert "Location" in response.headers
+        
+        data = response.json()
+        assert data["customerId"] == "c-1"
+        assert len(data["items"]) == 1
+        assert data["items"][0]["sku"] == "A-1"
+        assert data["items"][0]["quantity"] == 2
+        assert data["items"][0]["unitPriceCents"] == 1250
+        assert data["totalCents"] == 2500
+        assert "id" in data
+        assert "createdAt" in data
+
+    def test_create_order_invalid_json(self):
+        response = client.post("/orders", content="not json", headers={"Content-Type": "application/json"})
+        assert response.status_code == 400
+        assert "error" in response.json()
+
+    def test_create_order_missing_customer_id(self):
+        payload = {
+            "items": [
+                {"sku": "A-1", "quantity": 1, "unitPriceCents": 100}
+            ]
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 400
+        assert "error" in response.json()
+
+    def test_create_order_customer_id_too_long(self):
+        payload = {
+            "customerId": "c" * 65,
+            "items": [
+                {"sku": "A-1", "quantity": 1, "unitPriceCents": 100}
+            ]
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 400
+        assert "error" in response.json()
+
+    def test_create_order_empty_items(self):
+        payload = {
+            "customerId": "c-1",
+            "items": []
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 400
+        assert "error" in response.json()
+
+    def test_create_order_invalid_quantity_zero(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [
+                {"sku": "A-1", "quantity": 0, "unitPriceCents": 100}
+            ]
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 400
+        assert "error" in response.json()
+
+    def test_create_order_invalid_quantity_too_high(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [
+                {"sku": "A-1", "quantity": 101, "unitPriceCents": 100}
+            ]
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 400
+        assert "error" in response.json()
+
+    def test_create_order_invalid_unit_price_zero(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [
+                {"sku": "A-1", "quantity": 1, "unitPriceCents": 0}
+            ]
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 400
+        assert "error" in response.json()
+
+    def test_create_order_invalid_unit_price_too_high(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [
+                {"sku": "A-1", "quantity": 1, "unitPriceCents": 1000001}
+            ]
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 400
+        assert "error" in response.json()
+
+    def test_create_order_sku_too_long(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [
+                {"sku": "s" * 33, "quantity": 1, "unitPriceCents": 100}
+            ]
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 400
+        assert "error" in response.json()
+
+    def test_create_order_too_many_items(self):
+        items = [{"sku": "A-1", "quantity": 1, "unitPriceCents": 100} for _ in range(51)]
+        payload = {
+            "customerId": "c-1",
+            "items": items
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 400
+        assert "error" in response.json()
+
+    def test_create_order_ignores_unknown_fields(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [
+                {"sku": "A-1", "quantity": 1, "unitPriceCents": 100, "extraField": "ignored"}
+            ],
+            "unknownRootField": "ignored"
+        }
+        response = client.post("/orders", json=payload)
+        assert response.status_code == 201
+
+class TestGetOrder:
+    def test_get_order_success(self):
+        # Create an order first
+        create_payload = {
+            "customerId": "c-1",
+            "items": [
+                {"sku": "A-1", "quantity": 1, "unitPriceCents": 100}
+            ]
+        }
+        create_response = client.post("/orders", json=create_payload)
+        assert create_response.status_code == 201
+        order_id = create_response.json()["id"]
+        
+        # Retrieve it
+        response = client.get(f"/orders/{order_id}")
+        assert response.status_code == 200
+        assert response.json()["id"] == order_id
+
+    def test_get_order_not_found(self):
+        fake_id = "non-existent-id-12345"
+        response = client.get(f"/orders/{fake_id}")
+        assert response.status_code == 404
+        assert "error" in response.json()

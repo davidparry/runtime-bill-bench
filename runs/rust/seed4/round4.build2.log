@@ -1,0 +1,51 @@
+   Compiling futures-macro v0.3.34
+   Compiling tokio v1.54.1
+   Compiling futures-util v0.3.34
+   Compiling axum-core v0.4.5
+   Compiling tokio-util v0.7.20
+   Compiling hyper v1.13.0
+   Compiling tower v0.5.3
+   Compiling tokio-native-tls v0.3.1
+   Compiling h2 v0.3.27
+   Compiling hyper-util v0.1.21
+   Compiling axum v0.7.9
+   Compiling hyper v0.14.32
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed4/project)
+   Compiling hyper-tls v0.5.0
+   Compiling reqwest v0.11.27
+error[E0432]: unresolved import `orders`
+  --> tests/integration.rs:10:5
+   |
+10 | use orders::AppState;
+   |     ^^^^^^ use of unresolved module or unlinked crate `orders`
+   |
+   = help: if you wanted to use a crate named `orders`, use `cargo add orders` to add it to your `Cargo.toml`
+
+error[E0432]: unresolved import `orders`
+  --> tests/integration.rs:11:5
+   |
+11 | use orders::create_order;
+   |     ^^^^^^ use of unresolved module or unlinked crate `orders`
+   |
+   = help: if you wanted to use a crate named `orders`, use `cargo add orders` to add it to your `Cargo.toml`
+
+error[E0432]: unresolved import `orders`
+  --> tests/integration.rs:12:5
+   |
+12 | use orders::get_order;
+   |     ^^^^^^ use of unresolved module or unlinked crate `orders`
+   |
+   = help: if you wanted to use a crate named `orders`, use `cargo add orders` to add it to your `Cargo.toml`
+
+error[E0433]: cannot find module or crate `orders` in this scope
+  --> tests/integration.rs:23:16
+   |
+23 |     items: Vec<orders::OrderItem>,
+   |                ^^^^^^ use of unresolved module or unlinked crate `orders`
+   |
+   = help: if you wanted to use a crate named `orders`, use `cargo add orders` to add it to your `Cargo.toml`
+
+Some errors have detailed explanations: E0432, E0433.
+For more information about an error, try `rustc --explain E0432`.
+error: could not compile `orders` (test "integration") due to 4 previous errors
+warning: build failed, waiting for other jobs to finish...

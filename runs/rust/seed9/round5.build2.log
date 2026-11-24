@@ -1,0 +1,98 @@
+   Compiling tokio v1.54.1
+   Compiling tokio-util v0.7.20
+   Compiling tower v0.5.3
+   Compiling tokio-native-tls v0.3.1
+   Compiling tower-http v0.6.11
+   Compiling h2 v0.4.20
+   Compiling hyper v1.13.0
+   Compiling hyper-util v0.1.21
+   Compiling hyper-tls v0.6.0
+   Compiling axum v0.8.9
+   Compiling reqwest v0.12.28
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed9/project)
+error[E0599]: no method named `oneshot` found for struct `Router<S>` in the current scope
+   --> src/main.rs:269:14
+    |
+268 |           let response = app
+    |  ________________________-
+269 | |             .oneshot(
+    | |_____________-^^^^^^^
+    |
+help: there is a method `nest` with a similar name, but with different arguments
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axum-0.8.9/src/routing/mod.rs:209:5
+    |
+209 |     pub fn nest(self, path: &str, router: Router<S>) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0599]: no method named `oneshot` found for struct `Router<S>` in the current scope
+   --> src/main.rs:306:14
+    |
+305 |           let response = app
+    |  ________________________-
+306 | |             .oneshot(
+    | |_____________-^^^^^^^
+    |
+help: there is a method `nest` with a similar name, but with different arguments
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axum-0.8.9/src/routing/mod.rs:209:5
+    |
+209 |     pub fn nest(self, path: &str, router: Router<S>) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0599]: no method named `oneshot` found for struct `Router<S>` in the current scope
+   --> src/main.rs:336:14
+    |
+335 |           let response = app
+    |  ________________________-
+336 | |             .oneshot(
+    | |_____________-^^^^^^^
+    |
+help: there is a method `nest` with a similar name, but with different arguments
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axum-0.8.9/src/routing/mod.rs:209:5
+    |
+209 |     pub fn nest(self, path: &str, router: Router<S>) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0599]: no method named `oneshot` found for struct `Router<S>` in the current scope
+   --> src/main.rs:366:14
+    |
+365 |           let response = app
+    |  ________________________-
+366 | |             .oneshot(
+    | |_____________-^^^^^^^
+    |
+help: there is a method `nest` with a similar name, but with different arguments
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axum-0.8.9/src/routing/mod.rs:209:5
+    |
+209 |     pub fn nest(self, path: &str, router: Router<S>) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0599]: no method named `oneshot` found for struct `Router<S>` in the current scope
+   --> src/main.rs:385:14
+    |
+384 |           let response = app
+    |  ________________________-
+385 | |             .oneshot(
+    | |_____________-^^^^^^^
+    |
+help: there is a method `nest` with a similar name, but with different arguments
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axum-0.8.9/src/routing/mod.rs:209:5
+    |
+209 |     pub fn nest(self, path: &str, router: Router<S>) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0599]: no method named `oneshot` found for struct `Router<S>` in the current scope
+   --> src/main.rs:407:14
+    |
+406 |           let response = app
+    |  ________________________-
+407 | |             .oneshot(
+    | |_____________-^^^^^^^
+    |
+help: there is a method `nest` with a similar name, but with different arguments
+   --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axum-0.8.9/src/routing/mod.rs:209:5
+    |
+209 |     pub fn nest(self, path: &str, router: Router<S>) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `orders` (bin "orders" test) due to 6 previous errors

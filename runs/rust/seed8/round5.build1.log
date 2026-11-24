@@ -1,0 +1,29 @@
+warning: unused imports: `get` and `post`
+ --> src/lib.rs:5:15
+  |
+5 |     routing::{get, post},
+  |               ^^^  ^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: `orders` (lib) generated 1 warning (run `cargo fix --lib -p orders` to apply 1 suggestion)
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed8/project)
+error[E0382]: use of moved value: `order`
+   --> src/main.rs:152:26
+    |
+132 |     let order = OrderResponse {
+    |         ----- move occurs because `order` has type `OrderResponse`, which does not implement the `Copy` trait
+...
+143 |         store.insert(id.clone(), order);
+    |                                  ----- value moved here
+...
+152 |             total_cents: order.total_cents,
+    |                          ^^^^^^^^^^^^^^^^^ value used here after move
+    |
+help: consider cloning the value if the performance cost is acceptable
+    |
+143 |         store.insert(id.clone(), order.clone());
+    |                                       ++++++++
+
+For more information about this error, try `rustc --explain E0382`.
+error: could not compile `orders` (bin "orders") due to 1 previous error

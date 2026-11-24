@@ -1,0 +1,60 @@
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed1/project)
+error[E0596]: cannot borrow `rx` as mutable, as it is not declared as mutable
+   --> src/main.rs:219:13
+    |
+219 |             rx.recv().await.ok();
+    |             ^^ cannot borrow as mutable
+    |
+help: consider changing this to be mutable
+    |
+215 |     let (tx, mut rx) = tokio::sync::broadcast::channel(1);
+    |              +++
+
+error[E0382]: borrow of moved value: `state`
+   --> src/main.rs:217:55
+    |
+197 |     let state = AppState {
+    |         ----- move occurs because `state` has type `AppState`, which does not implement the `Copy` trait
+...
+207 |         .with_state(state);
+    |                     ----- value moved here
+...
+217 |     let server = axum::serve(listener, app.with_state(state.clone()))
+    |                                                       ^^^^^ value borrowed here after move
+    |
+help: consider cloning the value if the performance cost is acceptable
+    |
+207 |         .with_state(state.clone());
+    |                          ++++++++
+
+error[E0382]: use of moved value: `tx`
+   --> src/main.rs:232:18
+    |
+215 |     let (tx, rx) = tokio::sync::broadcast::channel(1);
+    |          -- move occurs because `tx` has type `tokio::sync::broadcast::Sender<()>`, which does not implement the `Copy` trait
+...
+223 |     tokio::spawn(async move {
+    |                  ---------- value moved here
+...
+228 |         let _ = tx.send(());
+    |                 -- variable moved due to use in coroutine
+...
+232 |     tokio::spawn(async move {
+    |                  ^^^^^^^^^^ value used here after move
+...
+237 |         let _ = tx.send(());
+    |                 -- use occurs due to use in coroutine
+    |
+help: consider cloning the value before moving it into the closure
+    |
+223 ~     let value = tx.clone();
+224 ~     tokio::spawn(async move {
+225 |         signal::unix::signal(signal::unix::SignalKind::terminate())
+...
+228 |             .await;
+229 ~         let _ = value.send(());
+    |
+
+Some errors have detailed explanations: E0382, E0596.
+For more information about an error, try `rustc --explain E0382`.
+error: could not compile `orders` (bin "orders") due to 3 previous errors

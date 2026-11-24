@@ -1,0 +1,258 @@
+EEEEEEEEEEEEEEEEEE                                                       [100%]
+==================================== ERRORS ====================================
+_________ ERROR at setup of TestHealthEndpoint.test_health_returns_ok __________
+
+    @pytest.fixture
+    def client():
+>       with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.AsyncClient' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:18: TypeError
+_________ ERROR at setup of TestCreateOrder.test_create_order_success __________
+
+    @pytest.fixture
+    def client():
+>       with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.AsyncClient' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:18: TypeError
+_______ ERROR at setup of TestCreateOrder.test_create_order_invalid_json _______
+
+    @pytest.fixture
+    def client():
+>       with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.AsyncClient' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:18: TypeError
+___ ERROR at setup of TestCreateOrder.test_create_order_missing_customer_id ____
+
+    @pytest.fixture
+    def client():
+>       with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.AsyncClient' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:18: TypeError
+_______ ERROR at setup of TestCreateOrder.test_create_order_empty_items ________
+
+    @pytest.fixture
+    def client():
+>       with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.AsyncClient' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:18: TypeError
+____ ERROR at setup of TestCreateOrder.test_create_order_invalid_sku_length ____
+
+    @pytest.fixture
+    def client():
+>       with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.AsyncClient' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:18: TypeError
+_____ ERROR at setup of TestCreateOrder.test_create_order_invalid_quantity _____
+
+    @pytest.fixture
+    def client():
+>       with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.AsyncClient' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:18: TypeError
+____ ERROR at setup of TestCreateOrder.test_create_order_invalid_unit_price ____
+
+    @pytest.fixture
+    def client():
+>       with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.AsyncClient' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:18: TypeError
+______ ERROR at setup of TestCreateOrder.test_create_order_too_many_items ______
+
+    @pytest.fixture
+    def client():
+>       with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.AsyncClient' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:18: TypeError
+___ ERROR at setup of TestCreateOrder.test_create_order_customer_id_too_long ___
+
+    @pytest.fixture
+    def client():
+>       with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.AsyncClient' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:18: TypeError
+______ ERROR at setup of TestCreateOrder.test_create_order_sku_too_short _______
+
+    @pytest.fixture
+    def client():
+>       with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.AsyncClient' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:18: TypeError
+____ ERROR at setup of TestCreateOrder.test_create_order_quantity_too_high _____
+
+    @pytest.fixture
+    def client():
+>       with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.AsyncClient' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:18: TypeError
+___ ERROR at setup of TestCreateOrder.test_create_order_unit_price_too_high ____
+
+    @pytest.fixture
+    def client():
+>       with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.AsyncClient' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:18: TypeError
+__ ERROR at setup of TestCreateOrder.test_create_order_ignore_unknown_fields ___
+
+    @pytest.fixture
+    def client():
+>       with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.AsyncClient' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:18: TypeError
+______ ERROR at setup of TestCreateOrder.test_create_order_multiple_items ______
+
+    @pytest.fixture
+    def client():
+>       with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.AsyncClient' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:18: TypeError
+____________ ERROR at setup of TestGetOrder.test_get_order_success _____________
+
+    @pytest.fixture
+    def client():
+>       with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.AsyncClient' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:18: TypeError
+___________ ERROR at setup of TestGetOrder.test_get_order_not_found ____________
+
+    @pytest.fixture
+    def client():
+>       with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.AsyncClient' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:18: TypeError
+___________ ERROR at setup of TestConcurrency.test_concurrent_orders ___________
+
+    @pytest.fixture
+    def client():
+>       with httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as c:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: 'httpx.AsyncClient' object does not support the context manager protocol (missed __exit__ method) but it supports the asynchronous context manager protocol. Did you mean to use 'async with'?
+
+tests/test_orders.py:18: TypeError
+=============================== warnings summary ===============================
+tests/test_orders.py:31
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/tests/test_orders.py:31: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_orders.py:38
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/tests/test_orders.py:38: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_orders.py:57
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/tests/test_orders.py:57: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_orders.py:63
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/tests/test_orders.py:63: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_orders.py:70
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/tests/test_orders.py:70: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_orders.py:77
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/tests/test_orders.py:77: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_orders.py:84
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/tests/test_orders.py:84: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_orders.py:91
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/tests/test_orders.py:91: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_orders.py:98
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/tests/test_orders.py:98: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_orders.py:106
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/tests/test_orders.py:106: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_orders.py:113
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/tests/test_orders.py:113: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_orders.py:120
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/tests/test_orders.py:120: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_orders.py:127
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/tests/test_orders.py:127: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_orders.py:134
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/tests/test_orders.py:134: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_orders.py:143
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/tests/test_orders.py:143: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_orders.py:156
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/tests/test_orders.py:156: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_orders.py:168
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/tests/test_orders.py:168: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+tests/test_orders.py:175
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed3/project/tests/test_orders.py:175: PytestUnknownMarkWarning: Unknown pytest.mark.asyncio - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.asyncio
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+ERROR tests/test_orders.py::TestHealthEndpoint::test_health_returns_ok - Type...
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_success - Type...
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_invalid_json
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_missing_customer_id
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_empty_items - ...
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_invalid_sku_length
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_invalid_quantity
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_invalid_unit_price
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_too_many_items
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_customer_id_too_long
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_sku_too_short
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_quantity_too_high
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_unit_price_too_high
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_ignore_unknown_fields
+ERROR tests/test_orders.py::TestCreateOrder::test_create_order_multiple_items
+ERROR tests/test_orders.py::TestGetOrder::test_get_order_success - TypeError:...
+ERROR tests/test_orders.py::TestGetOrder::test_get_order_not_found - TypeErro...
+ERROR tests/test_orders.py::TestConcurrency::test_concurrent_orders - TypeErr...
+18 warnings, 18 errors in 0.56s

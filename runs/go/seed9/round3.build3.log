@@ -1,0 +1,27 @@
+--- FAIL: TestValidateCustomerID (0.00s)
+    --- FAIL: TestValidateCustomerID/too_long (0.00s)
+        main_test.go:29: validateCustomerID("c-\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00") error = <nil>, wantErr true
+{"durationMs":0,"method":"GET","path":"/health","status":200}
+{"durationMs":0,"method":"POST","path":"/orders","status":201}
+{"durationMs":0,"method":"POST","path":"/orders","status":201}
+{"durationMs":0,"method":"POST","path":"/orders","status":201}
+{"durationMs":0,"method":"POST","path":"/orders","status":201}
+{"durationMs":0,"method":"POST","path":"/orders","status":201}
+{"durationMs":0,"method":"POST","path":"/orders","status":201}
+{"durationMs":0,"method":"POST","path":"/orders","status":201}
+{"durationMs":0,"method":"GET","path":"/orders/934956ce-d328-4e58-8361-b2633d8c5fb9","status":200}
+{"durationMs":0,"method":"GET","path":"/orders/233bc57f-04e0-49ee-affe-f091bac1c1a7","status":200}
+{"durationMs":0,"method":"POST","path":"/orders","status":201}
+{"durationMs":0,"method":"GET","path":"/orders/cc5c8786-abdb-4228-a3c1-c4471f317204","status":200}
+{"durationMs":0,"method":"POST","path":"/orders","status":201}
+{"durationMs":0,"method":"POST","path":"/orders","status":201}
+{"durationMs":0,"method":"GET","path":"/orders/d4fe9f8a-af87-4b92-957c-cf056803b3e8","status":200}
+{"durationMs":0,"method":"GET","path":"/orders/51fc7d20-2f2e-49a4-b29f-a3067cec353f","status":200}
+{"durationMs":0,"method":"GET","path":"/orders/0397cf91-f35f-4bf9-93a8-8609ad4a4e2e","status":200}
+{"durationMs":0,"method":"GET","path":"/orders/fc7ef234-ba3d-4f03-8e84-fba76af44676","status":200}
+{"durationMs":0,"method":"GET","path":"/orders/60ea09ad-99a6-4c0d-a621-0e57fe70972b","status":200}
+{"durationMs":0,"method":"GET","path":"/orders/5ae92fbd-d118-463d-b952-5bfa35a7aa58","status":200}
+{"durationMs":0,"method":"GET","path":"/orders/6a4be859-1e78-426c-a648-9cc0215d996c","status":200}
+FAIL
+FAIL	orders	0.407s
+FAIL

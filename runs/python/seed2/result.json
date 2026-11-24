@@ -1,0 +1,91 @@
+{
+  "lang": "python",
+  "seed": 2,
+  "model": "qwen3.6:35b-a3b-coding",
+  "passed": true,
+  "rounds": 4,
+  "input_tokens": 25040,
+  "output_tokens": 6728,
+  "wall_seconds": 75.8,
+  "files": [
+    "main.py",
+    "requirements-dev.txt",
+    "requirements.txt",
+    "test_main.py"
+  ],
+  "round_records": [
+    {
+      "round": 1,
+      "prompt_eval_count": 768,
+      "eval_count": 2886,
+      "prompt_eval_duration": 511247000,
+      "eval_duration": 20688694000,
+      "load_duration": 3734333,
+      "total_duration": 21263467750,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.py",
+        "requirements-dev.txt",
+        "requirements.txt",
+        "test_main.py"
+      ],
+      "failed_step": "pytest",
+      "failure": "`pytest` exited with status 1. The last lines of its output:\n```\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.14/site-packages/httpx/_client.py:928: in send\n    raise exc\n.venv/lib/python3.14/site-packages/httpx/_client.py:922: in send\n    response.read()\n.venv/lib/python3.14/site-packages/httpx/_models.py:881: in read\n    self._content = b\"\".join(self.iter_bytes())\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.14/site-packages/httpx/_models.py:897: in iter_bytes\n    for raw_bytes in self.iter_raw():\n                     ^^^^^^^^^^^^^^^\n.venv/lib/python3.14/site-packages/httpx/_models.py:951: in iter_raw\n    for raw_stream_bytes in self.stream:\n                            ^^^^^^^^^^^\n.venv/lib/python3.14/site-packages/httpx/_client.py:153: in __iter__\n    for chunk in self._stream:\n                 ^^^^^^^^^^^^\n.venv/lib/python3.14/site-packages/starlette/testclient.py:384: in iter_body\n    exit_stack.close()\n/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextlib.py:627: in close\n    self.__exit__(None, None, None)\n/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextlib.py:619: in __exit__\n    raise exc\n/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/contextlib.py:604: in __exit__\n    if cb(*exc_details):\n       ^^^^^^^^^^^^^^^^\n.venv/lib/python3.14/site-packages/starlette/testclient.py:399: in close_app\n    raise exception\n.venv/lib/python3.14/site-packages/anyio/from_thread.py:272: in _call_func\n    retval = await retval_or_awaitable\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.14/site-packages/starlette/testclient.py:366: in run_app\n    await self.app(scope, receive, send)\n.venv/lib/python3.14/site-packages/fastapi/applications.py:1224: in __call__\n    await super().__call__(scope, receive, send)\n.venv/lib/python3.14/site-packages/starlette/applications.py:96: in __call__\n    await self.middleware_stack(scope, receive, send)\n.venv/lib/python3.14/site-packages/starlette/middleware/errors.py:186: in __call__\n    raise exc\n.venv/lib/python3.14/site-packages/starlette/middleware/errors.py:164: in __call__\n    await self.app(scope, receive, _send)\n.venv/lib/python3.14/site-packages/fastapi/telemetry/_asgi.py:151: in __call__\n    await self.app(scope, receive, send)\n.venv/lib/python3.14/site-packages/fastapi/_body_limit.py:80: in __call__\n    await self.app(scope, receive, send)\n.venv/lib/python3.14/site-packages/starlette/middleware/base.py:203: in __call__\n    response = await self.dispatch_func(request, call_next)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nmain.py:89: in log_requests\n    response = await call_next(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.14/site-packages/starlette/middleware/base.py:179: in call_next\n    raise app_exc from app_exc.__cause__ or app_exc.__context__\n.venv/lib/python3.14/site-packages/starlette/middleware/base.py:149: in coro\n    await self.app(scope, receive_or_disconnect, send_no_error)\n.venv/lib/python3.14/site-packages/starlette/middleware/exceptions.py:63: in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n.venv/lib/python3.14/site-packages/starlette/_exception_handler.py:53: in wrapped_app\n    raise exc\n.venv/lib/python3.14/site-packages/starlette/_exception_handler.py:42: in wrapped_app\n    await app(scope, receive, sender)\n.venv/lib/python3.14/site-packages/fastapi/middleware/asyncexitstack.py:18: in __call__\n    await self.app(scope, receive, send)\n.venv/lib/python3.14/site-packages/starlette/routing.py:683: in __call__\n    await self.middleware_stack(scope, receive, send)\n.venv/lib/python3.14/site-packages/fastapi/routing.py:2929: in app\n    await route.handle(scope, receive, send)\n.venv/lib/python3.14/site-packages/fastapi/routing.py:1375: in handle\n    await super().handle(scope, receive, send)\n.venv/lib/python3.14/site-packages/starlette/routing.py:289: in handle\n    await self.app(scope, receive, send)\n.venv/lib/python3.14/site-packages/fastapi/routing.py:175: in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n.venv/lib/python3.14/site-packages/starlette/_exception_handler.py:53: in wrapped_app\n    raise exc\n.venv/lib/python3.14/site-packages/starlette/_exception_handler.py:42: in wrapped_app\n    await app(scope, receive, sender)\n.venv/lib/python3.14/site-packages/fastapi/routing.py:161: in app\n    response = await f(request)\n               ^^^^^^^^^^^^^^^^\n.venv/lib/python3.14/site-packages/fastapi/routing.py:762: in app\n    raw_response = await run_endpoint_function(\n.venv/lib/python3.14/site-packages/fastapi/routing.py:381: in run_endpoint_function\n    return await dependant.call(**values)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nmain.py:155: in get_order\n    return JSONResponse(content=order)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.14/site-packages/starlette/responses.py:197: in __init__\n    super().__init__(content, status_code, headers, media_type, background)\n.venv/lib/python3.14/site-packages/starlette/responses.py:46: in __init__\n    self.body = self.render(content)\n                ^^^^^^^^^^^^^^^^^^^^\n.venv/lib/python3.14/site-packages/starlette/responses.py:200: in render\n    return json.dumps(\n/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py:242: in dumps\n    **kw).encode(obj)\n          ^^^^^^^^^^^\n/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py:202: in encode\n    chunks = self.iterencode(o, _one_shot=True)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/encoder.py:263: in iterencode\n    return _iterencode(o, 0)\n           ^^^^^^^^^^^^"
+    },
+    {
+      "round": 2,
+      "prompt_eval_count": 6238,
+      "eval_count": 1254,
+      "prompt_eval_duration": 4021553000,
+      "eval_duration": 9149563000,
+      "load_duration": 4950667,
+      "total_duration": 13210643375,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.py"
+      ],
+      "startup_seconds": 0.32,
+      "acceptance_failures": 17,
+      "failed_step": "acceptance",
+      "failure": "These checks failed:\n- GET /orders/{id} for the created order: createdAt is '2026-11-24T15:46:16.027563Z', but the create response had '2026-11-24T15:46:16.027581Z'\n- GET /orders/{id} for an unknown id: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Order not found\"}'\n- POST /orders with malformed JSON: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Invalid JSON body\"}'\n- POST /orders with no customerId: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Validation error\"}'\n- POST /orders with an empty customerId: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Validation error\"}'\n- POST /orders with a 65-character customerId: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Validation error\"}'\n- POST /orders with no items: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Validation error\"}'\n- POST /orders with an empty items array: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Validation error\"}'\n- POST /orders with 51 items: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Validation error\"}'\n- POST /orders with quantity 0: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Validation error\"}'\n- POST /orders with quantity 101: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Validation error\"}'\n- POST /orders with no quantity: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Validation error\"}'\n- POST /orders with unitPriceCents 0: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Validation error\"}'\n- POST /orders with unitPriceCents 1000001: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Validation error\"}'\n- POST /orders with an empty sku: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Validation error\"}'\n- POST /orders with a 33-character sku: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Validation error\"}'\n- POST /orders with no sku: expected a JSON object with a string \"error\" field, got '{\"detail\":\"Validation error\"}'\n\nThe service's standard error:\n```\nINFO:     Started server process [12271]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:49713 (Press CTRL+C to quit)\nINFO:     Shutting down\nINFO:     Waiting for application shutdown.\nINFO:     Application shutdown complete.\nINFO:     Finished server process [12271]\n```"
+    },
+    {
+      "round": 3,
+      "prompt_eval_count": 8246,
+      "eval_count": 1292,
+      "prompt_eval_duration": 5930493000,
+      "eval_duration": 9388230000,
+      "load_duration": 4218917,
+      "total_duration": 15379806709,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.py"
+      ],
+      "startup_seconds": 0.269,
+      "acceptance_failures": 1,
+      "failed_step": "acceptance",
+      "failure": "These checks failed:\n- GET /orders/{id} for the created order: createdAt is '2026-11-24T15:46:33.711934Z', but the create response had '2026-11-24T15:46:33.711949Z'\n\nThe service's standard error:\n```\nINFO:     Started server process [12451]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:50175 (Press CTRL+C to quit)\nINFO:     Shutting down\nINFO:     Waiting for application shutdown.\nINFO:     Application shutdown complete.\nINFO:     Finished server process [12451]\n```"
+    },
+    {
+      "round": 4,
+      "prompt_eval_count": 9788,
+      "eval_count": 1296,
+      "prompt_eval_duration": 7413631000,
+      "eval_duration": 9588881000,
+      "load_duration": 4380292,
+      "total_duration": 17073722292,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.py"
+      ],
+      "startup_seconds": 0.265,
+      "acceptance_failures": 0,
+      "failed_step": null,
+      "failure": null
+    }
+  ]
+}

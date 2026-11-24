@@ -1,0 +1,85 @@
+{
+  "lang": "go",
+  "seed": 3,
+  "model": "qwen3.6:35b-a3b-coding",
+  "passed": true,
+  "rounds": 4,
+  "input_tokens": 29190,
+  "output_tokens": 13605,
+  "wall_seconds": 134.5,
+  "files": [
+    "go.mod",
+    "main.go",
+    "main_test.go"
+  ],
+  "round_records": [
+    {
+      "round": 1,
+      "prompt_eval_count": 728,
+      "eval_count": 5593,
+      "prompt_eval_duration": 483956000,
+      "eval_duration": 42905812000,
+      "load_duration": 3092167,
+      "total_duration": 43434624500,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "go.mod",
+        "main.go",
+        "main_test.go"
+      ],
+      "failed_step": "go build -o orders .",
+      "failure": "`go build -o orders .` exited with status 1. The last lines of its output:\n```\n# orders\n./main.go:62:1: syntax error: imports must appear before other declarations\n```"
+    },
+    {
+      "round": 2,
+      "prompt_eval_count": 6429,
+      "eval_count": 2611,
+      "prompt_eval_duration": 4143571000,
+      "eval_duration": 20111383000,
+      "load_duration": 3273667,
+      "total_duration": 24294471500,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.go"
+      ],
+      "failed_step": "go test ./...",
+      "failure": "`go test ./...` exited with status 1. The last lines of its output:\n```\n# orders [orders.test]\n./main_test.go:7:2: \"io\" imported and not used\nFAIL\torders [build failed]\nFAIL\n```"
+    },
+    {
+      "round": 3,
+      "prompt_eval_count": 9165,
+      "eval_count": 2789,
+      "prompt_eval_duration": 7073971000,
+      "eval_duration": 22109716000,
+      "load_duration": 3153792,
+      "total_duration": 29219331417,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main_test.go"
+      ],
+      "failed_step": "go test ./...",
+      "failure": "`go test ./...` exited with status 1. The last lines of its output:\n```\n{\"durationMs\":0,\"method\":\"GET\",\"path\":\"/health\",\"status\":200,\"timestamp\":\"2026-11-24T15:54:57Z\"}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":201,\"timestamp\":\"2026-11-24T15:54:57Z\"}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400,\"timestamp\":\"2026-11-24T15:54:57Z\"}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400,\"timestamp\":\"2026-11-24T15:54:57Z\"}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400,\"timestamp\":\"2026-11-24T15:54:57Z\"}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400,\"timestamp\":\"2026-11-24T15:54:57Z\"}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400,\"timestamp\":\"2026-11-24T15:54:57Z\"}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400,\"timestamp\":\"2026-11-24T15:54:57Z\"}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400,\"timestamp\":\"2026-11-24T15:54:57Z\"}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400,\"timestamp\":\"2026-11-24T15:54:57Z\"}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400,\"timestamp\":\"2026-11-24T15:54:57Z\"}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":201,\"timestamp\":\"2026-11-24T15:54:57Z\"}\n{\"durationMs\":0,\"method\":\"GET\",\"path\":\"/orders/b368f61e-ab15-4a0c-9d65-3fd6c80882b2\",\"status\":200,\"timestamp\":\"2026-11-24T15:54:57Z\"}\n{\"durationMs\":0,\"method\":\"GET\",\"path\":\"/orders/non-existent-id\",\"status\":404,\"timestamp\":\"2026-11-24T15:54:57Z\"}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":400,\"timestamp\":\"2026-11-24T15:54:57Z\"}\n--- FAIL: TestIgnoreUnknownFields (0.00s)\n    main_test.go:286: Expected status 201, got 400\n{\"durationMs\":0,\"method\":\"GET\",\"path\":\"/health\",\"status\":200,\"timestamp\":\"2026-11-24T15:54:57Z\"}\n{\"durationMs\":0,\"method\":\"POST\",\"path\":\"/orders\",\"status\":201,\"timestamp\":\"2026-11-24T15:54:57Z\"}\nFAIL\nFAIL\torders\t0.390s\nFAIL\n```"
+    },
+    {
+      "round": 4,
+      "prompt_eval_count": 12868,
+      "eval_count": 2612,
+      "prompt_eval_duration": 10197374000,
+      "eval_duration": 21666080000,
+      "load_duration": 6515959,
+      "total_duration": 31928437750,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.go"
+      ],
+      "startup_seconds": 0.15,
+      "acceptance_failures": 0,
+      "failed_step": null,
+      "failure": null
+    }
+  ]
+}

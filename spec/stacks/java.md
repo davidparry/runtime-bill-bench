@@ -1,0 +1,3 @@
+- Java with Spring Boot, built with Maven. The harness uses JDK 25 (Temurin 25.0.5) and Maven 3.9.
+- `mvn -B package` must compile, run the unit tests, and produce an executable jar in target/ with spring-boot-maven-plugin.
+- The harness starts the service with `java -jar target/<artifact>.jar`.

@@ -1,0 +1,209 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.example:orders-service >---------------------
+[INFO] Building orders-service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ orders-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ orders-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 7 source files with javac [debug release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ orders-service ---
+[INFO] skip non existing resourceDirectory /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed7/project/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ orders-service ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ orders-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.ordersservice.OrderControllerTest
+10:37:37.406 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.ordersservice.OrderControllerTest]: OrderControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:37:37.442 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.ordersservice.OrdersServiceApplication for test class com.example.ordersservice.OrderControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-11-24 10:37:37.573 [main] INFO  c.e.o.OrderControllerTest - Starting OrderControllerTest using Java 25.0.5 with PID 24911 (started by davidparry in /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed7/project)
+2026-11-24 10:37:37.573 [main] INFO  c.e.o.OrderControllerTest - No active profile set, falling back to 1 default profile: "default"
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/Users/davidparry/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.20/tomcat-embed-core-10.1.20.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-11-24 10:37:37.915 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2026-11-24 10:37:37.915 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2026-11-24 10:37:37.915 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2026-11-24 10:37:37.922 [main] INFO  c.e.o.OrderControllerTest - Started OrderControllerTest in 0.446 seconds (process running for 0.727)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/Users/davidparry/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.13/byte-buddy-agent-1.14.13.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-11-24 10:37:38.234 [main] INFO  c.e.o.logging.RequestLoggingFilter - {"method":"GET","path":"/orders/non-existent-id","status":404,"durationMs":24}
+2026-11-24 10:37:38.252 [main] INFO  c.e.o.logging.RequestLoggingFilter - {"method":"GET","path":"/health","status":200,"durationMs":1}
+2026-11-24 10:37:38.291 [main] INFO  c.e.o.logging.RequestLoggingFilter - {"method":"POST","path":"/orders","status":201,"durationMs":36}
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /orders
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"155"]
+             Body = {
+    "customerId": "c-1",
+    "items": [
+        {
+            "sku": "A-1",
+            "quantity": 1,
+            "unitPriceCents": 0
+        }
+    ]
+}
+
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.ordersservice.controller.OrderController
+           Method = com.example.ordersservice.controller.OrderController#createOrder(CreateOrderRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Location:"/orders/fcae5009-5317-4f6a-a330-04060bd7e1ed", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":"fcae5009-5317-4f6a-a330-04060bd7e1ed","customerId":"c-1","items":[{"sku":"A-1","quantity":1,"unitPriceCents":0}],"totalCents":0,"createdAt":"2026-11-24T16:37:38.288169Z"}
+    Forwarded URL = null
+   Redirected URL = /orders/fcae5009-5317-4f6a-a330-04060bd7e1ed
+          Cookies = []
+2026-11-24 10:37:38.301 [main] INFO  c.e.o.logging.RequestLoggingFilter - {"method":"POST","path":"/orders","status":400,"durationMs":5}
+2026-11-24 10:37:38.303 [main] INFO  c.e.o.logging.RequestLoggingFilter - {"method":"POST","path":"/orders","status":201,"durationMs":0}
+2026-11-24 10:37:38.304 [main] INFO  c.e.o.logging.RequestLoggingFilter - {"method":"GET","path":"/orders/f05d9325-f97c-42a6-b084-8611a79cbdad","status":200,"durationMs":0}
+2026-11-24 10:37:38.308 [main] INFO  c.e.o.logging.RequestLoggingFilter - {"method":"POST","path":"/orders","status":400,"durationMs":2}
+2026-11-24 10:37:38.310 [main] INFO  c.e.o.logging.RequestLoggingFilter - {"method":"POST","path":"/orders","status":201,"durationMs":1}
+2026-11-24 10:37:38.313 [main] INFO  c.e.o.logging.RequestLoggingFilter - {"method":"POST","path":"/orders","status":201,"durationMs":1}
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /orders
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"157"]
+             Body = {
+    "customerId": "c-1",
+    "items": [
+        {
+            "sku": "A-1",
+            "quantity": 0,
+            "unitPriceCents": 100
+        }
+    ]
+}
+
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.ordersservice.controller.OrderController
+           Method = com.example.ordersservice.controller.OrderController#createOrder(CreateOrderRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Location:"/orders/5bc69bf0-7b39-4df3-ba6c-bfb73de3e023", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":"5bc69bf0-7b39-4df3-ba6c-bfb73de3e023","customerId":"c-1","items":[{"sku":"A-1","quantity":0,"unitPriceCents":100}],"totalCents":0,"createdAt":"2026-11-24T16:37:38.313298Z"}
+    Forwarded URL = null
+   Redirected URL = /orders/5bc69bf0-7b39-4df3-ba6c-bfb73de3e023
+          Cookies = []
+2026-11-24 10:37:38.316 [main] INFO  c.e.o.logging.RequestLoggingFilter - {"method":"POST","path":"/orders","status":400,"durationMs":1}
+[ERROR] Tests run: 9, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.954 s <<< FAILURE! -- in com.example.ordersservice.OrderControllerTest
+[ERROR] com.example.ordersservice.OrderControllerTest.createOrderInvalidUnitPriceCents -- Time elapsed: 0.040 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<400> but was:<201>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.ordersservice.OrderControllerTest.createOrderInvalidUnitPriceCents(OrderControllerTest.java:162)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+[ERROR] com.example.ordersservice.OrderControllerTest.createOrderInvalidQuantity -- Time elapsed: 0.002 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<400> but was:<201>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.ordersservice.OrderControllerTest.createOrderInvalidQuantity(OrderControllerTest.java:140)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   OrderControllerTest.createOrderInvalidQuantity:140 Status expected:<400> but was:<201>
+[ERROR]   OrderControllerTest.createOrderInvalidUnitPriceCents:162 Status expected:<400> but was:<201>
+[INFO] 
+[ERROR] Tests run: 9, Failures: 2, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.994 s
+[INFO] Finished at: 2026-11-24T10:37:38-06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.1.2:test (default-test) on project orders-service: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed7/project/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,0 +1,236 @@
+09:19:25 java seed1 round1: in=747 out=4575 fail at mvn -B package
+09:19:44 java seed1 round2: in=9167 out=1541 fail at mvn -B package
+09:20:06 java seed1 round3: in=12043 out=898 fail at mvn -B package
+09:20:34 java seed1 round4: in=16746 out=1283 fail at mvn -B package
+09:21:10 java seed1 round5: in=21846 out=1630 fail at mvn -B package
+== java seed1: FAILED after 5 round(s), 60549 in / 9927 out, 151.5s
+skip go seed1: already has a result
+09:21:51 rust seed1 round1: in=729 out=4025 fail at cargo build --release
+09:22:22 rust seed1 round2: in=7452 out=3282 fail at cargo build --release
+09:22:46 rust seed1 round3: in=13118 out=1797 fail at cargo build --release
+09:23:13 rust seed1 round4: in=15453 out=1796 fail at cargo build --release
+09:23:43 rust seed1 round5: in=17978 out=1820 fail at cargo build --release
+== rust seed1: FAILED after 5 round(s), 54730 in / 12720 out, 153.5s
+09:24:16 python seed1 round1: in=766 out=3442 fail at pytest
+09:24:35 python seed1 round2: in=6555 out=1814 fail at pytest
+09:24:59 python seed1 round3: in=10644 out=1607 fail at acceptance
+09:25:27 python seed1 round4: in=12859 out=2016 fail at acceptance
+09:25:56 python seed1 round5: in=15120 out=1744 fail at acceptance
+== python seed1: FAILED after 5 round(s), 45944 in / 10623 out, 132.3s
+09:26:39 java seed2 round1: in=745 out=4908 fail at mvn -B package
+09:26:51 java seed2 round2: in=7279 out=512 fail at mvn -B package
+skip java seed1: already has a result
+skip go seed1: already has a result
+skip rust seed1: already has a result
+09:27:57 python seed1 round1: in=766 out=3415 fail at acceptance
+09:28:27 python seed1 round2: in=6109 out=3265 fail at acceptance
+09:29:05 python seed1 round3: in=15212 out=3163 fail at pytest
+09:29:50 python seed1 round4: in=20669 out=3155 fail at pytest
+09:30:48 python seed1 round5: in=25979 out=3226 fail at acceptance
+== python seed1: FAILED after 5 round(s), 68735 in / 16224 out, 201.0s
+09:31:24 java seed2 round1: in=744 out=4240 fail at mvn -B package
+09:31:51 java seed2 round2: in=7061 out=2346 fail at mvn -B package
+09:32:19 java seed2 round3: in=12497 out=2021 fail at mvn -B package
+09:32:41 java seed2 round4: in=15199 out=363 fail at acceptance
+09:33:05 java seed2 round5: in=16393 out=531 fail at acceptance
+== java seed2: FAILED after 5 round(s), 51894 in / 9501 out, 136.5s
+09:33:43 go seed2 round1: in=729 out=4431 fail at go build -o orders .
+09:34:03 go seed2 round2: in=5279 out=1937 fail at go build -o orders .
+09:34:25 go seed2 round3: in=7319 out=1941 fail at go test ./...
+09:34:52 go seed2 round4: in=9477 out=1903 fail at acceptance
+09:35:23 go seed2 round5: in=11581 out=2203 fail at acceptance
+== go seed2: FAILED after 5 round(s), 34385 in / 12415 out, 138.2s
+09:35:58 rust seed2 round1: in=737 out=3984 fail at cargo build --release
+09:38:28 rust seed2 round2: in=5975 out=1806 fail at acceptance
+09:40:51 rust seed2 round3: in=7894 out=2009 fail at acceptance
+09:43:14 rust seed2 round4: in=10006 out=2009 fail at acceptance
+09:45:37 rust seed2 round5: in=12128 out=1806 fail at acceptance
+== rust seed2: FAILED after 5 round(s), 36740 in / 11614 out, 614.4s
+09:46:00 python seed2 round1: in=768 out=2886 fail at pytest
+09:46:16 python seed2 round2: in=6238 out=1254 fail at acceptance
+09:46:34 python seed2 round3: in=8246 out=1292 fail at acceptance
+09:46:53 python seed2 round4: in=9788 out=1296 PASS
+== python seed2: PASSED after 4 round(s), 25040 in / 6728 out, 75.8s
+skip java seed1: already has a result
+skip go seed1: already has a result
+skip rust seed1: already has a result
+skip python seed1: already has a result
+skip java seed2: already has a result
+skip go seed2: already has a result
+09:48:52 rust seed2 round1: in=736 out=8814 fail at cargo build --release
+09:49:29 rust seed2 round2: in=11449 out=3780 fail at cargo build --release
+09:50:02 rust seed2 round3: in=16164 out=1535 fail at cargo test --release
+09:50:55 rust seed2 round4: in=20133 out=3759 fail at cargo test --release
+09:51:34 rust seed2 round5: in=25957 out=1342 fail at cargo test --release
+== rust seed2: FAILED after 5 round(s), 74439 in / 19230 out, 229.1s
+skip python seed2: already has a result
+09:52:08 java seed3 round1: in=748 out=3991 fail at mvn -B package
+09:52:20 java seed3 round2: in=5956 out=791 fail at mvn -B package
+09:52:37 java seed3 round3: in=7575 out=1146 fail at mvn -B package
+09:52:55 java seed3 round4: in=12049 out=104 fail at acceptance
+09:53:16 java seed3 round5: in=12978 out=729 fail at acceptance
+== java seed3: FAILED after 5 round(s), 39306 in / 6761 out, 102.1s
+09:54:02 go seed3 round1: in=728 out=5593 fail at go build -o orders .
+09:54:27 go seed3 round2: in=6429 out=2611 fail at go test ./...
+09:54:58 go seed3 round3: in=9165 out=2789 fail at go test ./...
+09:55:31 go seed3 round4: in=12868 out=2612 PASS
+== go seed3: PASSED after 4 round(s), 29190 in / 13605 out, 134.5s
+09:56:02 rust seed3 round1: in=737 out=3819 fail at cargo build --release
+09:56:21 rust seed3 round2: in=6558 out=1885 fail at cargo build --release
+09:56:44 rust seed3 round3: in=10571 out=1887 fail at cargo build --release
+09:57:15 rust seed3 round4: in=13134 out=1880 fail at cargo test --release
+09:57:44 rust seed3 round5: in=17595 out=1452 fail at cargo test --release
+== rust seed3: FAILED after 5 round(s), 48595 in / 10923 out, 133.3s
+09:58:33 python seed3 round1: in=767 out=5475 fail at pytest
+09:59:12 python seed3 round2: in=8475 out=3600 fail at pytest
+09:59:57 python seed3 round3: in=14982 out=3590 fail at pytest
+10:00:50 python seed3 round4: in=21474 out=3590 fail at pytest
+10:01:55 python seed3 round5: in=27977 out=3590 fail at pytest
+== python seed3: FAILED after 5 round(s), 73675 in / 19845 out, 250.8s
+10:02:37 java seed4 round1: in=748 out=4599 fail at mvn -B package
+10:02:52 java seed4 round2: in=6948 out=1311 fail at mvn -B package
+10:03:02 java seed4 round3: in=9192 out=134 fail at mvn -B package
+10:03:16 java seed4 round4: in=9955 out=705 fail at mvn -B package
+10:03:34 java seed4 round5: in=11293 out=888 fail at mvn -B package
+== java seed4: FAILED after 5 round(s), 38136 in / 7637 out, 99.4s
+10:04:36 go seed4 round1: in=728 out=7549 fail at format
+10:05:48 go seed4 round2: in=8369 out=4649 PASS
+== go seed4: PASSED after 2 round(s), 9097 in / 12198 out, 133.9s
+10:06:43 rust seed4 round1: in=733 out=4663 fail at cargo build --release
+10:07:27 rust seed4 round2: in=8026 out=3648 fail at cargo build --release
+10:07:54 rust seed4 round3: in=12018 out=1839 fail at cargo build --release
+10:08:27 rust seed4 round4: in=14195 out=1614 fail at cargo test --release
+10:08:50 rust seed4 round5: in=16555 out=931 fail at cargo test --release
+== rust seed4: FAILED after 5 round(s), 51527 in / 12695 out, 181.7s
+10:09:18 python seed4 round1: in=765 out=3138 fail at pytest
+10:10:10 python seed4 round2: in=6160 out=3163 fail at pytest
+10:10:38 python seed4 round3: in=12043 out=1786 fail at pytest
+10:11:36 python seed4 round4: in=15929 out=3060 PASS
+== python seed4: PASSED after 4 round(s), 34897 in / 11147 out, 166.0s
+10:12:19 java seed5 round1: in=745 out=4769 fail at mvn -B package
+10:12:37 java seed5 round2: in=6171 out=446 fail at acceptance
+10:12:51 java seed5 round3: in=7400 out=417 PASS
+== java seed5: PASSED after 3 round(s), 14316 in / 5632 out, 75.9s
+10:13:27 go seed5 round1: in=729 out=4546 fail at go build -o orders .
+10:13:50 go seed5 round2: in=5385 out=2266 fail at go test ./...
+10:14:14 go seed5 round3: in=7865 out=2112 fail at acceptance
+10:14:40 go seed5 round4: in=10170 out=2266 fail at acceptance
+10:15:21 go seed5 round5: in=12628 out=3511 PASS
+== go seed5: PASSED after 5 round(s), 36777 in / 14701 out, 149.3s
+10:15:52 rust seed5 round1: in=737 out=3362 fail at cargo build --release
+10:16:07 rust seed5 round2: in=6283 out=1557 fail at cargo build --release
+10:16:27 rust seed5 round3: in=9753 out=1501 fail at cargo build --release
+10:16:53 rust seed5 round4: in=12936 out=1548 fail at cargo test --release
+10:17:21 rust seed5 round5: in=16247 out=1630 fail at cargo test --release
+== rust seed5: FAILED after 5 round(s), 45956 in / 9598 out, 119.9s
+10:17:52 python seed5 round1: in=766 out=3572 fail at acceptance
+10:18:10 python seed5 round2: in=4870 out=1341 PASS
+== python seed5: PASSED after 2 round(s), 5636 in / 4913 out, 49.3s
+10:19:36 java seed6 round1: in=743 out=5006 fail at mvn -B package
+10:22:00 java seed6 round2: in=8125 out=1829 fail at acceptance
+10:22:18 java seed6 round3: in=13549 out=347 fail at acceptance
+10:22:46 java seed6 round4: in=14757 out=1258 fail at acceptance
+10:23:13 java seed6 round5: in=16633 out=934 PASS
+== java seed6: PASSED after 5 round(s), 53807 in / 9374 out, 263.6s
+10:24:18 go seed6 round1: in=730 out=8647 fail at go test ./...
+10:24:50 go seed6 round2: in=9540 out=2913 fail at acceptance
+10:25:26 go seed6 round3: in=12765 out=2925 fail at acceptance
+10:26:17 go seed6 round4: in=15948 out=4041 fail at acceptance
+10:27:10 go seed6 round5: in=21760 out=2992 fail at acceptance
+== go seed6: FAILED after 5 round(s), 60743 in / 21518 out, 236.7s
+10:29:53 rust seed6 round1: in=739 out=16384 fail at cargo build --release
+10:30:34 rust seed6 round2: in=19301 out=2788 fail at cargo build --release
+10:31:32 rust seed6 round3: in=22593 out=2783 fail at acceptance
+10:32:26 rust seed6 round4: in=26553 out=2785 fail at acceptance
+10:33:25 rust seed6 round5: in=30515 out=2591 fail at cargo build --release
+== rust seed6: FAILED after 5 round(s), 99701 in / 27331 out, 375.4s
+10:33:55 python seed6 round1: in=766 out=3322 fail at pytest
+10:34:27 python seed6 round2: in=6131 out=3252 fail at pytest
+10:35:02 python seed6 round3: in=11435 out=1576 fail at acceptance
+10:35:40 python seed6 round4: in=13156 out=1414 fail at acceptance
+10:36:16 python seed6 round5: in=14727 out=1407 fail at acceptance
+== python seed6: FAILED after 5 round(s), 46215 in / 10971 out, 170.5s
+10:36:51 java seed7 round1: in=749 out=4710 fail at mvn -B package
+10:37:04 java seed7 round2: in=6139 out=918 fail at mvn -B package
+10:37:19 java seed7 round3: in=9305 out=918 fail at mvn -B package
+10:37:38 java seed7 round4: in=12455 out=918 fail at mvn -B package
+10:38:00 java seed7 round5: in=15607 out=918 fail at mvn -B package
+== java seed7: FAILED after 5 round(s), 44255 in / 8382 out, 104.1s
+10:39:05 go seed7 round1: in=733 out=8024 fail at go test ./...
+10:39:26 go seed7 round2: in=9040 out=1649 fail at go test ./...
+10:39:49 go seed7 round3: in=10867 out=1642 PASS
+== go seed7: PASSED after 3 round(s), 20640 in / 11315 out, 109.7s
+10:40:39 rust seed7 round1: in=735 out=5772 fail at cargo build --release
+10:41:12 rust seed7 round2: in=6852 out=3395 fail at cargo build --release
+10:41:49 rust seed7 round3: in=10600 out=3405 fail at cargo build --release
+10:42:31 rust seed7 round4: in=14355 out=3408 fail at cargo build --release
+10:43:17 rust seed7 round5: in=18118 out=3408 fail at cargo build --release
+== rust seed7: FAILED after 5 round(s), 50660 in / 19388 out, 208.0s
+10:43:43 python seed7 round1: in=768 out=2767 fail at acceptance
+10:44:12 python seed7 round2: in=4566 out=2854 fail at acceptance
+10:44:41 python seed7 round3: in=7831 out=2655 PASS
+== python seed7: PASSED after 3 round(s), 13165 in / 8276 out, 83.4s
+10:45:22 java seed8 round1: in=745 out=4917 fail at mvn -B package
+10:45:55 java seed8 round2: in=8646 out=2925 fail at mvn -B package
+10:46:21 java seed8 round3: in=14551 out=1073 fail at mvn -B package
+10:46:44 java seed8 round4: in=18604 out=382 fail at mvn -B package
+10:47:13 java seed8 round5: in=22062 out=314 fail at mvn -B package
+== java seed8: FAILED after 5 round(s), 64608 in / 9611 out, 152.5s
+10:48:25 go seed8 round1: in=727 out=8433 fail at go test ./...
+10:48:56 go seed8 round2: in=9318 out=2763 fail at go test ./...
+10:49:31 go seed8 round3: in=13411 out=2763 fail at go test ./...
+10:50:11 go seed8 round4: in=17567 out=2763 fail at go test ./...
+10:51:02 go seed8 round5: in=21714 out=2763 fail at go test ./...
+== go seed8: FAILED after 5 round(s), 62737 in / 19485 out, 228.5s
+10:52:19 rust seed8 round1: in=737 out=8689 fail at cargo build --release
+10:52:37 rust seed8 round2: in=9899 out=1303 fail at cargo build --release
+10:52:57 rust seed8 round3: in=11638 out=1301 fail at cargo build --release
+10:53:19 rust seed8 round4: in=13357 out=1256 fail at cargo build --release
+10:53:46 rust seed8 round5: in=15094 out=1654 fail at cargo build --release
+== rust seed8: FAILED after 5 round(s), 50725 in / 14203 out, 164.3s
+10:54:13 python seed8 round1: in=766 out=2976 PASS
+== python seed8: PASSED after 1 round(s), 766 in / 2976 out, 26.8s
+10:54:44 java seed9 round1: in=748 out=3794 fail at mvn -B package
+10:54:56 java seed9 round2: in=5438 out=941 fail at mvn -B package
+10:55:12 java seed9 round3: in=7278 out=1078 fail at mvn -B package
+10:55:29 java seed9 round4: in=9255 out=1063 fail at mvn -B package
+10:55:48 java seed9 round5: in=11223 out=1063 fail at mvn -B package
+== java seed9: FAILED after 5 round(s), 33942 in / 7939 out, 94.9s
+10:56:33 go seed9 round1: in=729 out=5463 fail at go build -o orders .
+10:56:58 go seed9 round2: in=6322 out=2514 fail at go test ./...
+10:57:28 go seed9 round3: in=8950 out=2762 fail at go test ./...
+10:58:03 go seed9 round4: in=12815 out=2761 PASS
+== go seed9: PASSED after 4 round(s), 28816 in / 13500 out, 135.1s
+10:58:34 rust seed9 round1: in=737 out=3575 fail at cargo build --release
+10:59:23 rust seed9 round2: in=5419 out=5532 fail at cargo build --release
+11:00:00 rust seed9 round3: in=11174 out=3402 fail at cargo build --release
+11:00:40 rust seed9 round4: in=14864 out=3164 fail at cargo build --release
+11:01:33 rust seed9 round5: in=18359 out=3183 fail at cargo test --release
+== rust seed9: FAILED after 5 round(s), 50553 in / 18856 out, 209.8s
+11:01:52 python seed9 round1: in=768 out=2155 fail at acceptance
+11:02:05 python seed9 round2: in=4947 out=1146 fail at pytest
+11:02:29 python seed9 round3: in=7643 out=2000 PASS
+== python seed9: PASSED after 3 round(s), 13358 in / 5301 out, 56.0s
+11:03:26 java seed10 round1: in=747 out=6965 fail at mvn -B package
+11:03:52 java seed10 round2: in=8515 out=1629 fail at acceptance
+11:04:15 java seed10 round3: in=10877 out=1667 fail at mvn -B package
+11:04:45 java seed10 round4: in=14932 out=1667 fail at mvn -B package
+11:05:22 java seed10 round5: in=18995 out=1640 fail at mvn -B package
+== java seed10: FAILED after 5 round(s), 54066 in / 13568 out, 173.4s
+11:05:58 go seed10 round1: in=732 out=4146 fail at go build -o orders .
+11:06:26 go seed10 round2: in=5003 out=2608 fail at go build -o orders .
+11:06:55 go seed10 round3: in=7727 out=2612 fail at go test ./...
+11:07:26 go seed10 round4: in=10514 out=2612 fail at acceptance
+11:08:00 go seed10 round5: in=13425 out=2647 PASS
+== go seed10: PASSED after 5 round(s), 37401 in / 14625 out, 158.0s
+11:08:48 rust seed10 round1: in=737 out=5585 fail at cargo build --release
+11:09:18 rust seed10 round2: in=8071 out=2617 fail at acceptance
+11:09:54 rust seed10 round3: in=11830 out=2693 fail at acceptance
+11:10:32 rust seed10 round4: in=15420 out=2693 fail at acceptance
+11:11:16 rust seed10 round5: in=19007 out=2693 fail at acceptance
+== rust seed10: FAILED after 5 round(s), 55065 in / 16281 out, 195.5s
+11:11:59 python seed10 round1: in=768 out=3747 fail at acceptance
+11:12:18 python seed10 round2: in=6741 out=1524 fail at pytest
+11:12:54 python seed10 round3: in=10601 out=3407 fail at pytest
+11:13:21 python seed10 round4: in=14759 out=1537 PASS
+== python seed10: PASSED after 4 round(s), 32869 in / 10215 out, 125.1s

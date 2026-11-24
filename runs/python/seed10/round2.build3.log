@@ -1,0 +1,195 @@
+...FFFFFFFFF.....                                                        [100%]
+=================================== FAILURES ===================================
+________________ TestCreateOrder.test_create_order_invalid_json ________________
+
+self = <test_main.TestCreateOrder object at 0x1088a2fd0>
+
+    def test_create_order_invalid_json(self):
+        response = client.post("/orders", content="not json", headers={"content-type": "application/json"})
+>       assert response.status_code == 422  # FastAPI default validation error for invalid JSON body in Pydantic
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       assert 400 == 422
+E        +  where 400 = <Response [400 Bad Request]>.status_code
+
+test_main.py:55: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0, "message": "POST /orders 400 0ms", "level": "INFO"}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:main.py:115 POST /orders 400 0ms
+____________ TestCreateOrder.test_create_order_missing_customer_id _____________
+
+self = <test_main.TestCreateOrder object at 0x1088a2ea0>
+
+    def test_create_order_missing_customer_id(self):
+        payload = {
+            "items": [{"sku": "A-1", "quantity": 1, "unitPriceCents": 100}]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 422
+E       assert 400 == 422
+E        +  where 400 = <Response [400 Bad Request]>.status_code
+
+test_main.py:62: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0, "message": "POST /orders 400 0ms", "level": "INFO"}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:main.py:115 POST /orders 400 0ms
+________________ TestCreateOrder.test_create_order_empty_items _________________
+
+self = <test_main.TestCreateOrder object at 0x1088985f0>
+
+    def test_create_order_empty_items(self):
+        payload = {
+            "customerId": "c-1",
+            "items": []
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 422
+E       assert 400 == 422
+E        +  where 400 = <Response [400 Bad Request]>.status_code
+
+test_main.py:70: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0, "message": "POST /orders 400 0ms", "level": "INFO"}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:main.py:115 POST /orders 400 0ms
+_____________ TestCreateOrder.test_create_order_invalid_sku_length _____________
+
+self = <test_main.TestCreateOrder object at 0x1088cd480>
+
+    def test_create_order_invalid_sku_length(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [{"sku": "a" * 33, "quantity": 1, "unitPriceCents": 100}]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 422
+E       assert 400 == 422
+E        +  where 400 = <Response [400 Bad Request]>.status_code
+
+test_main.py:78: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0, "message": "POST /orders 400 0ms", "level": "INFO"}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:main.py:115 POST /orders 400 0ms
+___________ TestCreateOrder.test_create_order_invalid_quantity_zero ____________
+
+self = <test_main.TestCreateOrder object at 0x1088cd7b0>
+
+    def test_create_order_invalid_quantity_zero(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [{"sku": "A-1", "quantity": 0, "unitPriceCents": 100}]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 422
+E       assert 400 == 422
+E        +  where 400 = <Response [400 Bad Request]>.status_code
+
+test_main.py:86: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0, "message": "POST /orders 400 0ms", "level": "INFO"}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:main.py:115 POST /orders 400 0ms
+_________ TestCreateOrder.test_create_order_invalid_quantity_too_high __________
+
+self = <test_main.TestCreateOrder object at 0x10889fb50>
+
+    def test_create_order_invalid_quantity_too_high(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [{"sku": "A-1", "quantity": 101, "unitPriceCents": 100}]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 422
+E       assert 400 == 422
+E        +  where 400 = <Response [400 Bad Request]>.status_code
+
+test_main.py:94: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0, "message": "POST /orders 400 0ms", "level": "INFO"}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:main.py:115 POST /orders 400 0ms
+__________ TestCreateOrder.test_create_order_invalid_unit_price_zero ___________
+
+self = <test_main.TestCreateOrder object at 0x10889fc50>
+
+    def test_create_order_invalid_unit_price_zero(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [{"sku": "A-1", "quantity": 1, "unitPriceCents": 0}]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 422
+E       assert 400 == 422
+E        +  where 400 = <Response [400 Bad Request]>.status_code
+
+test_main.py:102: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0, "message": "POST /orders 400 0ms", "level": "INFO"}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:main.py:115 POST /orders 400 0ms
+________ TestCreateOrder.test_create_order_invalid_unit_price_too_high _________
+
+self = <test_main.TestCreateOrder object at 0x10843f4d0>
+
+    def test_create_order_invalid_unit_price_too_high(self):
+        payload = {
+            "customerId": "c-1",
+            "items": [{"sku": "A-1", "quantity": 1, "unitPriceCents": 1000001}]
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 422
+E       assert 400 == 422
+E        +  where 400 = <Response [400 Bad Request]>.status_code
+
+test_main.py:110: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0, "message": "POST /orders 400 0ms", "level": "INFO"}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:main.py:115 POST /orders 400 0ms
+_______________ TestCreateOrder.test_create_order_too_many_items _______________
+
+self = <test_main.TestCreateOrder object at 0x108890500>
+
+    def test_create_order_too_many_items(self):
+        items = [{"sku": "A-1", "quantity": 1, "unitPriceCents": 100} for _ in range(51)]
+        payload = {
+            "customerId": "c-1",
+            "items": items
+        }
+        response = client.post("/orders", json=payload)
+>       assert response.status_code == 422
+E       assert 400 == 422
+E        +  where 400 = <Response [400 Bad Request]>.status_code
+
+test_main.py:119: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"method": "POST", "path": "/orders", "status": 400, "durationMs": 0, "message": "POST /orders 400 0ms", "level": "INFO"}
+------------------------------ Captured log call -------------------------------
+INFO     orders_service:main.py:115 POST /orders 400 0ms
+=============================== warnings summary ===============================
+.venv/lib/python3.14/site-packages/fastapi/testclient.py:1
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed10/project/.venv/lib/python3.14/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+main.py:37
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed10/project/main.py:37: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.14/migration/
+    class Item(BaseModel):
+
+main.py:45
+  /Users/davidparry/code/github/runtime-bill-bench/runs/python/seed10/project/main.py:45: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.14/migration/
+    class OrderRequest(BaseModel):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED test_main.py::TestCreateOrder::test_create_order_invalid_json - assert...
+FAILED test_main.py::TestCreateOrder::test_create_order_missing_customer_id
+FAILED test_main.py::TestCreateOrder::test_create_order_empty_items - assert ...
+FAILED test_main.py::TestCreateOrder::test_create_order_invalid_sku_length - ...
+FAILED test_main.py::TestCreateOrder::test_create_order_invalid_quantity_zero
+FAILED test_main.py::TestCreateOrder::test_create_order_invalid_quantity_too_high
+FAILED test_main.py::TestCreateOrder::test_create_order_invalid_unit_price_zero
+FAILED test_main.py::TestCreateOrder::test_create_order_invalid_unit_price_too_high
+FAILED test_main.py::TestCreateOrder::test_create_order_too_many_items - asse...
+9 failed, 8 passed, 3 warnings in 0.57s

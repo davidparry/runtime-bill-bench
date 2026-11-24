@@ -1,0 +1,37 @@
+--- FAIL: TestCreateOrderSuccess (0.00s)
+panic: runtime error: invalid memory address or nil pointer dereference [recovered, repanicked]
+[signal SIGSEGV: segmentation violation code=0x2 addr=0x8 pc=0x1010a3cc0]
+
+goroutine 33 [running]:
+testing.tRunner.func1.2({0x101398918, 0x10141a7b0})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/testing/testing.go:2125 +0x1a0
+testing.tRunner.func1()
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/testing/testing.go:2128 +0x2c8
+panic({0x101398918?, 0x10141a7b0?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/runtime/panic.go:859 +0x120
+math/big.(*Int).scan(0x0, {0x1013ca400, 0xdb85f31dad0}, 0x0)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/math/big/intconv.go:203 +0x40
+math/big.(*Int).setFromScanner(0x0, {0x1013ca400, 0xdb85f31dad0}, 0xdb85f3083f8?)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/math/big/int.go:589 +0x28
+math/big.(*Int).UnmarshalText(0x0, {0xdb85f36e288, 0x4, 0x4})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/math/big/intmarsh.go:60 +0x8c
+math/big.(*Int).UnmarshalJSON(...)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/math/big/intmarsh.go:84
+encoding/json/v2.makeMethodArshaler.func6(0xdb85f37c3c0, {{0x1013c6b18?, 0xdb85f3083f8?, 0x101026f38?}, 0x28?}, 0xdb85f37c480)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/encoding/json/v2/arshal_methods.go:347 +0xec
+encoding/json/v2.makeStructArshaler.func3(0xdb85f37c3c0, {{0x1013b62f0?, 0xdb85f3083c0?, 0xb7?}, 0xb7?}, 0xdb85f37c480)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/encoding/json/v2/arshal_default.go:1404 +0x5bc
+encoding/json/v2.unmarshalDecode(0xdb85f37c3c0, {0x10135d5f0?, 0xdb85f3083c0?}, 0xdb85f37c480, 0x1)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/encoding/json/v2/arshal.go:471 +0x190
+encoding/json/v2.Unmarshal({0xdb85f36e200?, 0xdb85f233e30?, 0xdb85f31e740?}, {0x10135d5f0, 0xdb85f3083c0}, {0xdb85f233e48?, 0x1037c1c48?, 0xdb85f31e740?})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/encoding/json/v2/arshal.go:390 +0x84
+encoding/json.(*Decoder).Decode(0xdb85f31daa0, {0x10135d5f0, 0xdb85f3083c0})
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/encoding/json/v2_stream.go:90 +0x134
+orders.TestCreateOrderSuccess(0xdb85f37a248)
+	/Users/davidparry/code/github/runtime-bill-bench/runs/go/seed8/project/main_test.go:85 +0x2bc
+testing.tRunner(0xdb85f37a248, 0x1013cb528)
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/testing/testing.go:2195 +0xc4
+created by testing.(*T).Run in goroutine 1
+	/opt/homebrew/Cellar/go/1.27.4/libexec/src/testing/testing.go:2260 +0x3b8
+FAIL	orders	0.254s
+FAIL

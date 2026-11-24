@@ -1,0 +1,305 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.example:orders-service >---------------------
+[INFO] Building orders-service 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ orders-service ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ orders-service ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 8 source files with javac [debug parameters release 21] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ orders-service ---
+[INFO] skip non existing resourceDirectory /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed2/project/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ orders-service ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ orders-service ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.orderservice.OrderControllerTest
+09:31:23.517 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.orderservice.OrderControllerTest]: OrderControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:31:23.557 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.orderservice.OrdersServiceApplication for test class com.example.orderservice.OrderControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-11-24T09:31:23.673-06:00  INFO 6082 --- [           main] c.e.orderservice.OrderControllerTest     : Starting OrderControllerTest using Java 25.0.5 with PID 6082 (started by davidparry in /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed2/project)
+2026-11-24T09:31:23.673-06:00  INFO 6082 --- [           main] c.e.orderservice.OrderControllerTest     : No active profile set, falling back to 1 default profile: "default"
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/Users/davidparry/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-11-24T09:31:24.036-06:00  INFO 6082 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-24T09:31:24.036-06:00  INFO 6082 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-24T09:31:24.036-06:00  INFO 6082 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-11-24T09:31:24.043-06:00  INFO 6082 --- [           main] c.e.orderservice.OrderControllerTest     : Started OrderControllerTest in 0.449 seconds (process running for 0.756)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/Users/davidparry/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-11-24T09:31:24.383-06:00  INFO 6082 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"POST","path":"/orders","status":400,"durationMs":66}
+2026-11-24T09:31:24.402-06:00  INFO 6082 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"GET","path":"/health","status":500,"durationMs":3}
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /health
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = org.springframework.web.servlet.resource.ResourceHttpRequestHandler
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.web.servlet.resource.NoResourceFoundException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 500
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"error":"No static resource health."}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2026-11-24T09:31:24.411-06:00  INFO 6082 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"POST","path":"/orders","status":500,"durationMs":4}
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /orders
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"109"]
+             Body = {
+    "customerId": "c-1",
+    "items": [
+        {"sku": "A-1", "quantity": 1, "unitPriceCents": 0}
+    ]
+}
+
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.orderservice.controller.OrderController
+           Method = com.example.orderservice.controller.OrderController#createOrder(CreateOrderRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = java.lang.IllegalArgumentException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 500
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"error":"Unit price must be between 1 and 1000000"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2026-11-24T09:31:24.419-06:00  INFO 6082 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"POST","path":"/orders","status":201,"durationMs":6}
+2026-11-24T09:31:24.437-06:00  INFO 6082 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"GET","path":"/orders/cc5ed637-4127-44ca-8256-0b023be665ce","status":200,"durationMs":1}
+2026-11-24T09:31:24.440-06:00  INFO 6082 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"GET","path":"/orders/non-existent-id","status":404,"durationMs":1}
+2026-11-24T09:31:24.442-06:00  INFO 6082 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"POST","path":"/orders","status":500,"durationMs":1}
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /orders
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"108"]
+             Body = {
+    "customerId": "c-1",
+    "items": [
+        {"sku": "", "quantity": 1, "unitPriceCents": 100}
+    ]
+}
+
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.orderservice.controller.OrderController
+           Method = com.example.orderservice.controller.OrderController#createOrder(CreateOrderRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = java.lang.IllegalArgumentException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 500
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"error":"SKU must be between 1 and 32 characters"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2026-11-24T09:31:24.445-06:00  INFO 6082 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"POST","path":"/orders","status":500,"durationMs":0}
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /orders
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"111"]
+             Body = {
+    "customerId": "c-1",
+    "items": [
+        {"sku": "A-1", "quantity": 0, "unitPriceCents": 100}
+    ]
+}
+
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.orderservice.controller.OrderController
+           Method = com.example.orderservice.controller.OrderController#createOrder(CreateOrderRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = java.lang.IllegalArgumentException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 500
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"error":"Quantity must be between 1 and 100"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2026-11-24T09:31:24.448-06:00  INFO 6082 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"POST","path":"/orders","status":400,"durationMs":1}
+2026-11-24T09:31:24.450-06:00  INFO 6082 --- [           main] c.e.orderservice.logging.LoggingFilter   : {"method":"POST","path":"/orders","status":400,"durationMs":1}
+[ERROR] Tests run: 9, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.982 s <<< FAILURE! -- in com.example.orderservice.OrderControllerTest
+[ERROR] com.example.orderservice.OrderControllerTest.healthCheck -- Time elapsed: 0.006 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<500>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.orderservice.OrderControllerTest.healthCheck(OrderControllerTest.java:173)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+[ERROR] com.example.orderservice.OrderControllerTest.createOrder_invalidUnitPrice -- Time elapsed: 0.006 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<400> but was:<500>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.orderservice.OrderControllerTest.createOrder_invalidUnitPrice(OrderControllerTest.java:131)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+[ERROR] com.example.orderservice.OrderControllerTest.createOrder_invalidSku -- Time elapsed: 0.002 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<400> but was:<500>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.orderservice.OrderControllerTest.createOrder_invalidSku(OrderControllerTest.java:97)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+[ERROR] com.example.orderservice.OrderControllerTest.createOrder_invalidQuantity -- Time elapsed: 0.002 s <<< FAILURE!
+java.lang.AssertionError: Status expected:<400> but was:<500>
+	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
+	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
+	at org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.orderservice.OrderControllerTest.createOrder_invalidQuantity(OrderControllerTest.java:114)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   OrderControllerTest.createOrder_invalidQuantity:114 Status expected:<400> but was:<500>
+[ERROR]   OrderControllerTest.createOrder_invalidSku:97 Status expected:<400> but was:<500>
+[ERROR]   OrderControllerTest.createOrder_invalidUnitPrice:131 Status expected:<400> but was:<500>
+[ERROR]   OrderControllerTest.healthCheck:173 Status expected:<200> but was:<500>
+[INFO] 
+[ERROR] Tests run: 9, Failures: 4, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.084 s
+[INFO] Finished at: 2026-11-24T09:31:24-06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.2.5:test (default-test) on project orders-service: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed2/project/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

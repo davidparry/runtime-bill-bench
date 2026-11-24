@@ -1,0 +1,57 @@
+{
+  "lang": "python",
+  "seed": 5,
+  "model": "qwen3.6:35b-a3b-coding",
+  "passed": true,
+  "rounds": 2,
+  "input_tokens": 5636,
+  "output_tokens": 4913,
+  "wall_seconds": 49.3,
+  "files": [
+    "main.py",
+    "requirements-dev.txt",
+    "requirements.txt",
+    "test_main.py"
+  ],
+  "round_records": [
+    {
+      "round": 1,
+      "prompt_eval_count": 766,
+      "eval_count": 3572,
+      "prompt_eval_duration": 542168000,
+      "eval_duration": 27969636000,
+      "load_duration": 4878916,
+      "total_duration": 28578657208,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.py",
+        "requirements-dev.txt",
+        "requirements.txt",
+        "test_main.py"
+      ],
+      "startup_seconds": 0.648,
+      "acceptance_failures": 1,
+      "failed_step": "acceptance",
+      "failure": "These checks failed:\n- request log: expected at least 421 stdout lines that are JSON objects with the top-level keys method, path, status, and durationMs (one per request); found 0. Last stdout lines:\n{'method': 'GET', 'path': '/orders/567a5f64-9d42-44e8-8166-a3656cce9221', 'status': 200, 'durationMs': 0.39}\n{'method': 'GET', 'path': '/orders/034f75aa-6697-40b7-ae42-7033b820888b', 'status': 200, 'durationMs': 0.38}\n{'method': 'GET', 'path': '/orders/fcceb9c7-a8ed-41f0-ac17-ccb2d75b5969', 'status': 200, 'durationMs': 0.36}\n{'method': 'GET', 'path': '/orders/fe4785a1-fe87-4363-af97-885cc4f30af5', 'status': 200, 'durationMs': 0.32}\n{'method': 'GET', 'path': '/orders/e20bf70c-2da0-4c55-8740-f12fbddc87ef', 'status': 200, 'durationMs': 0.24}\n\nThe service's standard error:\n```\nINFO:     Started server process [19738]\nINFO:     Waiting for application startup.\nINFO:     Application startup complete.\nINFO:     Uvicorn running on http://0.0.0.0:60081 (Press CTRL+C to quit)\nINFO:     Shutting down\nINFO:     Waiting for application shutdown.\nINFO:     Application shutdown complete.\nINFO:     Finished server process [19738]\n```"
+    },
+    {
+      "round": 2,
+      "prompt_eval_count": 4870,
+      "eval_count": 1341,
+      "prompt_eval_duration": 3060439000,
+      "eval_duration": 10164811000,
+      "load_duration": 7876084,
+      "total_duration": 13278651042,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.py"
+      ],
+      "startup_seconds": 2.502,
+      "acceptance_failures": 0,
+      "failed_step": null,
+      "failure": null
+    }
+  ]
+}

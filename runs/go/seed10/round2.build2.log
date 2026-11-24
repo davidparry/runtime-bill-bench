@@ -1,0 +1,3 @@
+# orders
+./main.go:211:6: undefined: strings
+./main.go:215:8: undefined: strings

@@ -1,0 +1,103 @@
+{
+  "lang": "go",
+  "seed": 10,
+  "model": "qwen3.6:35b-a3b-coding",
+  "passed": true,
+  "rounds": 5,
+  "input_tokens": 37401,
+  "output_tokens": 14625,
+  "wall_seconds": 158.0,
+  "files": [
+    "go.mod",
+    "main.go",
+    "main_test.go"
+  ],
+  "round_records": [
+    {
+      "round": 1,
+      "prompt_eval_count": 732,
+      "eval_count": 4146,
+      "prompt_eval_duration": 489017000,
+      "eval_duration": 34998636000,
+      "load_duration": 3449958,
+      "total_duration": 35541861708,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "go.mod",
+        "main.go",
+        "main_test.go"
+      ],
+      "failed_step": "go build -o orders .",
+      "failure": "`go build -o orders .` exited with status 1. The last lines of its output:\n```\n# orders\n./main.go:12:2: \"strconv\" imported and not used\n./main.go:120:2: declared and not used: ctx\n```"
+    },
+    {
+      "round": 2,
+      "prompt_eval_count": 5003,
+      "eval_count": 2608,
+      "prompt_eval_duration": 4124544000,
+      "eval_duration": 23369057000,
+      "load_duration": 3724500,
+      "total_duration": 27527919042,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.go"
+      ],
+      "failed_step": "go build -o orders .",
+      "failure": "`go build -o orders .` exited with status 1. The last lines of its output:\n```\n# orders\n./main.go:211:6: undefined: strings\n./main.go:215:8: undefined: strings\n```"
+    },
+    {
+      "round": 3,
+      "prompt_eval_count": 7727,
+      "eval_count": 2612,
+      "prompt_eval_duration": 6254393000,
+      "eval_duration": 21813217000,
+      "load_duration": 6059958,
+      "total_duration": 28111009333,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.go"
+      ],
+      "failed_step": "go test ./...",
+      "failure": "`go test ./...` exited with status 1. The last lines of its output:\n```\n--- FAIL: TestValidationRules (0.00s)\n    --- FAIL: TestValidationRules/unknown_fields_ignored (0.00s)\n        main_test.go:97: got status 400, want 201. Body: {\"error\":\"invalid JSON: json: unknown field \\\"extraRoot\\\"\"}\nFAIL\nFAIL\torders\t0.196s\nFAIL\n```"
+    },
+    {
+      "round": 4,
+      "prompt_eval_count": 10514,
+      "eval_count": 2612,
+      "prompt_eval_duration": 8365232000,
+      "eval_duration": 21275798000,
+      "load_duration": 2786750,
+      "total_duration": 29680834875,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.go"
+      ],
+      "startup_seconds": 0.171,
+      "acceptance_failures": 3,
+      "failed_step": "acceptance",
+      "failure": "These checks failed:\n- POST /orders with a valid order: id '8149e705f6d8dc40039a9ae8edbf8716c3e5' is not a UUID\n- POST /orders with the largest allowed order: id '0c687abaecf1e042f419163bf9455faa020f' is not a UUID\n- POST /orders with unknown fields: id '8dfd4b03eda678417eb88304426e13cccd18' is not a UUID\n\nThe service's standard error:\n```\n2026/11/24 11:07:26 Starting server on port 57254\n2026/11/24 11:07:26 Received signal terminated, shutting down...\n2026/11/24 11:07:26 Server stopped gracefully.\n```"
+    },
+    {
+      "round": 5,
+      "prompt_eval_count": 13425,
+      "eval_count": 2647,
+      "prompt_eval_duration": 10979712000,
+      "eval_duration": 22222842000,
+      "load_duration": 2821083,
+      "total_duration": 33245825417,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main.go"
+      ],
+      "startup_seconds": 0.279,
+      "acceptance_failures": 0,
+      "failed_step": null,
+      "failure": null
+    }
+  ]
+}

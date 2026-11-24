@@ -1,0 +1,69 @@
+{
+  "lang": "go",
+  "seed": 1,
+  "model": "qwen3.6:35b-a3b-coding",
+  "passed": true,
+  "rounds": 3,
+  "input_tokens": 14312,
+  "output_tokens": 8900,
+  "wall_seconds": 88.7,
+  "files": [
+    "go.mod",
+    "main.go",
+    "main_test.go"
+  ],
+  "round_records": [
+    {
+      "round": 1,
+      "prompt_eval_count": 728,
+      "eval_count": 4691,
+      "prompt_eval_duration": 521765000,
+      "eval_duration": 32919369000,
+      "load_duration": 9610828958,
+      "total_duration": 43056728042,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "go.mod",
+        "main.go",
+        "main_test.go"
+      ],
+      "failed_step": "go test ./...",
+      "failure": "`go test ./...` exited with status 1. The last lines of its output:\n```\n# orders [orders.test]\n./main_test.go:247:16: undefined: time\n./main_test.go:248:9: undefined: time\nFAIL\torders [build failed]\nFAIL\n```"
+    },
+    {
+      "round": 2,
+      "prompt_eval_count": 5549,
+      "eval_count": 2005,
+      "prompt_eval_duration": 3580660000,
+      "eval_duration": 13788349000,
+      "load_duration": 3057583,
+      "total_duration": 17414585791,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main_test.go"
+      ],
+      "failed_step": "go test ./...",
+      "failure": "`go test ./...` exited with status 1. The last lines of its output:\n```\n--- FAIL: TestHandleCreateOrder (0.00s)\n    --- FAIL: TestHandleCreateOrder/customerId_too_long (0.00s)\n        main_test.go:170: expected status 400, got 201. Body: {\"id\":\"06c90089-9e45-4781-a825-dcf50fc9bac2\",\"customerId\":\"a\",\"items\":[{\"sku\":\"A-1\",\"quantity\":2,\"unitPriceCents\":1250}],\"totalCents\":2500,\"createdAt\":\"2026-11-24T15:17:56.047298Z\"}\n    --- FAIL: TestHandleCreateOrder/item_sku_too_long (0.00s)\n        main_test.go:170: expected status 400, got 201. Body: {\"id\":\"59c17243-cf2b-4136-80b5-e6143ffd9c98\",\"customerId\":\"c-1\",\"items\":[{\"sku\":\"a\",\"quantity\":2,\"unitPriceCents\":1250}],\"totalCents\":2500,\"createdAt\":\"2026-11-24T15:17:56.047407Z\"}\n--- FAIL: TestHandleGetOrder (0.00s)\n    --- FAIL: TestHandleGetOrder/invalid_path (0.00s)\n        main_test.go:220: expected status 400, got 404. Body: {\"error\":\"order not found\"}\nFAIL\nFAIL\torders\t0.121s\nFAIL\n```"
+    },
+    {
+      "round": 3,
+      "prompt_eval_count": 8035,
+      "eval_count": 2204,
+      "prompt_eval_duration": 5859335000,
+      "eval_duration": 15621637000,
+      "load_duration": 5141083,
+      "total_duration": 21527019208,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "main_test.go"
+      ],
+      "startup_seconds": 0.151,
+      "acceptance_failures": 0,
+      "failed_step": null,
+      "failure": null
+    }
+  ]
+}

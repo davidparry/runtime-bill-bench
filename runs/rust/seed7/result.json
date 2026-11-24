@@ -1,0 +1,113 @@
+{
+  "lang": "rust",
+  "seed": 7,
+  "model": "qwen3.6:35b-a3b-coding",
+  "passed": false,
+  "rounds": 5,
+  "input_tokens": 50660,
+  "output_tokens": 19388,
+  "wall_seconds": 208.0,
+  "files": [
+    "Cargo.toml",
+    "src/lib.rs",
+    "src/main.rs",
+    "tests/validation_tests.rs"
+  ],
+  "round_records": [
+    {
+      "round": 1,
+      "prompt_eval_count": 735,
+      "eval_count": 5772,
+      "prompt_eval_duration": 497371000,
+      "eval_duration": 48542640000,
+      "load_duration": 3352542,
+      "total_duration": 49080733334,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "Cargo.toml",
+        "src/lib.rs",
+        "src/main.rs",
+        "tests/validation_tests.rs"
+      ],
+      "failed_step": "cargo build --release",
+      "failure": "`cargo build --release` exited with status 101. The last lines of its output:\n```\n    Updating crates.io index\nerror: failed to select a version for `axum`.\n    ... required by package `orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed7/project)`\nversions that meet the requirements `^0.8` are: 0.8.9, 0.8.8, 0.8.7, 0.8.6, 0.8.5, 0.8.4, 0.8.3, 0.8.1, 0.8.0\n\npackage `orders` depends on `axum` with feature `test` but `axum` does not have that feature.\nhelp: there is a feature `ws` with a similar name\n\n\nall possible versions conflict with previously selected packages\n\n  previously selected package `axum v0.8.0`\n    ... which satisfies dependency `axum = \"^0.8\"` of package `orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed7/project)`\n\nfailed to select a version for `axum` which could resolve this conflict\n```"
+    },
+    {
+      "round": 2,
+      "prompt_eval_count": 6852,
+      "eval_count": 3395,
+      "prompt_eval_duration": 5285101000,
+      "eval_duration": 27712601000,
+      "load_duration": 6444208,
+      "total_duration": 33058926250,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "Cargo.toml",
+        "src/lib.rs",
+        "src/main.rs",
+        "tests/validation_tests.rs"
+      ],
+      "failed_step": "cargo build --release",
+      "failure": "`cargo build --release` exited with status 101. The last lines of its output:\n```\n    Updating crates.io index\nerror: failed to select a version for `axum`.\n    ... required by package `orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed7/project)`\nversions that meet the requirements `^0.7` are: 0.7.9, 0.7.8, 0.7.7, 0.7.6, 0.7.5, 0.7.4, 0.7.3, 0.7.2, 0.7.1, 0.7.0\n\npackage `orders` depends on `axum` with feature `test` but `axum` does not have that feature.\nhelp: there is a feature `ws` with a similar name\n\n\nall possible versions conflict with previously selected packages\n\n  previously selected package `axum v0.7.0`\n    ... which satisfies dependency `axum = \"^0.7\"` of package `orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed7/project)`\n\nfailed to select a version for `axum` which could resolve this conflict\n```"
+    },
+    {
+      "round": 3,
+      "prompt_eval_count": 10600,
+      "eval_count": 3405,
+      "prompt_eval_duration": 8513656999,
+      "eval_duration": 28034482000,
+      "load_duration": 6745833,
+      "total_duration": 36619249833,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "Cargo.toml",
+        "src/lib.rs",
+        "src/main.rs",
+        "tests/validation_tests.rs"
+      ],
+      "failed_step": "cargo build --release",
+      "failure": "`cargo build --release` exited with status 101. The last lines of its output:\n```\n    Updating crates.io index\nerror: failed to select a version for `axum`.\n    ... required by package `orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed7/project)`\nversions that meet the requirements `^0.7` are: 0.7.9, 0.7.8, 0.7.7, 0.7.6, 0.7.5, 0.7.4, 0.7.3, 0.7.2, 0.7.1, 0.7.0\n\npackage `orders` depends on `axum` with feature `test` but `axum` does not have that feature.\nhelp: there is a feature `ws` with a similar name\n\n\nall possible versions conflict with previously selected packages\n\n  previously selected package `axum v0.7.0`\n    ... which satisfies dependency `axum = \"^0.7\"` of package `orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed7/project)`\n\nfailed to select a version for `axum` which could resolve this conflict\n```"
+    },
+    {
+      "round": 4,
+      "prompt_eval_count": 14355,
+      "eval_count": 3408,
+      "prompt_eval_duration": 12184236000,
+      "eval_duration": 28773637000,
+      "load_duration": 6922250,
+      "total_duration": 41041627708,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "Cargo.toml",
+        "src/lib.rs",
+        "src/main.rs",
+        "tests/validation_tests.rs"
+      ],
+      "failed_step": "cargo build --release",
+      "failure": "`cargo build --release` exited with status 101. The last lines of its output:\n```\n    Updating crates.io index\nerror: failed to select a version for `axum`.\n    ... required by package `orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed7/project)`\nversions that meet the requirements `^0.7` are: 0.7.9, 0.7.8, 0.7.7, 0.7.6, 0.7.5, 0.7.4, 0.7.3, 0.7.2, 0.7.1, 0.7.0\n\npackage `orders` depends on `axum` with feature `test` but `axum` does not have that feature.\nhelp: there is a feature `ws` with a similar name\n\n\nall possible versions conflict with previously selected packages\n\n  previously selected package `axum v0.7.0`\n    ... which satisfies dependency `axum = \"^0.7\"` of package `orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed7/project)`\n\nfailed to select a version for `axum` which could resolve this conflict\n```"
+    },
+    {
+      "round": 5,
+      "prompt_eval_count": 18118,
+      "eval_count": 3408,
+      "prompt_eval_duration": 16318969000,
+      "eval_duration": 29766643000,
+      "load_duration": 7933250,
+      "total_duration": 46185177208,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "Cargo.toml",
+        "src/lib.rs",
+        "src/main.rs",
+        "tests/validation_tests.rs"
+      ],
+      "failed_step": "cargo build --release",
+      "failure": "`cargo build --release` exited with status 101. The last lines of its output:\n```\n    Updating crates.io index\nerror: failed to select a version for `axum`.\n    ... required by package `orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed7/project)`\nversions that meet the requirements `^0.7` are: 0.7.9, 0.7.8, 0.7.7, 0.7.6, 0.7.5, 0.7.4, 0.7.3, 0.7.2, 0.7.1, 0.7.0\n\npackage `orders` depends on `axum` with feature `test` but `axum` does not have that feature.\nhelp: there is a feature `ws` with a similar name\n\n\nall possible versions conflict with previously selected packages\n\n  previously selected package `axum v0.7.0`\n    ... which satisfies dependency `axum = \"^0.7\"` of package `orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed7/project)`\n\nfailed to select a version for `axum` which could resolve this conflict\n```"
+    }
+  ]
+}

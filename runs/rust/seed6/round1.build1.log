@@ -1,0 +1,218 @@
+    Updating crates.io index
+     Locking 189 packages to latest compatible versions
+      Adding matchit v0.8.4 (available: v0.8.6)
+      Adding reqwest v0.12.28 (available: v0.13.5)
+      Adding tower-http v0.6.11 (available: v0.7.1)
+ Downloading crates ...
+  Downloaded tracing-serde v0.2.0
+  Downloaded regex-syntax v0.8.12
+  Downloaded regex-automata v0.4.19
+   Compiling serde_core v1.0.229
+   Compiling log v0.4.35
+   Compiling tracing-core v0.1.36
+   Compiling regex-syntax v0.8.12
+   Compiling syn v3.0.10
+   Compiling syn v2.0.119
+   Compiling lazy_static v1.5.1
+   Compiling thread_local v1.1.10
+   Compiling matchit v0.8.4
+   Compiling nu-ansi-term v0.50.3
+   Compiling sharded-slab v0.1.7
+   Compiling tracing-log v0.2.0
+   Compiling regex-automata v0.4.19
+   Compiling serde_derive v1.0.229
+   Compiling tokio-macros v2.7.2
+   Compiling serde_json v1.0.154
+   Compiling serde_path_to_error v0.1.20
+   Compiling uuid v1.29.3
+   Compiling tokio v1.54.1
+   Compiling tracing-attributes v0.1.31
+   Compiling matchers v0.2.0
+   Compiling tracing v0.1.44
+   Compiling axum-core v0.5.6
+   Compiling tower-http v0.6.11
+   Compiling serde v1.0.229
+   Compiling tracing-serde v0.2.0
+   Compiling serde_urlencoded v0.7.1
+   Compiling chrono v0.4.45
+   Compiling tracing-subscriber v0.3.23
+   Compiling hyper v1.13.0
+   Compiling tower v0.5.3
+   Compiling hyper-util v0.1.21
+   Compiling axum v0.8.9
+   Compiling orders v0.1.0 (/Users/davidparry/code/github/runtime-bill-bench/runs/rust/seed6/project)
+warning: unused import: `Response`
+ --> src/main.rs:4:30
+  |
+4 |     response::{IntoResponse, Response},
+  |                              ^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `time::Duration`
+  --> src/main.rs:13:5
+   |
+13 |     time::Duration,
+   |     ^^^^^^^^^^^^^^
+
+error[E0308]: mismatched types
+   --> src/main.rs:191:5
+    |
+191 |     res
+    |     ^^^ expected `(StatusCode, Json<ErrorResponse>)`, found `Response<Body>`
+    |
+    = note: expected tuple `(axum::http::StatusCode, axum::Json<ErrorResponse>)`
+              found struct `Response<Body>`
+note: return type inferred to be `(axum::http::StatusCode, axum::Json<ErrorResponse>)` here
+   --> src/main.rs:105:6
+    |
+105 | ) -> impl IntoResponse {
+    |      ^^^^
+
+error[E0277]: the trait bound `(axum::http::StatusCode, axum::Json<ErrorResponse>): IntoResponse` is not satisfied
+   --> src/main.rs:105:24
+    |
+105 |   ) -> impl IntoResponse {
+    |  ________________________^
+106 | |     // Validation
+107 | |     if req.customer_id.len() < 1 || req.customer_id.len() > 64 {
+108 | |         return (
+...   |
+191 | |     res
+192 | | }
+    | | ^
+    | | |
+    | |_the trait `IntoResponse` is not implemented for `(axum::http::StatusCode, axum::Json<ErrorResponse>)`
+    |   return type was inferred to be `(axum::http::StatusCode, axum::Json<ErrorResponse>)` here
+    |
+    = help: the following other types implement trait `IntoResponse`:
+              ()
+              (R,)
+              (Response<()>, R)
+              (Response<()>, T1, R)
+              (Response<()>, T1, T2, R)
+              (Response<()>, T1, T2, T3, R)
+              (Response<()>, T1, T2, T3, T4, R)
+              (Response<()>, T1, T2, T3, T4, T5, R)
+            and 61 others
+    = note: the full name for the type has been written to '/Users/davidparry/code/github/runtime-bill-bench/.cargo-target/release/deps/orders-4f42182d3193ada2.long-type-9338279079722408282.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+error[E0277]: the trait bound `(axum::http::StatusCode, axum::Json<ErrorResponse>): IntoResponse` is not satisfied
+   --> src/main.rs:105:6
+    |
+105 | ) -> impl IntoResponse {
+    |      ^^^^^^^^^^^^^^^^^ the trait `IntoResponse` is not implemented for `(axum::http::StatusCode, axum::Json<ErrorResponse>)`
+    |
+    = help: the following other types implement trait `IntoResponse`:
+              ()
+              (R,)
+              (Response<()>, R)
+              (Response<()>, T1, R)
+              (Response<()>, T1, T2, R)
+              (Response<()>, T1, T2, T3, R)
+              (Response<()>, T1, T2, T3, T4, R)
+              (Response<()>, T1, T2, T3, T4, T5, R)
+            and 61 others
+    = note: the full name for the type has been written to '/Users/davidparry/code/github/runtime-bill-bench/.cargo-target/release/deps/orders-4f42182d3193ada2.long-type-9338279079722408282.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+error[E0599]: no method named `into_response` found for tuple `(axum::http::StatusCode, axum::Json<ErrorResponse>)` in the current scope
+   --> src/main.rs:207:10
+    |
+201 |           None => (
+    |  _________________-
+202 | |             StatusCode::NOT_FOUND,
+203 | |             Json(ErrorResponse {
+204 | |                 error: "Order not found".to_string(),
+...   |
+207 | |         .into_response(),
+    | |         -^^^^^^^^^^^^^ method not found in `(axum::http::StatusCode, axum::Json<ErrorResponse>)`
+    | |_________|
+    |
+    |
+help: some of the expressions' fields have a method of the same name
+    |
+207 |         .0.into_response(),
+    |          ++
+207 |         .1.0.error.into_response(),
+    |          ++++++++++
+
+error[E0277]: the trait bound `OrderItem: serde::Serialize` is not satisfied
+    --> src/main.rs:32:17
+     |
+  32 | #[derive(Debug, Serialize)]
+     |                 ^^^^^^^^^ unsatisfied trait bound
+...
+  36 |     items: Vec<OrderItem>,
+     |     ----- required by a bound introduced by this call
+     |
+help: the trait `Serialize` is not implemented for `OrderItem`
+    --> src/main.rs:26:1
+     |
+  26 | struct OrderItem {
+     | ^^^^^^^^^^^^^^^^
+     = note: for local types consider adding `#[derive(serde::Serialize)]` to your `OrderItem` type
+     = note: for types from other crates check whether the crate offers a `serde` feature flag
+     = help: the following other types implement trait `Serialize`:
+               &'a T
+               &'a mut T
+               ()
+               (T,)
+               (T0, T1)
+               (T0, T1, T2)
+               (T0, T1, T2, T3)
+               (T0, T1, T2, T3, T4)
+             and 156 others
+     = note: required for `Vec<OrderItem>` to implement `Serialize`
+note: required by a bound in `_::_serde::ser::SerializeStruct::serialize_field`
+    --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_core-1.0.229/src/ser/mod.rs:1917:21
+     |
+1915 |     fn serialize_field<T>(&mut self, key: &'static str, value: &T) -> Result<(), Self::Error>
+     |        --------------- required by a bound in this associated function
+1916 |     where
+1917 |         T: ?Sized + Serialize;
+     |                     ^^^^^^^^^ required by this bound in `SerializeStruct::serialize_field`
+     = note: this error originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+error[E0277]: the trait bound `OrderItem: serde::Serialize` is not satisfied
+    --> src/main.rs:41:17
+     |
+  41 | #[derive(Debug, Serialize)]
+     |                 ^^^^^^^^^ unsatisfied trait bound
+...
+  45 |     items: Vec<OrderItem>,
+     |     ----- required by a bound introduced by this call
+     |
+help: the trait `Serialize` is not implemented for `OrderItem`
+    --> src/main.rs:26:1
+     |
+  26 | struct OrderItem {
+     | ^^^^^^^^^^^^^^^^
+     = note: for local types consider adding `#[derive(serde::Serialize)]` to your `OrderItem` type
+     = note: for types from other crates check whether the crate offers a `serde` feature flag
+     = help: the following other types implement trait `Serialize`:
+               &'a T
+               &'a mut T
+               ()
+               (T,)
+               (T0, T1)
+               (T0, T1, T2)
+               (T0, T1, T2, T3)
+               (T0, T1, T2, T3, T4)
+             and 156 others
+     = note: required for `Vec<OrderItem>` to implement `Serialize`
+note: required by a bound in `_::_serde::ser::SerializeStruct::serialize_field`
+    --> /Users/davidparry/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_core-1.0.229/src/ser/mod.rs:1917:21
+     |
+1915 |     fn serialize_field<T>(&mut self, key: &'static str, value: &T) -> Result<(), Self::Error>
+     |        --------------- required by a bound in this associated function
+1916 |     where
+1917 |         T: ?Sized + Serialize;
+     |                     ^^^^^^^^^ required by this bound in `SerializeStruct::serialize_field`
+     = note: this error originates in the derive macro `Serialize` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+Some errors have detailed explanations: E0277, E0308, E0599.
+For more information about an error, try `rustc --explain E0277`.
+warning: `orders` (bin "orders") generated 2 warnings
+error: could not compile `orders` (bin "orders") due to 6 previous errors; 2 warnings emitted

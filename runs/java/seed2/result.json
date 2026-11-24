@@ -1,0 +1,125 @@
+{
+  "lang": "java",
+  "seed": 2,
+  "model": "qwen3.6:35b-a3b-coding",
+  "passed": false,
+  "rounds": 5,
+  "input_tokens": 51894,
+  "output_tokens": 9501,
+  "wall_seconds": 136.5,
+  "files": [
+    "pom.xml",
+    "src/main/java/com/example/orderservice/OrdersServiceApplication.java",
+    "src/main/java/com/example/orderservice/controller/CreateOrderRequest.java",
+    "src/main/java/com/example/orderservice/controller/GlobalExceptionHandler.java",
+    "src/main/java/com/example/orderservice/controller/HealthController.java",
+    "src/main/java/com/example/orderservice/controller/OrderController.java",
+    "src/main/java/com/example/orderservice/logging/LoggingFilter.java",
+    "src/main/java/com/example/orderservice/model/Order.java",
+    "src/main/java/com/example/orderservice/model/OrderItem.java",
+    "src/main/java/com/example/orderservice/service/OrderService.java",
+    "src/main/resources/application.properties",
+    "src/test/java/com/example/orderservice/OrderControllerTest.java"
+  ],
+  "round_records": [
+    {
+      "round": 1,
+      "prompt_eval_count": 744,
+      "eval_count": 4240,
+      "prompt_eval_duration": 501389000,
+      "eval_duration": 32664456000,
+      "load_duration": 3170042,
+      "total_duration": 33239031125,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "pom.xml",
+        "src/main/java/com/example/orderservice/OrdersServiceApplication.java",
+        "src/main/java/com/example/orderservice/controller/CreateOrderRequest.java",
+        "src/main/java/com/example/orderservice/controller/GlobalExceptionHandler.java",
+        "src/main/java/com/example/orderservice/controller/OrderController.java",
+        "src/main/java/com/example/orderservice/logging/LoggingFilter.java",
+        "src/main/java/com/example/orderservice/model/Order.java",
+        "src/main/java/com/example/orderservice/model/OrderItem.java",
+        "src/main/java/com/example/orderservice/service/OrderService.java",
+        "src/main/resources/application.properties",
+        "src/test/java/com/example/orderservice/OrderControllerTest.java"
+      ],
+      "failed_step": "mvn -B package",
+      "failure": "`mvn -B package` exited with status 1. The last lines of its output:\n```\n\n    Session Attrs = {}\n\nHandler:\n             Type = com.example.orderservice.controller.OrderController\n           Method = com.example.orderservice.controller.OrderController#createOrder(CreateOrderRequest)\n\nAsync:\n    Async started = false\n     Async result = null\n\nResolved Exception:\n             Type = java.lang.IllegalArgumentException\n\nModelAndView:\n        View name = null\n             View = null\n            Model = null\n\nFlashMap:\n       Attributes = null\n\nMockHttpServletResponse:\n           Status = 500\n    Error message = null\n          Headers = [Content-Type:\"application/json\"]\n     Content type = application/json\n             Body = {\"error\":\"SKU must be between 1 and 32 characters\"}\n    Forwarded URL = null\n   Redirected URL = null\n          Cookies = []\n2026-11-24T09:31:24.445-06:00  INFO 6082 --- [           main] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"POST\",\"path\":\"/orders\",\"status\":500,\"durationMs\":0}\n\nMockHttpServletRequest:\n      HTTP Method = POST\n      Request URI = /orders\n       Parameters = {}\n          Headers = [Content-Type:\"application/json;charset=UTF-8\", Content-Length:\"111\"]\n             Body = {\n    \"customerId\": \"c-1\",\n    \"items\": [\n        {\"sku\": \"A-1\", \"quantity\": 0, \"unitPriceCents\": 100}\n    ]\n}\n\n    Session Attrs = {}\n\nHandler:\n             Type = com.example.orderservice.controller.OrderController\n           Method = com.example.orderservice.controller.OrderController#createOrder(CreateOrderRequest)\n\nAsync:\n    Async started = false\n     Async result = null\n\nResolved Exception:\n             Type = java.lang.IllegalArgumentException\n\nModelAndView:\n        View name = null\n             View = null\n            Model = null\n\nFlashMap:\n       Attributes = null\n\nMockHttpServletResponse:\n           Status = 500\n    Error message = null\n          Headers = [Content-Type:\"application/json\"]\n     Content type = application/json\n             Body = {\"error\":\"Quantity must be between 1 and 100\"}\n    Forwarded URL = null\n   Redirected URL = null\n          Cookies = []\n2026-11-24T09:31:24.448-06:00  INFO 6082 --- [           main] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"POST\",\"path\":\"/orders\",\"status\":400,\"durationMs\":1}\n2026-11-24T09:31:24.450-06:00  INFO 6082 --- [           main] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"POST\",\"path\":\"/orders\",\"status\":400,\"durationMs\":1}\n[ERROR] Tests run: 9, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 0.982 s <<< FAILURE! -- in com.example.orderservice.OrderControllerTest\n[ERROR] com.example.orderservice.OrderControllerTest.healthCheck -- Time elapsed: 0.006 s <<< FAILURE!\njava.lang.AssertionError: Status expected:<200> but was:<500>\n\tat org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)\n\tat org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)\n\tat org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)\n\tat org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)\n\tat com.example.orderservice.OrderControllerTest.healthCheck(OrderControllerTest.java:173)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\n[ERROR] com.example.orderservice.OrderControllerTest.createOrder_invalidUnitPrice -- Time elapsed: 0.006 s <<< FAILURE!\njava.lang.AssertionError: Status expected:<400> but was:<500>\n\tat org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)\n\tat org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)\n\tat org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)\n\tat org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)\n\tat com.example.orderservice.OrderControllerTest.createOrder_invalidUnitPrice(OrderControllerTest.java:131)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\n[ERROR] com.example.orderservice.OrderControllerTest.createOrder_invalidSku -- Time elapsed: 0.002 s <<< FAILURE!\njava.lang.AssertionError: Status expected:<400> but was:<500>\n\tat org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)\n\tat org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)\n\tat org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)\n\tat org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)\n\tat com.example.orderservice.OrderControllerTest.createOrder_invalidSku(OrderControllerTest.java:97)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\n[ERROR] com.example.orderservice.OrderControllerTest.createOrder_invalidQuantity -- Time elapsed: 0.002 s <<< FAILURE!\njava.lang.AssertionError: Status expected:<400> but was:<500>\n\tat org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)\n\tat org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)\n\tat org.springframework.test.web.servlet.result.StatusResultMatchers.lambda$matcher$9(StatusResultMatchers.java:637)\n\tat org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)\n\tat com.example.orderservice.OrderControllerTest.createOrder_invalidQuantity(OrderControllerTest.java:114)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:565)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1604)\n\n[INFO] \n[INFO] Results:\n[INFO] \n[ERROR] Failures: \n[ERROR]   Ord"
+    },
+    {
+      "round": 2,
+      "prompt_eval_count": 7061,
+      "eval_count": 2346,
+      "prompt_eval_duration": 5110269000,
+      "eval_duration": 18641126000,
+      "load_duration": 6924792,
+      "total_duration": 23807670167,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "src/main/java/com/example/orderservice/controller/GlobalExceptionHandler.java",
+        "src/main/java/com/example/orderservice/controller/HealthController.java",
+        "src/main/java/com/example/orderservice/service/OrderService.java",
+        "src/test/java/com/example/orderservice/OrderControllerTest.java"
+      ],
+      "failed_step": "mvn -B package",
+      "failure": "`mvn -B package` exited with status 1. The last lines of its output:\n```\n[INFO] Scanning for projects...\n[INFO] \n[INFO] ---------------------< com.example:orders-service >---------------------\n[INFO] Building orders-service 0.0.1-SNAPSHOT\n[INFO]   from pom.xml\n[INFO] --------------------------------[ jar ]---------------------------------\n[INFO] \n[INFO] --- resources:3.3.1:resources (default-resources) @ orders-service ---\n[INFO] Copying 1 resource from src/main/resources to target/classes\n[INFO] Copying 0 resource from src/main/resources to target/classes\n[INFO] \n[INFO] --- compiler:3.13.0:compile (default-compile) @ orders-service ---\n[INFO] Recompiling the module because of changed source code.\n[INFO] Compiling 9 source files with javac [debug parameters release 21] to target/classes\n[INFO] \n[INFO] --- resources:3.3.1:testResources (default-testResources) @ orders-service ---\n[INFO] skip non existing resourceDirectory /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed2/project/src/test/resources\n[INFO] \n[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ orders-service ---\n[INFO] Recompiling the module because of changed dependency.\n[INFO] Compiling 1 source file with javac [debug parameters release 21] to target/test-classes\n[INFO] \n[INFO] --- surefire:3.2.5:test (default-test) @ orders-service ---\n[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider\n[INFO] \n[INFO] -------------------------------------------------------\n[INFO]  T E S T S\n[INFO] -------------------------------------------------------\n[INFO] Running com.example.orderservice.OrderControllerTest\n09:31:50.078 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.orderservice.OrderControllerTest]: OrderControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.\n09:31:50.118 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.orderservice.OrdersServiceApplication for test class com.example.orderservice.OrderControllerTest\n\n  .   ____          _            __ _ _\n /\\\\ / ___'_ __ _ _(_)_ __  __ _ \\ \\ \\ \\\n( ( )\\___ | '_ | '_| | '_ \\/ _` | \\ \\ \\ \\\n \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )\n  '  |____| .__|_| |_|_| |_\\__, | / / / /\n =========|_|==============|___/=/_/_/_/\n\n :: Spring Boot ::                (v3.3.5)\n\n2026-11-24T09:31:50.239-06:00  INFO 6231 --- [           main] c.e.orderservice.OrderControllerTest     : Starting OrderControllerTest using Java 25.0.5 with PID 6231 (started by davidparry in /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed2/project)\n2026-11-24T09:31:50.240-06:00  INFO 6231 --- [           main] c.e.orderservice.OrderControllerTest     : No active profile set, falling back to 1 default profile: \"default\"\nWARNING: A restricted method in java.lang.System has been called\nWARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/Users/davidparry/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31.jar)\nWARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module\nWARNING: Restricted methods will be blocked in a future release unless native access is enabled\n\n2026-11-24T09:31:50.603-06:00  INFO 6231 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''\n2026-11-24T09:31:50.603-06:00  INFO 6231 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''\n2026-11-24T09:31:50.604-06:00  INFO 6231 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms\n2026-11-24T09:31:50.611-06:00  INFO 6231 --- [           main] c.e.orderservice.OrderControllerTest     : Started OrderControllerTest in 0.455 seconds (process running for 0.78)\nOpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended\nWARNING: A Java agent has been loaded dynamically (/Users/davidparry/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar)\nWARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning\nWARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information\nWARNING: Dynamic loading of agents will be disallowed by default in a future release\n2026-11-24T09:31:50.947-06:00  INFO 6231 --- [           main] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"POST\",\"path\":\"/orders\",\"status\":400,\"durationMs\":63}\n2026-11-24T09:31:50.964-06:00  INFO 6231 --- [           main] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"GET\",\"path\":\"/health\",\"status\":200,\"durationMs\":2}\n2026-11-24T09:31:50.969-06:00  INFO 6231 --- [           main] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"POST\",\"path\":\"/orders\",\"status\":400,\"durationMs\":3}\n2026-11-24T09:31:50.976-06:00  INFO 6231 --- [           main] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"POST\",\"path\":\"/orders\",\"status\":201,\"durationMs\":5}\n2026-11-24T09:31:50.992-06:00  INFO 6231 --- [           main] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"GET\",\"path\":\"/orders/5ac78619-ac3a-4712-9e8d-d8953e131e32\",\"status\":200,\"durationMs\":1}\n2026-11-24T09:31:50.994-06:00  INFO 6231 --- [           main] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"GET\",\"path\":\"/orders/non-existent-id\",\"status\":404,\"durationMs\":0}\n\nMockHttpServletRequest:\n      HTTP Method = GET\n      Request URI = /orders/non-existent-id\n       Parameters = {}\n          Headers = []\n             Body = null\n    Session Attrs = {}\n\nHandler:\n             Type = com.example.orderservice.controller.OrderController\n           Method = com.exa"
+    },
+    {
+      "round": 3,
+      "prompt_eval_count": 12497,
+      "eval_count": 2021,
+      "prompt_eval_duration": 10087882000,
+      "eval_duration": 16627252000,
+      "load_duration": 7985750,
+      "total_duration": 26773941666,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "src/main/java/com/example/orderservice/controller/GlobalExceptionHandler.java",
+        "src/main/java/com/example/orderservice/controller/OrderController.java",
+        "src/test/java/com/example/orderservice/OrderControllerTest.java"
+      ],
+      "failed_step": "mvn -B package",
+      "failure": "`mvn -B package` exited with status 1. The last lines of its output:\n```\n[INFO] Scanning for projects...\n[INFO] \n[INFO] ---------------------< com.example:orders-service >---------------------\n[INFO] Building orders-service 0.0.1-SNAPSHOT\n[INFO]   from pom.xml\n[INFO] --------------------------------[ jar ]---------------------------------\n[INFO] \n[INFO] --- resources:3.3.1:resources (default-resources) @ orders-service ---\n[INFO] Copying 1 resource from src/main/resources to target/classes\n[INFO] Copying 0 resource from src/main/resources to target/classes\n[INFO] \n[INFO] --- compiler:3.13.0:compile (default-compile) @ orders-service ---\n[INFO] Recompiling the module because of changed source code.\n[INFO] Compiling 9 source files with javac [debug parameters release 21] to target/classes\n[INFO] -------------------------------------------------------------\n[ERROR] COMPILATION ERROR : \n[INFO] -------------------------------------------------------------\n[ERROR] /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed2/project/src/main/java/com/example/orderservice/controller/OrderController.java:[47,26] incompatible types: inference variable T has incompatible bounds\n    equality constraints: com.example.orderservice.model.Order\n    lower bounds: com.example.orderservice.controller.OrderController.OrderResponse\n[INFO] 1 error\n[INFO] -------------------------------------------------------------\n[INFO] ------------------------------------------------------------------------\n[INFO] BUILD FAILURE\n[INFO] ------------------------------------------------------------------------\n[INFO] Total time:  0.685 s\n[INFO] Finished at: 2026-11-24T09:32:19-06:00\n[INFO] ------------------------------------------------------------------------\n[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile (default-compile) on project orders-service: Compilation failure\n[ERROR] /Users/davidparry/code/github/runtime-bill-bench/runs/java/seed2/project/src/main/java/com/example/orderservice/controller/OrderController.java:[47,26] incompatible types: inference variable T has incompatible bounds\n[ERROR]     equality constraints: com.example.orderservice.model.Order\n[ERROR]     lower bounds: com.example.orderservice.controller.OrderController.OrderResponse\n[ERROR] -> [Help 1]\n[ERROR] \n[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.\n[ERROR] Re-run Maven using the -X switch to enable full debug logging.\n[ERROR] \n[ERROR] For more information about the errors and possible solutions, please read the following articles:\n[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException\n```"
+    },
+    {
+      "round": 4,
+      "prompt_eval_count": 15199,
+      "eval_count": 363,
+      "prompt_eval_duration": 13056131000,
+      "eval_duration": 2925107000,
+      "load_duration": 5782333,
+      "total_duration": 16048561750,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "src/main/java/com/example/orderservice/controller/OrderController.java"
+      ],
+      "startup_seconds": 0.813,
+      "acceptance_failures": 2,
+      "failed_step": "acceptance",
+      "failure": "These checks failed:\n- POST /orders with malformed JSON: expected status 400, got 500 with body '{\"error\":\"Internal server error\"}'\n- request log: expected at least 421 stdout lines that are JSON objects with the top-level keys method, path, status, and durationMs (one per request); found 0. Last stdout lines:\n2026-11-24T09:32:40.162-06:00  INFO 6377 --- [o-58456-exec-11] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"GET\",\"path\":\"/orders/4aa5c65c-7aea-4712-98c2-dbb9ea2f3772\",\"status\":200,\"durationMs\":0}\n2026-11-24T09:32:40.162-06:00  INFO 6377 --- [o-58456-exec-15] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"GET\",\"path\":\"/orders/fc8bf44e-e536-4524-a168-60d72b8a65e4\",\"status\":200,\"durationMs\":0}\n2026-11-24T09:32:40.162-06:00  INFO 6377 --- [io-58456-exec-3] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"GET\",\"path\":\"/orders/c7a2246a-bbf0-489b-88a1-2efdc19fa180\",\"status\":200,\"durationMs\":0}\n2026-11-24T09:32:40.163-06:00  INFO 6377 --- [io-58456-exec-8] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"GET\",\"path\":\"/orders/f56459be-7df0-4c29-a859-4a4048cdea2c\",\"status\":200,\"durationMs\":1}\n2026-11-24T09:32:40.163-06:00  INFO 6377 --- [o-58456-exec-18] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"GET\",\"path\":\"/orders/b3af5d08-7198-46de-ad0d-298312891d49\",\"status\":200,\"durationMs\":0}\n\nThe service's standard error:\n```\nWARNING: A restricted method in java.lang.System has been called\nWARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (jar:nested:/Users/davidparry/code/github/runtime-bill-bench/runs/java/seed2/artifacts/app.jar/!BOOT-INF/lib/tomcat-embed-core-10.1.31.jar!/)\nWARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module\nWARNING: Restricted methods will be blocked in a future release unless native access is enabled\n```"
+    },
+    {
+      "round": 5,
+      "prompt_eval_count": 16393,
+      "eval_count": 531,
+      "prompt_eval_duration": 13095126000,
+      "eval_duration": 4444017000,
+      "load_duration": 6574500,
+      "total_duration": 17633546042,
+      "done_reason": "stop",
+      "thinking_chars": 0,
+      "files": [
+        "src/main/java/com/example/orderservice/controller/GlobalExceptionHandler.java"
+      ],
+      "startup_seconds": 0.783,
+      "acceptance_failures": 1,
+      "failed_step": "acceptance",
+      "failure": "These checks failed:\n- request log: expected at least 421 stdout lines that are JSON objects with the top-level keys method, path, status, and durationMs (one per request); found 0. Last stdout lines:\n2026-11-24T09:33:03.420-06:00  INFO 6572 --- [o-58948-exec-19] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"GET\",\"path\":\"/orders/80f7e12a-f7e5-4e68-a856-0196f9170516\",\"status\":200,\"durationMs\":0}\n2026-11-24T09:33:03.420-06:00  INFO 6572 --- [o-58948-exec-10] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"GET\",\"path\":\"/orders/4c0bb10e-8ec5-4a55-b5c1-b301bcccebb2\",\"status\":200,\"durationMs\":1}\n2026-11-24T09:33:03.420-06:00  INFO 6572 --- [o-58948-exec-14] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"GET\",\"path\":\"/orders/9eefc646-5e31-415e-8377-7b29af9accd0\",\"status\":200,\"durationMs\":0}\n2026-11-24T09:33:03.420-06:00  INFO 6572 --- [io-58948-exec-8] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"GET\",\"path\":\"/orders/91292bfb-8216-4dd5-8480-5cab675fbd69\",\"status\":200,\"durationMs\":0}\n2026-11-24T09:33:03.421-06:00  INFO 6572 --- [io-58948-exec-6] c.e.orderservice.logging.LoggingFilter   : {\"method\":\"GET\",\"path\":\"/orders/0df05cfa-cf15-4059-a43a-34d18f413cab\",\"status\":200,\"durationMs\":1}\n\nThe service's standard error:\n```\nWARNING: A restricted method in java.lang.System has been called\nWARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (jar:nested:/Users/davidparry/code/github/runtime-bill-bench/runs/java/seed2/artifacts/app.jar/!BOOT-INF/lib/tomcat-embed-core-10.1.31.jar!/)\nWARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module\nWARNING: Restricted methods will be blocked in a future release unless native access is enabled\n```"
+    }
+  ]
+}

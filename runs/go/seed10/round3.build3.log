@@ -1,0 +1,6 @@
+--- FAIL: TestValidationRules (0.00s)
+    --- FAIL: TestValidationRules/unknown_fields_ignored (0.00s)
+        main_test.go:97: got status 400, want 201. Body: {"error":"invalid JSON: json: unknown field \"extraRoot\""}
+FAIL
+FAIL	orders	0.196s
+FAIL

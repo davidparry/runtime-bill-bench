@@ -1,0 +1,17 @@
+java seed5: 500 lines, 34 deps, 82 vulns, cpu/100k=13.955s, peak=517.4MB, rps=73127.2
+java seed6: 578 lines, 34 deps, 86 vulns, cpu/100k=11.722s, peak=484.8MB, rps=81891.4
+go seed1: 544 lines, 0 deps, 0 vulns, cpu/100k=5.532s, peak=98.3MB, rps=132919.0
+go seed10: 428 lines, 0 deps, 0 vulns, cpu/100k=5.794s, peak=79.7MB, rps=135242.5
+go seed3: 532 lines, 0 deps, 0 vulns, cpu/100k=5.906s, peak=99.0MB, rps=133938.9
+go seed4: 478 lines, 0 deps, 0 vulns, cpu/100k=5.864s, peak=79.3MB, rps=136074.9
+go seed5: 573 lines, 0 deps, 0 vulns, cpu/100k=5.867s, peak=82.1MB, rps=133678.1
+go seed7: 387 lines, 0 deps, 0 vulns, cpu/100k=5.495s, peak=93.1MB, rps=131771.7
+go seed9: 553 lines, 0 deps, 0 vulns, cpu/100k=5.653s, peak=79.4MB, rps=134491.4
+rust handfix-seed3: 332 lines, 63 deps, 0 vulns, cpu/100k=2.85s, peak=45.6MB, rps=120247.2
+python seed10: 338 lines, 14 deps, 0 vulns, cpu/100k=58.788s, peak=1200.3MB, rps=22143.0
+python seed2: 262 lines, 14 deps, 0 vulns, cpu/100k=52.225s, peak=1275.7MB, rps=24627.5
+python seed4: 314 lines, 14 deps, 0 vulns, cpu/100k=56.222s, peak=1379.4MB, rps=21970.4
+python seed5: 358 lines, 20 deps, 0 vulns, cpu/100k=42.256s, peak=1465.4MB, rps=30638.5
+python seed7: 266 lines, 14 deps, 0 vulns, cpu/100k=53.237s, peak=1387.3MB, rps=23918.6
+python seed8: 271 lines, 14 deps, 0 vulns, cpu/100k=50.043s, peak=1189.2MB, rps=24300.3
+python seed9: 209 lines, 14 deps, 0 vulns, cpu/100k=57.375s, peak=1191.2MB, rps=22636.0
